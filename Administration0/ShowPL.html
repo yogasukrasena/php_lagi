@@ -1,0 +1,217 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ShowPL</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Print-Gaya/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record Header -->
+<form id="Header" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>PACKING LIST</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="8">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th><em>P/L No.</em></th>
+ 
+            <td>{PackingListNo}<input id="HeaderInvoice_H_ID" type="hidden" value="{Invoice_H_ID}" name="{Invoice_H_ID_Name}"></td> 
+            <th><em>P/L Date</em></th>
+ 
+            <td>{PackingListDate} </td> 
+            <th><em>Order Ref</em></th>
+ 
+            <td colspan="3">{OrderRef}</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th colspan="4"><em><strong>Invoice Address <input id="HeaderPL_H_ID" type="hidden" value="{PL_H_ID}" name="{PL_H_ID_Name}"></strong></em></th>
+ 
+            <th colspan="4"><em><strong>Delivery Address</strong></em></th>
+ 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Invoice Address</th>
+ 
+            <td colspan="3">{DumyAddress1}</td> 
+            <th>Delivery Address</th>
+ 
+            <td colspan="3">{DumyAddress2}</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th><em>Destination</em></th>
+ 
+            <td colspan="3"><input id="HeaderInvoiceAddressContact" type="hidden" value="{InvoiceAddressContact}" name="{InvoiceAddressContact_Name}">{lblInvoiceAddressContact}&nbsp;</td> 
+            <th><em>Company</em></th>
+ 
+            <td colspan="3"><input id="HeaderDeliveryAddressContact" type="hidden" value="{DeliveryAddressContact}" name="{DeliveryAddressContact_Name}">{lblDeliveryAddressContact}&nbsp; </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th><em>Address</em></th>
+ 
+            <td colspan="3">{InvoiceAddress}</td> 
+            <th><em>Address</em></th>
+ 
+            <td colspan="3">{DeliveryAddress}</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th><em>Phone</em></th>
+ 
+            <td>{InvoicePhone}</td> 
+            <th><em>Fax</em></th>
+ 
+            <td>{InvoiceFax}</td> 
+            <th><em>Phone</em></th>
+ 
+            <td>{DeliveryPhone}</td> 
+            <th><em>Fax</em></th>
+ 
+            <td>{DeliveryFax}</td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+&nbsp;<!-- END Record Header --><br>
+<!-- BEGIN Grid Detil -->
+<table cellspacing="0" cellpadding="3" width="100%" border="0">
+  <tr>
+    <td valign="top">
+      <table class="row" cellspacing="0" cellpadding="3" width="100%">
+        <tr>
+          <th rowspan="2"><strong>NO.</strong></th>
+ 
+          <th colspan="3"><strong>BOX</strong>&nbsp;</th>
+ 
+          <th rowspan="2"><strong>QTY</strong></th>
+ 
+          <th rowspan="2"><strong>UNIT</strong></th>
+ 
+          <th rowspan="2"><strong>CLIENT CODE</strong></th>
+ 
+          <th rowspan="2"><strong>CLIENT DESC</strong></th>
+ 
+          <th rowspan="2"><strong>PHOTO</strong></th>
+ 
+          <th rowspan="2"><strong>COLLECTION</strong></th>
+ 
+          <th style="TEXT-ALIGN: center" align="middle" colspan="6"><strong>DESCRIPTION</strong></th>
+ 
+          <th colspan="2" rowspan="2"><strong>FINAL SIZE</strong></th>
+ 
+          <th rowspan="2"><strong>REMARKS</strong></th>
+ 
+        </tr>
+ 
+        <tr>
+          <td><b>NO.</b></td> 
+          <td><b>SIZE</b></td> 
+          <td><b>WEIGHT</b></td> 
+          <th><strong>NAME</strong></th>
+ 
+          <th><strong>CATEGORY</strong></th>
+ 
+          <th><strong>INFO/SIZE</strong></th>
+ 
+          <th><strong>TEXTURE</strong></th>
+ 
+          <th><strong>COLOR</strong></th>
+ 
+          <th><strong>MATERIAL</strong></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right" rowspan="4">{Detil:LocalRowNumber}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{BoxNumber}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{BoxWeight}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{Qty}&nbsp;</td> 
+          <td rowspan="4">{Unit}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">clientcode<input id="DetilPL_H_ID_{Detil:rowNumber}" type="hidden" value="{PL_H_ID}" name="{PL_H_ID_Name}">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">clientdesc{CollectID}&nbsp;</td> 
+          <td rowspan="4"><img id="DetilPhoto1_{Detil:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;</td> 
+          <td rowspan="4">{CollectCode}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{NameDesc}&nbsp;&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{CategoryName}</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{SizeName}</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{TextureName}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{ColorName}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{MaterialName}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">D=</td> 
+          <td style="TEXT-ALIGN: right">{Diameter}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">&nbsp;{Total}</td> 
+        </tr>
+ 
+        <tr class="Row">
+          <td>L={BoxLength}</td> 
+          <td style="TEXT-ALIGN: right">H=</td> 
+          <td style="TEXT-ALIGN: right">{Height}&nbsp;</td> 
+        </tr>
+ 
+        <tr class="Row">
+          <td>W={BoxWidth}</td> 
+          <td style="TEXT-ALIGN: right">W=</td> 
+          <td style="TEXT-ALIGN: right">{Width}&nbsp;</td> 
+        </tr>
+ 
+        <tr class="Row">
+          <td>H={BoxHeight}</td> 
+          <td style="TEXT-ALIGN: right">L=</td> 
+          <td style="TEXT-ALIGN: right">{Length}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="19">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr>
+          <td valign="top" align="left" colspan="12">
+            <p><em><strong>Issued By,</strong></em><br>
+            GAYA Fusion<br>
+            </p>
+ 
+            <p><br>
+            {lblAdministrasi}</p>
+ </td> 
+          <td style="TEXT-ALIGN: right" valign="top" align="right" colspan="7">
+            <p><b><i>Costumer Approval</i></b><br>
+            </p>
+ 
+            <p>&nbsp;</p>
+ 
+            <p>{Company}&nbsp;</p>
+ </td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid Detil -->
+</body>
+</html>

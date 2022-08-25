@@ -1,0 +1,13 @@
+TODO:
+Buat Admin page
+Buat Login
+coding utk add component
+coding untuk add sample
+****==== 1,5 hari selesai!!!!!!!! =====******
+
+
+Admin Page :
+fungsi :
+1. edit password
+2. tambah admin
+3. tambah user

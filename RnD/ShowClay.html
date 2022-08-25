@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Show Clay</title>
+
+<link href="../includes/graphite.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record tblclay -->
+<form id="tblclay" name="{HTMLFormName}" action="{Action}" method="post">
+  <font class="GraphiteFormHeaderFont">Work Plan Gaya&nbsp;Design </font>
+  <table class="GraphiteFormTABLE" cellspacing="1" cellpadding="3">
+    <tr>
+      <td class="GraphiteColumnTD" align="center" colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td valign="bottom" align="center" height="50">
+              <h1>CLAY</h1>
+            </td> 
+            <td height="50"><img height="50" src="../images/GayaKecil.jpg" width="300"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- BEGIN Error -->
+    <tr>
+      <td class="GraphiteErrorDataTD" colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Clay Code</th>
+ 
+      <th class="GraphiteFieldCaptionTD">Clay Description</th>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD">{ClayCode}</td> 
+      <td class="GraphiteDataTD">{ClayDescription}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap align="right" colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" nowrap colspan="2">Notes</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="1">
+          <tr>
+            <td valign="top" height="500">{ClayNotes}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Photo</td>
+    </tr>
+ 
+    <tr>
+      <td colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblclayClayPhoto1" src="../upload/{ClayPhoto1}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblclayClayPhoto2" src="../upload/{ClayPhoto2}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblclayClayPhoto3" src="../upload/{ClayPhoto3}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblclayClayPhoto4" src="../upload/{ClayPhoto4}" width="150"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Technical Drawing</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" valign="middle" nowrap align="center" colspan="2"><img class="GraphiteInput" id="tblclayClayTechDraw" height="750" src="../upload/{ClayTechDraw}" width="600"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblclay --><br>
+</body>
+</html>

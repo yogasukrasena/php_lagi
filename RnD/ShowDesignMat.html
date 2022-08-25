@@ -1,0 +1,149 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Show Design Material</title>
+<meta content="CodeCharge Studio 4.00.00.015" name="GENERATOR">
+<link href="../includes/graphite.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record tbldesignmat -->
+<form id="tbldesignmat" name="{HTMLFormName}" action="{Action}" method="post">
+  <font class="GraphiteFormHeaderFont">Work Plan Gaya&nbsp;Design </font>
+  <table class="GraphiteFormTABLE" cellspacing="1" cellpadding="3">
+    <tr>
+      <td class="GraphiteColumnTD" align="center" colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td valign="bottom" align="center" height="50">
+              <h1>DESIGN MATERIAL</h1>
+            </td> 
+            <td height="50"><img height="50" src="../images/GayaKecil.jpg" width="300"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- BEGIN Error -->
+    <tr>
+      <td class="GraphiteErrorDataTD" colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Design Mat Code</th>
+ 
+      <th class="GraphiteFieldCaptionTD">Design Mat Description</th>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD">{DesignMatCode}</td> 
+      <td class="GraphiteDataTD">{DesignMatDescription}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap align="right" colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Supplier</th>
+ 
+      <td class="GraphiteDataTD">{SupCompany}</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Contact Person</th>
+ 
+      <td class="GraphiteDataTD">{SupContact}</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Address</th>
+ 
+      <td class="GraphiteDataTD"><textarea id="tbldesignmatSupAddress" style="WIDTH: 261px; HEIGHT: 54px" name="{SupAddress_Name}" rows="3" cols="21">{SupAddress}</textarea></td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Telephone</th>
+ 
+      <td class="GraphiteDataTD">{SupHP}</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Fax</th>
+ 
+      <td class="GraphiteDataTD">{SupFax}</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">E-mail</th>
+ 
+      <td class="GraphiteDataTD">{SupEmail}</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Other Info</th>
+ 
+      <td class="GraphiteDataTD">{SupOtherInfo}</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Unit</th>
+ 
+      <td class="GraphiteDataTD">{UnitValue}</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Unit Price</th>
+ 
+      <td class="GraphiteDataTD">{DesignMatUnitPrice}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD" nowrap colspan="2">Notes</th>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="1">
+          <tr>
+            <td valign="top" height="300">{DesignMatNotes}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Photo</td>
+    </tr>
+ 
+    <tr>
+      <td colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tbldesignmatDesignMatPhoto1" src="../upload/{DesignMatPhoto1}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tbldesignmatDesignMatPhoto2" src="../upload/{DesignMatPhoto2}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tbldesignmatDesignMatPhoto3" src="../upload/{DesignMatPhoto3}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tbldesignmatDesignMatPhoto4" src="../upload/{DesignMatPhoto4}" width="150"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Technical Drawing</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" valign="middle" nowrap align="center" colspan="2"><img class="GraphiteInput" id="tbldesignmatDesignMatTechDraw" height="750" src="../upload/{DesignMatTechDraw}" width="600"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tbldesignmat --><br>
+</body>
+</html>

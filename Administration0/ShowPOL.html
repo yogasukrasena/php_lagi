@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Production Order List</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Print-Gaya/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellspacing="0" cellpadding="3" width="100%" border="0">
+  <tr>
+    <th>
+    <h2>PRODUCTION ORDER LIST</h2>
+    </th>
+  </tr>
+</table>
+<br>
+<!-- BEGIN Grid Grid -->
+<table cellspacing="0" cellpadding="3" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="3">
+        <tr class="Caption">
+          <th>CLIENT</th>
+ 
+          <th>CLIENT ORDER REFERENCE </th>
+ 
+          <th>GAYA PROFORMA NO. </th>
+ 
+          <th>PROFORMA DATE</th>
+ 
+          <th>DELIVERY TIME </th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{ClientCompany}&nbsp;</td> 
+          <td>{ClientOrderRef}&nbsp;<input id="GridPOL_H_ID" type="hidden" value="{POL_H_ID}" name="{POL_H_ID_Name}"><input id="GridProforma_H_ID" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}"></td> 
+          <td>{ProformaNo}&nbsp;{ProformaRef}</td> 
+          <td>{PolDate}&nbsp;</td> 
+          <td>{DeliveryTime}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Grid -->
+<p></p>
+<!-- BEGIN Grid DetailPOL -->
+<table cellspacing="0" cellpadding="3" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="3" width="100%">
+        <tr class="Caption">
+          <th rowspan="2">PHOTO</th>
+ 
+          <th rowspan="2">NAME</th>
+ 
+          <th rowspan="2">CATEGORY</th>
+ 
+          <th rowspan="2">INFO/SIZE</th>
+ 
+          <th rowspan="2">TEXTURE</th>
+ 
+          <th rowspan="2">COLOR</th>
+ 
+          <th rowspan="2">MATERIAL</th>
+ 
+          <th rowspan="2">QTY</th>
+ 
+          <th colspan="2">STOCK </th>
+ 
+          <th rowspan="2">TRO QTY</th>
+ 
+          <th rowspan="2">TROW</th>
+ 
+          <th rowspan="2">TRIM</th>
+ 
+          <th rowspan="2">BISQUE</th>
+ 
+          <th rowspan="2">GLAZE</th>
+ 
+          <th colspan="2">
+          <p>PACK</p>
+          </th>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>PIN</th>
+ 
+          <th>RAW</th>
+ 
+          <th>IN</th>
+ 
+          <th>OUT</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td rowspan="2"><img id="DetailPOLPhoto1_{DetailPOL:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;</td> 
+          <td rowspan="2">{NameDesc}&nbsp;<input type="hidden" name="{POL_D_ID_Name}" value="{POL_D_ID}" id="DetailPOLPOL_D_ID_{DetailPOL:rowNumber}"></td> 
+          <td rowspan="2">{CategoryName}&nbsp;<input type="hidden" name="{POL_H_ID_Name}" value="{POL_H_ID}" id="DetailPOLPOL_H_ID_{DetailPOL:rowNumber}"></td> 
+          <td rowspan="2">{SizeName}&nbsp;</td> 
+          <td rowspan="2">{TextureName}&nbsp;</td> 
+          <td rowspan="2">{ColorName}&nbsp;</td> 
+          <td rowspan="2">{MaterialName}&nbsp;</td> 
+          <td rowspan="2">{Qty}</td> 
+          <td rowspan="2">&nbsp;{Label1}</td>
+          <!--pin-->
+          <td rowspan="2">&nbsp;</td>
+          <!--raw-->
+          <td rowspan="2">&nbsp;{Label2}</td>
+          <!--trq qty-->
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Label3}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td height="81">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td>&nbsp;</td>
+        </tr>
+ 
+        <tr class="Row">
+          <td>&nbsp;</td> 
+          <th><strong>REST</strong></th>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="21">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid DetailPOL --><br>
+<!-- BEGIN Grid DetailPROF -->
+<table cellspacing="0" cellpadding="3" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="3" width="100%">
+        <tr class="Caption">
+          <th rowspan="2">PHOTO</th>
+ 
+          <th rowspan="2">NAME</th>
+ 
+          <th rowspan="2">CATEGORY</th>
+ 
+          <th rowspan="2">INFO/SIZE</th>
+ 
+          <th rowspan="2">TEXTURE</th>
+ 
+          <th rowspan="2">COLOR</th>
+ 
+          <th rowspan="2">MATERIAL</th>
+ 
+          <th rowspan="2">QTY</th>
+ 
+          <th colspan="2">STOCK </th>
+ 
+          <th rowspan="2">TRO QTY</th>
+ 
+          <th rowspan="2">TROW</th>
+ 
+          <th rowspan="2">TRIM</th>
+ 
+          <th rowspan="2">BISQUE</th>
+ 
+          <th rowspan="2">GLAZE</th>
+ 
+          <th colspan="2">
+          <p>PACK</p>
+          </th>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>PIN</th>
+ 
+          <th>RAW</th>
+ 
+          <th>IN</th>
+ 
+          <th>OUT</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td rowspan="2"><img id="DetailPROFPhoto1_{DetailPROF:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;</td> 
+          <td rowspan="2">{NameDesc}&nbsp;<input type="hidden" name="{Proforma_D_ID_Name}" value="{Proforma_D_ID}" id="DetailPROFProforma_D_ID_{DetailPROF:rowNumber}"></td> 
+          <td rowspan="2">{CategoryName}&nbsp;<input type="hidden" name="{Proforma_H_ID_Name}" value="{Proforma_H_ID}" id="DetailPROFProforma_H_ID_{DetailPROF:rowNumber}"></td> 
+          <td rowspan="2">{SizeName}&nbsp;</td> 
+          <td rowspan="2">{TextureName}&nbsp;</td> 
+          <td rowspan="2">{ColorName}&nbsp;</td> 
+          <td rowspan="2">{MaterialName}&nbsp;</td> 
+          <td rowspan="2">{Qty}</td> 
+          <td rowspan="2">&nbsp;{Label1}</td>
+          <!--pin-->
+          <td rowspan="2">&nbsp;</td>
+          <!--raw-->
+          <td rowspan="2">&nbsp;{Label2}</td>
+          <!--trq qty-->
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Label3}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td height="81">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td>&nbsp;</td>
+        </tr>
+ 
+        <tr class="Row">
+          <td>&nbsp;</td> 
+          <th><strong>REST</strong></th>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="21">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid DetailPROF -->
+</body>
+</html>

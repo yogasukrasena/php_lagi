@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>NewPage1</title>
+<meta content="CodeCharge Studio 3.1.1.0" name="GENERATOR">
+<link href="Styles/Basic/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellspacing="0" cellpadding="3" width="100%" border="0">
+  <tr>
+    <td class="TopContentTitle" width="50%" height="39">Administration</td>
+  </tr>
+</table>
+<p></p>
+<!-- BEGIN Record tbladminist_administ_doc -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Basic/Images/Spacer.gif" border="0"></td> 
+            <th>Search Document </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Basic/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th class="InLineFieldCaptionTD">Client</th>
+ 
+            <td class="InLineDataTD">
+              <select name="{s_tbladminist_client_ClientName_Name}" id="tbladminist_administ_docs_tbladminist_client_ClientName">
+                <option value="" selected>Select Value</option>
+                {s_tbladminist_client_ClientName_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td class="InLineFooterTD" align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" type="submit" value="Search" name="{Button_Name}" id="tbladminist_administ_docButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tbladminist_administ_doc --><br>
+<!-- BEGIN Grid tbladminist_administ_doc1 -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="InLineColumnTD">
+          <th>
+          <!-- BEGIN Sorter Sorter_tbladminist_client_ClientName --><a href="{Sort_URL}" id="tbladminist_administ_doc1Sorter_tbladminist_client_ClientName">CLIENT</a> 
+          <!-- BEGIN Asc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Asc.gif" border="0"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Desc.gif" border="0"></font><!-- END Desc_On --><!-- END Sorter Sorter_tbladminist_client_ClientName --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_QuotationNo --><a href="{Sort_URL}" id="tbladminist_administ_doc1Sorter_QuotationNo">QUOTATION</a> 
+          <!-- BEGIN Asc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Asc.gif" border="0"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Desc.gif" border="0"></font><!-- END Desc_On --><!-- END Sorter Sorter_QuotationNo --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_tbladminist_proforma_h_ProformaNo --><a href="{Sort_URL}" id="tbladminist_administ_doc1Sorter_tbladminist_proforma_h_ProformaNo">PROFORMA</a> 
+          <!-- BEGIN Asc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Asc.gif" border="0"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Desc.gif" border="0"></font><!-- END Desc_On --><!-- END Sorter Sorter_tbladminist_proforma_h_ProformaNo --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_tbladminist_prodorderlist_h_ClientOrderRef --><a href="{Sort_URL}" id="tbladminist_administ_doc1Sorter_tbladminist_prodorderlist_h_ClientOrderRef">PRODUCTION ORDER LIST</a> 
+          <!-- BEGIN Asc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Asc.gif" border="0"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Desc.gif" border="0"></font><!-- END Desc_On --><!-- END Sorter Sorter_tbladminist_prodorderlist_h_ClientOrderRef --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_InvoiceNo --><a href="{Sort_URL}" id="tbladminist_administ_doc1Sorter_InvoiceNo">INVOICE</a> 
+          <!-- BEGIN Asc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Asc.gif" border="0"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Desc.gif" border="0"></font><!-- END Desc_On --><!-- END Sorter Sorter_InvoiceNo --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_PackListNo --><a href="{Sort_URL}" id="tbladminist_administ_doc1Sorter_PackListNo">PACKING LIST</a> 
+          <!-- BEGIN Asc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Asc.gif" border="0"></font><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><font color="#0000ff"><img src="Styles/Basic/Images/Desc.gif" border="0"></font><!-- END Desc_On --><!-- END Sorter Sorter_PackListNo --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="InLineDataTD">
+          <td><a href="{tbladminist_client_ClientName_Src}" id="tbladminist_administ_doc1tbladminist_client_ClientName">{tbladminist_client_ClientName}</a>&nbsp;</td> 
+          <td>{QuotationNo}&nbsp;</td> 
+          <td>{tbladminist_proforma_h_ProformaNo}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{tbladminist_prodorderlist_h_ClientOrderRef}&nbsp;</td> 
+          <td>{InvoiceNo}&nbsp;</td> 
+          <td>{PackListNo}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN Separator -->
+        <tr class="Separator">
+          <td colspan="6"><img src="Styles/Basic/Images/Spacer.gif" border="0"></td>
+        </tr>
+        <!-- END Separator -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td class="InLineErrorDataTD" colspan="6">No records </td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td class="InLineFooterTD" colspan="6"><a href="{tbladminist_administ_doc1_Insert_Src}" id="tbladminist_administ_doc1tbladminist_administ_doc1_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid tbladminist_administ_doc1 --><br>
+</body>
+</html>

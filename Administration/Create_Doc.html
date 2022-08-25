@@ -1,0 +1,63 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>NewPage1</title>
+<meta content="CodeCharge Studio 3.1.1.0" name="GENERATOR">
+<link href="Styles/Basic/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record tbladminist_client -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Basic/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Tbladminist Client </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Basic/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th class="InLineFieldCaptionTD">Client Name</th>
+ 
+            <td class="InLineDataTD">
+              <select name="{ClientName_Name}" id="tbladminist_clientClientName">
+                <option value="" selected>Select Value</option>
+                {ClientName_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="InLineFieldCaptionTD">Type</th>
+ 
+            <td class="InLineDataTD">
+              <select name="{Type}">
+                <option value="" selected>Select Value</option>
+ {ClientName_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td class="InLineFooterTD" align="center" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="submit" value="Add" name="{Button_Name}" id="tbladminist_clientButton_Insert"><!-- END Button Button_Insert --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tbladminist_client --><br>
+</body>
+</html>

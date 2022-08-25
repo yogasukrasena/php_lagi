@@ -1,0 +1,1224 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorPrint-Gaya {
+	background-color: #cfcfcf;
+	}
+
+.FormTitleBgColorPrint-Gaya {
+	background-color: #787878;
+	}
+
+.FormTitleFontColorPrint-Gaya {
+	color: #ffffff;
+	}
+
+.CaptionBgColorPrint-Gaya {
+	background-color: #d7d7d7;
+	}
+
+.CaptionFontColorPrint-Gaya {
+	color: #000000;
+	}
+
+.DataBgColorPrint-Gaya {
+	background-color: #f7f7f7;
+	}
+
+.AltDataBgColorPrint-Gaya {
+	background-color: #ededed;
+	}
+
+.DataFontColorPrint-Gaya {
+	color: #000000;
+	}
+
+.LinkColorPrint-Gaya {
+	color: #0033cc;
+	}
+
+.VisitedLinkColorPrint-Gaya {
+	color: #830083;
+	}
+
+.HoverLinkColorPrint-Gaya {
+	color: #ff0000;
+	}
+
+.ColorBgButtonPrint-Gaya {
+	background-color: #787878;
+}
+
+.ColorFontButtonPrint-Gaya {
+	color: #ffffff;
+}
+
+.ColorBgButtonPassivePrint-Gaya {
+	background-color: #bababa;
+}
+
+.ColorFontButtonPassivePrint-Gaya {
+	color: #ffffff;
+}
+
+
+
+.HeaderPrint-Gaya {
+	width: 100%;
+	}
+
+.HeaderPrint-Gaya th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 3px;
+	background-image: url('Images/HeaderBg.gif'); background-color: #f7f7f7; color: #000000;
+	width: 100%;
+	white-space: nowrap;
+	padding-left: 8px;
+	}
+
+
+html>body .HeaderPrint-Gaya th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderPrint-Gaya th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.HeaderPrint-Gaya a:link { 
+	color: #000000;
+	}
+
+.HeaderPrint-Gaya a:visited { 
+	color: #000000;
+	}
+
+.HeaderPrint-Gaya a:hover, .CaptionPrint-Gaya a:active { 
+	color: #000000; text-decoration: none;
+	}
+
+.HeaderLeftPrint-Gaya { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightPrint-Gaya { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftPrint-Gaya img{
+	width: 1px;
+	}
+
+.HeaderRightPrint-Gaya img{
+	width: 1px;
+	}
+
+
+/* Grid Options */
+.GridPrint-Gaya { 
+	border-left: 1px solid #787878; border-bottom: 1px solid #787878;
+	width: 100%;
+	}
+
+.CaptionPrint-Gaya th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	}
+
+
+html>body .CaptionPrint-Gaya th, html>body .CaptionPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionPrint-Gaya th, * html body .CaptionPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionPrint-Gaya a:link { 
+	color: #000000;
+	}
+
+.CaptionPrint-Gaya a:visited { 
+	color: #000000;
+	}
+
+.CaptionPrint-Gaya a:hover, .CaptionPrint-Gaya a:active { 
+	color: #ff0000;
+	}
+
+.CaptionPrint-Gaya img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionPrint-Gaya input {
+	vertical-align: middle;
+	}
+
+.RowPrint-Gaya th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+
+html>body .RowPrint-Gaya th, html>body .RowPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .RowPrint-Gaya th, * html body .RowPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+caption.RowPrint-Gaya { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border: 1px solid #787878; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+html>body caption.RowPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body caption.RowPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.RowPrint-Gaya a:link { 
+	color: #0033cc;
+	}
+
+.RowPrint-Gaya a:visited { 
+	color: #830083;
+	}
+
+.RowPrint-Gaya a:hover, .RowPrint-Gaya a:active { 
+	color: #ff0000;
+	}
+
+.SeparatorPrint-Gaya{
+	color: #787878;
+	}
+
+.SeparatorPrint-Gaya td{
+	height: 1px;
+	}
+
+
+.AltRowPrint-Gaya th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ededed; 
+	color: #000000;
+	}
+
+
+html>body .AltRowPrint-Gaya th, html>body .AltRowPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .AltRowPrint-Gaya th, * html body .AltRowPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.AltRowPrint-Gaya a:link { 
+	color: #0033cc;
+	}
+
+.AltRowPrint-Gaya a:visited { 
+	color: #830083;
+	}
+
+.AltRowPrint-Gaya a:hover, .AltRowPrint-Gaya a:active { 
+	color: #ff0000;
+	}
+
+.NoRecordsPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	background-color: #f7f7f7; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .NoRecordsPrint-Gaya td, html>body .FooterPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .NoRecordsPrint-Gaya td, * html body .FooterPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.FooterPrint-Gaya a:link { 
+	color: #0033cc;
+	}
+
+.FooterPrint-Gaya a:visited { 
+	color: #830083;
+	}
+
+.FooterPrint-Gaya a:hover, .FooterPrint-Gaya a:active { 
+	color: #ff0000;
+	}
+
+.FooterPrint-Gaya img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterPrint-Gaya input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordPrint-Gaya { 
+	border-left: 1px solid #787878; border-bottom: 1px solid #787878;
+	width: 100%;
+	}
+
+.ErrorPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+
+* html>body .ErrorPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ErrorPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.ControlsPrint-Gaya th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+.BottomPrint-Gaya td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .ControlsPrint-Gaya th, html>body .ControlsPrint-Gaya td, html>body .BottomPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ControlsPrint-Gaya th, * html body .ControlsPrint-Gaya td, * html body .BottomPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.BottomPrint-Gaya a:link { 
+	color: #0033cc;
+	}
+
+.BottomPrint-Gaya a:visited { 
+	color: #830083;
+	}
+
+.BottomPrint-Gaya a:hover, .CaptionPrint-Gaya a:active { 
+	color: #ff0000;
+	}
+
+.BottomPrint-Gaya img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomPrint-Gaya input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionPrint-Gaya th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ededed; 
+	color: #000000;
+	}
+
+.GroupCaptionPrint-Gaya td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+html>body .GroupCaptionPrint-Gaya th, html>body .GroupCaptionPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionPrint-Gaya th, * html body .GroupCaptionPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionPrint-Gaya a:link {
+	color: #000000;
+	}
+
+.GroupCaptionPrint-Gaya a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionPrint-Gaya a:hover, .GroupCaptionPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterPrint-Gaya td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #d7d7d7; 
+	color: #000000;
+	}
+
+
+html>body .GroupFooterPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupFooterPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.GroupFooterPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.GroupFooterPrint-Gaya a:hover, .GroupFooterPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterPrint-Gaya img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterPrint-Gaya input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalPrint-Gaya td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ededed; 
+	color: #000000;
+	border-bottom: 2px solid #787878;
+	}
+
+
+html>body .SubTotalPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .SubTotalPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.SubTotalPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.SubTotalPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.SubTotalPrint-Gaya a:hover, .SubTotalPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+.TotalPrint-Gaya td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #ededed; 
+	color: #000000;
+	}
+
+
+html>body .TotalPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .TotalPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.TotalPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.TotalPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.TotalPrint-Gaya a:hover, .TotalPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Form Options */
+.ButtonPrint-Gaya { 
+	background-color: #ededed; color: #000000; border: solid 1px #787878; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 11px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarPrint-Gaya { 
+	border: 1px solid #787878;
+	width: 100%;
+	}
+
+.CalendarWeekdayNamePrint-Gaya{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #ededed; 
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekdayNamePrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekdayNamePrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNamePrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekdayNamePrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekdayNamePrint-Gaya a:hover, .CalendarWeekdayNamePrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+.CalendarWeekendNamePrint-Gaya{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #ededed;	
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekendNamePrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendNamePrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNamePrint-Gaya a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNamePrint-Gaya a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNamePrint-Gaya a:link, .CalendarWeekendNamePrint-Gaya a:visited{
+	color: #ff0000;
+	}
+
+/* Calendar Day */
+.CalendarDayPrint-Gaya{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+html>body .CalendarDayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarDayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.CalendarDayPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.CalendarDayPrint-Gaya a:hover, .CalendarDayPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendPrint-Gaya{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: center;
+	background-color: #ededed;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekendPrint-Gaya a:hover, .CalendarWeekendPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Today */
+.CalendarTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border-top: 3px solid #787878; border-right: 3px solid #787878; border-left: 2px solid #787878; border-bottom: 2px solid #787878;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+html>body .CalendarTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.CalendarTodayPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.CalendarTodayPrint-Gaya a:hover, .CalendarTodayPrint-Gaya a:active {
+	color: #ff0000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border-top: 3px solid #787878; border-right: 3px solid #787878; border-left: 2px solid #787878; border-bottom: 2px solid #787878;
+	text-align: center;
+	background-color: #ededed;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendTodayPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekendTodayPrint-Gaya a:hover, .CalendarWeekendTodayPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayPrint-Gaya{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #787878;
+	}
+
+
+html>body .CalendarOtherMonthDayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayPrint-Gaya a:link {
+	color: #787878;
+	}
+
+.CalendarOtherMonthDayPrint-Gaya a:visited{
+	color: #787878;
+	}
+
+.CalendarOtherMonthDayPrint-Gaya a:hover, .CalendarOtherMonthDayPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border-top: 3px solid #787878; border-right: 3px solid #787878; border-left: 2px solid #787878; border-bottom: 2px solid #787878;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #787878;
+	}
+
+
+html>body .CalendarOtherMonthTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayPrint-Gaya a:link {
+	color: #787878;
+	}
+
+.CalendarOtherMonthTodayPrint-Gaya a:visited{
+	color: #787878;
+	}
+
+.CalendarOtherMonthTodayPrint-Gaya a:hover, .CalendarOtherMonthTodayPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendPrint-Gaya {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: center;
+	background-color: #ededed;	
+	color: #787878;
+	}
+
+
+html>body .CalendarOtherMonthWeekendPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendPrint-Gaya a:link {
+	color: #787878;
+	}
+
+.CalendarOtherMonthWeekendPrint-Gaya a:visited{
+	color: #787878;
+	}
+
+.CalendarOtherMonthWeekendPrint-Gaya a:hover, .CalendarOtherMonthWeekendPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border-top: 3px solid #787878; border-right: 3px solid #787878; border-left: 2px solid #787878; border-bottom: 2px solid #787878;
+	text-align: center;
+	color: #787878;
+	background-color: #ededed;	
+	}
+	
+
+html>body .CalendarOtherMonthWeekendTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayPrint-Gaya a:link {
+	color: #787878;
+	}
+
+.CalendarOtherMonthWeekendTodayPrint-Gaya a:visited{
+	color: #787878;
+	}
+
+.CalendarOtherMonthWeekendTodayPrint-Gaya a:hover, .CalendarOtherMonthWeekendTodayPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayPrint-Gaya{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #d7d7d7;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+html>body .CalendarSelectedDayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarSelectedDayPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayPrint-Gaya a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDayPrint-Gaya a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDayPrint-Gaya a:hover, .CalendarSelectedDayPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorPrint-Gaya {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	background-color: #f7f7f7; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .CalendarNavigatorPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.CalendarNavigatorPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.CalendarNavigatorPrint-Gaya a:hover, .CalendarNavigatorPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+.CalendarNavigatorPrint-Gaya img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorPrint-Gaya td {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+.CalendarNavigatorPrint-Gaya th {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+
+html>body .CalendarNavigatorPrint-Gaya th, html>body .CalendarNavigatorPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorPrint-Gaya th, * html body .CalendarNavigatorPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventPrint-Gaya{
+	font-family: Tahoma; font-size: 80%;
+	text-align: left;
+	}
+
+
+html>body .CalendarEventPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarEventPrint-Gaya {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventPrint-Gaya a:link {
+	color: #0033cc;
+	}
+
+.CalendarEventPrint-Gaya a:visited{
+	color: #830083;
+	}
+
+.CalendarEventPrint-Gaya a:hover, .CalendarEventPrint-Gaya a:active{
+	color: #ff0000;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thPrint-Gaya { 
+	font-family: Tahoma; font-size: 80%;
+	font-weight: bold;
+}
+
+
+html>body .thPrint-Gaya {
+	font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .thPrint-Gaya {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderPrint-Gaya .th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 3px;
+	background-image: url('Images/HeaderBg.gif'); background-color: #f7f7f7; color: #000000;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+html>body .HeaderPrint-Gaya .th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderPrint-Gaya .th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.CaptionPrint-Gaya .th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+}
+
+
+html>body .CaptionPrint-Gaya .th {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionPrint-Gaya .th {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowPrint-Gaya .th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.AltRowPrint-Gaya .th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.ControlsPrint-Gaya .th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.GroupCaptionPrint-Gaya .th {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #787878; border-right: 1px solid #787878;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ededed; 
+	color: #000000;
+}
+
+
+html>body .GroupCaptionPrint-Gaya .th {
+	font-family: Tahoma; font-size: 100%;
+}
+
+html>body .RowPrint-Gaya .th, html>body .AltRowPrint-Gaya .th, html>body .ControlsPrint-Gaya .th {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionPrint-Gaya .th {
+	font-family: Tahoma; font-size: 100%;
+}
+
+* html body .RowPrint-Gaya .th, * html body .AltRowPrint-Gaya .th, * html body .ControlsPrint-Gaya .th {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuPrint-Gaya td {
+	font-family: Tahoma; font-size: 80%;
+}
+
+
+html>body .simpleMenuPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+} 
+
+
+/*ie6*/
+* html body .simpleMenuPrint-Gaya td {
+	font-family: Tahoma; font-size: 100%;
+} 
+/*end*/

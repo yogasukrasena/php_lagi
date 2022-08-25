@@ -1,0 +1,236 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Show Quotation</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="../includes/graphite.css" type="text/css" rel="stylesheet">
+<link href="Styles/Print-Gaya/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record Header -->
+<form id="Header" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="1">
+    <!-- BEGIN Error -->
+    <tr class="Error">
+      <td class="GraphiteErrorDataTD" colspan="4">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" width="250" border="0">
+          <tr>
+            <th class="GraphiteColumnTD">
+            <h1><u><i>QUOTATION</i></u></h1>
+            </th>
+          </tr>
+ 
+          <tr>
+            <td><img alt="" src=""></td>
+          </tr>
+        </table>
+      </td> 
+      <td valign="top">
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Quotation No</th>
+ 
+            <td class="GraphiteDataTD">{QuotationNo}</td> 
+            <td class="GraphiteDataTD">-{Rev}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Quotation Date</th>
+ 
+            <td class="GraphiteDataTD" colspan="2">{QuotationDate}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Validity</th>
+ 
+            <td class="GraphiteDataTD" colspan="2">{Validity}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Client</th>
+ 
+            <td class="GraphiteDataTD" colspan="2"><input id="HeaderClientID" style="WIDTH: 33px; HEIGHT: 22px" type="hidden" size="4" value="{ClientID}" name="{ClientID_Name}">{lblClient}</td>
+          </tr>
+          <!--<tr>
+            <td class="GraphiteDataTD" colspan="3">&nbsp;</td>
+          </tr>-->
+          <tr>
+            <td colspan="3" height="101" rowspan="5">&nbsp;</td>
+          </tr>
+        </table>
+      </td> 
+      <td valign="top">
+        <table>
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Client Order Ref</th>
+ 
+            <td class="GraphiteDataTD">{ClientOrderRef}</td>
+          </tr>
+ 
+          <tr>
+            <td class="GraphiteColumnTD" colspan="2"><i>Delivery Address</i></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>&nbsp;</th>
+ 
+            <td class="GraphiteDataTD">{AddressID}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Attn</th>
+ 
+            <td class="GraphiteDataTD">{ContactID}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Email</th>
+ 
+            <td class="GraphiteDataTD">{Email}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Address</th>
+ 
+            <td class="GraphiteDataTD">{Address}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Phone</th>
+ 
+            <td class="GraphiteDataTD">{Phone}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Fax</th>
+ 
+            <td class="GraphiteDataTD">{Fax}</td>
+          </tr>
+        </table>
+      </td> 
+      <td valign="top">
+        <table>
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Packaging Cost</th>
+ 
+            <td class="GraphiteDataTD">{PackagingCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Delivery Term ID</th>
+ 
+            <td class="GraphiteDataTD">{DeliveryTermID}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Delivery Time ID</th>
+ 
+            <td class="GraphiteDataTD">{DeliveryTimeID}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD">Payment Term ID</th>
+ 
+            <td class="GraphiteDataTD">{PaymentTermID}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="GraphiteFieldCaptionTD" height="85" rowspan="3">Special Instruction</th>
+ 
+            <td class="GraphiteTextarea" rowspan="3">{SpecialInstruction}<input id="HeaderDocMaker" type="hidden" value="{DocMaker}" name="{DocMaker_Name}"><input id="HeaderCurrencyID" type="hidden" value="{CurrencyID}" name="{CurrencyID_Name}">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record Header --><br>
+<!-- BEGIN Grid Detil -->
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="1" width="850" border="1">
+        <tr>
+          <th class="GraphiteFieldCaptionTD">NO</th>
+ 
+          <th class="GraphiteFieldCaptionTD">R&amp;D CODE</th>
+ 
+          <th class="GraphiteFieldCaptionTD">PHOTO</th>
+ 
+          <th class="GraphiteFieldCaptionTD">DESCRIPTION</th>
+ 
+          <th class="GraphiteFieldCaptionTD">FINAL SIZE</th>
+ 
+          <th class="GraphiteFieldCaptionTD">UNIT PRICE</th>
+ 
+          <th class="GraphiteFieldCaptionTD">REMARKS</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr>
+          <td class="GraphiteDataTD">{Detil:LocalRowNumber}</td> 
+          <td class="GraphiteDataTD">{RndCode}&nbsp;<input id="DetilQuotation_H_ID" type="hidden" value="{Quotation_H_ID}" name="{Quotation_H_ID_Name}"></td> 
+          <td class="GraphiteDataTD"><img id="DetilPhoto1_{Detil:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;</td> 
+          <td class="GraphiteDataTD">{Description}&nbsp;</td> 
+          <td class="GraphiteDataTD">
+            <table cellspacing="0" cellpadding="0" width="100%" border="1">
+              <tr>
+                <td style="TEXT-ALIGN: right">D= {Diameter}&nbsp;</td>
+              </tr>
+ 
+              <tr>
+                <td style="TEXT-ALIGN: right">H= {Height}&nbsp;</td>
+              </tr>
+ 
+              <tr>
+                <td style="TEXT-ALIGN: right">W= {Width}&nbsp;</td>
+              </tr>
+ 
+              <tr>
+                <td style="TEXT-ALIGN: right">L= {Length}&nbsp;</td>
+              </tr>
+            </table>
+          </td> 
+          <td class="GraphiteDataTD" style="TEXT-ALIGN: right">{lblCurrency}&nbsp;{UnitPrice}&nbsp;</td> 
+          <td class="GraphiteTextarea">{Remark}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Detil --><br>
+&nbsp; 
+<table cellpadding="4" width="100%" border="0">
+  <tr>
+    <td valign="top">
+      <p align="left">Issued By, <br>
+      GAYA Fusion</p>
+ 
+      <p align="left">&nbsp;</p>
+ 
+      <p>
+      {lblAdministrasi}</p>
+    </td> 
+    <td valign="top">
+      <p align="right">&nbsp;Costumer approval,<br>
+      </p>
+ 
+      <p align="right"><br>
+      &nbsp;</p>
+ 
+      <p align="right">{lblCustomer}</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

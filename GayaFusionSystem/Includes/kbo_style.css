@@ -1,0 +1,275 @@
+/* CSS Kios Buku Online */
+/* (c) Dadan Sutisna 2007 */
+/* file ini ga kepake di gaya */
+body {
+	font-family: Tahoma, Helvetica, verdana;
+	font-size: 11px;
+	margin: 0px;
+	color:#3F1F03;
+	background-image: url(images/bg_all.gif);
+	padding: 0px;
+}
+#table_utama { 
+	padding: 0px;
+	height:auto;
+	margin: auto;  
+	width: 694px; 
+	background-image: url(images/bg_utama.gif); 
+	background-repeat: repeat-y;
+}
+td .caribuku {
+	background-image: url(images/bg_caribuku.gif);
+}
+#formcaribuku form{
+	padding-left: 25px;
+	padding-right: 5px;
+	width: 176px;
+}
+#formcaribuku form select {
+	font-family: Tahoma, Helvetica, sans-serif; 
+	font-size: 11px;
+	color:#3F1F03;
+	width: 115px;
+	height: 20px;
+	background-color:#FFFFFF;
+}
+#formcaribuku form input {
+	font-family: Tahoma, Helvetica, sans-serif; 
+	font-size: 11px;
+	color:#3F1F03;
+	width: 160px;
+	height: 16px;
+	text-align:center;
+	background-color:#FFFFFF;
+	float:right;
+}
+#formcaribuku form input.button {
+	width: 43px; 
+	height: 20px;
+}
+#form-login form{
+	padding-left: 25px;
+	padding-right: 5px;
+	width: 176px;
+}
+#form-login form select {
+	font-family: Tahoma, Helvetica, sans-serif; 
+	font-size: 11px;
+	color:#3F1F03;
+	width: 115px;
+	height: 20px;
+	background-color:#FFFFFF;
+}
+#form-login form input {
+	font-family: Tahoma, Helvetica, sans-serif; 
+	font-size: 11px;
+	color:#3F1F03;
+	width: 110px;
+	height: 16px;
+	background-color:#FFFFFF;
+	float:right;
+}
+#form-login form input.button {
+	width: 51px; 
+	height: 20px;
+}
+td .menukiri {
+	height: 26px;
+	background-image: url(images/bg_menukiri_a.gif);
+}
+td .menukiri a {
+	height: 21px;
+	font-weight:bold;
+	padding-left: 45px;
+	padding-top: 5px;
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 11px;
+	color:#623A1E;
+	display: block;
+	text-decoration: none;
+}
+td .menukiri a:hover {
+	color:#7C3F09;
+	background-image: url(images/bg_menukiri_ahover.gif);
+}
+td .menuatas {
+	height: 37px;
+	width: 95px;
+	background-image: url(images/bg_menuatas_a.gif);
+}
+td .menuatas a {
+	height: 27px;
+	padding-top: 10px;
+	font-family: Arial, Helvatica, sans-serif; 
+	font-size: 11px;
+	color:#613803;
+	text-align:center;
+	display: block;
+	text-decoration: none;
+}
+td .menuatas a:hover {
+	color:#000000;
+	background-image: url(images/bg_menuatas_ahover.gif);
+}
+td .bawah {
+	background-image: url(images/bot_menurght.gif);
+	padding-left: 3px;
+}
+td .isi-atas {
+	background-image: url(images/bg_bar-isi-atas.gif);
+	height: 30px;
+	padding-left: 10px;
+	padding-bottom: 4px;
+}
+.link01 a{
+	color: #623A1E;
+	font-weight: bold;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding: 2px 3px 2px 4px;
+	border: 1px solid #DEC681;
+	text-decoration: none;
+	background-color:#FFF0C3;
+}
+.link01 a:hover{
+	color: #734926;
+	background-color:#FFFFFF;
+	border: 1px solid #999999;
+	text-decoration: none;
+}
+.link02 {
+	color: #623A1E;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	padding: 2px 3px 2px 4px;
+	text-decoration: none;
+}
+.link02 a{
+	color: #734926;
+	padding: 2px 3px 2px 4px;
+	text-decoration: none;
+}
+.link02 a:hover{
+	background-color: #FFCC33;
+	text-decoration: none;
+}
+td .buku {
+	padding: 0px 15px 0px 20px;
+	line-height: 17px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+td .buku .tanggal{
+	font-size: 10px;
+	text-transform:uppercase;
+}
+td .buku .newsisi{
+	font-size: 11px;
+	padding: 4px 0px 4px 0px;
+}
+td .buku .judul {
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color:#993300;
+	}
+td .buku img {
+	padding: 6px 6px 6px 6px;
+	border:#CCCCCC solid 1px;
+	background-color:#FFFFCC;
+}
+td .bukulain a {
+	border-bottom:#CCCCCC solid 1px;
+	padding: 3px 3px 3px 10px;
+	display:block;
+	color:#663300;
+	text-decoration:none;
+	font-weight: bold;
+}
+td .bukulain a:hover {
+	background-color:#FFFFCC;
+	display:block;
+}
+.katalog {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 18px;
+	border-bottom: #CCCCCC 1px solid;
+	color:#333333;
+}
+.halaman a{
+	color: #623A1E;
+	font-weight: bold;
+	line-height: 18px;
+	padding: 2px 3px 2px 4px;
+	border-right: 1px solid #DFCBAA;
+	text-decoration: none;
+}
+.halaman a:hover{
+	color: #734926;
+	background-color:#FFCC00;
+	border-top: 1px solid #DFCBAA;
+	text-decoration: none;
+}
+.info-login {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	letter-spacing: -1px;
+}
+form .daftar input {
+	font-family: Tahoma, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#3F1F03;
+	height: 16px;
+	padding-left: 2px;
+	background-color:#FFFBEC;
+	border: #996633 solid 1px;
+}
+form .daftar select {
+	font-family: Tahoma, Helvetica, sans-serif; 
+	font-size: 11px;
+	color:#3F1F03;
+	height: 17px;
+	padding-left: 2px;
+	background-color:#FFFBEC;
+}
+form .daftar textarea {
+	font-family: Tahoma, Helvetica, sans-serif; 
+	font-size: 11px;
+	color:#3F1F03;
+	padding-left: 2px;
+	background-color:#FFFBEC;
+}
+form .daftar input.buttonbrows {
+	font-weight: bold;
+	height: 23px;
+	border: #663300 outset 1px;
+}
+form .daftar input.butbelanja {
+	font-weight: bold;
+	height: 21px;
+	border: #CC9900 inset 1px;
+	background-color: #E4C76D;
+	}
+.txt-list-warn {
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:11px;
+	color: #990000;
+	font-weight: bold;
+}
+#h5 {
+	color: #402000;
+	font-size: 12px;
+	padding: 2px;
+	text-align:center;
+	background-color:#E8DEA8;
+	border-bottom:#999999 1px solid;
+}
+#h5deui {
+	color: #402000;
+	font-size: 12px;
+	padding: 2px;
+	text-align:center;
+	background-color:#E8DEA8;
+	border-bottom:#999999 1px solid;
+}

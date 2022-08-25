@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>.:: R&D - Texture ::.</title>
+
+<link href="Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-4D754B5C
+
+var tbltexture_DatePicker_TextureDate = new Object(); 
+tbltexture_DatePicker_TextureDate.format           = "dd/mm/yyyy";
+tbltexture_DatePicker_TextureDate.style            = "Styles/Blueprint-Versi3/Style.css";
+tbltexture_DatePicker_TextureDate.relativePathPart = "";
+tbltexture_DatePicker_TextureDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//tbltextureButton_Delete_OnClick @4-78A66609
+function tbltextureButton_Delete_OnClick()
+{
+    var result;
+//End tbltextureButton_Delete_OnClick
+
+//Confirmation Message @5-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close tbltextureButton_Delete_OnClick @4-BC33A33A
+    return result;
+}
+//End Close tbltextureButton_Delete_OnClick
+
+//bind_events @1-41415A97
+function bind_events() {
+    addEventHandler("tbltextureButton_Delete", "click", tbltextureButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+
+<!-- BEGIN Record tbltexture -->
+<form id="tbltexture" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Texture </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Texture Code</th>
+ 
+            <td>{TextureCode}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Description</th>
+ 
+            <td>{TextureDescription}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Date</th>
+ 
+            <td><input id="tbltextureTextureDate" maxlength="100" size="10" value="{TextureDate}" name="{TextureDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_TextureDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="tbltextureDatePicker_TextureDate"><img id="tbltextureDatePicker_TextureDate_Image" alt="Show Date Picker" src="Styles/Blueprint-Versi3/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_TextureDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Technical Draw</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload1 --><input id="tbltextureFileUpload1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbltextureFileUpload1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbltextureFileUpload1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --><font color="#FF0000">(600 x 750)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Photo1</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload2 --><input id="tbltextureFileUpload2ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbltextureFileUpload2FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbltextureFileUpload2DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload2 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Photo2</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload3 --><input id="tbltextureFileUpload3ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbltextureFileUpload3FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbltextureFileUpload3DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload3 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Photo3</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload4 --><input id="tbltextureFileUpload4ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbltextureFileUpload4FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbltextureFileUpload4DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload4 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Photo4</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload5 --><input id="tbltextureFileUpload5ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbltextureFileUpload5FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbltextureFileUpload5DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload5 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture Notes</th>
+ 
+            <td><textarea id="tbltextureTextureNotes" name="{TextureNotes_Name}" rows="15" cols="50">{TextureNotes}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tbltextureButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="tbltextureButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tbltexture --><br>
+</body>
+</html>

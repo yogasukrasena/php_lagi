@@ -1,0 +1,232 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AddInvoice1</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-252A7665
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//PTAutoFill1 Loading @48-2F5B6AC4
+function AddNewHeaderAttnPTAutoFill1_start(sender) {
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTAutoFill1.php?keyword=" + $("AddNewHeaderAttn").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            $("Email").value = valuesRow["Email"];
+            $("Address").value = valuesRow["Address"];
+            $("Phone").value = valuesRow["Phone"];
+            $("Fax").value = valuesRow["Fax"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//AddNewHeaderAttnPTDependentListBox1 Start @53-B6D11546
+function AddNewHeaderAttnPTDependentListBox1_start(sender) {
+    var dependentElement = $("AddNewHeaderAttn" + sender.id.substring(21));
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onLoading: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+        },
+        onSuccess: function(transport) {
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End AddNewHeaderAttnPTDependentListBox1 Start
+
+//AddNewHeaderDeliveryContactIDPTDependentListBox2 Start @59-235FCE63
+function AddNewHeaderDeliveryContactIDPTDependentListBox2_start(sender) {
+    var dependentElement = $("AddNewHeaderDeliveryContactID" + sender.id.substring(29));
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onLoading: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+        },
+        onSuccess: function(transport) {
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End AddNewHeaderDeliveryContactIDPTDependentListBox2 Start
+
+//PTAutoFill2 Loading @60-69DCFA48
+function AddNewHeaderDeliveryContactIDPTAutoFill2_start(sender) {
+    new Ajax.Request("services/ListQuotation_AddNewHeader_DeliveryContactID_PTAutoFill1.php?keyword=" + $("AddNewHeaderDeliveryContactID").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            $("DeliveryAddress").value = valuesRow["Address"];
+            $("DeliveryPhone").value = valuesRow["Phone"];
+            $("DeliveryFax").value = valuesRow["Fax"];
+            $("DeliveryEmail").value = valuesRow["Email"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill2 Loading
+
+//bind_events @1-F6D1F7E9
+function bind_events() {
+    addEventHandler("AddNewHeaderAddressID", "change", AddNewHeaderAttnPTDependentListBox1_start);
+    addEventHandler("AddNewHeaderDeliveryAddressID", "change", AddNewHeaderDeliveryContactIDPTDependentListBox2_start);
+    addEventHandler("AddNewHeaderAttn", "change", AddNewHeaderAttnPTAutoFill1_start);
+    addEventHandler("AddNewHeaderDeliveryContactID", "change", AddNewHeaderDeliveryContactIDPTAutoFill2_start);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record AddNewHeader -->
+<form id="AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Invoice Number</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>Invoice No</th>
+ 
+            <td colspan="3"><input id="AddNewHeaderInvoiceNo" maxlength="16" size="16" value="{InvoiceNo}" name="{InvoiceNo_Name}">&nbsp;<input id="AddNewHeaderQuotation_H_ID" type="hidden" value="{Quotation_H_ID}" name="{Quotation_H_ID_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client</th>
+ 
+            <td colspan="3">
+              <select id="AddNewHeaderClientID" name="{ClientID_Name}">
+                <option value="" selected>Select Value</option>
+ {ClientID_Options} 
+              </select>
+ <input id="AddNewHeaderProforma_H_ID" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Currency</th>
+ 
+            <td colspan="3">
+              <select id="AddNewHeaderCurrency" name="{Currency_Name}">
+                <option value="" selected>Select Value</option>
+ {Currency_Options} 
+              </select>
+ &nbsp;&nbsp;<input id="AddNewHeaderDocMaker" type="hidden" value="{DocMaker}" name="{DocMaker_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Invoice&nbsp;Address</th>
+ 
+            <td>
+              <select id="AddNewHeaderAddressID" name="{AddressID_Name}">
+                <option value="" selected>Select Value</option>
+ {AddressID_Options} 
+              </select>
+ </td> 
+            <td>Attn&nbsp;</td> 
+            <td>
+              <!-- BEGIN ListBox Attn -->
+              <select id="AddNewHeaderAttn" name="{Attn_Name}">
+                <option value="0" selected>Select Value</option>
+ {Attn_Options} 
+              </select>
+ &nbsp;&nbsp; <!-- END ListBox Attn --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Delivery Address&nbsp;</th>
+ 
+            <td>
+              <select id="AddNewHeaderDeliveryAddressID" name="{DeliveryAddressID_Name}">
+                <option value="" selected>Select Value</option>
+ {DeliveryAddressID_Options} 
+              </select>
+ </td> 
+            <td>Attn</td> 
+            <td>
+              <!-- BEGIN ListBox DeliveryContactID -->
+              <select id="AddNewHeaderDeliveryContactID" name="{DeliveryContactID_Name}">
+                <option value="0" selected>Select Value</option>
+ {DeliveryContactID_Options} 
+              </select>
+ <!-- END ListBox DeliveryContactID --></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">&nbsp; 
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record AddNewHeader --><br>
+<br>
+</body>
+</html>

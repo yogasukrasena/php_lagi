@@ -1,0 +1,161 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>.:: R&D - Stain Oxide ::.</title>
+
+<link href="Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-19AE6B10
+
+var tblstainoxide_DatePicker_StainOxideDate = new Object(); 
+tblstainoxide_DatePicker_StainOxideDate.format           = "dd/mm/yyyy";
+tblstainoxide_DatePicker_StainOxideDate.style            = "Styles/Blueprint-Versi3/Style.css";
+tblstainoxide_DatePicker_StainOxideDate.relativePathPart = "";
+tblstainoxide_DatePicker_StainOxideDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//tblstainoxideButton_Delete_OnClick @4-AD702420
+function tblstainoxideButton_Delete_OnClick()
+{
+    var result;
+//End tblstainoxideButton_Delete_OnClick
+
+//Confirmation Message @5-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close tblstainoxideButton_Delete_OnClick @4-BC33A33A
+    return result;
+}
+//End Close tblstainoxideButton_Delete_OnClick
+
+//bind_events @1-BCEF2F33
+function bind_events() {
+    addEventHandler("tblstainoxideButton_Delete", "click", tblstainoxideButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+
+<!-- BEGIN Record tblstainoxide -->
+<form id="tblstainoxide" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Stain Oxide </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Stain Oxide Code</th>
+ 
+            <td>{StainOxideCode}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Description</th>
+ 
+            <td>{StainOxideDescription}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Date</th>
+ 
+            <td><input id="tblstainoxideStainOxideDate" maxlength="100" size="10" value="{StainOxideDate}" name="{StainOxideDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_StainOxideDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="tblstainoxideDatePicker_StainOxideDate"><img id="tblstainoxideDatePicker_StainOxideDate_Image" alt="Show Date Picker" src="Styles/Blueprint-Versi3/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_StainOxideDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Technical Draw</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload1 --><input id="tblstainoxideFileUpload1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblstainoxideFileUpload1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblstainoxideFileUpload1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --><font color="#ff0000">(600 x 750)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Photo1</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload2 --><input id="tblstainoxideFileUpload2ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblstainoxideFileUpload2FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblstainoxideFileUpload2DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload2 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Photo2</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload3 --><input id="tblstainoxideFileUpload3ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblstainoxideFileUpload3FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblstainoxideFileUpload3DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload3 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Photo3</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload4 --><input id="tblstainoxideFileUpload4ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblstainoxideFileUpload4FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblstainoxideFileUpload4DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload4 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Photo4</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload5 --><input id="tblstainoxideFileUpload5ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblstainoxideFileUpload5FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblstainoxideFileUpload5DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload5 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide Notes</th>
+ 
+            <td><textarea id="tblstainoxideStainOxideNotes" name="{StainOxideNotes_Name}" rows="15" cols="50">{StainOxideNotes}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tblstainoxideButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="tblstainoxideButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblstainoxide --><br>
+</body>
+</html>

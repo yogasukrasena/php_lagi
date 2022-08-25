@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>EditCollectGroup</title>
+
+<link href="Styles/PinkPatterned/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-56D0AF56
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-88774A07
+
+var EditCollectGroup_DatePicker_GroupDate = new Object(); 
+EditCollectGroup_DatePicker_GroupDate.format           = "dd/mm/yyyy";
+EditCollectGroup_DatePicker_GroupDate.style            = "Styles/PinkPatterned/Style.css";
+EditCollectGroup_DatePicker_GroupDate.relativePathPart = "";
+EditCollectGroup_DatePicker_GroupDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record EditCollectGroup -->
+<form id="Panel2EditCollectGroup" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+            <td class="th">
+              <p><strong>Edit Collection in Group</strong></p>
+            </td> 
+            <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="Panel2EditCollectGroupGroupDate">Date</label></td> 
+            <td><input id="Panel2EditCollectGroupGroupDate" maxlength="100" size="10" value="{GroupDate}" name="{GroupDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_GroupDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="Panel2EditCollectGroupDatePicker_GroupDate"><img id="Panel2EditCollectGroupDatePicker_GroupDate_Image" alt="Show Date Picker" src="Styles/PinkPatterned/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_GroupDate --><label for="Panel2EditCollectGroupGroupHID" style="display: none;"></label></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Panel2EditCollectGroupClientCode">Client Code</label></td> 
+            <td><input id="Panel2EditCollectGroupClientCode" maxlength="50" value="{ClientCode}" name="{ClientCode_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Panel2EditCollectGroupClientDesc">Client Desc</label></td> 
+            <td><input id="Panel2EditCollectGroupClientDesc" maxlength="250" size="30" value="{ClientDesc}" name="{ClientDesc_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_group_hGroupPhoto">Photo</label></td> 
+            <td>
+              <!-- BEGIN FileUpload GroupPhoto --><input id="Panel2EditCollectGroupGroupPhotoControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><label for="Panel2EditCollectGroupGroupPhotoFileControl" style="display: none;"></label><input id="Panel2EditCollectGroupGroupPhotoFileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl --><label for="Panel2EditCollectGroupGroupPhotoDeleteControl">Delete</label><input id="Panel2EditCollectGroupGroupPhotoDeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload GroupPhoto --><font color="red">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="Panel2EditCollectGroupDiameter">Final Size </label></td> 
+            <td>Ø=<input id="Panel2EditCollectGroupDiameter" maxlength="12" size="5" value="{Diameter}" name="{Diameter_Name}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H=<input id="Panel2EditCollectGroupHeight" maxlength="12" size="5" value="{Height}" name="{Height_Name}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; W=<input id="Panel2EditCollectGroupWeight" maxlength="12" size="5" value="{Weight}" name="{Weight_Name}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L=<input id="Panel2EditCollectGroupLength" maxlength="12" size="5" value="{Length}" name="{Length_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="Panel2EditCollectGroupButton_Update" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Delete --><input class="Button" id="Panel2EditCollectGroupDelete" type="submit" alt="Button1" value="Delete" name="{Button_Name}"><!-- END Button Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record EditCollectGroup --><!-- END Panel Panel2 --><br>
+</body>
+</html>

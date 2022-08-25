@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Receive Payment</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-252A7665
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Grid Grid -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          <th>List of OutStanding Invoice : {lblClient}</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="9">Total Records:&nbsp;{ar_invoice_pay_invoice_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_invoice_h_id --><a href="{Sort_URL}" id="GridSorter_invoice_h_id">INVOICE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_invoice_h_id --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_proforma_h_id --><a href="{Sort_URL}" id="GridSorter_proforma_h_id">PROFORMA</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_proforma_h_id --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_pre_date --><a href="{Sort_URL}" id="GridSorter_pre_date">DUE DATE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_pre_date --></th>
+ 
+          <th>CURRENCY</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_amount --><a href="{Sort_URL}" id="GridSorter_amount">SUB TOTAL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_amount --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Diskon --><a href="{Sort_URL}" id="GridSorter_Diskon">DISCOUNT</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Diskon -->&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Packaging --><a href="{Sort_URL}" id="GridSorter_Packaging">PACKAGING</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Packaging --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Fumigation --><a href="{Sort_URL}" id="GridSorter_Fumigation">FUMIGATION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Fumigation -->&nbsp;</th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_GrandTot --><a href="{Sort_URL}" id="GridSorter_GrandTot">GRAND TOTAL</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_GrandTot -->&nbsp;</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><input id="GridInvoice_SH_ID" style="WIDTH: 63px; HEIGHT: 22px" type="hidden" size="8" value="{Invoice_SH_ID}" name="{Invoice_SH_ID_Name}"><a href="{InvoiceNo_Src}" id="GridInvoiceNo_{Grid:rowNumber}">{InvoiceNo}</a><input id="GridInvoice_H_ID" type="hidden" value="{Invoice_H_ID}" name="{Invoice_H_ID_Name}">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right"><input id="Gridproforma_h_id_{Grid:rowNumber}" type="hidden" value="{proforma_h_id}" name="{proforma_h_id_Name}">{lblProforma}&nbsp;</td> 
+          <td>{due_date}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{lblCurrency}<input id="GridCurrencyID" type="hidden" value="{CurrencyID}" name="{CurrencyID_Name}">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{SubTotal}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Discount}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Packaging}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Fumigation}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{GrandTotal}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="9">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="9">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option value="" selected>-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Grid --><br>
+</body>
+</html>

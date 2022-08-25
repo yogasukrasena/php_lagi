@@ -1,0 +1,297 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Show Sample Ceramic</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<!--<link href="Styles/Print-Gaya/Style.css" type="text/css" rel="stylesheet">-->
+<link href="../includes/graphite.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record AddSampleCeramic -->
+<form id="AddSampleCeramic" name="{HTMLFormName}" action="{Action}" method="post">
+  <table class="GraphiteFormTABLE" cellspacing="1" cellpadding="3">
+    <tr>
+      <td class="GraphiteColumnTD" align="center" colspan="6">
+        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td valign="bottom" align="center" height="50">
+              <h1>SAMPLE CERAMIC</h1>
+            </td> 
+            <td height="50"><img height="50" src="../images/GayaKecil.jpg" width="300"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- BEGIN Error -->
+    <tr>
+      <td class="GraphiteErrorDataTD" colspan="6">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td class="GraphiteDataTD" nowrap align="right" colspan="6">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD" valign="center" nowrap align="middle" colspan="6">Technical Drawing</th>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" valign="middle" nowrap align="center" colspan="6"><img id="AddSampleCeramicTechDraw" height="750" src="../upload/{TechDraw}" width="600"></td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="6">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <th class="GraphiteFieldCaptionTD" colspan="6">Photo</th>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" colspan="6"></td>
+    </tr>
+ 
+    <tr>
+      <td colspan="6">
+        <table cellspacing="1" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td class="GraphiteDataTD" nowrap align="center"><img id="AddSampleCeramicPhoto1" height="200" alt=" " src="../upload/{Photo1}" width="200" align="center">&nbsp;</td> 
+            <td class="GraphiteDataTD" nowrap align="center"><img id="AddSampleCeramicPhoto2" height="200" alt=" " src="../upload/{Photo2}" width="200" align="center">&nbsp;</td> 
+            <td class="GraphiteDataTD" nowrap align="center"><img id="AddSampleCeramicPhoto3" height="200" alt=" " src="../upload/{Photo3}" width="200" align="center">&nbsp;</td> 
+            <td class="GraphiteDataTD" nowrap align="center"><img id="AddSampleCeramicPhoto4" height="200" alt=" " src="../upload/{Photo4}" width="200" align="center">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" nowrap align="center" colspan="2">Code</td> 
+      <td class="GraphiteFieldCaptionTD" align="center" colspan="4">Description</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">{SampleCode}&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{SampleDescription}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="6">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" nowrap align="center" colspan="2">Barcode</td> 
+      <td class="GraphiteFieldCaptionTD" align="center" colspan="2">Client Code</td> 
+      <td class="GraphiteFieldCaptionTD" align="center" colspan="2">Client Description</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="2">{ClientCode}&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="2">{ClientDescription}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="6">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" nowrap colspan="6">TECHNICAL NOTES</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Clay&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4"><input id="AddSampleCeramicClay" type="hidden" value="{Clay}" name="{Clay_Name}">{ClayCode}-{ClayDesc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Clay Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{ClayNote}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">KG&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{ClayKG}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Build Technique&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{BuildTech}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{BuildTechNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Rim&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{Rim}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Feet&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{Feet}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Casting&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157"><input id="AddSampleCeramicCasting1" type="hidden" value="{Casting1}" name="{Casting1_Name}">{Casting1Code}{Casting1Desc}</td> 
+      <td class="GraphiteDataTableTD" width="160"><input id="AddSampleCeramicCasting2" type="hidden" value="{Casting2}" name="{Casting2_Name}">{Casting2Code}{Casting2Desc}</td> 
+      <td class="GraphiteDataTableTD" width="131"><input id="AddSampleCeramicCasting3" type="hidden" value="{Casting3}" name="{Casting3_Name}">{Casting3Code}{Casting3Desc}</td> 
+      <td class="GraphiteDataTableTD" width="135"><input id="AddSampleCeramicCasting4" type="hidden" value="{Casting4}" name="{Casting4_Name}">{Casting4Code}{Casting4Desc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Casting Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{CastingNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Estruder&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157"><input id="AddSampleCeramicEstruder1" type="hidden" value="{Estruder1}" name="{Estruder1_Name}">{Estruder1Desc}</td> 
+      <td class="GraphiteDataTableTD" width="160"><input id="AddSampleCeramicEstruder2" type="hidden" value="{Estruder2}" name="{Estruder2_Name}">{Estruder2Desc}</td> 
+      <td class="GraphiteDataTableTD" width="131"><input id="AddSampleCeramicEstruder3" type="hidden" value="{Estruder3}" name="{Estruder3_Name}">{Estruder3Desc}</td> 
+      <td class="GraphiteDataTableTD" width="135"><input id="AddSampleCeramicEstruder4" type="hidden" value="{Estruder4}" name="{Estruder4_Name}">{Estruder4Desc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Estruder Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{EstruderNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Texture&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157"><input id="AddSampleCeramicTexture1" type="hidden" value="{Texture1}" name="{Texture1_Name}">{Texture1Desc}</td> 
+      <td class="GraphiteDataTableTD" width="160"><input id="AddSampleCeramicTexture2" type="hidden" value="{Texture2}" name="{Texture2_Name}">{Texture2Desc}</td> 
+      <td class="GraphiteDataTableTD" width="131"><input id="AddSampleCeramicTexture3" type="hidden" value="{Texture3}" name="{Texture3_Name}">{Texture3Desc}</td> 
+      <td class="GraphiteDataTableTD" width="135"><input id="AddSampleCeramicTexture4" type="hidden" value="{Texture4}" name="{Texture4_Name}">{Texture4Desc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Texture Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{TextureNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Tools&nbsp;</td> 
+      <td class="GraphiteDataTD" align="center"><input id="AddSampleCeramicTools1" type="hidden" value="{Tools1}" name="{Tools1_Name}"><img id="AddSampleCeramicToolsPic1" height="150" alt=" " src="../upload/{ToolsPic1}" width="150" align="center">&nbsp;</td> 
+      <td class="GraphiteDataTD" align="center"><input id="AddSampleCeramicTools2" type="hidden" value="{Tools2}" name="{Tools2_Name}"><img id="AddSampleCeramicToolsPic2" height="150" alt=" " src="../upload/{ToolsPic2}" width="150" align="center">&nbsp;</td> 
+      <td class="GraphiteDataTD" align="center"><input id="AddSampleCeramicTools3" type="hidden" value="{Tools3}" name="{Tools3_Name}"><img id="AddSampleCeramicToolsPic3" height="150" alt=" " src="../upload/{ToolsPic3}" width="150" align="center">&nbsp;</td> 
+      <td class="GraphiteDataTD" align="center"><input id="AddSampleCeramicTools4" type="hidden" value="{Tools4}" name="{Tools4_Name}"><img id="AddSampleCeramicToolsPic4" height="150" alt=" " src="../upload/{ToolsPic4}" width="150" align="center">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Tools Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{ToolsNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Engobe&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157"><input id="AddSampleCeramicEngobe1" type="hidden" value="{Engobe1}" name="{Engobe1_Name}">{Engobe1Desc}</td> 
+      <td class="GraphiteDataTableTD" width="160"><input id="AddSampleCeramicEngobe2" type="hidden" value="{Engobe2}" name="{Engobe2_Name}">{Engobe2Desc}</td> 
+      <td class="GraphiteDataTableTD" width="131"><input id="AddSampleCeramicEngobe3" type="hidden" value="{Engobe3}" name="{Engobe3_Name}">{Engobe3Desc}</td> 
+      <td class="GraphiteDataTableTD" width="135"><input id="AddSampleCeramicEngobe4" type="hidden" value="{Engobe4}" name="{Engobe4_Name}">{Engobe4Desc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Engobe Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{EngobeNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Bisque Temp&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{BisqueTemp}&nbsp;°</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Stain &amp; Oxide&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157"><input id="AddSampleCeramicStainOxide1" type="hidden" value="{StainOxide1}" name="{StainOxide1_Name}">{StainOxide1Desc}</td> 
+      <td class="GraphiteDataTableTD" width="160"><input id="AddSampleCeramicStainOxide2" type="hidden" value="{StainOxide2}" name="{StainOxide2_Name}">{StainOxide2Desc}</td> 
+      <td class="GraphiteDataTableTD" width="131"><input id="AddSampleCeramicStainOxide3" type="hidden" value="{StainOxide3}" name="{StainOxide3_Name}">{StainOxide3Desc}</td> 
+      <td class="GraphiteDataTableTD" width="135"><input id="AddSampleCeramicStainOxide4" type="hidden" value="{StainOxide4}" name="{StainOxide4_Name}">{StainOxide4Desc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Stain &amp; Oxide Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{StainOxideNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Glaze&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157"><input id="AddSampleCeramicGlaze1" type="hidden" value="{Glaze1}" name="{Glaze1_Name}">{Glaze1Desc}</td> 
+      <td class="GraphiteDataTableTD" width="160"><input id="AddSampleCeramicGlaze2" type="hidden" value="{Glaze2}" name="{Glaze2_Name}">{Glaze2Desc}</td> 
+      <td class="GraphiteDataTableTD" width="131"><input id="AddSampleCeramicGlaze3" type="hidden" value="{Glaze3}" name="{Glaze3_Name}">{Glaze3Desc}</td> 
+      <td class="GraphiteDataTableTD" width="135"><input id="AddSampleCeramicGlaze4" type="hidden" value="{Glaze4}" name="{Glaze4_Name}">{Glaze4Desc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Density&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157">{GlazeDensity1}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="160">{GlazeDensity2}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="131">{GlazeDensity3}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="135">{GlazeDensity4}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Glaze Technique&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{GlazeTechnique}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Glaze Temp&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{GlazeTemp}&nbsp;°&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Glaze Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{GlazeNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Firing Atmosphere&nbsp;</td> 
+      <td class="GraphiteDataTD" colspan="4">{Firing}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Firing Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{FiringNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Final Size&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="160">W=&nbsp;{Width}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="131">L=&nbsp;{Length}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157">Ø=&nbsp;{Diameter}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="135">H=&nbsp;{Height}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{FinalSizeNote}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Design Material&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157"><input id="AddSampleCeramicDesignMat1" type="hidden" value="{DesignMat1}" name="{DesignMat1_Name}">{DesignMat1Desc}</td> 
+      <td class="GraphiteDataTableTD" width="160"><input id="AddSampleCeramicDesignMat2" type="hidden" value="{DesignMat2}" name="{DesignMat2_Name}">{DesignMat2Desc}</td> 
+      <td class="GraphiteDataTableTD" width="131"><input id="AddSampleCeramicDesignMat3" type="hidden" value="{DesignMat3}" name="{DesignMat3_Name}">{DesignMat3Desc}</td> 
+      <td class="GraphiteDataTableTD" width="135"><input id="AddSampleCeramicDesignMat4" type="hidden" value="{DesignMat4}" name="{DesignMat4_Name}">{DesignMat4Desc}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavTD" nowrap colspan="2">Quantity&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="157">{DesignMatQty1}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="160">{DesignMatQty2}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="131">{DesignMatQty3}&nbsp;</td> 
+      <td class="GraphiteDataTableTD" width="135">{DesignMatQty4}&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteNavNotesTD" nowrap colspan="2">Notes&nbsp;</td> 
+      <td class="GraphiteDataTDNotes" colspan="4">{DesignMatNote}&nbsp;</td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AddSampleCeramic --><br>
+</body>
+</html>

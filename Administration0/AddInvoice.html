@@ -1,0 +1,521 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Invoice</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+
+function openDialog(url, width, height, returnFunc, args) {
+        if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+                dialogWin.returnFunc = returnFunc
+                dialogWin.args = args
+                dialogWin.url = url
+                dialogWin.width = width
+                dialogWin.height = height
+                                dialogWin.scrollbars = scrollbars
+                dialogWin.name = (new Date()).getSeconds().toString()
+
+                if (Nav4) {
+                        dialogWin.left = window.screenX + 
+                           ((window.outerWidth - dialogWin.width) / 2)
+                        dialogWin.top = window.screenY + 
+                           ((window.outerHeight - dialogWin.height) / 2)
+                        var attr = "screenX=" + dialogWin.left + 
+                           ",screenY=" + dialogWin.top + ",resizable=yes,width=" + 
+                           dialogWin.width + ",height=" + dialogWin.height + ",scrollbars=yes"
+                } else {
+                        dialogWin.left = (screen.width - dialogWin.width) / 2
+                        dialogWin.top = (screen.height - dialogWin.height) / 2
+                        var attr = "left=" + dialogWin.left + ",top=" + 
+                           dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+                           ",height=" + dialogWin.height + ",scrollbars=yes"
+                }
+                
+                dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+                dialogWin.win.focus()
+        } else {
+                dialogWin.win.focus()
+        }
+}
+
+function StrToFloat(str)
+{
+    if (str.indexOf(",") != -1) {
+                str = str.replace(",","");
+    }
+    var result = parseFloat(str);
+    if (isNaN(result)) {
+                result = 0.0;
+    }
+    return result;
+}
+
+function Show_Total()
+{
+ var TotalSum=0;
+ var Summ;
+ initAddNewDetailElements();
+
+    for(var i = 0; i < AddNewDetailElements.length; i++){
+          Summ = StrToFloat(AddNewDetailElements[i][AddNewDetailUnitPriceID].value) *
+            StrToFloat(AddNewDetailElements[i][AddNewDetailQtyID].value);
+      TotalSum = TotalSum + Summ;
+      if (Summ == 0) {
+        AddNewDetailElements[i][AddNewDetailSumPriceID].value = "";
+          } else {
+        AddNewDetailElements[i][AddNewDetailSumPriceID].value = Math.round(Summ*100)/100;
+          }
+    }
+    document.AddNewDetail.Total_price.value = Math.round(TotalSum*100)/100;
+}
+
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-FE4876B4
+
+var AddNewHeader_DatePicker_DueDate = new Object(); 
+AddNewHeader_DatePicker_DueDate.format           = "dd/mm/yyyy";
+AddNewHeader_DatePicker_DueDate.style            = "Styles/Fresh/Style.css";
+AddNewHeader_DatePicker_DueDate.relativePathPart = "";
+AddNewHeader_DatePicker_DueDate.themeVersion = "3.0";
+
+var AddNewHeader_DatePicker_InvoiceDate = new Object(); 
+AddNewHeader_DatePicker_InvoiceDate.format           = "dd/mm/yyyy";
+AddNewHeader_DatePicker_InvoiceDate.style            = "Styles/Fresh/Style.css";
+AddNewHeader_DatePicker_InvoiceDate.relativePathPart = "";
+AddNewHeader_DatePicker_InvoiceDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//AddNewDetailQty_OnChange @54-C5448CDB
+function AddNewDetailQty_OnChange()
+{
+    var result;
+//End AddNewDetailQty_OnChange
+
+//Custom Code @55-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close AddNewDetailQty_OnChange @54-BC33A33A
+    return result;
+}
+//End Close AddNewDetailQty_OnChange
+
+//AddNewDetailAddItemBtn_OnClick @61-10805450
+function AddNewDetailAddItemBtn_OnClick()
+{
+    var result;
+//End AddNewDetailAddItemBtn_OnClick
+
+//Custom Code @62-2A29BDB7
+  var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+  var IE  = (document.all) ? 1 : 0;
+  var O = typeof(opera) != "undefined";
+  var FormState = document.AddNewDetail.FormState.value.split(";");
+  var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+  
+    if (parseInt(FormState[0]) == 0 ) {
+        FormState[0] = 1;
+    }
+  
+    var i;
+    
+    for (i=FormState[0]; i<AllLength; i++) {
+       var objRow = document.getElementById("row"+i);
+       if (NS6 || O) {
+         if (objRow.style.display == "none") {
+             objRow.style.display = '';
+             break;
+         }
+       } else {
+         if (objRow.style.display == "none") {
+             objRow.style.display = "block"; 
+             break;
+         }
+           }
+    }
+  
+    if (i >= AllLength) 
+        document.forms["AddNewDetail"].AddItemBtn.disabled = true;
+//End Custom Code
+
+//Close AddNewDetailAddItemBtn_OnClick @61-BC33A33A
+    return result;
+}
+//End Close AddNewDetailAddItemBtn_OnClick
+
+//AddNewDetailTotal_OnClick @111-0384B267
+function AddNewDetailTotal_OnClick()
+{
+    var result;
+//End AddNewDetailTotal_OnClick
+
+//Custom Code @112-2A29BDB7
+var Invoice_H_ID = AddNewHeader.Invoice_H_ID.value;
+//var Proforma_H_ID = AddNewHeader.Proforma_H_ID.value;
+var TotalPrice = AddNewDetail.Total_price.value;
+openDialog('InvoiceTotal.php?Invoice_H_ID='+Invoice_H_ID+'&TP='+TotalPrice, 300,250);return false;
+//End Custom Code
+
+//Close AddNewDetailTotal_OnClick @111-BC33A33A
+    return result;
+}
+//End Close AddNewDetailTotal_OnClick
+
+//AddNewDetail_OnLoad @51-B3D25386
+function AddNewDetail_OnLoad()
+{
+    var result;
+//End AddNewDetail_OnLoad
+
+//Custom Code @116-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close AddNewDetail_OnLoad @51-BC33A33A
+    return result;
+}
+//End Close AddNewDetail_OnLoad
+
+//PTAutoFill1 Loading @13-CF521B72
+function AddNewHeaderInvoiceAddressContactPTAutoFill1_start(sender) {
+    new Ajax.Request("services/AddInvoice_tbladminist_invoice_h_InvoiceAddressContact_PTAutoFill1.php?keyword=" + $("AddNewHeaderInvoiceAddressContact").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            getSameLevelCtl("AddNewHeaderInvoiceAddress", sender).value = valuesRow["Address"];
+            getSameLevelCtl("AddNewHeaderInvoicePhone", sender).value = valuesRow["Phone"];
+            getSameLevelCtl("AddNewHeaderInvoiceFax", sender).value = valuesRow["Fax"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//PTAutoFill2 Loading @20-83CE125B
+function AddNewHeaderDeliveryAddressContactPTAutoFill2_start(sender) {
+    new Ajax.Request("services/AddInvoice_tbladminist_invoice_h_DeliveryAddressContact_PTAutoFill1.php?keyword=" + $("AddNewHeaderDeliveryAddressContact").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            getSameLevelCtl("AddNewHeaderDeliveryPhone", sender).value = valuesRow["Phone"];
+            getSameLevelCtl("AddNewHeaderDeliveryFax", sender).value = valuesRow["Fax"];
+            getSameLevelCtl("AddNewHeaderDeliveryAddress", sender).value = valuesRow["Address"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill2 Loading
+
+//bind_events @1-4973B401
+function bind_events() {
+    addEventHandler("AddNewHeaderInvoiceAddressContact", "change", AddNewHeaderInvoiceAddressContactPTAutoFill1_start);
+    addEventHandler("AddNewHeaderDeliveryAddressContact", "change", AddNewHeaderDeliveryAddressContactPTAutoFill2_start);
+    addEventHandler("AddNewDetailQty", "change", AddNewDetailQty_OnChange);
+    addEventHandler("AddNewDetailAddItemBtn", "click", AddNewDetailAddItemBtn_OnClick);
+    addEventHandler("AddNewDetailTotal", "click", AddNewDetailTotal_OnClick);
+    addEventHandler("AddNewDetail", "load", AddNewDetail_OnLoad);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table style="WIDTH: 100%" cellpadding="3" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record AddNewHeader -->
+      <form id="AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="3" border="0">
+                <tr>
+                  <td class="HeaderLeft"></td> 
+                  <th>Add/Edit Invoice</th>
+ 
+                  <td class="HeaderRight"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="8">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th><strong>Invoice No</strong></th>
+ 
+                  <td><input id="AddNewHeaderInvoiceNo" maxlength="16" size="16" value="{InvoiceNo}" name="{InvoiceNo_Name}"></td> 
+                  <th><strong>Client Order Ref</strong><input id="AddNewHeaderProforma_H_ID" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}"></th>
+ 
+                  <td colspan="3"><input id="AddNewHeaderClientOrderRef" value="{ClientOrderRef}" name="{ClientOrderRef_Name}"></td> 
+                  <th><strong>Delivery Term</strong> </th>
+ 
+                  <td>
+                    <select id="AddNewHeaderDeliveryTerm" name="{DeliveryTerm_Name}">
+                      <option value="" selected>Select Value</option>
+                      {DeliveryTerm_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th><strong>Client</strong></th>
+ 
+                  <td>
+                    <select id="AddNewHeaderClientID" name="{ClientID_Name}">
+                      <option value="" selected>Select Value</option>
+                      {ClientID_Options}
+                    </select>
+ </td> 
+                  <th><strong>GAYA Order Ref</strong><input id="AddNewHeaderQuotation_H_ID" type="hidden" value="{Quotation_H_ID}" name="{Quotation_H_ID_Name}"></th>
+ 
+                  <td colspan="3"><input id="AddNewHeaderGayaOrderRef" value="{GayaOrderRef}" name="{GayaOrderRef_Name}"></td> 
+                  <th><strong>Payment Term</strong> </th>
+ 
+                  <td>
+                    <select id="AddNewHeaderPaymentTerm" name="{PaymentTerm_Name}">
+                      <option value="" selected>Select Value</option>
+                      {PaymentTerm_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <td><strong>Invoice Date</strong></td> 
+                  <td><input id="AddNewHeaderInvoiceDate" maxlength="100" size="10" value="{InvoiceDate}" name="{InvoiceDate_Name}">
+                    <!-- BEGIN DatePicker DatePicker_InvoiceDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddNewHeaderDatePicker_InvoiceDate"><img id="AddNewHeaderDatePicker_InvoiceDate_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_InvoiceDate --></td> 
+                  <th><strong>Packaging Cost</strong><input id="AddNewHeaderInvoice_H_ID" type="hidden" value="{Invoice_H_ID}" name="{Invoice_H_ID_Name}"></th>
+ 
+                  <td colspan="3"><input id="AddNewHeaderPackagingCost" size="5" value="{PackagingCost}" name="{PackagingCost_Name}"></td> 
+                  <th><strong>Due Date</strong></th>
+ 
+                  <td><input id="AddNewHeaderDueDate" maxlength="100" size="10" value="{DueDate}" name="{DueDate_Name}">
+                    <!-- BEGIN DatePicker DatePicker_DueDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddNewHeaderDatePicker_DueDate"><img id="AddNewHeaderDatePicker_DueDate_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a>&nbsp;<!-- END DatePicker DatePicker_DueDate --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                </tr>
+ 
+                <tr class="Controls">
+                </tr>
+ 
+                <tr class="Controls">
+                  <td><strong>Address</strong></td> 
+                  <th colspan="2">
+                  <select id="AddNewHeaderAddressID" name="{AddressID_Name}">
+                    <option value="" selected>Select Value</option>
+                    {AddressID_Options}
+                  </select>
+ </th>
+ 
+                  <td colspan="3"><strong>Currency</strong></td> 
+                  <th colspan="2">
+                  <select id="AddNewHeaderlblCurrency" name="{lblCurrency_Name}">
+                    <option value="" selected>Select Value</option>
+                    {lblCurrency_Options}
+                  </select>
+ </th>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th colspan="3"><strong>Attn Invoice&nbsp;Address&nbsp;</strong></th>
+ 
+                  <th colspan="5"><strong>Attn Delivery Address</strong></th>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th><strong>Attn</strong></th>
+ 
+                  <td colspan="2">
+                    <!-- BEGIN ListBox InvoiceAddressContact -->
+                    <select id="AddNewHeaderInvoiceAddressContact" name="{InvoiceAddressContact_Name}">
+                      <option value="" selected>Select Value</option>
+                      {InvoiceAddressContact_Options}
+                    </select>
+ <!-- END ListBox InvoiceAddressContact -->
+                    <!-- BEGIN TextBox lblInvoiceAddressContact --><input id="AddNewHeaderlblInvoiceAddressContact" readonly value="{lblInvoiceAddressContact}" name="{lblInvoiceAddressContact_Name}"><!-- END TextBox lblInvoiceAddressContact -->&nbsp; 
+                    <!-- BEGIN Link LinkChangeInvoiceContact --><a href="{LinkChangeInvoiceContact_Src}" id="AddNewHeaderLinkChangeInvoiceContact">Change</a><!-- END Link LinkChangeInvoiceContact --></td> 
+                  <th colspan="3"><strong>Attn</strong></th>
+ 
+                  <td colspan="2">
+                    <!-- BEGIN ListBox DeliveryAddressContact -->
+                    <select id="AddNewHeaderDeliveryAddressContact" name="{DeliveryAddressContact_Name}">
+                      <option value="" selected>Select Value</option>
+                      {DeliveryAddressContact_Options}
+                    </select>
+ &nbsp;<!-- END ListBox DeliveryAddressContact -->
+                    <!-- BEGIN TextBox lblDeliveryAddressContact --><input id="AddNewHeaderlblDeliveryAddressContact" readonly value="{lblDeliveryAddressContact}" name="{lblDeliveryAddressContact_Name}"><!-- END TextBox lblDeliveryAddressContact -->&nbsp; 
+                    <!-- BEGIN Link LinkChangeDeliveryContact --><a href="{LinkChangeDeliveryContact_Src}" id="AddNewHeaderLinkChangeDeliveryContact">Change</a><!-- END Link LinkChangeDeliveryContact --></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th><strong>Address</strong></th>
+ 
+                  <td colspan="2"><textarea id="AddNewHeaderInvoiceAddress" name="{InvoiceAddress_Name}" rows="3" readonly cols="30">{InvoiceAddress}</textarea></td> 
+                  <th colspan="3"><strong>Address</strong></th>
+ 
+                  <td colspan="2"><textarea id="AddNewHeaderDeliveryAddress" name="{DeliveryAddress_Name}" rows="3" readonly cols="30">{DeliveryAddress}</textarea></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th><strong>Phone</strong></th>
+ 
+                  <td colspan="2"><input id="AddNewHeaderInvoicePhone" readonly maxlength="15" size="15" value="{InvoicePhone}" name="{InvoicePhone_Name}"></td> 
+                  <th colspan="3"><strong>Phone</strong></th>
+ 
+                  <td colspan="2"><input id="AddNewHeaderDeliveryPhone" readonly maxlength="15" size="15" value="{DeliveryPhone}" name="{DeliveryPhone_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th><strong>Fax</strong></th>
+ 
+                  <td colspan="2"><input id="AddNewHeaderInvoiceFax" readonly maxlength="15" size="15" value="{InvoiceFax}" name="{InvoiceFax_Name}"></td> 
+                  <th colspan="3"><strong>Fax</strong></th>
+ 
+                  <td colspan="2"><input id="AddNewHeaderDeliveryFax" readonly maxlength="15" size="15" value="{DeliveryFax}" name="{DeliveryFax_Name}">&nbsp;</td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="8">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      &nbsp;<!-- END Record AddNewHeader -->
+      <p><br>
+      <!-- BEGIN EditableGrid AddNewDetail -->
+      <form id="AddNewDetail" name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>List of&nbsp;Invoice Item List</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="14">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Caption">
+                  <th>COLLECTION CODE </th>
+ 
+                  <th>DESIGN</th>
+ 
+                  <th>NAME</th>
+ 
+                  <th>CATEGORY</th>
+ 
+                  <th>INFO/SIZE&nbsp;</th>
+ 
+                  <th>TEXTURE&nbsp;</th>
+ 
+                  <th>COLOR&nbsp;</th>
+ 
+                  <th>MATERIAL&nbsp;</th>
+ 
+                  <th>UNIT PRICE </th>
+ 
+                  <th>QTY</th>
+ 
+                  <th>UNIT</th>
+ 
+                  <th>PRICE</th>
+ 
+                  <th colspan="2">DELETE</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr class="Error">
+                  <td colspan="14">{Error}</td>
+                </tr>
+                <!-- END RowError -->
+                <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+                  <td><input id="AddNewDetailInvoice_H_ID_{AddNewDetail:rowNumber}" type="hidden" value="{Invoice_H_ID}" name="{Invoice_H_ID_Name}">
+                    <!--{RowNameAttribute}-->
+                    <input id="AddNewDetailCollectID_{AddNewDetail:rowNumber}" type="hidden" value="{CollectID}" name="{CollectID_Name}"><input id="AddNewDetailCollectCode_{AddNewDetail:rowNumber}" readonly value="{CollectCode}" name="{CollectCode_Name}">&nbsp; <a href="{CollectPopup}" onclick="openDialog('PriceList.php?rowNumber={AddNewDetail:rowNumber}', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Fresh/Images/DatePicker.gif"></a> </td> 
+                  <td>
+                    <!-- BEGIN TextBox Design --><input id="AddNewDetailDesign_{AddNewDetail:rowNumber}" readonly value="{Design}" name="{Design_Name}"><!-- END TextBox Design --></td> 
+                  <td>
+                    <!-- BEGIN TextBox NameDesc --><input id="AddNewDetailNameDesc_{AddNewDetail:rowNumber}" readonly value="{NameDesc}" name="{NameDesc_Name}"><!-- END TextBox NameDesc --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Category --><input id="AddNewDetailCategory_{AddNewDetail:rowNumber}" readonly value="{Category}" name="{Category_Name}"><!-- END TextBox Category --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Size --><input id="AddNewDetailSize_{AddNewDetail:rowNumber}" readonly value="{Size}" name="{Size_Name}"><!-- END TextBox Size --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Texture --><input id="AddNewDetailTexture_{AddNewDetail:rowNumber}" readonly value="{Texture}" name="{Texture_Name}"><!-- END TextBox Texture -->&nbsp;</td> 
+                  <td>
+                    <!-- BEGIN TextBox Color --><input id="AddNewDetailColor_{AddNewDetail:rowNumber}" readonly value="{Color}" name="{Color_Name}"><!-- END TextBox Color -->&nbsp;</td> 
+                  <td>
+                    <!-- BEGIN TextBox Material --><input id="AddNewDetailMaterial_{AddNewDetail:rowNumber}" readonly value="{Material}" name="{Material_Name}"><!-- END TextBox Material --></td> 
+                  <td><input id="AddNewDetailUnitPrice_{AddNewDetail:rowNumber}" readonly maxlength="12" size="12" value="{UnitPrice}" name="{UnitPrice_Name}"></td> 
+                  <td><input id="AddNewDetailQty_{AddNewDetail:rowNumber}" maxlength="10" size="10" value="{Qty}" name="{Qty_Name}"></td> 
+                  <td><input id="AddNewDetailUnit_{AddNewDetail:rowNumber}" maxlength="15" size="15" value="{Unit}" name="{Unit_Name}"></td> 
+                  <td><input id="AddNewDetailSumPrice_{AddNewDetail:rowNumber}" disabled maxlength="12" size="12" value="{SumPrice}" name="{SumPrice_Name}"></td> 
+                  <td colspan="2">
+                    <!-- BEGIN CheckBox CheckBox_Delete --><input id="AddNewDetailCheckBox_Delete_{AddNewDetail:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="14">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="14"><input id="AddNewDetailTotal_price_{AddNewDetail:rowNumber}" type="hidden" value="{Total_price}" name="{Total_price_Name}">
+                    <!-- BEGIN Button AddItemBtn --><input class="Button" id="AddNewDetailAddItemBtn" type="button" value="Add Item" name="{Button_Name}"><!-- END Button AddItemBtn -->&nbsp; 
+                    <!-- BEGIN Button Total --><input class="Button" id="AddNewDetailTotal" type="button" value="Total Price" name="{Button_Name}"><!-- END Button Total -->
+                    <!-- BEGIN Button Button_Submit --><input class="Button" id="AddNewDetailButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid AddNewDetail --></p>
+    </td>
+  </tr>
+</table>
+<br>
+</body>
+</html>

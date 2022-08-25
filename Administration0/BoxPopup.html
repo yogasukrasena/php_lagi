@@ -1,0 +1,266 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>BoxPopup</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+
+function SetOpenerValue(Colid,CodeRnd,Design,NameDesc,Category,Sizenya,Texture,Colornya,Material)
+{
+  window.opener.document.AddNewDetail.AddNewDetailCollectID_{rowNumber}.value = Colid;
+  window.opener.document.AddNewDetail.AddNewDetailCollectCode_{rowNumber}.value = CodeRnd;
+  window.opener.document.AddNewDetail.AddNewDetailDesign_{rowNumber}.value = Design;
+  window.opener.document.AddNewDetail.AddNewDetailNameDesc_{rowNumber}.value = NameDesc;
+  window.opener.document.AddNewDetail.AddNewDetailCategory_{rowNumber}.value = Category;
+  window.opener.document.AddNewDetail.AddNewDetailSize_{rowNumber}.value = Sizenya;
+  window.opener.document.AddNewDetail.AddNewDetailTexture_{rowNumber}.value = Texture;
+  window.opener.document.AddNewDetail.AddNewDetailColor_{rowNumber}.value = Colornya;
+  window.opener.document.AddNewDetail.AddNewDetailMaterial_{rowNumber}.value = Material;
+  window.opener.focus();
+  window.close();
+}
+
+</script>
+</head>
+<body>
+&nbsp; 
+<table cellpadding="3" width="100%" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record Search -->
+      <form id="Search" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>Search Collection</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="8">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <th>Design</th>
+ 
+                  <td>
+                    <select id="Searchs_DesignName" name="{s_DesignName_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_DesignName_Options} 
+                    </select>
+ </td> 
+                  <th>Name</th>
+ 
+                  <td>
+                    <select id="Searchs_NameDesc" name="{s_NameDesc_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_NameDesc_Options} 
+                    </select>
+ </td> 
+                  <th>Category</th>
+ 
+                  <td>
+                    <select id="Searchs_CategoryName" name="{s_CategoryName_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_CategoryName_Options} 
+                    </select>
+ </td> 
+                  <th>Info/Size</th>
+ 
+                  <td>
+                    <select id="Searchs_SizeName" name="{s_SizeName_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_SizeName_Options} 
+                    </select>
+ </td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>Texture</th>
+ 
+                  <td>
+                    <select id="Searchs_TextureName" name="{s_TextureName_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_TextureName_Options} 
+                    </select>
+ </td> 
+                  <th>Color</th>
+ 
+                  <td>
+                    <select id="Searchs_ColorName" name="{s_ColorName_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_ColorName_Options} 
+                    </select>
+ </td> 
+                  <th>Material</th>
+ 
+                  <td>
+                    <select id="Searchs_MaterialName" name="{s_MaterialName_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_MaterialName_Options} 
+                    </select>
+ </td> 
+                  <th>Code</th>
+ 
+                  <td><input id="Searchs_CollectCode" maxlength="15" size="15" value="{s_CollectCode}" name="{s_CollectCode_Name}"></td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="8">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="SearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record Search -->
+      <p>
+      <!-- BEGIN Grid Grid -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                <th>List of Collection</th>
+ 
+                <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+              </tr>
+ 
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="13">Total Records:&nbsp;{tblcollect_category_tblco1_TotalRecords}</td> 
+              </tr>
+ 
+              <tr class="Caption">
+                <th>
+                <!-- BEGIN Sorter Sorter_CollectCode --><a href="{Sort_URL}" id="GridSorter_CollectCode">CODE</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CollectCode --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_DesignName --><a href="{Sort_URL}" id="GridSorter_DesignName">DESIGN</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DesignName --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_NameDesc --><a href="{Sort_URL}" id="GridSorter_NameDesc">NAME</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_NameDesc --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_CategoryName --><a href="{Sort_URL}" id="GridSorter_CategoryName">CATEGORY</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CategoryName --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_SizeName --><a href="{Sort_URL}" id="GridSorter_SizeName">INFO/SIZE</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SizeName --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_TextureName --><a href="{Sort_URL}" id="GridSorter_TextureName">TEXTURE</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_TextureName --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_ColorName --><a href="{Sort_URL}" id="GridSorter_ColorName">COLOR</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ColorName --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_MaterialName --><a href="{Sort_URL}" id="GridSorter_MaterialName">MATERIAL</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_MaterialName --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_Photo1 --><a href="{Sort_URL}" id="GridSorter_Photo1">PHOTO</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Photo1 --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_RealSellingPrice --><a href="{Sort_URL}" id="GridSorter_RealSellingPrice">SELLING PRICE</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_RealSellingPrice --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_LastUpdate --><a href="{Sort_URL}" id="GridSorter_LastUpdate">LAST UPDATE</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_LastUpdate --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_ClientCode --><a href="{Sort_URL}" id="GridSorter_ClientCode">CLIENT CODE</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ClientCode --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_ClientDescription --><a href="{Sort_URL}" id="GridSorter_ClientDescription">CLIENT DESCRIPTION</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ClientDescription --></th>
+ 
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td><a href="{CollectCode_Src}" onclick="SetOpenerValue('{CollectID}','{CollectCode}','{DesignName}','{NameDesc}','{CategoryName}','{SizeName}','{TextureName}','{ColorName}','{MaterialName}'); return false;" id="GridCollectCode_{Grid:rowNumber}">{CollectCode}</a>&nbsp;<input id="GridCollectID_{Grid:rowNumber}" type="hidden" value="{CollectID}" name="{CollectID_Name}">&nbsp;</td> 
+                <td>{DesignName}&nbsp;</td> 
+                <td>{NameDesc}&nbsp;</td> 
+                <td>{CategoryName}&nbsp;</td> 
+                <td>{SizeName}&nbsp;</td> 
+                <td>{TextureName}&nbsp;</td> 
+                <td>{ColorName}&nbsp;</td> 
+                <td>{MaterialName}&nbsp;</td> 
+                <td><img id="GridPhoto1_{Grid:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;</td> 
+                <td style="TEXT-ALIGN: right">{RealSellingPrice}&nbsp;</td> 
+                <td>{LastUpdate}&nbsp;</td> 
+                <td>{ClientCode}&nbsp;</td> 
+                <td>{ClientDescription}&nbsp;</td> 
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="13">No records</td> 
+              </tr>
+ <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="13">
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN First_On --><a href="{First_URL}">First </a> <!-- END First_On -->
+                  <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev </a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp;
+                  <!-- BEGIN Pages -->
+                  <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                  <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}">Next </a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}">Last </a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+              </tr>
+ 
+            </table>
+ </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid Grid --></p>
+ </td> 
+  </tr>
+</table>
+</body>
+</html>

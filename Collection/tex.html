@@ -1,0 +1,275 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>tex</title>
+
+<link rel="stylesheet" type="text/css" href="Styles/PinkPatterned/Style_doctype.css">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//tblcollect_masterButton_Delete_OnClick @76-DAB802F5
+function tblcollect_masterButton_Delete_OnClick()
+{
+    var result;
+//End tblcollect_masterButton_Delete_OnClick
+
+//Confirmation Message @77-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close tblcollect_masterButton_Delete_OnClick @76-BC33A33A
+    return result;
+}
+//End Close tblcollect_masterButton_Delete_OnClick
+
+//bind_events @1-CEE58471
+function bind_events() {
+    addEventHandler("tblcollect_masterButton_Delete", "click", tblcollect_masterButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record tblcollect_category_tblco -->
+<form id="tblcollect_category_tblco" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Search Tblcollect Category Tblco </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="16">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_category_tblcos_DesignCode">Design Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_DesignCode" maxlength="2" size="2" value="{s_DesignCode}" name="{s_DesignCode_Name}"></td> 
+            <td class="th"><label for="tblcollect_category_tblcos_NameCode">Name Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_NameCode" maxlength="2" size="2" value="{s_NameCode}" name="{s_NameCode_Name}"></td> 
+            <td class="th"><label for="tblcollect_category_tblcos_CategoryCode">Category Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_CategoryCode" maxlength="2" size="2" value="{s_CategoryCode}" name="{s_CategoryCode_Name}"></td> 
+            <td class="th"><label for="tblcollect_category_tblcos_SizeCode">Size Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_SizeCode" maxlength="2" size="2" value="{s_SizeCode}" name="{s_SizeCode_Name}"></td> 
+            <td class="th"><label for="tblcollect_category_tblcos_TextureCode">Texture Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_TextureCode" maxlength="2" size="2" value="{s_TextureCode}" name="{s_TextureCode_Name}"></td> 
+            <td class="th"><label for="tblcollect_category_tblcos_ColorCode">Color Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_ColorCode" maxlength="2" size="2" value="{s_ColorCode}" name="{s_ColorCode_Name}"></td> 
+            <td class="th"><label for="tblcollect_category_tblcos_MaterialCode">Material Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_MaterialCode" maxlength="2" size="2" value="{s_MaterialCode}" name="{s_MaterialCode_Name}"></td> 
+            <td class="th"><label for="tblcollect_category_tblcos_CollectCode">Collect Code</label></td> 
+            <td><input id="tblcollect_category_tblcos_CollectCode" maxlength="15" size="15" value="{s_CollectCode}" name="{s_CollectCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="16">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="tblcollect_category_tblcoButton_DoSearch" type="submit" alt="Search" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record tblcollect_category_tblco --><br>
+<!-- BEGIN Grid tblcollect_category_tblco1 -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>List of Tblcollect Category,tblcollect Color,tblcollect Design,tblcollect Master,tblcollect Material,tblcollect Name,tblcollect Size,tblcollect Texture </strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="9">Total Records:&nbsp;{tblcollect_category_tblco1_TotalRecords}</td> 
+        </tr>
+ 
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_CollectCode --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_CollectCode">Collect Code</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CollectCode --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_DesignName --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_DesignName">Design Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DesignName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_NameDesc --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_NameDesc">Name Desc</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_NameDesc --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_CategoryName --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_CategoryName">Category Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CategoryName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SizeName --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_SizeName">Size Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SizeName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_TextureName --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_TextureName">Texture Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_TextureName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_ColorName --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_ColorName">Color Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ColorName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_MaterialName --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_MaterialName">Material Name</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_MaterialName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Photo1 --><a href="{Sort_URL}" id="tblcollect_category_tblco1Sorter_Photo1">Photo1</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Photo1 --></th>
+ 
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{CollectCode_Src}" id="tblcollect_category_tblco1CollectCode_{tblcollect_category_tblco1:rowNumber}">{CollectCode}</a>&nbsp;</td> 
+          <td>{DesignName}&nbsp;</td> 
+          <td>{NameDesc}&nbsp;</td> 
+          <td>{CategoryName}&nbsp;</td> 
+          <td>{SizeName}&nbsp;</td> 
+          <td>{TextureName}&nbsp;</td> 
+          <td>{ColorName}&nbsp;</td> 
+          <td>{MaterialName}&nbsp;</td> 
+          <td>{Photo1}&nbsp;</td> 
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="9">No records</td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="9"><a href="{tblcollect_category_tblco1_Insert_Src}" id="tblcollect_category_tblco1tblcollect_category_tblco1_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option value="" selected>-</option>
+ {PageSize_Options} 
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid tblcollect_category_tblco1 --><br>
+<!-- BEGIN Record tblcollect_master -->
+<form id="tblcollect_master" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Add/Edit Tblcollect Master </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_masterDesignCode">Design Code</label></td> 
+            <td><input id="tblcollect_masterDesignCode" maxlength="2" size="2" value="{DesignCode}" name="{DesignCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_masterNameCode">Name Code</label></td> 
+            <td><input id="tblcollect_masterNameCode" maxlength="2" size="2" value="{NameCode}" name="{NameCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_masterCategoryCode">Category Code</label></td> 
+            <td><input id="tblcollect_masterCategoryCode" maxlength="2" size="2" value="{CategoryCode}" name="{CategoryCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_masterSizeCode">Size Code</label></td> 
+            <td><input id="tblcollect_masterSizeCode" maxlength="2" size="2" value="{SizeCode}" name="{SizeCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_masterTextureCode">Texture Code</label></td> 
+            <td><input id="tblcollect_masterTextureCode" maxlength="2" size="2" value="{TextureCode}" name="{TextureCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_masterColorCode">Color Code</label></td> 
+            <td><input id="tblcollect_masterColorCode" maxlength="2" size="2" value="{ColorCode}" name="{ColorCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcollect_masterMaterialCode">Material Code</label></td> 
+            <td><input id="tblcollect_masterMaterialCode" maxlength="2" size="2" value="{MaterialCode}" name="{MaterialCode_Name}"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="tblcollect_masterButton_Insert" type="submit" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tblcollect_masterButton_Update" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="tblcollect_masterButton_Delete" type="submit" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record tblcollect_master --><br>
+</body>
+</html>

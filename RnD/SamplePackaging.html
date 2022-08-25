@@ -1,0 +1,195 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>.:: R&D - Sample Packaging ::.</title>
+<meta content="CodeCharge Studio 4.00.00.015" name="GENERATOR">
+<link href="Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-252A7665
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//DEL      document.AddSamplePackaging.TotalDesMat1.value = document.AddSamplePackaging.QtyDesMat1.value * document.AddSamplePackaging.DesignMatUnitPrice1.value;
+//DEL      total_des_mat();
+
+//DEL      document.AddSamplePackaging.TotalDesMat2.value = (document.AddSamplePackaging.QtyDesMat2.value * document.AddSamplePackaging.DesignMatUnitPrice2.value);
+//DEL          total_des_mat();
+
+//DEL      document.AddSamplePackaging.TotalDesMat3.value = document.AddSamplePackaging.QtyDesMat3.value * document.AddSamplePackaging.DesignMatUnitPrice3.value;
+//DEL          total_des_mat();
+
+//DEL      document.AddSamplePackaging.TotalDesMat4.value = document.AddSamplePackaging.QtyDesMat4.value * document.AddSamplePackaging.DesignMatUnitPrice4.value;
+//DEL          total_des_mat();
+
+//DEL      document.AddSamplePackaging.TotalDesMat5.value = document.AddSamplePackaging.QtyDesMat5.value * document.AddSamplePackaging.DesignMatUnitPrice5.value;
+//DEL          total_des_mat();
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record samplepackagingSearch -->
+<form id="samplepackagingSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="3" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="3" border="0">
+          <tr>
+            <td class="HeaderLeft">&nbsp;</td> 
+            <th>Search Sample Packaging </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="3">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Sample Code</th>
+ 
+            <td><input id="samplepackagingSearchs_SampleCode" maxlength="12" size="12" value="{s_SampleCode}" name="{s_SampleCode_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Description</th>
+ 
+            <td><input id="samplepackagingSearchs_Description" maxlength="50" size="50" value="{s_Description}" name="{s_Description_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="samplepackagingSearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record samplepackagingSearch --><br>
+<!-- BEGIN Grid samplepackaging -->
+<table cellspacing="0" cellpadding="3" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="3" border="0">
+        <tr>
+          <td class="HeaderLeft">&nbsp;</td> 
+          <th>List of Sample Packaging </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+        </tr>
+ 
+        <tr>
+          <td>&nbsp;</td> 
+          <td colspan="2"><strong>Total Records : {TotalRecord}</strong></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="3">
+        <tr class="Caption">
+          <th rowspan="2">
+          <!-- BEGIN Sorter Sorter_SampleCode --><a href="{Sort_URL}" id="samplepackagingSorter_SampleCode">SAMPLE CODE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SampleCode --></th>
+ 
+          <th rowspan="2">
+          <!-- BEGIN Sorter Sorter_Description --><a href="{Sort_URL}" id="samplepackagingSorter_Description">DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Description --></th>
+ 
+          <th colspan="4"><b><u>FINAL SIZE</u></b></th>
+ 
+          <th rowspan="2"><u>PHOTO</u></th>
+ 
+          <th rowspan="2">
+          <!-- BEGIN Sorter Sorter_CostPrice1 --><a href="{Sort_URL}" id="samplepackagingSorter_CostPrice1">COST PRICE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CostPrice1 --></th>
+ 
+          <th rowspan="2"><u>NOTES</u></th>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_Diameter --><a href="{Sort_URL}" id="samplepackagingSorter_Diameter">&nbsp;Ø&nbsp;</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Diameter --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Width --><a href="{Sort_URL}" id="samplepackagingSorter_Width">&nbsp;W&nbsp;</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Width --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Length --><a href="{Sort_URL}" id="samplepackagingSorter_Length">&nbsp;L&nbsp;</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Length --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Height --><a href="{Sort_URL}" id="samplepackagingSorter_Height">&nbsp;H&nbsp;</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Height --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{SampleCode}&nbsp;</td> 
+          <td>{Description}&nbsp;<input id="samplepackagingDesMat1" type="hidden" value="{DesMat1}" name="{DesMat1_Name}"><input id="samplepackagingDesMat2" type="hidden" value="{DesMat2}" name="{DesMat2_Name}"><input id="samplepackagingDesMat3_{samplepackaging:rowNumber}" type="hidden" value="{DesMat3}" name="{DesMat3_Name}"><input id="samplepackagingDesMat4_{samplepackaging:rowNumber}" type="hidden" value="{DesMat4}" name="{DesMat4_Name}"><input type="hidden" name="{DesMat5_Name}" value="{DesMat5}" id="samplepackagingDesMat5_{samplepackaging:rowNumber}"><input id="samplepackagingQtyDesMat1_{samplepackaging:rowNumber}" type="hidden" value="{QtyDesMat1}" name="{QtyDesMat1_Name}"><input id="samplepackagingQtyDesMat2_{samplepackaging:rowNumber}" type="hidden" value="{QtyDesMat2}" name="{QtyDesMat2_Name}"><input id="samplepackagingQtyDesMat3_{samplepackaging:rowNumber}" type="hidden" value="{QtyDesMat3}" name="{QtyDesMat3_Name}"><input id="samplepackagingQtyDesMat4_{samplepackaging:rowNumber}" type="hidden" value="{QtyDesMat4}" name="{QtyDesMat4_Name}"><input id="samplepackagingQtyDesMat5_{samplepackaging:rowNumber}" type="hidden" value="{QtyDesMat5}" name="{QtyDesMat5_Name}"><input type="hidden" name="{TotalCostPrice_Name}" value="{TotalCostPrice}" id="samplepackagingTotalCostPrice_{samplepackaging:rowNumber}"></td> 
+          <td style="TEXT-ALIGN: right">&nbsp;{Diameter}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp;{Width}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp;{Length}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp;{Height}&nbsp;</td> 
+          <td><img id="samplepackagingPhoto1_{samplepackaging:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{TotalCost}&nbsp;</td> 
+          <td><a href="{Link1_Src}" id="samplepackagingLink1_{samplepackaging:rowNumber}" target="_blank">Show</a>&nbsp;<a href="{LinkEdit_Src}" id="samplepackagingLinkEdit_{samplepackaging:rowNumber}">edit</a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="9">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="9"><a href="{samplepackaging_Insert_Src}" id="samplepackagingsamplepackaging_Insert">Add New</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option value="" selected>-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid samplepackaging --><br>
+<br>
+<br>
+<br>
+</body>
+</html>

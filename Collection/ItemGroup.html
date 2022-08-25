@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ItemGroup</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/PinkPatterned/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+function openDialog(url, width, height, returnFunc, args) {
+        if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+                dialogWin.returnFunc = returnFunc
+                dialogWin.returnedValue_c_col_id = ""
+                dialogWin.args = args
+                dialogWin.url = url
+                dialogWin.width = width
+                dialogWin.height = height
+                dialogWin.name = (new Date()).getSeconds().toString()
+
+                if (Nav4) {
+                        dialogWin.left = window.screenX + 
+                           ((window.outerWidth - dialogWin.width) / 2)
+                        dialogWin.top = window.screenY + 
+                           ((window.outerHeight - dialogWin.height) / 2)
+                        var attr = "screenX=" + dialogWin.left + 
+                           ",screenY=" + dialogWin.top + ",resizable=no,width=" + 
+                           dialogWin.width + ",height=" + dialogWin.height
+                } else {
+                        dialogWin.left = (screen.width - dialogWin.width) / 2
+                        dialogWin.top = (screen.height - dialogWin.height) / 2
+                        var attr = "left=" + dialogWin.left + ",top=" + 
+                           dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+                           ",height=" + dialogWin.height + ",scrollbars=yes"
+                }
+                
+                dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+                dialogWin.win.focus()
+        } else {
+                dialogWin.win.focus()
+        }
+}
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Panel1ItemListAddItem_OnClick @43-A2DE8974
+function Panel1ItemListAddItem_OnClick()
+{
+    var result;
+//End Panel1ItemListAddItem_OnClick
+
+//Custom Code @59-2A29BDB7
+var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+var IE  = (document.all) ? 1 : 0;
+var O = typeof(opera) != "undefined";
+var FormState = document.ItemList.FormState.value.split(";");
+var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+
+  if (parseInt(FormState[0]) == 0 ) {
+      FormState[0] = 1;
+  }
+
+  var i;
+  
+  for (i=FormState[0]; i<AllLength; i++) {
+     var objRow = document.getElementById("row"+i);
+     if (NS6 || O) {
+       if (objRow.style.display == "none") {
+           objRow.style.display = '';
+           break;
+       }
+     } else {
+       if (objRow.style.display == "none") {
+           objRow.style.display = "block"; 
+           break;
+       }
+         }
+  }
+
+  if (i >= AllLength) 
+      document.forms["ItemList"].AddItem.disabled = true;
+//End Custom Code
+
+//Close Panel1ItemListAddItem_OnClick @43-BC33A33A
+    return result;
+}
+//End Close Panel1ItemListAddItem_OnClick
+
+//DEL  function Panel1ItemListCollectCodePTAutoFill1_start(sender) {
+//DEL  //get the row identifier which is the number after the '_'  
+//DEL      var row_id = sender.id.split("_")[1];  
+//DEL      new Ajax.Request("services/ItemGroup_ItemList_CollectCode_PTAutoFill1.php?keyword=" + $("Panel1ItemListCollectCode_"+row_id).value, {
+//DEL          method: "get",
+//DEL          requestHeaders: ['If-Modified-Since', new Date(0)],
+//DEL          onSuccess: function(transport) {
+//DEL              var valuesRow = eval(transport.responseText)[0];
+//DEL              getSameLevelCtl("Panel1ItemListDesignName_"+row_id, sender).value = valuesRow["DesignName"];
+//DEL              getSameLevelCtl("Panel1ItemListNameDesc_"+row_id, sender).value = valuesRow["NameDesc"];
+//DEL              getSameLevelCtl("Panel1ItemListCategoryName_"+row_id, sender).value = valuesRow["CategoryName"];
+//DEL              getSameLevelCtl("Panel1ItemListSizeName_"+row_id, sender).value = valuesRow["SizeName"];
+//DEL              getSameLevelCtl("Panel1ItemListTextureName_"+row_id, sender).value = valuesRow["TextureName"];
+//DEL              getSameLevelCtl("Panel1ItemListColorName_"+row_id, sender).value = valuesRow["ColorName"];
+//DEL              getSameLevelCtl("Panel1ItemListMaterialName_"+row_id, sender).value = valuesRow["MaterialName"];
+//DEL          }, 
+//DEL          onFailure: function(transport) {
+//DEL              alert(transport.responseText);
+//DEL          }
+//DEL      });
+//DEL  }
+
+//bind_events @1-921198AA
+function bind_events() {
+    addEventHandler("Panel1ItemListAddItem", "click", Panel1ItemListAddItem_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record GroupHeader -->
+<form id="Panel1GroupHeader" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Collection in Group&nbsp;</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th">Group Code</td> 
+            <td>{GroupCode}<input id="Panel1GroupHeaderFileFoto" type="hidden" value="{FileFoto}" name="{FileFoto_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Group Date</td> 
+            <td>{GroupDate}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Group Description</td> 
+            <td>{GroupDescription}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th">Group Photo</td> 
+            <td><img id="Panel1GroupHeaderGroupPhoto" height="50" alt=" " src="../upload/{GroupPhoto}" width="50" align="center"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">&nbsp;</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record GroupHeader --><br>
+<!-- BEGIN EditableGrid ItemList -->
+<form id="Panel1ItemList" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>List of&nbsp;Item in Group</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="10">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th scope="col">CODE</th>
+ 
+            <th scope="col">DESIGN</th>
+ 
+            <th scope="col">NAME</th>
+ 
+            <th scope="col">CATEGORY</th>
+ 
+            <th scope="col">SIZE</th>
+ 
+            <th scope="col">TEXTURE</th>
+ 
+            <th scope="col">COLOR</th>
+ 
+            <th scope="col">MATERIAL</th>
+ 
+            <th scope="col">QTY</th>
+ 
+            <th scope="col">DELETE</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="10">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+            <td><input id="Panel1ItemListGroup_H_ID_{ItemList:rowNumber}" type="hidden" value="{Group_H_ID}" name="{Group_H_ID_Name}">
+              <!--{RowNameAttribute}-->
+              <label for="Panel1ItemListCollectCode_{ItemList:rowNumber}" style="display: none;">Collect Code</label><input id="Panel1ItemListCollectCode_{ItemList:rowNumber}" maxlength="15" size="15" value="{CollectCode}" name="{CollectCode_Name}"><a href="{LnkPopup}" id="Panel1ItemListLnkPopup_{ItemList:rowNumber}" onclick="openDialog('CollectPopup.php?rowNumber={ItemList:rowNumber}', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" alt="{LnkPopup}" src="Styles/PinkPatterned/Images/DatePicker.gif"></a></td> 
+            <td><label for="Panel1ItemListDesignName_{ItemList:rowNumber}" style="display: none;">Design Name</label><input id="Panel1ItemListDesignName_{ItemList:rowNumber}" maxlength="100" value="{DesignName}" name="{DesignName_Name}"><label for="Panel1ItemListCollectID_{ItemList:rowNumber}" style="display: none;"></label><input type="hidden" name="{CollectID_Name}" value="{CollectID}" id="Panel1ItemListCollectID_{ItemList:rowNumber}"></td> 
+            <td><label for="Panel1ItemListNameDesc_{ItemList:rowNumber}" style="display: none;">Name Desc</label><input id="Panel1ItemListNameDesc_{ItemList:rowNumber}" maxlength="50" value="{NameDesc}" name="{NameDesc_Name}"></td> 
+            <td><label for="Panel1ItemListCategoryName_{ItemList:rowNumber}" style="display: none;">Category Name</label><input id="Panel1ItemListCategoryName_{ItemList:rowNumber}" maxlength="50" value="{CategoryName}" name="{CategoryName_Name}"></td> 
+            <td><label for="Panel1ItemListSizeName_{ItemList:rowNumber}" style="display: none;">Size Name</label><input id="Panel1ItemListSizeName_{ItemList:rowNumber}" maxlength="50" value="{SizeName}" name="{SizeName_Name}"></td> 
+            <td><label for="Panel1ItemListTextureName_{ItemList:rowNumber}" style="display: none;">Texture Name</label><input id="Panel1ItemListTextureName_{ItemList:rowNumber}" maxlength="50" value="{TextureName}" name="{TextureName_Name}"></td> 
+            <td><label for="Panel1ItemListColorName_{ItemList:rowNumber}" style="display: none;">Color Name</label><input id="Panel1ItemListColorName_{ItemList:rowNumber}" maxlength="100" value="{ColorName}" name="{ColorName_Name}"></td> 
+            <td><label for="Panel1ItemListMaterialName_{ItemList:rowNumber}" style="display: none;">Material Name</label><input id="Panel1ItemListMaterialName_{ItemList:rowNumber}" maxlength="50" value="{MaterialName}" name="{MaterialName_Name}"></td> 
+            <td><label for="Panel1ItemListQty_{ItemList:rowNumber}" style="display: none;">Qty</label><input id="Panel1ItemListQty_{ItemList:rowNumber}" maxlength="10" size="10" value="{Qty}" name="{Qty_Name}"></td> 
+            <td>
+              <!-- BEGIN Panel CheckBox_Delete_Panel --><label for="Panel1ItemListCheckBox_Delete_PanelCheckBox_Delete_{ItemList:rowNumber}" style="display: none;">Delete</label> 
+              <!-- BEGIN CheckBox CheckBox_Delete --><input id="Panel1ItemListCheckBox_Delete_PanelCheckBox_Delete_{ItemList:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel CheckBox_Delete_Panel -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="10">No records</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="12">
+              <!-- BEGIN Button AddItem --><input class="Button" id="Panel1ItemListAddItem" type="button" alt="Button1" value="Add Item" name="{Button_Name}"><!-- END Button AddItem -->
+              <!-- BEGIN Button Button_Submit --><input class="Button" id="Panel1ItemListButton_Submit" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid ItemList --><!-- END Panel Panel1 --><br>
+</p>
+</body>
+</html>

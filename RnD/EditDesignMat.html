@@ -1,0 +1,218 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>.:: R&D - Design Material ::.</title>
+<meta content="CodeCharge Studio 4.00.00.015" name="GENERATOR">
+<link href="Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+function openDialog(url, width, height, returnFunc, args) {
+        if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+                dialogWin.returnFunc = returnFunc
+                dialogWin.returnedValue_c_col_id = ""
+                dialogWin.args = args
+                dialogWin.url = url
+                dialogWin.width = width
+                dialogWin.height = height
+                dialogWin.name = (new Date()).getSeconds().toString()
+
+                if (Nav4) {
+                        dialogWin.left = window.screenX + 
+                           ((window.outerWidth - dialogWin.width) / 2)
+                        dialogWin.top = window.screenY + 
+                           ((window.outerHeight - dialogWin.height) / 2)
+                        var attr = "screenX=" + dialogWin.left + 
+                           ",screenY=" + dialogWin.top + ",resizable=no,width=" + 
+                           dialogWin.width + ",height=" + dialogWin.height
+                } else {
+                        dialogWin.left = (screen.width - dialogWin.width) / 2
+                        dialogWin.top = (screen.height - dialogWin.height) / 2
+                        var attr = "left=" + dialogWin.left + ",top=" + 
+                           dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+                           ",height=" + dialogWin.height + ",scrollbars=yes"
+                }
+                
+                dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+                dialogWin.win.focus()
+        } else {
+                dialogWin.win.focus()
+        }
+}
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-C64D6CF6
+
+var tbldesignmat_DatePicker_DesignMatDate = new Object(); 
+tbldesignmat_DatePicker_DesignMatDate.format           = "dd/mm/yyyy";
+tbldesignmat_DatePicker_DesignMatDate.style            = "Styles/Blueprint-Versi3/Style.css";
+tbldesignmat_DatePicker_DesignMatDate.relativePathPart = "";
+tbldesignmat_DatePicker_DesignMatDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//tbldesignmatButton_Delete_OnClick @4-0BA2D172
+function tbldesignmatButton_Delete_OnClick()
+{
+    var result;
+//End tbldesignmatButton_Delete_OnClick
+
+//Confirmation Message @5-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close tbldesignmatButton_Delete_OnClick @4-BC33A33A
+    return result;
+}
+//End Close tbldesignmatButton_Delete_OnClick
+
+//bind_events @1-42317DFF
+function bind_events() {
+    addEventHandler("tbldesignmatButton_Delete", "click", tbldesignmatButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record tbldesignmat -->
+<form id="tbldesignmat" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Design Material</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Design Material Code</th>
+ 
+            <td>{DesignMatCode}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Design Material Description</th>
+ 
+            <td>{DesignMatDescription}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Design Material Date</th>
+ 
+            <td><input id="tbldesignmatDesignMatDate" maxlength="100" size="10" value="{DesignMatDate}" name="{DesignMatDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_DesignMatDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="tbldesignmatDatePicker_DesignMatDate"><img id="tbldesignmatDatePicker_DesignMatDate_Image" alt="Show Date Picker" src="Styles/Blueprint-Versi3/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_DesignMatDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Technical Draw</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload1 --><input id="tbldesignmatFileUpload1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbldesignmatFileUpload1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbldesignmatFileUpload1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --><font color="#ff0000">(600 x 750)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo 1</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload2 --><input id="tbldesignmatFileUpload2ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbldesignmatFileUpload2FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbldesignmatFileUpload2DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload2 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo 2</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload3 --><input id="tbldesignmatFileUpload3ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbldesignmatFileUpload3FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbldesignmatFileUpload3DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload3 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo 3</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload4 --><input id="tbldesignmatFileUpload4ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbldesignmatFileUpload4FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbldesignmatFileUpload4DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload4 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo 4</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload5 --><input id="tbldesignmatFileUpload5ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tbldesignmatFileUpload5FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tbldesignmatFileUpload5DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload5 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Supplier</th>
+ 
+            <td><input id="tbldesignmatDesignMatSupplier" type="hidden" value="{DesignMatSupplier}" name="{DesignMatSupplier_Name}"><input id="tbldesignmatDesignMatSupDesc" readonly value="{DesignMatSupDesc}" name="{DesignMatSupDesc_Name}">&nbsp; 
+              <!-- BEGIN ImageLink ImageLink1 --><a href="{ImageLink1}" onmouseover="status='Search Record...';return true" onclick="openDialog('SupplierPopup.php?&doc=tbldesignmat&txtID=tbldesignmatDesignMatSupplier&txtdesc=tbldesignmatDesignMatSupDesc', 600,750);return false" onmouseout="status='';return true"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a><!-- END ImageLink ImageLink1 -->&nbsp;
+              <!-- BEGIN Link DelSup --><a href="{DelSup_Src}" id="tbldesignmatDelSup" onclick="document.tbldesignmat.DesignMatSupplier.value = '';document.tbldesignmat.DesignMatSupDesc.value = '';">Del</a><!-- END Link DelSup --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Unit</th>
+ 
+            <td><input id="tbldesignmatDesignMatUnit" maxlength="2" size="2" value="{DesignMatUnit}" name="{DesignMatUnit_Name}">&nbsp;
+              <!-- BEGIN ImageLink ImageLink2 --><a href="{ImageLink2}" onmouseover="status='Search Record...';return true" onclick="openDialog('UnitPopup.php', 600,550);return false" onmouseout="status='';return true"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a><!-- END ImageLink ImageLink2 -->&nbsp;
+              <!-- BEGIN Link DelUnit --><a href="{DelUnit_Src}" id="tbldesignmatDelUnit" onclick="document.tbldesignmat.DesignMatUnit.value = '';">Del</a><!-- END Link DelUnit --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Unit Price</th>
+ 
+            <td><input id="tbldesignmatDesignMatUnitPrice" maxlength="12" size="12" value="{DesignMatUnitPrice}" name="{DesignMatUnitPrice_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Notes</th>
+ 
+            <td><textarea id="tbldesignmatDesignMatNotes" name="{DesignMatNotes_Name}" rows="3" cols="50">{DesignMatNotes}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tbldesignmatButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="tbldesignmatButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tbldesignmat --><br>
+</body>
+</html>

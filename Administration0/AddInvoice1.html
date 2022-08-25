@@ -1,0 +1,81 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AddInvoice1</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record AddNewHeader -->
+<form id="AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Invoice Number</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Invoice No</th>
+ 
+            <td><input id="AddNewHeaderInvoiceNo" maxlength="16" size="16" value="{InvoiceNo}" name="{InvoiceNo_Name}">&nbsp;<input id="AddNewHeaderQuotation_H_ID" type="hidden" value="{Quotation_H_ID}" name="{Quotation_H_ID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client</th>
+ 
+            <td>
+              <select id="AddNewHeaderClientID" name="{ClientID_Name}">
+                <option value="" selected>Select Value</option>
+                {ClientID_Options}
+              </select>
+ <input id="AddNewHeaderProforma_H_ID" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Currency</th>
+ 
+            <td>
+              <select id="AddNewHeaderCurrency" name="{Currency_Name}">
+                <option value="" selected>Select Value</option>
+                {Currency_Options}
+              </select>
+              &nbsp;&nbsp;<input type="hidden" name="{DocMaker_Name}" value="{DocMaker}" id="AddNewHeaderDocMaker"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Delivery Address</th>
+ 
+            <td>
+              <select id="AddNewHeaderAddressID" name="{AddressID_Name}">
+                <option value="" selected>Select Value</option>
+                {AddressID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">&nbsp; 
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AddNewHeader --><br>
+<br>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Rnd</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+function SetOpenerValue(currentObj,CodeRnd)
+{
+    var IE  = (document.all) ? 1 : 0;
+    if(IE) {
+            var Price = currentObj.innerText; 
+    } else {
+            var Price = currentObj.text;  
+    }
+    window.opener.document.AddNewDetail.AddNewDetailUnitPrice_{rowNumber}.value = Price;
+    window.opener.document.AddNewDetail.AddNewDetailRndCode_{rowNumber}.value = CodeRnd;
+    window.opener.focus();
+    window.close();
+}
+</script>
+</head>
+<body>
+<!-- BEGIN Panel Panel1 -->
+<!-- BEGIN Record sampleceramicSearch -->
+<form id="Panel1sampleceramicSearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Search Sample Ceramic </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Sample Code</th>
+ 
+            <td><input id="Panel1sampleceramicSearchs_SampleCode" maxlength="12" size="12" value="{s_SampleCode}" name="{s_SampleCode_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Sample Description</th>
+ 
+            <td><input id="Panel1sampleceramicSearchs_SampleDescription" maxlength="100" size="50" value="{s_SampleDescription}" name="{s_SampleDescription_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="Panel1sampleceramicSearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record sampleceramicSearch --><br>
+<!-- BEGIN Grid sampleceramic -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          <th>List of Sample Ceramic </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="10">Total Records:&nbsp;{sampleceramic_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_SampleCode --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_SampleCode">Sample Code</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SampleCode --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_SampleDescription --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_SampleDescription">Sample Description</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SampleDescription --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Photo1 --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_Photo1">Photo1</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Photo1 --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Width --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_Width">Width</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Width --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Height --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_Height">Height</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Height --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Length --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_Length">Length</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Length --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_Diameter --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_Diameter">Diameter</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Diameter --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_RealSellingPrice --><a href="{Sort_URL}" id="Panel1sampleceramicSorter_RealSellingPrice">Real Selling Price</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_RealSellingPrice --></th>
+ 
+          <th>&nbsp;US Dollar Price&nbsp;</th>
+ 
+          <th>Euro Price&nbsp;</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{SampleCode}<input id="Panel1sampleceramicSampleCod" type="hidden" value="{SampleCod}" name="{SampleCod_Name}"></td> 
+          <td>{SampleDescription}&nbsp;</td> 
+          <td><img id="Panel1sampleceramicPhoto1_{sampleceramic:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Width}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Height}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Length}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Diameter}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right"><a href="{RealSellingPrice_Src}" id="Panel1sampleceramicRealSellingPrice_{sampleceramic:rowNumber}" onclick="SetOpenerValue(this,'{SampleCod}');return false;">{RealSellingPrice}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp;<a href="{PriceDollar_Src}" id="Panel1sampleceramicPriceDollar_{sampleceramic:rowNumber}" onclick="SetOpenerValue(this,'{SampleCod}');return false;">{PriceDollar}</a></td> 
+          <td style="TEXT-ALIGN: right"><a href="{PriceEuro_Src}" id="Panel1sampleceramicPriceEuro_{sampleceramic:rowNumber}" onclick="SetOpenerValue(this,'{SampleCod}');return false;">{PriceEuro}</a>&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="10">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="10">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First </a><!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev </a><!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next </a><!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last </a><!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid sampleceramic --><!-- END Panel Panel1 --><br>
+</body>
+</html>

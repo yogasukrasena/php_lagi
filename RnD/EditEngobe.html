@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>.:: R&D - Engobe ::.</title>
+
+<link href="Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-12F45250
+
+var tblengobe_DatePicker_EngobeDate = new Object(); 
+tblengobe_DatePicker_EngobeDate.format           = "dd/mm/yyyy";
+tblengobe_DatePicker_EngobeDate.style            = "Styles/Blueprint-Versi3/Style.css";
+tblengobe_DatePicker_EngobeDate.relativePathPart = "";
+tblengobe_DatePicker_EngobeDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//tblengobeButton_Delete_OnClick @4-03DC939D
+function tblengobeButton_Delete_OnClick()
+{
+    var result;
+//End tblengobeButton_Delete_OnClick
+
+//Confirmation Message @5-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close tblengobeButton_Delete_OnClick @4-BC33A33A
+    return result;
+}
+//End Close tblengobeButton_Delete_OnClick
+
+//bind_events @1-200675D6
+function bind_events() {
+    addEventHandler("tblengobeButton_Delete", "click", tblengobeButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record tblengobe -->
+<form id="tblengobe" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Engobe </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Engobe Code</th>
+ 
+            <td>{EngobeCode}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Description</th>
+ 
+            <td>{EngobeDescription}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Date</th>
+ 
+            <td><input id="tblengobeEngobeDate" maxlength="100" size="10" value="{EngobeDate}" name="{EngobeDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_EngobeDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="tblengobeDatePicker_EngobeDate"><img id="tblengobeDatePicker_EngobeDate_Image" alt="Show Date Picker" src="Styles/Blueprint-Versi3/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_EngobeDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Technical Draw</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload1 --><input id="tblengobeFileUpload1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblengobeFileUpload1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblengobeFileUpload1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --><font color="#FF0000">(600 x 750)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Photo1</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload2 --><input id="tblengobeFileUpload2ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblengobeFileUpload2FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblengobeFileUpload2DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload2 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Photo2</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload3 --><input id="tblengobeFileUpload3ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblengobeFileUpload3FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblengobeFileUpload3DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload3 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Photo3</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload4 --><input id="tblengobeFileUpload4ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblengobeFileUpload4FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblengobeFileUpload4DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload4 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Photo4</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload5 --><input id="tblengobeFileUpload5ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblengobeFileUpload5FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblengobeFileUpload5DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload5 --><font color="#FF0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe Notes</th>
+ 
+            <td><textarea id="tblengobeEngobeNotes" name="{EngobeNotes_Name}" rows="3" cols="50">{EngobeNotes}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tblengobeButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="tblengobeButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblengobe --><br>
+</body>
+</html>

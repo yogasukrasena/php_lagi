@@ -1,0 +1,668 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Edit Sample Other</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+
+function format_number(pnumber,decimals){
+        if (isNaN(pnumber)) { return 0};
+        if (pnumber=='') { return 0};
+        
+        var snum = new String(pnumber);
+        var sec = snum.split('.');
+        var whole = parseFloat(sec[0]);
+        var result = '';
+        
+        if(sec.length > 1){
+                var dec = new String(sec[1]);
+                dec = String(parseFloat(sec[1])/Math.pow(10,(dec.length - decimals)));
+                dec = String(whole + Math.round(parseFloat(dec))/Math.pow(10,decimals));
+                var dot = dec.indexOf('.');
+                if(dot == -1){
+                        dec += '.'; 
+                        dot = dec.indexOf('.');
+                }
+                while(dec.length <= dot + decimals) { dec += '0'; }
+                result = dec;
+        } else{
+                var dot;
+                var dec = new String(whole);
+                dec += '.';
+                dot = dec.indexOf('.');         
+                while(dec.length <= dot + decimals) { dec += '0'; }
+                result = dec;
+        }       
+        return result;
+}
+
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+function openDialog(url, width, height, returnFunc, args) {
+        if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+                dialogWin.returnFunc = returnFunc
+                dialogWin.returnedValue_c_col_id = ""
+                dialogWin.args = args
+                dialogWin.url = url
+                dialogWin.width = width
+                dialogWin.height = height
+                dialogWin.name = (new Date()).getSeconds().toString()
+
+                if (Nav4) {
+                        dialogWin.left = window.screenX + 
+                           ((window.outerWidth - dialogWin.width) / 2)
+                        dialogWin.top = window.screenY + 
+                           ((window.outerHeight - dialogWin.height) / 2)
+                        var attr = "screenX=" + dialogWin.left + 
+                           ",screenY=" + dialogWin.top + ",resizable=no,width=" + 
+                           dialogWin.width + ",height=" + dialogWin.height
+                } else {
+                        dialogWin.left = (screen.width - dialogWin.width) / 2
+                        dialogWin.top = (screen.height - dialogWin.height) / 2
+                        var attr = "left=" + dialogWin.left + ",top=" + 
+                           dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+                           ",height=" + dialogWin.height + ",scrollbars=yes"
+                }
+                
+                dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+                dialogWin.win.focus()
+        } else {
+                dialogWin.win.focus()
+        }
+}
+
+function total_des_mat()
+{
+        document.AddSamplePackaging.TotalDesMat.value = parseInt(document.AddSamplePackaging.TotalDesMat1.value) + parseInt(document.AddSamplePackaging.TotalDesMat2.value) + parseInt(document.AddSamplePackaging.TotalDesMat3.value) + parseInt(document.AddSamplePackaging.TotalDesMat4.value) + parseInt(document.AddSamplePackaging.TotalDesMat5.value);
+                document.AddSamplePackaging.TotalCost.value = parseInt(document.AddSamplePackaging.TotalDesMat.value) + parseInt(document.AddSamplePackaging.TotalCostPrice.value)
+}
+
+function total_cost_price()
+{
+        document.AddSamplePackaging.TotalCostPrice.value = parseInt(document.AddSamplePackaging.CostPrice1.value) + parseInt(document.AddSamplePackaging.CostPrice2.value) + parseInt(document.AddSamplePackaging.CostPrice3.value) + parseInt(document.AddSamplePackaging.CostPrice4.value) + parseInt(document.AddSamplePackaging.CostPrice5.value);
+                total_des_mat();
+}
+
+function bundkosong()
+{
+document.AddSamplePackaging.Diameter.value = '';
+}
+
+function kotakkosong()
+{
+document.AddSamplePackaging.Width.value = '';
+document.AddSamplePackaging.Length.value = '';
+}
+
+function kotak()
+{
+        document.AddSamplePackaging.Volume.value = parseFloat(document.AddSamplePackaging.Width.value) * parseFloat(document.AddSamplePackaging.Height.value) * parseFloat(document.AddSamplePackaging.Length.value);
+}
+
+function bund()
+{
+        
+        document.AddSamplePackaging.Volume.value = (3.14 * 2 * parseFloat(document.AddSamplePackaging.Diameter.value)) * parseFloat(document.AddSamplePackaging.Height.value);
+}
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-04895C07
+
+var AddSamplePackaging_DatePicker_SampleDate = new Object(); 
+AddSamplePackaging_DatePicker_SampleDate.format           = "dd/mm/yyyy";
+AddSamplePackaging_DatePicker_SampleDate.style            = "Styles/Blueprint-Versi3/Style.css";
+AddSamplePackaging_DatePicker_SampleDate.relativePathPart = "";
+AddSamplePackaging_DatePicker_SampleDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//AddSamplePackagingButton_Delete_OnClick @5-F97931BB
+function AddSamplePackagingButton_Delete_OnClick()
+{
+    var result;
+//End AddSamplePackagingButton_Delete_OnClick
+
+//Confirmation Message @6-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close AddSamplePackagingButton_Delete_OnClick @5-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingButton_Delete_OnClick
+
+//AddSamplePackagingQtyDesMat1_OnChange @22-CA0DD8E2
+function AddSamplePackagingQtyDesMat1_OnChange()
+{
+    var result;
+//End AddSamplePackagingQtyDesMat1_OnChange
+
+//Custom Code @104-2A29BDB7
+    document.AddSamplePackaging.TotalDesMat1.value = document.AddSamplePackaging.QtyDesMat1.value * document.AddSamplePackaging.DesignMatUnitPrice1.value;
+    total_des_mat();
+//End Custom Code
+
+//Close AddSamplePackagingQtyDesMat1_OnChange @22-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingQtyDesMat1_OnChange
+
+//AddSamplePackagingQtyDesMat2_OnChange @23-BCE8E1DF
+function AddSamplePackagingQtyDesMat2_OnChange()
+{
+    var result;
+//End AddSamplePackagingQtyDesMat2_OnChange
+
+//Custom Code @105-2A29BDB7
+    document.AddSamplePackaging.TotalDesMat2.value = (document.AddSamplePackaging.QtyDesMat2.value * document.AddSamplePackaging.DesignMatUnitPrice2.value);
+        total_des_mat();
+//End Custom Code
+
+//Close AddSamplePackagingQtyDesMat2_OnChange @23-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingQtyDesMat2_OnChange
+
+//AddSamplePackagingQtyDesMat3_OnChange @24-279B0B0B
+function AddSamplePackagingQtyDesMat3_OnChange()
+{
+    var result;
+//End AddSamplePackagingQtyDesMat3_OnChange
+
+//Custom Code @106-2A29BDB7
+    document.AddSamplePackaging.TotalDesMat3.value = document.AddSamplePackaging.QtyDesMat3.value * document.AddSamplePackaging.DesignMatUnitPrice3.value;
+        total_des_mat();
+//End Custom Code
+
+//Close AddSamplePackagingQtyDesMat3_OnChange @24-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingQtyDesMat3_OnChange
+
+//AddSamplePackagingQtyDesMat4_OnChange @25-512293A5
+function AddSamplePackagingQtyDesMat4_OnChange()
+{
+    var result;
+//End AddSamplePackagingQtyDesMat4_OnChange
+
+//Custom Code @107-2A29BDB7
+    document.AddSamplePackaging.TotalDesMat4.value = document.AddSamplePackaging.QtyDesMat4.value * document.AddSamplePackaging.DesignMatUnitPrice4.value;
+        total_des_mat();
+//End Custom Code
+
+//Close AddSamplePackagingQtyDesMat4_OnChange @25-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingQtyDesMat4_OnChange
+
+//AddSamplePackagingQtyDesMat5_OnChange @26-CA517971
+function AddSamplePackagingQtyDesMat5_OnChange()
+{
+    var result;
+//End AddSamplePackagingQtyDesMat5_OnChange
+
+//Custom Code @108-2A29BDB7
+    document.AddSamplePackaging.TotalDesMat5.value = document.AddSamplePackaging.QtyDesMat5.value * document.AddSamplePackaging.DesignMatUnitPrice5.value;
+        total_des_mat();
+//End Custom Code
+
+//Close AddSamplePackagingQtyDesMat5_OnChange @26-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingQtyDesMat5_OnChange
+
+//AddSamplePackagingCostPrice1_OnChange @47-FA007ADA
+function AddSamplePackagingCostPrice1_OnChange()
+{
+    var result;
+//End AddSamplePackagingCostPrice1_OnChange
+
+//Custom Code @114-2A29BDB7
+   total_cost_price();
+//End Custom Code
+
+//Close AddSamplePackagingCostPrice1_OnChange @47-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingCostPrice1_OnChange
+
+//AddSamplePackagingCostPrice2_OnChange @48-8CE543E7
+function AddSamplePackagingCostPrice2_OnChange()
+{
+    var result;
+//End AddSamplePackagingCostPrice2_OnChange
+
+//Custom Code @115-2A29BDB7
+        total_cost_price();
+//End Custom Code
+
+//Close AddSamplePackagingCostPrice2_OnChange @48-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingCostPrice2_OnChange
+
+//AddSamplePackagingCostPrice3_OnChange @49-1796A933
+function AddSamplePackagingCostPrice3_OnChange()
+{
+    var result;
+//End AddSamplePackagingCostPrice3_OnChange
+
+//Custom Code @116-2A29BDB7
+    total_cost_price();
+//End Custom Code
+
+//Close AddSamplePackagingCostPrice3_OnChange @49-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingCostPrice3_OnChange
+
+//AddSamplePackagingCostPrice4_OnChange @50-612F319D
+function AddSamplePackagingCostPrice4_OnChange()
+{
+    var result;
+//End AddSamplePackagingCostPrice4_OnChange
+
+//Custom Code @117-2A29BDB7
+    total_cost_price();
+//End Custom Code
+
+//Close AddSamplePackagingCostPrice4_OnChange @50-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingCostPrice4_OnChange
+
+//AddSamplePackagingCostPrice5_OnChange @51-FA5CDB49
+function AddSamplePackagingCostPrice5_OnChange()
+{
+    var result;
+//End AddSamplePackagingCostPrice5_OnChange
+
+//Custom Code @118-2A29BDB7
+    total_cost_price();
+//End Custom Code
+
+//Close AddSamplePackagingCostPrice5_OnChange @51-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingCostPrice5_OnChange
+
+//AddSamplePackagingWidth_OnChange @56-84192C53
+function AddSamplePackagingWidth_OnChange()
+{
+    var result;
+//End AddSamplePackagingWidth_OnChange
+
+//Custom Code @119-2A29BDB7
+    bundkosong();
+    kotak();
+//End Custom Code
+
+//Close AddSamplePackagingWidth_OnChange @56-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingWidth_OnChange
+
+//AddSamplePackagingHeight_OnChange @57-BB3C6D25
+function AddSamplePackagingHeight_OnChange()
+{
+    var result;
+//End AddSamplePackagingHeight_OnChange
+
+//Custom Code @120-2A29BDB7
+   if(!document.AddSamplePackaging.Diameter.value == ""){
+                bund();
+        } else if (!document.AddSamplePackaging.Length.value == ""){
+                kotak();
+        }
+//End Custom Code
+
+//Close AddSamplePackagingHeight_OnChange @57-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingHeight_OnChange
+
+//AddSamplePackagingLength_OnChange @58-A0DF5B52
+function AddSamplePackagingLength_OnChange()
+{
+    var result;
+//End AddSamplePackagingLength_OnChange
+
+//Custom Code @121-2A29BDB7
+    bundkosong();
+    kotak();
+//End Custom Code
+
+//Close AddSamplePackagingLength_OnChange @58-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingLength_OnChange
+
+//AddSamplePackagingDiameter_OnChange @59-D3ADF2FD
+function AddSamplePackagingDiameter_OnChange()
+{
+    var result;
+//End AddSamplePackagingDiameter_OnChange
+
+//Custom Code @122-2A29BDB7
+kotakkosong();
+    bund();
+//End Custom Code
+
+//Close AddSamplePackagingDiameter_OnChange @59-BC33A33A
+    return result;
+}
+//End Close AddSamplePackagingDiameter_OnChange
+
+//bind_events @1-73732D5E
+function bind_events() {
+    addEventHandler("AddSamplePackagingButton_Delete", "click", AddSamplePackagingButton_Delete_OnClick);
+    addEventHandler("AddSamplePackagingQtyDesMat1", "change", AddSamplePackagingQtyDesMat1_OnChange);
+    addEventHandler("AddSamplePackagingQtyDesMat2", "change", AddSamplePackagingQtyDesMat2_OnChange);
+    addEventHandler("AddSamplePackagingQtyDesMat3", "change", AddSamplePackagingQtyDesMat3_OnChange);
+    addEventHandler("AddSamplePackagingQtyDesMat4", "change", AddSamplePackagingQtyDesMat4_OnChange);
+    addEventHandler("AddSamplePackagingQtyDesMat5", "change", AddSamplePackagingQtyDesMat5_OnChange);
+    addEventHandler("AddSamplePackagingCostPrice1", "change", AddSamplePackagingCostPrice1_OnChange);
+    addEventHandler("AddSamplePackagingCostPrice2", "change", AddSamplePackagingCostPrice2_OnChange);
+    addEventHandler("AddSamplePackagingCostPrice3", "change", AddSamplePackagingCostPrice3_OnChange);
+    addEventHandler("AddSamplePackagingCostPrice4", "change", AddSamplePackagingCostPrice4_OnChange);
+    addEventHandler("AddSamplePackagingCostPrice5", "change", AddSamplePackagingCostPrice5_OnChange);
+    addEventHandler("AddSamplePackagingWidth", "change", AddSamplePackagingWidth_OnChange);
+    addEventHandler("AddSamplePackagingHeight", "change", AddSamplePackagingHeight_OnChange);
+    addEventHandler("AddSamplePackagingLength", "change", AddSamplePackagingLength_OnChange);
+    addEventHandler("AddSamplePackagingDiameter", "change", AddSamplePackagingDiameter_OnChange);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record AddSamplePackaging -->
+<form id="AddSamplePackaging" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="3" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="3" border="0">
+          <tr>
+            <td class="HeaderLeft">&nbsp;</td> 
+            <th>Add/Edit Sample&nbsp;Other </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="3">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Sample Code</th>
+ 
+            <td><input id="AddSamplePackagingSampleCode" maxlength="12" size="12" value="{SampleCode}" name="{SampleCode_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Description</th>
+ 
+            <td><input id="AddSamplePackagingDescription" maxlength="50" size="50" value="{Description}" name="{Description_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Sample Date</th>
+ 
+            <td><input id="AddSamplePackagingSampleDate" maxlength="100" size="10" value="{SampleDate}" name="{SampleDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_SampleDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddSamplePackagingDatePicker_SampleDate"><img id="AddSamplePackagingDatePicker_SampleDate_Image" alt="Show Date Picker" src="Styles/Blueprint-Versi3/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_SampleDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Tech Draw</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload TechDraw --><input id="AddSamplePackagingTechDrawControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="AddSamplePackagingTechDrawFileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="AddSamplePackagingTechDrawDeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload TechDraw --><font color="#ff0000">(600 x 750)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo1</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload Photo1 --><input id="AddSamplePackagingPhoto1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="AddSamplePackagingPhoto1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="AddSamplePackagingPhoto1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload Photo1 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo2</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload Photo2 --><input id="AddSamplePackagingPhoto2ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="AddSamplePackagingPhoto2FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="AddSamplePackagingPhoto2DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload Photo2 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo3</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload Photo3 --><input id="AddSamplePackagingPhoto3ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="AddSamplePackagingPhoto3FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="AddSamplePackagingPhoto3DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload Photo3 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo4</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload Photo4 --><input id="AddSamplePackagingPhoto4ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="AddSamplePackagingPhoto4FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="AddSamplePackagingPhoto4DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload Photo4 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+        </table>
+ 
+        <table class="Record">
+          <tr class="Controls">
+            <td colspan="6">List of Design Material</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>Design Material&nbsp;</th>
+ 
+            <th>Supplier&nbsp;</th>
+ 
+            <th>Qty&nbsp;</th>
+ 
+            <th>Unit&nbsp;</th>
+ 
+            <th>Unit Price&nbsp;</th>
+ 
+            <th>Total&nbsp;</th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingDesMat1" type="hidden" value="{DesMat1}" name="{DesMat1_Name}">&nbsp;<input id="AddSamplePackagingDesMatDesc1" readonly value="{DesMatDesc1}" name="{DesMatDesc1_Name}">&nbsp;<a href="{LinkDM1}" onclick="openDialog('DesignMatPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingDesMat1&txtdesc=AddSamplePackagingDesMatDesc1&txtSup=AddSamplePackagingDesignMatSup1&txtUnit=AddSamplePackagingDesignMatUnit1&txtUPrice=AddSamplePackagingDesignMatUnitPrice1', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelDesMat1 --><a href="{DelDesMat1_Src}" id="AddSamplePackagingDelDesMat1" onclick="document.AddSamplePackaging.DesMat1.value='';document.AddSamplePackaging.DesMatDesc1.value='';document.AddSamplePackaging.DesignMatSup1.value='';document.AddSamplePackaging.QtyDesMat1.value=0;document.AddSamplePackaging.DesignMatUnit1.value='';document.AddSamplePackaging.DesignMatUnitPrice1.value='';document.AddSamplePackaging.TotalDesMat1.value=0;total_des_mat();">Del</a><!-- END Link DelDesMat1 --></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatSup1" readonly value="{DesignMatSup1}" name="{DesignMatSup1_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingQtyDesMat1" maxlength="10" size="10" value="{QtyDesMat1}" name="{QtyDesMat1_Name}"></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatUnit1" readonly size="5" value="{DesignMatUnit1}" name="{DesignMatUnit1_Name}"></th>
+ 
+            <th><input id="AddSamplePackagingDesignMatUnitPrice1" readonly size="8" value="{DesignMatUnitPrice1}" name="{DesignMatUnitPrice1_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingTotalDesMat1" readonly maxlength="20" value="{TotalDesMat1}" name="{TotalDesMat1_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingDesMat2" type="hidden" value="{DesMat2}" name="{DesMat2_Name}">&nbsp;<input id="AddSamplePackagingDesMatDesc2" readonly value="{DesMatDesc2}" name="{DesMatDesc2_Name}">&nbsp;<a href="{LinkDM2}" onclick="openDialog('DesignMatPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingDesMat2&txtdesc=AddSamplePackagingDesMatDesc2&txtSup=AddSamplePackagingDesignMatSup2&txtUnit=AddSamplePackagingDesignMatUnit2&txtUPrice=AddSamplePackagingDesignMatUnitPrice2', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelDesMat2 --><a href="{DelDesMat2_Src}" id="AddSamplePackagingDelDesMat2" onclick="document.AddSamplePackaging.DesMat2.value='';document.AddSamplePackaging.DesMatDesc2.value='';document.AddSamplePackaging.DesignMatSup2.value='';document.AddSamplePackaging.QtyDesMat2.value=0;document.AddSamplePackaging.DesignMatUnit2.value='';document.AddSamplePackaging.DesignMatUnitPrice2.value='';document.AddSamplePackaging.TotalDesMat2.value=0;total_des_mat();">Del</a><!-- END Link DelDesMat2 --></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatSup2" readonly value="{DesignMatSup2}" name="{DesignMatSup2_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingQtyDesMat2" maxlength="10" size="10" value="{QtyDesMat2}" name="{QtyDesMat2_Name}"></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatUnit2" readonly size="5" value="{DesignMatUnit2}" name="{DesignMatUnit2_Name}"></th>
+ 
+            <th><input id="AddSamplePackagingDesignMatUnitPrice2" readonly size="8" value="{DesignMatUnitPrice2}" name="{DesignMatUnitPrice2_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingTotalDesMat2" readonly maxlength="20" value="{TotalDesMat2}" name="{TotalDesMat2_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingDesMat3" type="hidden" value="{DesMat3}" name="{DesMat3_Name}">&nbsp;<input id="AddSamplePackagingDesMatDesc3" readonly value="{DesMatDesc3}" name="{DesMatDesc3_Name}">&nbsp;<a href="{LinkDM3}" onclick="openDialog('DesignMatPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingDesMat3&txtdesc=AddSamplePackagingDesMatDesc3&txtSup=AddSamplePackagingDesignMatSup3&txtUnit=AddSamplePackagingDesignMatUnit3&txtUPrice=AddSamplePackagingDesignMatUnitPrice3', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelDesMat3 --><a href="{DelDesMat3_Src}" id="AddSamplePackagingDelDesMat3" onclick="document.AddSamplePackaging.DesMat3.value='';document.AddSamplePackaging.DesMatDesc3.value='';document.AddSamplePackaging.DesignMatSup3.value='';document.AddSamplePackaging.QtyDesMat3.value=0;document.AddSamplePackaging.DesignMatUnit3.value='';document.AddSamplePackaging.DesignMatUnitPrice3.value='';document.AddSamplePackaging.TotalDesMat3.value=0;total_des_mat();">Del</a><!-- END Link DelDesMat3 --></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatSup3" readonly value="{DesignMatSup3}" name="{DesignMatSup3_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingQtyDesMat3" maxlength="10" size="10" value="{QtyDesMat3}" name="{QtyDesMat3_Name}"></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatUnit3" readonly size="5" value="{DesignMatUnit3}" name="{DesignMatUnit3_Name}"></th>
+ 
+            <th><input id="AddSamplePackagingDesignMatUnitPrice3" readonly size="8" value="{DesignMatUnitPrice3}" name="{DesignMatUnitPrice3_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingTotalDesMat3" readonly maxlength="20" value="{TotalDesMat3}" name="{TotalDesMat3_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingDesMat4" type="hidden" value="{DesMat4}" name="{DesMat4_Name}">&nbsp;<input id="AddSamplePackagingDesMatDesc4" readonly value="{DesMatDesc4}" name="{DesMatDesc4_Name}">&nbsp;<a href="{LinkDM4}" onclick="openDialog('DesignMatPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingDesMat4&txtdesc=AddSamplePackagingDesMatDesc4&txtSup=AddSamplePackagingDesignMatSup4&txtUnit=AddSamplePackagingDesignMatUnit4&txtUPrice=AddSamplePackagingDesignMatUnitPrice4', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelDesMat4 --><a href="{DelDesMat4_Src}" id="AddSamplePackagingDelDesMat4" onclick="document.AddSamplePackaging.DesMat4.value='';document.AddSamplePackaging.DesMatDesc4.value='';document.AddSamplePackaging.DesignMatSup4.value='';document.AddSamplePackaging.QtyDesMat4.value=0;document.AddSamplePackaging.DesignMatUnit4.value='';document.AddSamplePackaging.DesignMatUnitPrice4.value='';document.AddSamplePackaging.TotalDesMat4.value=0;total_des_mat();">Del</a><!-- END Link DelDesMat4 --></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatSup4" readonly value="{DesignMatSup4}" name="{DesignMatSup4_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingQtyDesMat4" maxlength="10" size="10" value="{QtyDesMat4}" name="{QtyDesMat4_Name}"></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatUnit4" readonly size="5" value="{DesignMatUnit4}" name="{DesignMatUnit4_Name}"></th>
+ 
+            <th><input id="AddSamplePackagingDesignMatUnitPrice4" readonly size="8" value="{DesignMatUnitPrice4}" name="{DesignMatUnitPrice4_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingTotalDesMat4" readonly maxlength="20" value="{TotalDesMat4}" name="{TotalDesMat4_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingDesMat5" type="hidden" value="{DesMat5}" name="{DesMat5_Name}">&nbsp;<input id="AddSamplePackagingDesMatDesc5" readonly value="{DesMatDesc5}" name="{DesMatDesc5_Name}">&nbsp;<a href="{LinkDM5}" onclick="openDialog('DesignMatPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingDesMat5&txtdesc=AddSamplePackagingDesMatDesc5&txtSup=AddSamplePackagingDesignMatSup5&txtUnit=AddSamplePackagingDesignMatUnit5&txtUPrice=AddSamplePackagingDesignMatUnitPrice5', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelDesMat5 --><a href="{DelDesMat5_Src}" id="AddSamplePackagingDelDesMat5" onclick="document.AddSamplePackaging.DesMat5.value='';document.AddSamplePackaging.DesMatDesc5.value='';document.AddSamplePackaging.DesignMatSup5.value='';document.AddSamplePackaging.QtyDesMat5.value=0;document.AddSamplePackaging.DesignMatUnit5.value='';document.AddSamplePackaging.DesignMatUnitPrice1.value='';document.AddSamplePackaging.TotalDesMat1.value=0;total_des_mat();">Del</a><!-- END Link DelDesMat5 --></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatSup5" readonly value="{DesignMatSup5}" name="{DesignMatSup5_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingQtyDesMat5" maxlength="10" size="10" value="{QtyDesMat5}" name="{QtyDesMat5_Name}"></td> 
+            <th>&nbsp;<input id="AddSamplePackagingDesignMatUnit5" readonly size="5" value="{DesignMatUnit5}" name="{DesignMatUnit5_Name}"></th>
+ 
+            <th><input id="AddSamplePackagingDesignMatUnitPrice5" readonly size="8" value="{DesignMatUnitPrice5}" name="{DesignMatUnitPrice5_Name}"></th>
+ 
+            <td><input id="AddSamplePackagingTotalDesMat5" readonly maxlength="20" value="{TotalDesMat5}" name="{TotalDesMat5_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="AltRow">
+            <td colspan="5"><strong>Total</strong></td> 
+            <td><input id="AddSamplePackagingTotalDesMat" readonly maxlength="20" value="{TotalDesMat}" name="{TotalDesMat_Name}" size="20"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record">
+          <tr class="Controls">
+            <td colspan="4">List of Work Supplier</td>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>Supplier</th>
+ 
+            <th>Material</th>
+ 
+            <th>Color</th>
+ 
+            <th>Cost Price</th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingSupplier1" type="hidden" value="{Supplier1}" name="{Supplier1_Name}">&nbsp;<input id="AddSamplePackagingSupDesc1" readonly size="25" value="{SupDesc1}" name="{SupDesc1_Name}">&nbsp;<a href="{LinkSup1}" onclick="openDialog('SupplierPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingSupplier1&txtdesc=AddSamplePackagingSupDesc1', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelSup1 --><a href="{DelSup1_Src}" id="AddSamplePackagingDelSup1" onclick="document.AddSamplePackaging.Supplier1.value='';document.AddSamplePackaging.SupDesc1.value='';document.AddSamplePackaging.Material1.value='';document.AddSamplePackaging.Color1.value='';document.AddSamplePackaging.CostPrice1.value=0;total_cost_price();">Del</a><!-- END Link DelSup1 --></td> 
+            <td><input id="AddSamplePackagingMaterial1" maxlength="50" size="25" value="{Material1}" name="{Material1_Name}"></td> 
+            <td><input id="AddSamplePackagingColor1" maxlength="50" size="25" value="{Color1}" name="{Color1_Name}"></td> 
+            <td><input id="AddSamplePackagingCostPrice1" maxlength="20" value="{CostPrice1}" name="{CostPrice1_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingSupplier2" type="hidden" value="{Supplier2}" name="{Supplier2_Name}">&nbsp;<input id="AddSamplePackagingSupDesc2" readonly size="25" value="{SupDesc2}" name="{SupDesc2_Name}">&nbsp;<a href="{LinkSup2}" onclick="openDialog('SupplierPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingSupplier2&txtdesc=AddSamplePackagingSupDesc2', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelSup2 --><a href="{DelSup2_Src}" id="AddSamplePackagingDelSup2" onclick="document.AddSamplePackaging.Supplier2.value='';document.AddSamplePackaging.SupDesc2.value='';document.AddSamplePackaging.Material2.value='';document.AddSamplePackaging.Color2.value='';document.AddSamplePackaging.CostPrice2.value=0;total_cost_price();">Del</a><!-- END Link DelSup2 --></td> 
+            <td><input id="AddSamplePackagingMaterial2" maxlength="50" size="25" value="{Material2}" name="{Material2_Name}"></td> 
+            <td><input id="AddSamplePackagingColor2" maxlength="50" size="25" value="{Color2}" name="{Color2_Name}"></td> 
+            <td><input id="AddSamplePackagingCostPrice2" maxlength="20" value="{CostPrice2}" name="{CostPrice2_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingSupplier3" type="hidden" value="{Supplier3}" name="{Supplier3_Name}">&nbsp;<input id="AddSamplePackagingSupDesc3" readonly size="25" value="{SupDesc3}" name="{SupDesc3_Name}">&nbsp;<a href="{LinkSup3}" onclick="openDialog('SupplierPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingSupplier3&txtdesc=AddSamplePackagingSupDesc3', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelSup3 --><a href="{DelSup3_Src}" id="AddSamplePackagingDelSup3" onclick="document.AddSamplePackaging.Supplier3.value='';document.AddSamplePackaging.SupDesc3.value='';document.AddSamplePackaging.Material3.value='';document.AddSamplePackaging.Color3.value='';document.AddSamplePackaging.CostPrice3.value=0;total_cost_price();">Del</a><!-- END Link DelSup3 --></td> 
+            <td><input id="AddSamplePackagingMaterial3" maxlength="50" size="25" value="{Material3}" name="{Material3_Name}"></td> 
+            <td><input id="AddSamplePackagingColor3" maxlength="50" size="25" value="{Color3}" name="{Color3_Name}"></td> 
+            <td><input id="AddSamplePackagingCostPrice3" maxlength="20" value="{CostPrice3}" name="{CostPrice3_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingSupplier4" type="hidden" value="{Supplier4}" name="{Supplier4_Name}">&nbsp;<input id="AddSamplePackagingSupDesc4" readonly size="25" value="{SupDesc4}" name="{SupDesc4_Name}">&nbsp;<a href="{LinkSup4}" onclick="openDialog('SupplierPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingSupplier4&txtdesc=AddSamplePackagingSupDesc4', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelSup4 --><a href="{DelSup4_Src}" id="AddSamplePackagingDelSup4" onclick="document.AddSamplePackaging.Supplier4.value='';document.AddSamplePackaging.SupDesc4.value='';document.AddSamplePackaging.Material4.value='';document.AddSamplePackaging.Color4.value='';document.AddSamplePackaging.CostPrice4.value=0;total_cost_price();">Del</a><!-- END Link DelSup4 --></td> 
+            <td><input id="AddSamplePackagingMaterial4" maxlength="50" size="25" value="{Material4}" name="{Material4_Name}"></td> 
+            <td><input id="AddSamplePackagingColor4" maxlength="50" size="25" value="{Color4}" name="{Color4_Name}"></td> 
+            <td><input id="AddSamplePackagingCostPrice4" maxlength="20" value="{CostPrice4}" name="{CostPrice4_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td><input id="AddSamplePackagingSupplier5" type="hidden" value="{Supplier5}" name="{Supplier5_Name}">&nbsp;<input id="AddSamplePackagingSupDesc5" readonly size="25" value="{SupDesc5}" name="{SupDesc5_Name}">&nbsp;<a href="{LinkSup5}" onclick="openDialog('SupplierPopup.php?doc=AddSamplePackaging&txtID=AddSamplePackagingSupplier5&txtdesc=AddSamplePackagingSupDesc5', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Blueprint-Versi3/Images/DatePicker.gif"></a> 
+              <!-- BEGIN Link DelSup5 --><a href="{DelSup5_Src}" id="AddSamplePackagingDelSup5" onclick="document.AddSamplePackaging.Supplier5.value='';document.AddSamplePackaging.SupDesc5.value='';document.AddSamplePackaging.Material5.value='';document.AddSamplePackaging.Color5.value='';document.AddSamplePackaging.CostPrice5.value=0;total_cost_price();">Del</a><!-- END Link DelSup5 --></td> 
+            <td><input id="AddSamplePackagingMaterial5" maxlength="50" size="25" value="{Material5}" name="{Material5_Name}"></td> 
+            <td><input id="AddSamplePackagingColor5" maxlength="50" size="25" value="{Color5}" name="{Color5_Name}"></td> 
+            <td><input id="AddSamplePackagingCostPrice5" maxlength="20" value="{CostPrice5}" name="{CostPrice5_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="AltRow">
+            <td colspan="3"><strong>Total Cost Price</strong></td> 
+            <td><input id="AddSamplePackagingTotalCostPrice" readonly maxlength="20" value="{TotalCostPrice}" name="{TotalCostPrice_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="AltRow">
+            <td colspan="3"><strong>Total All Cost</strong></td> 
+            <td><input id="AddSamplePackagingTotalCost" readonly maxlength="20" value="{TotalCost}" name="{TotalCost_Name}" size="20"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record">
+          <tr class="Controls">
+            <th>Final Size</th>
+ 
+            <th>W = <input id="AddSamplePackagingWidth" maxlength="12" size="3" value="{Width}" name="{Width_Name}"></th>
+ 
+            <th>L = <input id="AddSamplePackagingLength" maxlength="12" size="3" value="{Length}" name="{Length_Name}"></th>
+ 
+            <td>Ø = <input id="AddSamplePackagingDiameter" maxlength="12" size="3" value="{Diameter}" name="{Diameter_Name}"></td> 
+            <th>H = <input id="AddSamplePackagingHeight" maxlength="12" size="3" value="{Height}" name="{Height_Name}"></th>
+ 
+            <th>Vol = <input id="AddSamplePackagingVolume" readonly maxlength="12" size="3" value="{Volume}" name="{Volume_Name}"></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Notes</th>
+ 
+            <td colspan="5"><textarea id="AddSamplePackagingNotes" name="{Notes_Name}" rows="10" cols="80">{Notes}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="6">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddSamplePackagingButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddSamplePackagingButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="AddSamplePackagingButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AddSamplePackaging --><br>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AddBox</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+
+function openDialog(url, width, height, returnFunc, args) {
+  if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+    dialogWin.returnFunc = returnFunc
+    dialogWin.args = args
+    dialogWin.url = url
+    dialogWin.width = width
+    dialogWin.height = height
+    dialogWin.name = (new Date()).getSeconds().toString()
+
+    if (Nav4) {
+      dialogWin.left = window.screenX + 
+      ((window.outerWidth - dialogWin.width) / 2)
+      dialogWin.top = window.screenY + 
+      ((window.outerHeight - dialogWin.height) / 2)
+      var attr = "screenX=" + dialogWin.left + 
+      ",screenY=" + dialogWin.top + ",resizable=yes,width=" + 
+      dialogWin.width + ",height=" + dialogWin.height + ",scrollbars=yes"
+    } else {
+      dialogWin.left = (screen.width - dialogWin.width) / 2
+      dialogWin.top = (screen.height - dialogWin.height) / 2
+      var attr = "left=" + dialogWin.left + ",top=" + 
+      dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+      ",height=" + dialogWin.height + ",scrollbars=yes"
+    }
+                
+    dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+    dialogWin.win.focus()
+  } else {
+    dialogWin.win.focus()
+  }
+}
+
+
+function SetOpenerValue(currentObj,CodeRnd)
+{
+    var IE  = (document.all) ? 1 : 0;
+    if(IE) {
+            var Price = currentObj.innerText; 
+    } else {
+            var Price = currentObj.text;  
+    }
+    
+}
+//Begin CCS script
+//Include Common JSFunctions @1-252A7665
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//DEL  //window.close();
+//DEL  if (window.opener && !window.opener.closed) {
+//DEL  window.opener.location.reload();
+//DEL  } 
+
+//DEL
+
+//DEL  var url = "AddPackList.php?PL_H_ID=2";
+//DEL  //var winop = window.location.href = url;
+//DEL  //alert(url);
+//DEL  url.AddNewDetail.AddNewDetailBox_H_ID_{rowNumber}.value = document.AddNewHeader.Box_H_ID.value;
+//DEL  url.AddNewDetail.AddNewDetailBoxNumber_{rowNumber}.value = document.AddNewHeader.BoxNumber.value
+//DEL  //window.opener.document.AddNewDetail.AddNewDetailBox_H_ID_{rowNumber}.value = document.AddNewHeader.Box_H_ID.value;
+//DEL  //window.opener.document.AddNewDetail.AddNewDetailBoxNumber_{rowNumber}.value = document.AddNewHeader.BoxNumber.value
+//DEL  //window.opener.focus();
+//DEL  //window.close();
+
+//AddNewDetailButton_Submit_OnClick @60-378ED8B3
+function AddNewDetailButton_Submit_OnClick()
+{
+    var result;
+//End AddNewDetailButton_Submit_OnClick
+
+//Custom Code @106-2A29BDB7
+window.close();
+if (window.opener && !window.opener.closed) {
+window.opener.location.reload();
+} 
+//End Custom Code
+
+//Close AddNewDetailButton_Submit_OnClick @60-BC33A33A
+    return result;
+}
+//End Close AddNewDetailButton_Submit_OnClick
+
+//AddNewDetailAddItemBtn_OnClick @61-10805450
+function AddNewDetailAddItemBtn_OnClick()
+{
+    var result;
+//End AddNewDetailAddItemBtn_OnClick
+
+//Custom Code @62-2A29BDB7
+  var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+  var IE  = (document.all) ? 1 : 0;
+  var O = typeof(opera) != "undefined";
+  var FormState = document.AddNewDetail.FormState.value.split(";");
+  var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+  
+    if (parseInt(FormState[0]) == 0 ) {
+        FormState[0] = 1;
+    }
+  
+    var i;
+    
+    for (i=FormState[0]; i<AllLength; i++) {
+       var objRow = document.getElementById("row"+i);
+       if (NS6 || O) {
+         if (objRow.style.display == "none") {
+             objRow.style.display = '';
+             break;
+         }
+       } else {
+         if (objRow.style.display == "none") {
+             objRow.style.display = "block"; 
+             break;
+         }
+           }
+    }
+  
+    if (i >= AllLength) 
+        document.forms["AddNewDetail"].AddItemBtn.disabled = true;
+//End Custom Code
+
+//Close AddNewDetailAddItemBtn_OnClick @61-BC33A33A
+    return result;
+}
+//End Close AddNewDetailAddItemBtn_OnClick
+
+//bind_events @1-332235CC
+function bind_events() {
+    addEventHandler("AddNewDetailButton_Submit", "click", AddNewDetailButton_Submit_OnClick);
+    addEventHandler("AddNewDetailAddItemBtn", "click", AddNewDetailAddItemBtn_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+&nbsp; 
+<table style="WIDTH: 100%" cellpadding="3" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record AddNewHeader -->
+      <form id="AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="3" border="0">
+                <tr>
+                  <td class="HeaderLeft"></td> 
+                  <th>Add/Edit Box</th>
+ 
+                  <td class="HeaderRight"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="4">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>Box Number&nbsp;</th>
+ 
+                  <td colspan="3"><input id="AddNewHeaderBoxNumber" value="{BoxNumber}" name="{BoxNumber_Name}"><input id="AddNewHeaderBox_H_ID" type="hidden" value="{Box_H_ID}" name="{Box_H_ID_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>Length</th>
+ 
+                  <td><input id="AddNewHeaderLength" value="{Length}" name="{Length_Name}">&nbsp;</td> 
+                  <th>Height</th>
+ 
+                  <td><input id="AddNewHeaderHeight" value="{Height}" name="{Height_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>Width</th>
+ 
+                  <td><input id="AddNewHeaderWidth" value="{Width}" name="{Width_Name}">&nbsp;<input id="AddNewHeaderPL_H_ID" type="hidden" value="{PL_H_ID}" name="{PL_H_ID_Name}"></td> 
+                  <th>Weight&nbsp;</th>
+ 
+                  <td><input id="AddNewHeaderWeight" value="{Weight}" name="{Weight_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="4">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      &nbsp;<!-- END Record AddNewHeader -->
+      <p>
+      <!-- BEGIN EditableGrid AddNewDetail -->
+      <form id="AddNewDetail" name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>List of&nbsp;Item on Box</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="13">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Caption">
+                  <th>COLLECTION CODE </th>
+ 
+                  <th>DESIGN</th>
+ 
+                  <th>NAME</th>
+ 
+                  <th>CATEGORY</th>
+ 
+                  <th>INFO/SIZE&nbsp;</th>
+ 
+                  <th>TEXTURE&nbsp;</th>
+ 
+                  <th>COLOR&nbsp;</th>
+ 
+                  <th>MATERIAL&nbsp;</th>
+ 
+                  <th>QTY</th>
+ 
+                  <th>UNIT</th>
+ 
+                  <th>REMARKS</th>
+ 
+                  <th colspan="2">DELETE</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr class="Error">
+                  <td colspan="13">{Error}</td>
+                </tr>
+                <!-- END RowError -->
+                <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+                  <td><input id="AddNewDetailBox_H_ID_{AddNewDetail:rowNumber}" type="hidden" value="{Box_H_ID}" name="{Box_H_ID_Name}">
+                    <!--{RowNameAttribute}-->
+                    <input id="AddNewDetailCollectID_{AddNewDetail:rowNumber}" type="hidden" value="{CollectID}" name="{CollectID_Name}"><input id="AddNewDetailCollectCode_{AddNewDetail:rowNumber}" readonly value="{CollectCode}" name="{CollectCode_Name}">&nbsp; <a href="{CollectPopup}" onclick="openDialog('BoxPopup.php?rowNumber={AddNewDetail:rowNumber}', 750,650 );return false"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Fresh/Images/DatePicker.gif"></a> </td> 
+                  <td>
+                    <!-- BEGIN TextBox Design --><input id="AddNewDetailDesign_{AddNewDetail:rowNumber}" readonly value="{Design}" name="{Design_Name}"><!-- END TextBox Design --></td> 
+                  <td>
+                    <!-- BEGIN TextBox NameDesc --><input id="AddNewDetailNameDesc_{AddNewDetail:rowNumber}" readonly value="{NameDesc}" name="{NameDesc_Name}"><!-- END TextBox NameDesc --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Category --><input id="AddNewDetailCategory_{AddNewDetail:rowNumber}" readonly value="{Category}" name="{Category_Name}"><!-- END TextBox Category --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Size --><input id="AddNewDetailSize_{AddNewDetail:rowNumber}" readonly value="{Size}" name="{Size_Name}"><!-- END TextBox Size --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Texture --><input id="AddNewDetailTexture_{AddNewDetail:rowNumber}" readonly value="{Texture}" name="{Texture_Name}"><!-- END TextBox Texture -->&nbsp;</td> 
+                  <td>
+                    <!-- BEGIN TextBox Color --><input id="AddNewDetailColor_{AddNewDetail:rowNumber}" readonly value="{Color}" name="{Color_Name}"><!-- END TextBox Color -->&nbsp;</td> 
+                  <td>
+                    <!-- BEGIN TextBox Material --><input id="AddNewDetailMaterial_{AddNewDetail:rowNumber}" readonly value="{Material}" name="{Material_Name}"><!-- END TextBox Material --></td> 
+                  <td><input id="AddNewDetailQty_{AddNewDetail:rowNumber}" maxlength="10" size="10" value="{Qty}" name="{Qty_Name}"></td> 
+                  <td><input id="AddNewDetailUnit_{AddNewDetail:rowNumber}" maxlength="15" size="15" value="{Unit}" name="{Unit_Name}"><input id="AddNewDetailUnitPrice" type="hidden" value="{UnitPrice}" name="{UnitPrice_Name}"></td> 
+                  <td><textarea id="AddNewDetailRemarks" name="{Remarks_Name}" rows="3" cols="15">{Remarks}</textarea></td> 
+                  <td colspan="2">
+                    <!-- BEGIN CheckBox CheckBox_Delete --><input id="AddNewDetailCheckBox_Delete_{AddNewDetail:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="13">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="13">&nbsp; 
+                    <!-- BEGIN Button AddItemBtn --><input class="Button" id="AddNewDetailAddItemBtn" type="button" value="Add Item" name="{Button_Name}"><!-- END Button AddItemBtn -->
+                    <!-- BEGIN Button Button_Submit --><input class="Button" id="AddNewDetailButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid AddNewDetail --></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

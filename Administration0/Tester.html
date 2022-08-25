@@ -1,0 +1,421 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Tester</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Basic/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+function SetOpenerValue(currentObj)
+{
+        var IE  = (document.all) ? 1 : 0;
+        if(IE) {
+                var CodeRnd = currentObj.innerText; 
+        } else {
+                var CodeRnd = currentObj.text;  
+        }
+        window.opener.document.AddNewDetail.AddNewDetailRndCode_{rowNumber}.value = CodeRnd;
+        window.opener.focus();
+        window.close();
+}
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-3551DCF6
+
+var AddNewHeader_DatePicker_QuotationDate = new Object(); 
+AddNewHeader_DatePicker_QuotationDate.format           = "dd/mm/yyyy";
+AddNewHeader_DatePicker_QuotationDate.style            = "Styles/Fresh/Style.css";
+AddNewHeader_DatePicker_QuotationDate.relativePathPart = "";
+AddNewHeader_DatePicker_QuotationDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//AddNewHeaderButton_Delete_OnClick @5-86D80BDB
+function AddNewHeaderButton_Delete_OnClick()
+{
+    var result;
+//End AddNewHeaderButton_Delete_OnClick
+
+//Confirmation Message @6-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close AddNewHeaderButton_Delete_OnClick @5-BC33A33A
+    return result;
+}
+//End Close AddNewHeaderButton_Delete_OnClick
+
+//AddNewDetailAddItemBtn_OnClick @86-10805450
+function AddNewDetailAddItemBtn_OnClick()
+{
+    var result;
+//End AddNewDetailAddItemBtn_OnClick
+
+//Custom Code @87-2A29BDB7
+var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+var IE  = (document.all) ? 1 : 0;
+var O = typeof(opera) != "undefined";
+var FormState = document.AddNewDetail.FormState.value.split(";");
+var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+
+  if (parseInt(FormState[0]) == 0 ) {
+      FormState[0] = 1;
+  }
+
+  var i;
+  
+  for (i=FormState[0]; i<AllLength; i++) {
+     var objRow = document.getElementById("row"+i);
+     if (NS6 || O) {
+       if (objRow.style.display == "none") {
+           objRow.style.display = '';
+           break;
+       }
+     } else {
+       if (objRow.style.display == "none") {
+           objRow.style.display = "block"; 
+           break;
+       }
+         }
+  }
+
+  if (i >= AllLength) 
+      document.forms["AddNewDetail"].AddItemBtn.disabled = true;
+//End Custom Code
+
+//Close AddNewDetailAddItemBtn_OnClick @86-BC33A33A
+    return result;
+}
+//End Close AddNewDetailAddItemBtn_OnClick
+
+//PTAutoFill1 Loading @14-E7FF7242
+function AddNewHeaderAttnPTAutoFill1_start(sender) {
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTAutoFill1.php?keyword=" + $("AddNewHeaderAttn").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            getSameLevelCtl("AddNewHeaderEmail", sender).value = valuesRow["Email"];
+            getSameLevelCtl("AddNewHeaderAddress", sender).value = valuesRow["Address"];
+            getSameLevelCtl("AddNewHeaderPhone", sender).value = valuesRow["Phone"];
+            getSameLevelCtl("AddNewHeaderFax", sender).value = valuesRow["Fax"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//AddNewHeaderAttnPTDependentListBox1 Start @19-B6D11546
+function AddNewHeaderAttnPTDependentListBox1_start(sender) {
+    var dependentElement = $("AddNewHeaderAttn" + sender.id.substring(21));
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onLoading: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+        },
+        onSuccess: function(transport) {
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End AddNewHeaderAttnPTDependentListBox1 Start
+
+//PTAutoFill1 Loading @64-25561676
+function AddNewDetailRndCodePTAutoFill1_start(sender) {
+    new Ajax.Request("services/AddQuotation_AddNewDetail_RndCode_PTAutoFill1.php?keyword=" + $("AddNewDetailRndCode").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            getSameLevelCtl("AddNewDetailRndCode", sender).value = valuesRow["SampleCode"];
+            getSameLevelCtl("AddNewDetailDescription", sender).value = valuesRow["SampleDescription"];
+            getSameLevelCtl("AddNewDetailDiameter", sender).value = valuesRow["Diameter"];
+            getSameLevelCtl("AddNewDetailHeight", sender).value = valuesRow["Height"];
+            getSameLevelCtl("AddNewDetailWidth", sender).value = valuesRow["Width"];
+            getSameLevelCtl("AddNewDetailLength", sender).value = valuesRow["Length"];
+            getSameLevelCtl("AddNewDetailUnitPrice", sender).value = valuesRow["RealSellingPrice"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-AF2A2373
+function bind_events() {
+    addEventHandler("AddNewHeaderAddressID", "change", AddNewHeaderAttnPTDependentListBox1_start);
+    addEventHandler("Panel1AddNewHeaderAttn", "change", AddNewHeaderAttnPTAutoFill1_start);
+    addEventHandler("Panel1AddNewDetailRndCode", "change", AddNewDetailRndCodePTAutoFill1_start);
+    addEventHandler("AddNewHeaderButton_Delete", "click", AddNewHeaderButton_Delete_OnClick);
+    addEventHandler("AddNewDetailAddItemBtn", "click", AddNewDetailAddItemBtn_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<p>
+<!-- BEGIN Record AddNewHeader -->
+<form id="AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Quotation</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>Quotation No</th>
+ 
+            <td><input id="AddNewHeaderQuotationNo" readonly maxlength="11" size="11" value="{QuotationNo}" name="{QuotationNo_Name}">&nbsp; 
+              <!-- BEGIN TextBox Revis --><input id="AddNewHeaderRevis" size="5" value="{Revis}" name="{Revis_Name}"><!-- END TextBox Revis -->&nbsp; 
+              <!-- BEGIN Link LinkRev --><a href="{LinkRev_Src}" id="AddNewHeaderLinkRev">Rev</a><!-- END Link LinkRev --></td> 
+            <th>Delivery Address</th>
+ 
+            <td>
+              <!-- BEGIN ListBox AddressID -->
+              <select id="AddNewHeaderAddressID" name="{AddressID_Name}">
+                <option value="0" selected>Select Value</option>
+ {AddressID_Options} 
+              </select>
+ <!-- END ListBox AddressID -->
+              <!-- BEGIN TextBox lblAddress --><input id="AddNewHeaderlblAddress" readonly value="{lblAddress}" name="{lblAddress_Name}"><!-- END TextBox lblAddress --></td> 
+            <th>Delivery Term</th>
+ 
+            <td>
+              <select id="AddNewHeaderDeliveryTerm" name="{DeliveryTerm_Name}">
+                <option value="" selected>Select Value</option>
+ {DeliveryTerm_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Validity</th>
+ 
+            <td><input id="AddNewHeaderValidity" maxlength="15" size="15" value="{Validity}" name="{Validity_Name}"></td> 
+            <th>Attn</th>
+ 
+            <td>
+              <!-- BEGIN ListBox Attn -->
+              <select id="AddNewHeaderAttn" name="{Attn_Name}">
+                <option value="0" selected>Select Value</option>
+ {Attn_Options} 
+              </select>
+ <!-- END ListBox Attn -->
+              <!-- BEGIN TextBox lblAttn --><input id="AddNewHeaderlblAttn" readonly value="{lblAttn}" name="{lblAttn_Name}"><!-- END TextBox lblAttn -->&nbsp; 
+              <!-- BEGIN Link LinkChange --><a href="{LinkChange_Src}" id="AddNewHeaderLinkChange">Change</a><!-- END Link LinkChange --></td> 
+            <th>Delivery Time</th>
+ 
+            <td>
+              <select id="AddNewHeaderDeliveryTime" name="{DeliveryTime_Name}">
+                <option value="" selected>Select Value</option>
+ {DeliveryTime_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Quotation Date</th>
+ 
+            <td><input id="AddNewHeaderQuotationDate" maxlength="100" size="8" value="{QuotationDate}" name="{QuotationDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_QuotationDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddNewHeaderDatePicker_QuotationDate"><img id="AddNewHeaderDatePicker_QuotationDate_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_QuotationDate --></td> 
+            <th>Email</th>
+ 
+            <td><input id="AddNewHeaderEmail" readonly maxlength="30" size="30" value="{Email}" name="{Email_Name}"></td> 
+            <th>Payment Term</th>
+ 
+            <td>
+              <select id="AddNewHeaderPaymentTerm" name="{PaymentTerm_Name}">
+                <option value="" selected>Select Value</option>
+ {PaymentTerm_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client Order Ref</th>
+ 
+            <td><input id="AddNewHeaderClientOrderRef" maxlength="50" size="15" value="{ClientOrderRef}" name="{ClientOrderRef_Name}"></td> 
+            <th>Address</th>
+ 
+            <td><textarea id="AddNewHeaderAddress" name="{Address_Name}" rows="3" readonly cols="30">{Address}</textarea></td> 
+            <th rowspan="3">Special Instruction</th>
+ 
+            <td rowspan="3"><textarea id="AddNewHeaderSpecialInstruction" name="{SpecialInstruction_Name}" rows="7">{SpecialInstruction}</textarea></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client</th>
+ 
+            <td>
+              <select id="AddNewHeaderClientID" name="{ClientID_Name}">
+                <option value="" selected>Select Value</option>
+ {ClientID_Options} 
+              </select>
+ </td> 
+            <th>Phone</th>
+ 
+            <td><input id="AddNewHeaderPhone" readonly maxlength="15" size="15" value="{Phone}" name="{Phone_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Packaging Cost</th>
+ 
+            <td><input id="AddNewHeaderPackagingCost" maxlength="12" size="12" value="{PackagingCost}" name="{PackagingCost_Name}"></td> 
+            <th>Fax</th>
+ 
+            <td><input id="AddNewHeaderFax" readonly maxlength="15" size="15" value="{Fax}" name="{Fax_Name}"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="6">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="AddNewHeaderButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record AddNewHeader --></p>
+<p>
+<!-- BEGIN EditableGrid AddNewDetail -->
+<form id="AddNewDetail" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>List of Quotation</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="10">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Caption">
+            <th>Rnd Code</th>
+ 
+            <th>Photo</th>
+ 
+            <th>Description</th>
+ 
+            <th>D</th>
+ 
+            <th>H</th>
+ 
+            <th>W</th>
+ 
+            <th>L</th>
+ 
+            <th>Unit Price</th>
+ 
+            <th>Remark</th>
+ 
+            <th>Delete</th>
+ 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="11">{Error}</td> 
+          </tr>
+ <!-- END RowError -->
+          <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+            <td><input id="AddNewDetailQuotation_H_ID_{AddNewDetail:rowNumber}" type="hidden" value="{Quotation_H_ID}" name="{Quotation_H_ID_Name}">
+              <!--{RowNameAttribute}-->
+              <!-- BEGIN ListBox RndCode -->
+              <select id="AddNewDetailRndCode_{AddNewDetail:rowNumber}" name="{RndCode_Name}">
+                <option value="" selected>Select Value</option>
+ {RndCode_Options} 
+              </select>
+ <!-- END ListBox RndCode --></td> 
+            <td><input id="AddNewDetailFotoFile_{AddNewDetail:rowNumber}" type="hidden" value="{FotoFile}" name="{FotoFile_Name}"><img id="AddNewDetailPhoto_{AddNewDetail:rowNumber}" height="50" alt=" " src="../upload/{Photo}" width="50" align="center"></td> 
+            <td><input id="AddNewDetailDescription_{AddNewDetail:rowNumber}" maxlength="100" size="30" value="{Description}" name="{Description_Name}"></td> 
+            <td><input id="AddNewDetailDiameter_{AddNewDetail:rowNumber}" maxlength="12" size="5" value="{Diameter}" name="{Diameter_Name}"></td> 
+            <td><input id="AddNewDetailHeight_{AddNewDetail:rowNumber}" maxlength="12" size="5" value="{Height}" name="{Height_Name}"></td> 
+            <td><input id="AddNewDetailWidth_{AddNewDetail:rowNumber}" maxlength="12" size="5" value="{Width}" name="{Width_Name}"></td> 
+            <td><input id="AddNewDetailLength_{AddNewDetail:rowNumber}" maxlength="12" size="5" value="{Length}" name="{Length_Name}"></td> 
+            <td><input id="AddNewDetailUnitPrice_{AddNewDetail:rowNumber}" maxlength="12" size="6" value="{UnitPrice}" name="{UnitPrice_Name}"></td> 
+            <td><textarea id="AddNewDetailRemark_{AddNewDetail:rowNumber}" name="{Remark_Name}" rows="3" cols="30">{Remark}</textarea></td> 
+            <td>
+              <!-- BEGIN CheckBox CheckBox_Delete --><input id="AddNewDetailCheckBox_Delete_{AddNewDetail:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="10">No records</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="10">
+              <!-- BEGIN Button AddItemBtn --><input class="Button" id="AddNewDetailAddItemBtn" type="button" value="Add Item" name="{Button_Name}"><!-- END Button AddItemBtn -->
+              <!-- BEGIN Button Button_Submit --><input class="Button" id="AddNewDetailButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END EditableGrid AddNewDetail --></p>
+</body>
+</html>

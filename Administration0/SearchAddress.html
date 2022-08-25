@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta name="GENERATOR" content="CodeCharge Studio 3.1.1.0">
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>NewPage1</title>
+<meta content="CodeCharge Studio 3.1.1.0" name="GENERATOR">
+<link href="Styles/Basic/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellspacing="0" cellpadding="3" width="100%" border="0">
+  <tr>
+    <td class="TopContentTitle" width="50%" height="39">ADMINISTRATION</td>
+  </tr>
+</table>
+<br>
+<br>
+<font class="InLineFormHeaderFont">Search Address Book</font> 
+<!-- BEGIN Record tbladminist_addressbookSearch -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="3" border="0">
+    <!-- BEGIN Error -->
+    <tr>
+      <td class="InLineErrorDataTD" colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td class="InLineFieldCaptionTD">Company</td> 
+      <td class="InLineDataTD">
+        <select class="InLineSelect" name="{s_Company_Name}" id="tbladminist_addressbookSearchs_Company">
+          <option value="" selected>Select Value</option>
+          {s_Company_Options}
+        </select>
+ </td>
+    </tr>
+ 
+    <tr>
+      <td class="InLineFooterTD" align="right" colspan="2">
+        <!-- BEGIN Button Button_DoSearch --><input class="InLineButton" type="submit" value="Search" name="{Button_Name}" id="tbladminist_addressbookSearchButton_DoSearch"><!-- END Button Button_DoSearch --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tbladminist_addressbookSearch --><br>
+<!-- BEGIN Grid tbladminist_addressbook --><font class="InLineFormHeaderFont">List of Address Book</font> 
+<table cellspacing="0" cellpadding="3" border="0">
+  <tr>
+    <td class="InLineColumnTD">
+      <!-- BEGIN Sorter Sorter_Company --><a href="{Sort_URL}" class="InLineSorterLink" id="tbladminist_addressbookSorter_Company">COMPANY</a> 
+      <!-- BEGIN Asc_On --><img src="Styles/Basic/Images/Asc.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Styles/Basic/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_Company --></td> 
+    <td class="InLineColumnTD">
+      <!-- BEGIN Sorter Sorter_Contact --><a href="{Sort_URL}" class="InLineSorterLink" id="tbladminist_addressbookSorter_Contact">CONTACT</a> 
+      <!-- BEGIN Asc_On --><img src="Styles/Basic/Images/Asc.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Styles/Basic/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_Contact --></td> 
+    <td class="InLineColumnTD">
+      <!-- BEGIN Sorter Sorter_Email --><a href="{Sort_URL}" class="InLineSorterLink" id="tbladminist_addressbookSorter_Email">E-MAIL</a> 
+      <!-- BEGIN Asc_On --><img src="Styles/Basic/Images/Asc.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Styles/Basic/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_Email --></td> 
+    <td class="InLineColumnTD">
+      <!-- BEGIN Sorter Sorter_Address --><a href="{Sort_URL}" class="InLineSorterLink" id="tbladminist_addressbookSorter_Address">ADDRESS</a> 
+      <!-- BEGIN Asc_On --><img src="Styles/Basic/Images/Asc.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Styles/Basic/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_Address --></td> 
+    <td class="InLineColumnTD">
+      <!-- BEGIN Sorter Sorter_Phone --><a href="{Sort_URL}" class="InLineSorterLink" id="tbladminist_addressbookSorter_Phone">PHONE</a> 
+      <!-- BEGIN Asc_On --><img src="Styles/Basic/Images/Asc.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Styles/Basic/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_Phone --></td> 
+    <td class="InLineColumnTD">
+      <!-- BEGIN Sorter Sorter_Fax --><a href="{Sort_URL}" class="InLineSorterLink" id="tbladminist_addressbookSorter_Fax">FAX</a> 
+      <!-- BEGIN Asc_On --><img src="Styles/Basic/Images/Asc.gif" border="0"><!-- END Asc_On -->
+      <!-- BEGIN Desc_On --><img src="Styles/Basic/Images/Desc.gif" border="0"><!-- END Desc_On -->&nbsp;<!-- END Sorter Sorter_Fax --></td>
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr class="Row">
+    <td class="InLineDataTD">{Company}&nbsp;</td> 
+    <td class="InLineDataTD">{Contact}&nbsp;</td> 
+    <td class="InLineDataTD">{Email}&nbsp;</td> 
+    <td class="InLineDataTD">{Address}&nbsp;</td> 
+    <td class="InLineDataTD">{Phone}&nbsp;</td> 
+    <td class="InLineDataTD">{Fax}&nbsp;</td>
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td class="InLineErrorDataTD" colspan="6">No records </td>
+  </tr>
+  <!-- END NoRecords -->
+  <tr>
+    <td class="InLineFooterTD" colspan="6"><a href="{AddNew_Src}" id="tbladminist_addressbookAddNew">Add New</a>&nbsp;
+      <!-- BEGIN Navigator Navigator -->
+      <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->First &nbsp; <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+      <!-- BEGIN Pages -->
+      <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a><!-- END Page_On -->
+      <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->Next &nbsp; <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->Last &nbsp;<!-- END Last_Off -->&nbsp;<!-- END Navigator Navigator --></td>
+  </tr>
+</table>
+&nbsp;<!-- END Grid tbladminist_addressbook -->
+</body>
+</html>

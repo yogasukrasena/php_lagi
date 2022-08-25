@@ -1,0 +1,262 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ShowPL</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+&nbsp; 
+<!-- BEGIN Link Report_Print -->
+<p align="right"><a href="{Report_Print_Src}" id="Report_Print" target="_blank">Printable version</a></p>
+<!-- END Link Report_Print -->
+<!-- BEGIN Report Header -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          <th>PACKING LIST&nbsp;</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <!-- BEGIN Panel PageBreak -->
+      </table>
+    </td>
+  </tr>
+</table>
+<p style="PAGE-BREAK-AFTER: always">&nbsp;</p>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- END Panel PageBreak --><!-- END Section Page_Footer -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <th>P/L No </th>
+ 
+          <td colspan="2">{PLNo}&nbsp;&nbsp;<input id="HeaderDetailInvoice_H_ID" type="hidden" value="{Invoice_H_ID}" name="{Invoice_H_ID_Name}"></td> 
+          <td>P/L Date&nbsp;</td> 
+          <td>{PLDate}&nbsp;</td> 
+          <td colspan="2">Order&nbsp;Ref&nbsp;&nbsp;</td> 
+          <td>{OrderRef}&nbsp;</td>
+        </tr>
+ 
+        <tr class="Row">
+          <th colspan="4"><strong><em>Invoice Address :</em></strong>&nbsp;<input id="HeaderDetailAddressID" type="hidden" value="{AddressID}" name="{AddressID_Name}">&nbsp;</th>
+ 
+          <td colspan="4"><strong><em>Delivery Address : <input id="HeaderDetailDeliveryAddressID" type="hidden" value="{DeliveryAddressID}" name="{DeliveryAddressID_Name}"></em></strong></td>
+        </tr>
+ 
+        <tr class="Row">
+          <th colspan="4"><b>{Company}</b>&nbsp;</th>
+ 
+          <th colspan="4"><b>{Company1}</b>&nbsp; </th>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Attn</th>
+ 
+          <td colspan="3">{Attn1}&nbsp;</td> 
+          <td>Attn</td> 
+          <td colspan="3">{Attn2}&nbsp;</td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Address</th>
+ 
+          <td colspan="3">{Address1}&nbsp;</td> 
+          <td>Address</td> 
+          <td colspan="3">{Address2}&nbsp;</td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Phone</th>
+ 
+          <td>{Phone1}&nbsp;</td> 
+          <td>Fax&nbsp;</td> 
+          <td>{Fax1}&nbsp;</td> 
+          <td>Phone&nbsp;</td> 
+          <td>{Phone2}&nbsp;</td> 
+          <td>Fax&nbsp;</td> 
+          <td>{Fax2}&nbsp;</td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="8">No records</td>
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+&nbsp;<!-- END Report Header --><br>
+&nbsp; 
+<!-- BEGIN Report Detil -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          <th>Box List</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <thead style="DISPLAY: table-header-group">
+          <tr class="Caption">
+            <th rowspan="2">
+            <p align="center">NO</p>
+            </th>
+ 
+            <td colspan="3">
+              <p align="center">&nbsp;<strong>BOX</strong>&nbsp;&nbsp;</p>
+            </td> 
+            <th style="TEXT-ALIGN: center" rowspan="2">Qty</th>
+ 
+            <th style="TEXT-ALIGN: center" rowspan="2">Unit</th>
+ 
+            <th style="TEXT-ALIGN: center" rowspan="2">CLIENT CODE </th>
+ 
+            <th style="TEXT-ALIGN: center" rowspan="2">CLIENT DESC </th>
+ 
+            <th style="TEXT-ALIGN: center" colspan="6">DESCRIPTION</th>
+ 
+            <th style="TEXT-ALIGN: center" rowspan="2">FINAL SIZE</th>
+ 
+            <th rowspan="2">Remarks</th>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>NO.</th>
+ 
+            <th>SIZE</th>
+ 
+            <th>WEIGHT&nbsp;</th>
+ 
+            <th>NameDesc</th>
+ 
+            <th>CategoryName</th>
+ 
+            <th>SizeName</th>
+ 
+            <th>TextureName</th>
+ 
+            <th>ColorName</th>
+ 
+            <th>MaterialName</th>
+          </tr>
+ 
+        </thead>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tfoot style="DISPLAY: table-footer-group">
+          <tr class="Footer">
+            <td colspan="16">{Report_CurrentDate}</td>
+          </tr>
+        </tfoot>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section BoxNumber_Header --><!-- END Section BoxNumber_Header -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td style="VERTICAL-ALIGN: middle" rowspan="4">{LocalRowNumber}&nbsp;</td> 
+          <td style="VERTICAL-ALIGN: middle" rowspan="4">{BoxNumber}&nbsp; </td> 
+          <td style="VERTICAL-ALIGN: middle" rowspan="2">L= {Length}</td> 
+          <td style="VERTICAL-ALIGN: middle" rowspan="4">&nbsp;{Weight}</td> 
+          <td style="TEXT-ALIGN: right" rowspan="4">{Qty} </td> 
+          <td rowspan="4">{Unit} </td> 
+          <td rowspan="4">&nbsp;{cLIENTcODE}</td> 
+          <td rowspan="4">&nbsp;{ClientDesc}</td> 
+          <td rowspan="4">{NameDesc} </td> 
+          <td rowspan="4">{CategoryName} </td> 
+          <td rowspan="4">{SizeName} </td> 
+          <td rowspan="4">{TextureName}&nbsp;</td> 
+          <td rowspan="4">{ColorName} </td> 
+          <td rowspan="4">{MaterialName} </td> 
+          <td style="TEXT-ALIGN: right">D =&nbsp;&nbsp;{CollectDiameter}</td> 
+          <td rowspan="4">{Remarks}&nbsp; </td>
+        </tr>
+ 
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">H = {CollectHeight}&nbsp; </td>
+        </tr>
+ 
+        <tr class="Row">
+          <td style="VERTICAL-ALIGN: middle">W= {Width}</td> 
+          <td style="TEXT-ALIGN: right">W =&nbsp;&nbsp;{CollectWidth}</td>
+        </tr>
+ 
+        <tr class="Row">
+          <td style="VERTICAL-ALIGN: middle">H= {Height}</td> 
+          <td style="TEXT-ALIGN: right">L =&nbsp;&nbsp;{CollectLength}</td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section BoxNumber_Footer --><!-- END Section BoxNumber_Footer -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="16">No records</td>
+        </tr>
+ <!-- END Panel NoRecords -->
+        <tr class="Total">
+          <td valign="baseline">TOTAL&nbsp; </td> 
+          <td>{ReportLabel2}&nbsp;</td> 
+          <td>{ReportLabel3}&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>{ReportLabel1}&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td>
+        </tr>
+ <!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report Detil --><br>
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tr>
+    <td width="50%">Issued By,<br>
+    </td> 
+    <td align="right">Customer Approval </td>
+  </tr>
+ 
+  <tr>
+    <td>Gaya Fusion </td> 
+    <td>&nbsp;</td>
+  </tr>
+ 
+  <tr>
+    <td>&nbsp;</td> 
+    <td>&nbsp;</td>
+  </tr>
+ 
+  <tr>
+    <td>{lblAdministrasi}</td> 
+    <td align="right">{lblCustomer}</td>
+  </tr>
+</table>
+</body>
+</html>

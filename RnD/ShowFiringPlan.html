@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Show Firing Plan</title>
+
+<link href="../includes/graphite.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record tblfiringplan -->
+<form id="tblfiringplan" name="{HTMLFormName}" action="{Action}" method="post">
+<font class="GraphiteFormHeaderFont">Work Plan Gaya&nbsp;Design </font> 
+  <table class="GraphiteFormTABLE" cellspacing="1" cellpadding="3">
+    <tr>
+      <td class="GraphiteColumnTD" colspan="2" align="center">
+	  	<table width="100%" border="0" cellspacing="0" cellpadding="3">
+        	<tr>
+       		  <td height="50" align="center" valign="bottom"><h1>FIRING PLAN </h1></td>
+			  <td height="50"><img src="../images/GayaKecil.jpg" width="300" height="50"></td> 
+        	</tr>
+      	</table>
+	  </td> 
+    </tr>
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="2" class="GraphiteErrorDataTD">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Firing Plan Code</th>
+      <th class="GraphiteFieldCaptionTD">Firing Plan Description</th> 
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD">{FiringPlanCode}</td>
+      <td class="GraphiteDataTD">{FiringPlanDescription}</td>
+    </tr>
+	
+	<tr>
+      <td class="GraphiteDataTD" nowrap colspan="2" align="right">&nbsp;</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteFieldCaptionTD" colspan="2" nowrap>Notes</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" colspan="2" nowrap>&nbsp;</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">
+	  	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+			<tr>
+				<td height="500" valign="top">{FiringPlanNotes}</td>
+			</tr>
+		</table>	
+	  </td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" colspan="2" nowrap>&nbsp;</td> 
+    </tr>
+ 	<tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Photo</td> 
+    </tr>
+	<tr>
+	  <td colspan="2">
+	  	<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr>
+	  			<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tblfiringplanFiringPlanPhoto1" src="../upload/{FiringPlanPhoto1}"></td> 
+      			<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tblfiringplanFiringPlanPhoto2" src="../upload/{FiringPlanPhoto2}"></td> 
+      			<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tblfiringplanFiringPlanPhoto3" src="../upload/{FiringPlanPhoto3}"></td>
+				<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tblfiringplanFiringPlanPhoto4" src="../upload/{FiringPlanPhoto4}"></td> 
+			</tr>
+		</table>
+	  </td>
+    </tr>
+	<tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Technical
+        Drawing</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" nowrap colspan="2" align="center" valign="middle"><img class="GraphiteInput" height="750" width="600" id="tblfiringplanFiringPlanTechDraw" src="../upload/{FiringPlanTechDraw}"></td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record tblfiringplan --><br>
+</body>
+</html>

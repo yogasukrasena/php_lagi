@@ -1,0 +1,94 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Proforma Payment</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-A14DC9A2
+
+var Payment_DatePicker_paid_date = new Object(); 
+Payment_DatePicker_paid_date.format           = "dd/mm/yyyy";
+Payment_DatePicker_paid_date.style            = "Styles/Fresh/Style.css";
+Payment_DatePicker_paid_date.relativePathPart = "";
+Payment_DatePicker_paid_date.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record Payment -->
+<form id="Payment" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Proforma Payment</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Currency</th>
+ 
+            <td><input id="Paymentcurrency_id" type="hidden" value="{currency_id}" name="{currency_id_Name}">{lblCurrency} </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Rate</th>
+ 
+            <td><input id="PaymentRate" maxlength="12" size="12" value="{Rate}" name="{Rate_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Received&nbsp;Date<input id="Paymentar_proforma_id" type="hidden" value="{ar_proforma_id}" name="{ar_proforma_id_Name}"></th>
+ 
+            <td><input id="Paymentpaid_date" maxlength="100" size="10" value="{paid_date}" name="{paid_date_Name}">
+              <!-- BEGIN DatePicker DatePicker_paid_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="PaymentDatePicker_paid_date"><img id="PaymentDatePicker_paid_date_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_paid_date --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Amount Received</th>
+ 
+            <td><input id="Paymentamount_paid" maxlength="12" size="12" value="{amount_paid}" name="{amount_paid_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="PaymentButton_Insert" type="submit" value="Save" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="PaymentButton_Update" type="submit" value="Edit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record Payment -->
+</body>
+</html>

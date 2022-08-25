@@ -1,0 +1,1224 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorPinkPatterned {
+	background-color: #e6cfd3;
+	}
+
+.FormTitleBgColorPinkPatterned {
+	background-color: #cc6678;
+	}
+
+.FormTitleFontColorPinkPatterned {
+	color: #ffffff;
+	}
+
+.CaptionBgColorPinkPatterned {
+	background-color: #f2c2cb;
+	}
+
+.CaptionFontColorPinkPatterned {
+	color: #000000;
+	}
+
+.DataBgColorPinkPatterned {
+	background-color: #f7f7f7;
+	}
+
+.AltDataBgColorPinkPatterned {
+	background-color: #f7e6e9;
+	}
+
+.DataFontColorPinkPatterned {
+	color: #000000;
+	}
+
+.LinkColorPinkPatterned {
+	color: #0033cc;
+	}
+
+.VisitedLinkColorPinkPatterned {
+	color: #830083;
+	}
+
+.HoverLinkColorPinkPatterned {
+	color: #ff0000;
+	}
+
+.ColorBgButtonPinkPatterned {
+	background-color: #cc6678;
+}
+
+.ColorFontButtonPinkPatterned {
+	color: #ffffff;
+}
+
+.ColorBgButtonPassivePinkPatterned {
+	background-color: #ffb2c0;
+}
+
+.ColorFontButtonPassivePinkPatterned {
+	color: #ffffff;
+}
+
+
+
+.HeaderPinkPatterned {
+	width: 100%;
+	}
+
+.HeaderPinkPatterned th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif'); color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+	padding-left: 8px;
+	}
+
+
+html>body .HeaderPinkPatterned th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderPinkPatterned th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.HeaderPinkPatterned a:link { 
+	color: #ffffff;
+	}
+
+.HeaderPinkPatterned a:visited { 
+	color: #ffffff;
+	}
+
+.HeaderPinkPatterned a:hover, .CaptionPinkPatterned a:active { 
+	color: #ffffff; text-decoration: none;
+	}
+
+.HeaderLeftPinkPatterned { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightPinkPatterned { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftPinkPatterned img{
+	width: 1px;
+	}
+
+.HeaderRightPinkPatterned img{
+	width: 1px;
+	}
+
+
+/* Grid Options */
+.GridPinkPatterned { 
+	border: 1px solid #cc6678;
+	width: 100%;
+	}
+
+.CaptionPinkPatterned th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+
+html>body .CaptionPinkPatterned th, html>body .CaptionPinkPatterned td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionPinkPatterned th, * html body .CaptionPinkPatterned td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionPinkPatterned a:link { 
+	color: #000000;
+	}
+
+.CaptionPinkPatterned a:visited { 
+	color: #000000;
+	}
+
+.CaptionPinkPatterned a:hover, .CaptionPinkPatterned a:active { 
+	color: #ff0000;
+	}
+
+.CaptionPinkPatterned img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionPinkPatterned input {
+	vertical-align: middle;
+	}
+
+.RowPinkPatterned th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+
+html>body .RowPinkPatterned th, html>body .RowPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .RowPinkPatterned th, * html body .RowPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+caption.RowPinkPatterned { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #cc6678; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+html>body caption.RowPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body caption.RowPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.RowPinkPatterned a:link { 
+	color: #0033cc;
+	}
+
+.RowPinkPatterned a:visited { 
+	color: #830083;
+	}
+
+.RowPinkPatterned a:hover, .RowPinkPatterned a:active { 
+	color: #ff0000;
+	}
+
+.SeparatorPinkPatterned{
+	color: #cc6678;
+	}
+
+.SeparatorPinkPatterned td{
+	height: 1px;
+	}
+
+
+.AltRowPinkPatterned th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7e6e9; 
+	color: #000000;
+	}
+
+
+html>body .AltRowPinkPatterned th, html>body .AltRowPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .AltRowPinkPatterned th, * html body .AltRowPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.AltRowPinkPatterned a:link { 
+	color: #0033cc;
+	}
+
+.AltRowPinkPatterned a:visited { 
+	color: #830083;
+	}
+
+.AltRowPinkPatterned a:hover, .AltRowPinkPatterned a:active { 
+	color: #ff0000;
+	}
+
+.NoRecordsPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	background-color: #f7f7f7; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .NoRecordsPinkPatterned td, html>body .FooterPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .NoRecordsPinkPatterned td, * html body .FooterPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.FooterPinkPatterned a:link { 
+	color: #0033cc;
+	}
+
+.FooterPinkPatterned a:visited { 
+	color: #830083;
+	}
+
+.FooterPinkPatterned a:hover, .FooterPinkPatterned a:active { 
+	color: #ff0000;
+	}
+
+.FooterPinkPatterned img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterPinkPatterned input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordPinkPatterned { 
+	border: 1px solid #cc6678;
+	width: 100%;
+	}
+
+.ErrorPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+
+* html>body .ErrorPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ErrorPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.ControlsPinkPatterned th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+.BottomPinkPatterned td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .ControlsPinkPatterned th, html>body .ControlsPinkPatterned td, html>body .BottomPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .ControlsPinkPatterned th, * html body .ControlsPinkPatterned td, * html body .BottomPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.BottomPinkPatterned a:link { 
+	color: #0033cc;
+	}
+
+.BottomPinkPatterned a:visited { 
+	color: #830083;
+	}
+
+.BottomPinkPatterned a:hover, .CaptionPinkPatterned a:active { 
+	color: #ff0000;
+	}
+
+.BottomPinkPatterned img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomPinkPatterned input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionPinkPatterned th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7e6e9; 
+	color: #000000;
+	}
+
+.GroupCaptionPinkPatterned td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+html>body .GroupCaptionPinkPatterned th, html>body .GroupCaptionPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionPinkPatterned th, * html body .GroupCaptionPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionPinkPatterned a:link {
+	color: #000000;
+	}
+
+.GroupCaptionPinkPatterned a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionPinkPatterned a:hover, .GroupCaptionPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterPinkPatterned td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #f2c2cb; 
+	color: #000000;
+	}
+
+
+html>body .GroupFooterPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .GroupFooterPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.GroupFooterPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.GroupFooterPinkPatterned a:hover, .GroupFooterPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterPinkPatterned img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterPinkPatterned input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalPinkPatterned td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7e6e9; 
+	color: #000000;
+	border-bottom: 2px solid #cc6678;
+	}
+
+
+html>body .SubTotalPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .SubTotalPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.SubTotalPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.SubTotalPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.SubTotalPinkPatterned a:hover, .SubTotalPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+.TotalPinkPatterned td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #f7e6e9; 
+	color: #000000;
+	}
+
+
+html>body .TotalPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .TotalPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.TotalPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.TotalPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.TotalPinkPatterned a:hover, .TotalPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Form Options */
+.ButtonPinkPatterned { 
+	background-color: #cc6678; color: #ffffff; border-left: solid 1px #EDEDED; border-top: solid 1px #EDEDED; border-right: solid 1px #848284; border-bottom: solid 1px #848284; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 11px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarPinkPatterned { 
+	border: 1px solid #cc6678;
+	width: 100%;
+	}
+
+.CalendarWeekdayNamePinkPatterned{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #f7e6e9; 
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekdayNamePinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekdayNamePinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNamePinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekdayNamePinkPatterned a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekdayNamePinkPatterned a:hover, .CalendarWeekdayNamePinkPatterned a:active{
+	color: #ff0000;
+	}
+
+.CalendarWeekendNamePinkPatterned{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #f7e6e9;	
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+html>body .CalendarWeekendNamePinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendNamePinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNamePinkPatterned a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNamePinkPatterned a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNamePinkPatterned a:link, .CalendarWeekendNamePinkPatterned a:visited{
+	color: #ff0000;
+	}
+
+/* Calendar Day */
+.CalendarDayPinkPatterned{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+html>body .CalendarDayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarDayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.CalendarDayPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.CalendarDayPinkPatterned a:hover, .CalendarDayPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendPinkPatterned{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: center;
+	background-color: #f7e6e9;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekendPinkPatterned a:hover, .CalendarWeekendPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Today */
+.CalendarTodayPinkPatterned {
+	font-family: Tahoma; font-size: 80%;
+	padding: 0px;
+	border: 2px solid #cc6678;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+html>body .CalendarTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.CalendarTodayPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.CalendarTodayPinkPatterned a:hover, .CalendarTodayPinkPatterned a:active {
+	color: #ff0000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayPinkPatterned {
+	font-family: Tahoma; font-size: 80%;
+	padding: 0px;
+	border: 2px solid #cc6678;
+	text-align: center;
+	background-color: #f7e6e9;	
+	color: #000000;
+	}
+
+
+html>body .CalendarWeekendTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendTodayPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekendTodayPinkPatterned a:hover, .CalendarWeekendTodayPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayPinkPatterned{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #cc6678;
+	}
+
+
+html>body .CalendarOtherMonthDayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayPinkPatterned a:link {
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthDayPinkPatterned a:visited{
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthDayPinkPatterned a:hover, .CalendarOtherMonthDayPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayPinkPatterned {
+	font-family: Tahoma; font-size: 80%;
+	padding: 0px;
+	border: 2px solid #cc6678;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #cc6678;
+	}
+
+
+html>body .CalendarOtherMonthTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayPinkPatterned a:link {
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthTodayPinkPatterned a:visited{
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthTodayPinkPatterned a:hover, .CalendarOtherMonthTodayPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendPinkPatterned {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: center;
+	background-color: #f7e6e9;	
+	color: #cc6678;
+	}
+
+
+html>body .CalendarOtherMonthWeekendPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendPinkPatterned a:link {
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthWeekendPinkPatterned a:visited{
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthWeekendPinkPatterned a:hover, .CalendarOtherMonthWeekendPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayPinkPatterned {
+	font-family: Tahoma; font-size: 80%;
+	padding: 0px;
+	border: 2px solid #cc6678;
+	text-align: center;
+	color: #cc6678;
+	background-color: #f7e6e9;	
+	}
+	
+
+html>body .CalendarOtherMonthWeekendTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayPinkPatterned a:link {
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthWeekendTodayPinkPatterned a:visited{
+	color: #cc6678;
+	}
+
+.CalendarOtherMonthWeekendTodayPinkPatterned a:hover, .CalendarOtherMonthWeekendTodayPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayPinkPatterned{
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-color: #f2c2cb;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+html>body .CalendarSelectedDayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarSelectedDayPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayPinkPatterned a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDayPinkPatterned a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDayPinkPatterned a:hover, .CalendarSelectedDayPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorPinkPatterned {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+html>body .CalendarNavigatorPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.CalendarNavigatorPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.CalendarNavigatorPinkPatterned a:hover, .CalendarNavigatorPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+.CalendarNavigatorPinkPatterned img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorPinkPatterned td {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+.CalendarNavigatorPinkPatterned th {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+
+html>body .CalendarNavigatorPinkPatterned th, html>body .CalendarNavigatorPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarNavigatorPinkPatterned th, * html body .CalendarNavigatorPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventPinkPatterned{
+	font-family: Tahoma; font-size: 80%;
+	text-align: left;
+	}
+
+
+html>body .CalendarEventPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .CalendarEventPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventPinkPatterned a:link {
+	color: #0033cc;
+	}
+
+.CalendarEventPinkPatterned a:visited{
+	color: #830083;
+	}
+
+.CalendarEventPinkPatterned a:hover, .CalendarEventPinkPatterned a:active{
+	color: #ff0000;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thPinkPatterned { 
+	font-family: Tahoma; font-size: 80%;
+	font-weight: bold;
+}
+
+
+html>body .thPinkPatterned {
+	font-size: 100%;
+}
+
+
+/*ie6*/
+* html body .thPinkPatterned {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderPinkPatterned .thPinkPatterned { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 2px;
+	background-image: url('Images/HeaderBg.gif'); color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+html>body .HeaderPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+
+
+/*ie6*/
+* html body .HeaderPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.CaptionPinkPatterned .thPinkPatterned { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+}
+
+
+html>body .CaptionPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .CaptionPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowPinkPatterned .thPinkPatterned { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.AltRowPinkPatterned .thPinkPatterned { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.ControlsPinkPatterned .thPinkPatterned { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.GroupCaptionPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border: 1px solid #f2c2cb;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7e6e9; 
+	color: #000000;
+}
+
+
+html>body .GroupCaptionPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+html>body .RowPinkPatterned .thPinkPatterned, html>body .AltRowPinkPatterned .thPinkPatterned, html>body .ControlsPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+
+
+/*ie6*/
+* html body .GroupCaptionPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 100%;
+}
+
+* html body .RowPinkPatterned .thPinkPatterned, * html body .AltRowPinkPatterned .thPinkPatterned, * html body .ControlsPinkPatterned .thPinkPatterned {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuPinkPatterned td {
+	font-family: Tahoma; font-size: 80%;
+}
+
+
+html>body .simpleMenuPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+} 
+
+
+/*ie6*/
+* html body .simpleMenuPinkPatterned td {
+	font-family: Tahoma; font-size: 100%;
+} 
+/*end*/

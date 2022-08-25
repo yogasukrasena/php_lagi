@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>AddCollection</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/PinkPatterned/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//AddCollectButton_Delete_OnClick @5-93D80D28
+function AddCollectButton_Delete_OnClick()
+{
+    var result;
+//End AddCollectButton_Delete_OnClick
+
+//Confirmation Message @6-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close AddCollectButton_Delete_OnClick @5-BC33A33A
+    return result;
+}
+//End Close AddCollectButton_Delete_OnClick
+
+//bind_events @1-B2D156B7
+function bind_events() {
+    addEventHandler("AddCollectButton_Delete", "click", AddCollectButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record AddCollect -->
+<!-- BEGIN Link LinkEdit --><a href="{LinkEdit_Src}" id="AddCollectLinkEdit">Edit WorkPlan</a><!-- END Link LinkEdit -->
+<form id="AddCollect" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Add/Edit Collection</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="AddCollectDesignCode">Design</label></td> 
+            <td>
+              <select id="AddCollectDesignCode" name="{DesignCode_Name}">
+                <option value="" selected>Select Value</option>
+                {DesignCode_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="AddCollectNameCode">Name</label></td> 
+            <td>
+              <select id="AddCollectNameCode" name="{NameCode_Name}">
+                <option value="" selected>Select Value</option>
+                {NameCode_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="AddCollectCategoryCode">Category</label></td> 
+            <td>
+              <select id="AddCollectCategoryCode" name="{CategoryCode_Name}">
+                <option value="" selected>Select Value</option>
+                {CategoryCode_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="AddCollectSizeCode">Size</label><label for="AddCollecttest" style="display: none;"></label></td> 
+            <td>
+              <select id="AddCollectSizeCode" name="{SizeCode_Name}">
+                <option value="" selected>Select Value</option>
+                {SizeCode_Options}
+              </select>
+ &nbsp;<label for="AddCollecttest" style="display: none;"></label></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="AddCollectTextureCode">Texture</label></td> 
+            <td>
+              <select id="AddCollectTextureCode" name="{TextureCode_Name}">
+                <option value="" selected>Select Value</option>
+                {TextureCode_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="AddCollectColorCode">Color</label></td> 
+            <td>
+              <select id="AddCollectColorCode" name="{ColorCode_Name}">
+                <option value="" selected>Select Value</option>
+                {ColorCode_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="AddCollectMaterialCode">Material</label></td> 
+            <td>
+              <select id="AddCollectMaterialCode" name="{MaterialCode_Name}">
+                <option value="" selected>Select Value</option>
+                {MaterialCode_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddCollectButton_Insert" type="submit" alt="Add" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddCollectButton_Update" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="AddCollectButton_Delete" type="submit" alt="Delete" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AddCollect --><br>
+</body>
+</html>

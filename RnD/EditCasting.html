@@ -1,0 +1,160 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>.:: R&D - Casting ::.</title>
+
+<link href="Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-ECE0D51B
+
+var tblcasting_DatePicker_CastingDate = new Object(); 
+tblcasting_DatePicker_CastingDate.format           = "dd/mm/yyyy";
+tblcasting_DatePicker_CastingDate.style            = "Styles/Blueprint-Versi3/Style.css";
+tblcasting_DatePicker_CastingDate.relativePathPart = "";
+tblcasting_DatePicker_CastingDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//tblcastingButton_Delete_OnClick @4-F056AA52
+function tblcastingButton_Delete_OnClick()
+{
+    var result;
+//End tblcastingButton_Delete_OnClick
+
+//Confirmation Message @5-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close tblcastingButton_Delete_OnClick @4-BC33A33A
+    return result;
+}
+//End Close tblcastingButton_Delete_OnClick
+
+//bind_events @1-3B10FC14
+function bind_events() {
+    addEventHandler("tblcastingButton_Delete", "click", tblcastingButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record tblcasting -->
+<form id="tblcasting" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Casting </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Casting Code</th>
+ 
+            <td>{CastingCode}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Description</th>
+ 
+            <td>{CastingDescription}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Date</th>
+ 
+            <td><input id="tblcastingCastingDate" maxlength="100" size="10" value="{CastingDate}" name="{CastingDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_CastingDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="tblcastingDatePicker_CastingDate"><img id="tblcastingDatePicker_CastingDate_Image" alt="Show Date Picker" src="Styles/Blueprint-Versi3/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_CastingDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Technical Draw</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload1 --><input id="tblcastingFileUpload1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblcastingFileUpload1FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblcastingFileUpload1DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload1 --><font color="#ff0000">(600 x 750)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Photo1</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload2 --><input id="tblcastingFileUpload2ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblcastingFileUpload2FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblcastingFileUpload2DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload2 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Photo2</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload3 --><input id="tblcastingFileUpload3ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblcastingFileUpload3FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblcastingFileUpload3DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload3 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Photo3</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload4 --><input id="tblcastingFileUpload4ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblcastingFileUpload4FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblcastingFileUpload4DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload4 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Photo4</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload FileUpload5 --><input id="tblcastingFileUpload5ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes.<!-- END Info -->
+              <!-- BEGIN Upload --><input id="tblcastingFileUpload5FileControl" type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete<input id="tblcastingFileUpload5DeleteControl" type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload FileUpload5 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting Notes</th>
+ 
+            <td><textarea id="tblcastingCastingNotes" name="{CastingNotes_Name}" rows="3" cols="50">{CastingNotes}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tblcastingButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="tblcastingButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblcasting --><br>
+</body>
+</html>

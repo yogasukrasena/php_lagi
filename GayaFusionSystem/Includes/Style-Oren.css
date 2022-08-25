@@ -1,0 +1,31 @@
+/* InLine CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.InLinePageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.InLineFormHeaderFont{ color: #000000; font-size: 16px; font-weight: bold; }
+.InLineFormTableNew{ background-color:#FFF; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.InLineFieldCaptionTD{ border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #F2CFB1; font-size: 1.2em; }
+.InLineFieldCodifTD{ border-bottom: 1px solid #FFFFFF; color: #000000; background-color:#D98C96; font-size: 13px; }
+.InLineFieldCaptionTDNew{ background-color:#FF9966; border-bottom: 1px solid #FFFFFF; color: #000000; font-size: 13px; }
+/*.InlineTitleTD{background-color:#FB9C6E; color:#000000; font-size:13px; font-weight:bold; border:1px}*/
+.InLineTitleTD{ border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #FB9C6E; font-size: 13px; }
+.InlineLeftTitle{background-color:#EEE; font-size:13PX; font-weight:bold}
+.InLineAltDataTD{ color: #000000; background-color: #F2F2F2; font-size: 13px; }
+.InLineColumnTD{ border-left: 1px solid #89999B; border-right: 1px solid #89999B; border-bottom: 1px solid #89999B; border-top: 1px solid #89999B; color: #FFFFFF; background-color: #FF9966; font-size: 13px; font-weight: bold; }
+.InLineColumnBlackTD{border-right: 1px solid #89999B; border-bottom: 1px solid #89999B; border-top: 1px solid #89999B; color: #000000; background-color: #FF9966; font-size: 13px; }
+.MoneyBlackTD{ border-left: 1px solid #89999B; border-bottom: 1px solid #89999B; border-top: 1px solid #89999B; color: #000000; background-color: #FF9966; font-size: 13px; }
+.InLineDataTD{border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #F2CFB1; font-size: 13px; }
+.InLineForControl{border-right: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; background-color: #F2CFB1; font-size: 13px; }
+.MoneyTD{border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #F2CFB1; font-size: 13px; }
+.InLineErrorDataTD{ border-bottom: 1px solid #FFFFFF; color: #FF0000; background-color: #0D17EA; font-size: 13px; }
+.InLineSeparatorTD{ height: 1px; background-color: #000000; }
+.InLineFooterTD{ border: 1px solid #89999B; background-color: #FB9C6E; color: #FFFFFF; font-weight: bold; font-size: 13px; text-align: center; }
+.FooterSubmit{background-color:#DD7007; height:24px; color:#FFFFFF;}
+.TopContentTitle{background-color:#DD7007; font-size:24px; color:#FFFFFF;}
+.TopSeparator{background-color:#DD7007;}
+a.InLineDataLink:link,a.InLineDataLink:visited{ color: #000000; font-size: 13px; text-decoration: underline; }
+a.InLineDataLink:hover,a.InLineDataLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+.InLineButton { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #E7EFEF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.InLineInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.InLineTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.InLineSelect { font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.Table { }

@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Design Material</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="../RnD/Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+function SetOpenerValue(IDnya, currentObj)
+{
+        var IE  = (document.all) ? 1 : 0;
+        if(IE) {
+                var desc = currentObj.innerText; 
+        } else {
+                var desc = currentObj.text;     
+        }
+
+       window.opener.document.AddSampleCeramic.{txtID}.value = IDnya;
+       window.opener.document.AddSampleCeramic.{txtdesc}.value = desc;
+
+        window.opener.focus();
+        window.close();
+}
+
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/PinkPatterned/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellpadding="3" width="100%" border="0">
+  <tr>
+    <td>
+      <!-- BEGIN Record tbldesignmat_tblsupplier -->
+      <form id="tbldesignmat_tblsupplier" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="../RnD/Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+                  <th>Search Design Material</th>
+ 
+                  <td class="HeaderRight"><img src="../RnD/Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="6">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>Design Mat Code</th>
+ 
+                  <td><input id="tbldesignmat_tblsuppliers_DesignMatCode" maxlength="10" size="10" value="{s_DesignMatCode}" name="{s_DesignMatCode_Name}"></td> 
+                  <th>Design Mat Description</th>
+ 
+                  <td><input id="tbldesignmat_tblsuppliers_DesignMatDescription" maxlength="100" size="30" value="{s_DesignMatDescription}" name="{s_DesignMatDescription_Name}"></td> 
+                  <th>Supplier</th>
+ 
+                  <td><input id="tbldesignmat_tblsuppliers_SupCompany" maxlength="100" size="30" value="{s_SupCompany}" name="{s_SupCompany_Name}"></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="6">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="tbldesignmat_tblsupplierButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record tbldesignmat_tblsupplier -->
+      <p>
+      <!-- BEGIN Grid tbldesignmatGrid -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="../RnD/Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+                <th>List of Design Material</th>
+ 
+                <td class="HeaderRight"><img src="../RnD/Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="4"><b>Total Records :&nbsp;{tbldesignmat_tblsupplier1_TotalRecords}</b></td>
+              </tr>
+ 
+              <tr class="Caption">
+                <th>
+                <!-- BEGIN Sorter Sorter_DesignMatCode --><a href="{Sort_URL}" id="tbldesignmatGridSorter_DesignMatCode">DESIGN MATERIAL CODE</a> 
+                <!-- BEGIN Asc_On --><img src="../RnD/Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="../RnD/Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DesignMatCode --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_DesignMatDescription --><a href="{Sort_URL}" id="tbldesignmatGridSorter_DesignMatDescription">DESIGN MATERIAL DESCRIPTION</a> 
+                <!-- BEGIN Asc_On --><img src="../RnD/Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="../RnD/Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DesignMatDescription --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_SupCompany --><a href="{Sort_URL}" id="tbldesignmatGridSorter_SupCompany">SUPPLIER</a> 
+                <!-- BEGIN Asc_On --><img src="../RnD/Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="../RnD/Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SupCompany --></th>
+ 
+                <th><u>PHOTO</u></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td>{DesignMatCode}&nbsp;<input id="tbldesignmatGridDesignMatID" type="hidden" value="{DesignMatID}" name="{DesignMatID_Name}"></td> 
+                <td><a href="{DesignMatDescription_Src}" id="tbldesignmatGridDesignMatDescription_{tbldesignmatGrid:rowNumber}" onclick="SetOpenerValue('{DesignMatID}', this);return false;">{DesignMatDescription}</a>&nbsp;<input id="tbldesignmatGridUnitValue" type="hidden" value="{UnitValue}" name="{UnitValue_Name}">&nbsp;<input id="tbldesignmatGridUnitPrice" type="hidden" value="{UnitPrice}" name="{UnitPrice_Name}"></td> 
+                <td>{SupCompany}&nbsp;</td> 
+                <td><img id="tbldesignmatGridDesignMatPhoto1_{tbldesignmatGrid:rowNumber}" height="50" alt=" " src="../upload/{DesignMatPhoto1}" width="50" align="center" name="DesignMatPhoto1">&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="4">No records</td>
+              </tr>
+              <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="4">
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+                  <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                    <option value="" selected>-</option>
+ {PageSize_Options}
+                  </select>
+ 
+                  <!-- BEGIN First_On -->&nbsp;<a href="{First_URL}">First</a> &nbsp;<!-- END First_On -->
+                  <!-- BEGIN First_Off -->First &nbsp;<!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a>&nbsp; <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                  <!-- BEGIN Pages -->
+                  <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                  <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a>&nbsp; <!-- END Next_On -->
+                  <!-- BEGIN Next_Off -->Next &nbsp;<!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a>&nbsp; <!-- END Last_On -->
+                  <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- END Grid tbldesignmatGrid --></p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

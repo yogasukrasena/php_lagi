@@ -1,0 +1,507 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Edit Collection</title>
+<link href="../RnD/Styles/Blueprint-Versi3/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+function openDialog(url, width, height, returnFunc, args) {
+        if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+                dialogWin.returnFunc = returnFunc
+                dialogWin.returnedValue_c_col_id = ""
+                dialogWin.args = args
+                dialogWin.url = url
+                dialogWin.width = width
+                dialogWin.height = height
+                dialogWin.name = (new Date()).getSeconds().toString()
+
+                if (Nav4) {
+                        dialogWin.left = window.screenX + 
+                           ((window.outerWidth - dialogWin.width) / 2)
+                        dialogWin.top = window.screenY + 
+                           ((window.outerHeight - dialogWin.height) / 2)
+                        var attr = "screenX=" + dialogWin.left + 
+                           ",screenY=" + dialogWin.top + ",resizable=no,width=" + 
+                           dialogWin.width + ",height=" + dialogWin.height
+                } else {
+                        dialogWin.left = (screen.width - dialogWin.width) / 2
+                        dialogWin.top = (screen.height - dialogWin.height) / 2
+                        var attr = "left=" + dialogWin.left + ",top=" + 
+                           dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+                           ",height=" + dialogWin.height + ",scrollbars=yes"
+                }
+                
+                dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+                dialogWin.win.focus()
+        } else {
+                dialogWin.win.focus()
+        }
+}
+
+
+//Begin CCS script
+//Include Common JSFunctions @1-616FDD34
+</script>
+<script language="JavaScript" src="../RnD/ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../RnD/ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-30F0626E
+
+var AddSampleCeramic_DatePicker_SampleDate = new Object(); 
+AddSampleCeramic_DatePicker_SampleDate.format           = "dd/mm/yyyy";
+AddSampleCeramic_DatePicker_SampleDate.style            = "Styles/PinkPatterned/Style.css";
+AddSampleCeramic_DatePicker_SampleDate.relativePathPart = "";
+AddSampleCeramic_DatePicker_SampleDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//AddSampleCeramicButton_Delete_OnClick @5-055CC8BD
+function AddSampleCeramicButton_Delete_OnClick()
+{
+    var result;
+//End AddSampleCeramicButton_Delete_OnClick
+
+//Confirmation Message @6-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close AddSampleCeramicButton_Delete_OnClick @5-BC33A33A
+    return result;
+}
+//End Close AddSampleCeramicButton_Delete_OnClick
+
+//bind_events @1-B7CB58A6
+function bind_events() {
+    addEventHandler("AddSampleCeramicButton_Delete", "click", AddSampleCeramicButton_Delete_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/PinkPatterned/Style_doctype.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record AddSampleCeramic -->
+<form id="AddSampleCeramic" name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../RnD/Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Collection</th>
+ 
+            <td class="HeaderRight"><img src="../RnD/Styles/PinkPatterned/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="5">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Collection&nbsp;Code</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicCollectCode" maxlength="12" size="12" value="{CollectCode}" name="{CollectCode_Name}">&nbsp; 
+              <!-- BEGIN Link LinkCopy --><a href="{LinkCopy_Src}" id="AddSampleCeramicLinkCopy">Get R&amp;D Data</a><!-- END Link LinkCopy --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client Code</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicClientCode" maxlength="20" value="{ClientCode}" name="{ClientCode_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client Description</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicClientDescription" maxlength="50" size="30" value="{ClientDescription}" name="{ClientDescription_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Date</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicCollectDate" maxlength="10" size="10" value="{CollectDate}" name="{CollectDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_SampleDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddSampleCeramicDatePicker_SampleDate"><img src="Styles/PinkPatterned/Images/DatePicker.gif" border="0"></a> <!-- END DatePicker DatePicker_SampleDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Technical Draw</th>
+ 
+            <td colspan="4">
+              <!-- BEGIN FileUpload TechDraw --><input id="AddSampleCeramicTechDrawControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete <input type="checkbox" name="{DeleteControl}" {deletechecked}>&nbsp; <!-- END DeleteControl --><!-- END FileUpload TechDraw --><font color="#ff0000">(600 x 750)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo1</th>
+ 
+            <td colspan="4">
+              <!-- BEGIN FileUpload Photo1 --><input id="AddSampleCeramicPhoto1ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete <input type="checkbox" name="{DeleteControl}" {deletechecked}>&nbsp; <!-- END DeleteControl --><!-- END FileUpload Photo1 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo2</th>
+ 
+            <td colspan="4">
+              <!-- BEGIN FileUpload Photo2 --><input id="AddSampleCeramicPhoto2ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete <input type="checkbox" name="{DeleteControl}" {deletechecked}>&nbsp; <!-- END DeleteControl --><!-- END FileUpload Photo2 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo3</th>
+ 
+            <td colspan="4">
+              <!-- BEGIN FileUpload Photo3 --><input id="AddSampleCeramicPhoto3ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete <input type="checkbox" name="{DeleteControl}" {deletechecked}>&nbsp; <!-- END DeleteControl --><!-- END FileUpload Photo3 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Photo4</th>
+ 
+            <td colspan="4">
+              <!-- BEGIN FileUpload Photo4 --><input id="AddSampleCeramicPhoto4ControlName" type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;bytes. <!-- END Info -->
+              <!-- BEGIN Upload --><input type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->Delete <input type="checkbox" name="{DeleteControl}" {deletechecked}>&nbsp; <!-- END DeleteControl --><!-- END FileUpload Photo4 --><font color="#ff0000">(200 x 200)</font></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="5"><b><br>
+              TECHNICAL NOTES</b></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Clay</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicClay" type="hidden" value="{Clay}" name="{Clay_Name}"><input id="AddSampleCeramicClayDesc" readonly value="{ClayDesc}" name="{ClayDesc_Name}">&nbsp; 
+              <!-- BEGIN Link AddClay --><a href="{AddClay_Src}" id="AddSampleCeramicAddClay" onclick="openDialog('ClayPopup.php', 750,650 );return false">Add</a><!-- END Link AddClay -->
+              <!-- BEGIN Link DelClay --><a href="{DelClay_Src}" id="AddSampleCeramicDelClay" onclick="document.AddSampleCeramic.Clay.value='';document.AddSampleCeramic.ClayDesc.value='';">Del</a><!-- END Link DelClay --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Clay KG</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicClayKG" maxlength="12" size="12" value="{ClayKG}" name="{ClayKG_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls" id="Clay">
+            <th>Clay Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicClayNote" name="{ClayNote_Name}" rows="3" cols="80">{ClayNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Build Technique</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicBuildTech" maxlength="50" size="50" value="{BuildTech}" name="{BuildTech_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls" id="BuildTech">
+            <th>Build Technique Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicBuildTechNote" name="{BuildTechNote_Name}" rows="5" cols="80">{BuildTechNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Rim</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicRim" maxlength="50" size="50" value="{Rim}" name="{Rim_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Feet</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicFeet" maxlength="30" size="30" value="{Feet}" name="{Feet_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Casting</th>
+ 
+            <td><input id="AddSampleCeramicCasting1" type="hidden" value="{Casting1}" name="{Casting1_Name}"><input id="AddSampleCeramicCasting1Desc" size="12" value="{Casting1Desc}" name="{Casting1Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddCasting1 --><a href="{AddCasting1_Src}" id="sampleceramicAddCasting1" onclick="openDialog('CastingPopup.php?txtID=AddSampleCeramicCasting1&txtdesc=AddSampleCeramicCasting1Desc', 750,650 );return false">Add1</a><!-- END Link AddCasting1 -->
+              <!-- BEGIN Link DelCasting1 --><a href="{DelCasting1_Src}" id="AddSampleCeramicDelCasting1" onclick="document.AddSampleCeramic.Casting1.value='';document.AddSampleCeramic.Casting1Desc.value='';">Del</a><!-- END Link DelCasting1 --></td> 
+            <td><input id="AddSampleCeramicCasting2" type="hidden" value="{Casting2}" name="{Casting2_Name}"><input id="AddSampleCeramicCasting2Desc" size="12" value="{Casting2Desc}" name="{Casting2Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddCasting2 --><a href="{AddCasting2_Src}" id="sampleceramicAddCasting2" onclick="openDialog('CastingPopup.php?txtID=AddSampleCeramicCasting2&txtdesc=AddSampleCeramicCasting2Desc', 750,650 );return false">Add2</a><!-- END Link AddCasting2 -->
+              <!-- BEGIN Link DelCasting2 --><a href="{DelCasting2_Src}" id="AddSampleCeramicDelCasting2" onclick="document.AddSampleCeramic.Casting2.value='';document.AddSampleCeramic.Casting2Desc.value='';">Del</a><!-- END Link DelCasting2 --></td> 
+            <td><input id="AddSampleCeramicCasting3" type="hidden" value="{Casting3}" name="{Casting3_Name}"><input id="AddSampleCeramicCasting3Desc" size="12" value="{Casting3Desc}" name="{Casting3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddCasting3 --><a href="{AddCasting3_Src}" id="sampleceramicAddCasting3" onclick="openDialog('CastingPopup.php?txtID=AddSampleCeramicCasting3&txtdesc=AddSampleCeramicCasting3Desc', 750,650 );return false">Add3</a><!-- END Link AddCasting3 -->
+              <!-- BEGIN Link DelCasting3 --><a href="{DelCasting3_Src}" id="AddSampleCeramicDelCasting3" onclick="document.AddSampleCeramic.Casting3.value='';document.AddSampleCeramic.Casting3Desc.value='';">Del</a><!-- END Link DelCasting3 --></td> 
+            <td><input id="AddSampleCeramicCasting4" type="hidden" value="{Casting4}" name="{Casting4_Name}"><input id="AddSampleCeramicCasting4Desc" size="12" value="{Casting4Desc}" name="{Casting4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddCasting4 --><a href="{AddCasting4_Src}" id="AddSampleCeramicAddCasting4" onclick="openDialog('CastingPopup.php?txtID=AddSampleCeramicCasting4&txtdesc=AddSampleCeramicCasting4Desc', 750,650 );return false">Add4</a><!-- END Link AddCasting4 -->
+              <!-- BEGIN Link DelCasting4 --><a href="{DelCasting4_Src}" id="AddSampleCeramicDelCasting4" onclick="document.AddSampleCeramic.Casting4.value='';document.AddSampleCeramic.Casting4Desc.value='';">Del</a><!-- END Link DelCasting4 --></td>
+          </tr>
+ 
+          <tr class="Controls" id="Casting">
+            <th>Casting Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicCastingNote" name="{CastingNote_Name}" rows="3" cols="80">{CastingNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Estruder</th>
+ 
+            <td><input id="AddSampleCeramicEstruder1" type="hidden" value="{Estruder1}" name="{Estruder1_Name}"><input id="AddSampleCeramicEstruder1Desc" size="12" value="{Estruder1Desc}" name="{Estruder1Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEstruder1 --><a href="{AddEstruder1_Src}" id="sampleceramicAddEstruder1" onclick="openDialog('EstruderPopup.php?txtID=AddSampleCeramicEstruder1&txtdesc=AddSampleCeramicEstruder1Desc', 750,650 );return false">Add1</a><!-- END Link AddEstruder1 -->
+              <!-- BEGIN Link DelEstruder1 --><a href="{DelEstruder1_Src}" id="AddSampleCeramicDelEstruder1" onclick="document.AddSampleCeramic.Estruder1.value='';document.AddSampleCeramic.Estruder1Desc.value='';">Del</a><!-- END Link DelEstruder1 --></td> 
+            <td><input id="AddSampleCeramicEstruder2" type="hidden" value="{Estruder2}" name="{Estruder2_Name}"><input id="AddSampleCeramicEstruder2Desc" size="12" value="{Estruder2Desc}" name="{Estruder2Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEstruder2 --><a href="{AddEstruder2_Src}" id="sampleceramicAddEstruder2" onclick="openDialog('EstruderPopup.php?txtID=AddSampleCeramicEstruder2&txtdesc=AddSampleCeramicEstruder2Desc', 750,650 );return false">Add2</a><!-- END Link AddEstruder2 -->
+              <!-- BEGIN Link DelEstruder2 --><a href="{DelEstruder2_Src}" id="AddSampleCeramicDelEstruder2" onclick="document.AddSampleCeramic.Estruder2.value='';document.AddSampleCeramic.Estruder2Desc.value='';">Del</a><!-- END Link DelEstruder2 --></td> 
+            <td><input id="AddSampleCeramicEstruder3" type="hidden" value="{Estruder3}" name="{Estruder3_Name}"><input id="AddSampleCeramicEstruder3Desc" size="12" value="{Estruder3Desc}" name="{Estruder3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEstruder3 --><a href="{AddEstruder3_Src}" id="sampleceramicAddEstruder3" onclick="openDialog('EstruderPopup.php?txtID=AddSampleCeramicEstruder3&txtdesc=AddSampleCeramicEstruder3Desc', 750,650 );return false">Add3</a><!-- END Link AddEstruder3 -->
+              <!-- BEGIN Link DelEstruder3 --><a href="{DelEstruder3_Src}" id="AddSampleCeramicDelEstruder3" onclick="document.AddSampleCeramic.Estruder3.value='';document.AddSampleCeramic.Estruder3Desc.value='';">Del</a><!-- END Link DelEstruder3 --></td> 
+            <td><input id="AddSampleCeramicEstruder4" type="hidden" value="{Estruder4}" name="{Estruder4_Name}"><input id="AddSampleCeramicEstruder4Desc" size="12" value="{Estruder4Desc}" name="{Estruder4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEstruder4 --><a href="{AddEstruder4_Src}" id="sampleceramicAddEstruder4" onclick="openDialog('EstruderPopup.php?txtID=AddSampleCeramicEstruder4&txtdesc=AddSampleCeramicEstruder4Desc', 750,650 );return false">Add4</a><!-- END Link AddEstruder4 -->
+              <!-- BEGIN Link DelEstruder4 --><a href="{DelEstruder4_Src}" id="AddSampleCeramicDelEstruder4" onclick="document.AddSampleCeramic.Estruder4.value='';document.AddSampleCeramic.Estruder4Desc.value='';">Del</a><!-- END Link DelEstruder4 --></td>
+          </tr>
+ 
+          <tr class="Controls" id="Estruder">
+            <th>Estruder Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicEstruderNote" name="{EstruderNote_Name}" rows="3" cols="80">{EstruderNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Texture</th>
+ 
+            <td><input id="AddSampleCeramicTexture1" type="hidden" value="{Texture1}" name="{Texture1_Name}"><input id="AddSampleCeramicTexture1Desc" maxlength="12" size="12" value="{Texture1Desc}" name="{Texture1Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddTexture1 --><a href="{AddTexture1_Src}" id="sampleceramicAddTexture1" onclick="openDialog('TexturePopup.php?txtID=AddSampleCeramicTexture1&txtdesc=AddSampleCeramicTexture1Desc', 750,650 );return false">Add1</a><!-- END Link AddTexture1 -->
+              <!-- BEGIN Link DelTexture1 --><a href="{DelTexture1_Src}" id="AddSampleCeramicDelTexture1" onclick="document.AddSampleCeramic.Texture1.value='';document.AddSampleCeramic.Texture1Desc.value='';">Del</a><!-- END Link DelTexture1 --></td> 
+            <td><input id="AddSampleCeramicTexture2" type="hidden" value="{Texture2}" name="{Texture2_Name}"><input id="AddSampleCeramicTexture2Desc" maxlength="12" size="12" value="{Texture2Desc}" name="{Texture2Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddTexture2 --><a href="{AddTexture2_Src}" id="sampleceramicAddTexture2" onclick="openDialog('TexturePopup.php?txtID=AddSampleCeramicTexture2&txtdesc=AddSampleCeramicTexture2Desc', 750,650 );return false">Add2</a><!-- END Link AddTexture2 -->
+              <!-- BEGIN Link DelTexture2 --><a href="{DelTexture2_Src}" id="AddSampleCeramicDelTexture2" onclick="document.AddSampleCeramic.Texture2.value='';document.AddSampleCeramic.Texture2Desc.value='';">Del</a><!-- END Link DelTexture2 --></td> 
+            <td><input id="AddSampleCeramicTexture3" type="hidden" value="{Texture3}" name="{Texture3_Name}"><input id="AddSampleCeramicTexture3Desc" maxlength="12" size="12" value="{Texture3Desc}" name="{Texture3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddTexture3 --><a href="{AddTexture3_Src}" id="sampleceramicAddTexture3" onclick="openDialog('TexturePopup.php?txtID=AddSampleCeramicTexture3&txtdesc=AddSampleCeramicTexture3Desc', 750,650 );return false">Add3</a><!-- END Link AddTexture3 -->
+              <!-- BEGIN Link DelTexture3 --><a href="{DelTexture3_Src}" id="AddSampleCeramicDelTexture3" onclick="document.AddSampleCeramic.Texture3.value='';document.AddSampleCeramic.Texture3Desc.value='';">Del</a><!-- END Link DelTexture3 --></td> 
+            <td><input id="AddSampleCeramicTexture4" type="hidden" value="{Texture4}" name="{Texture4_Name}"><input id="AddSampleCeramicTexture4Desc" maxlength="12" size="12" value="{Texture4Desc}" name="{Texture4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddTexture4 --><a href="{AddTexture4_Src}" id="sampleceramicAddTexture4" onclick="openDialog('TexturePopup.php?txtID=AddSampleCeramicTexture4&txtdesc=AddSampleCeramicTexture4Desc', 750,650 );return false">Add4</a><!-- END Link AddTexture4 -->
+              <!-- BEGIN Link DelTexture4 --><a href="{DelTexture4_Src}" id="AddSampleCeramicDelTexture4" onclick="document.AddSampleCeramic.Texture2.value='';document.AddSampleCeramic.Texture2Desc.value='';">Del</a><!-- END Link DelTexture4 --></td>
+          </tr>
+ 
+          <tr class="Controls" id="Texture">
+            <th>Texture Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicTextureNote" name="{TextureNote_Name}" rows="3" cols="80">{TextureNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Tools</th>
+ 
+            <td><input id="AddSampleCeramicTools1" type="hidden" value="{Tools1}" name="{Tools1_Name}"><input id="AddSampleCeramicTools1Desc" size="12" value="{Tools1Desc}" name="{Tools1Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddTools1 --><a href="{AddTools1_Src}" id="sampleceramicAddTools1" onclick="openDialog('ToolsPopup.php?txtID=AddSampleCeramicTools1&txtdesc=AddSampleCeramicTools1Desc', 750,650 );return false">Add1</a><!-- END Link AddTools1 -->
+              <!-- BEGIN Link DelTools1 --><a href="{DelTools1_Src}" id="AddSampleCeramicDelTools1" onclick="document.AddSampleCeramic.Tools1.value='';document.AddSampleCeramic.Tools1Desc.value='';">Del</a><!-- END Link DelTools1 --></td> 
+            <td><input id="AddSampleCeramicTools2" type="hidden" value="{Tools2}" name="{Tools2_Name}">
+              <!-- BEGIN TextBox Tools2Desc --><input id="AddSampleCeramicTools2Desc" size="12" value="{Tools2Desc}" name="{Tools2Desc_Name}"><!-- END TextBox Tools2Desc -->&nbsp; 
+              <!-- BEGIN Link AddTools2 --><a href="{AddTools2_Src}" id="sampleceramicAddTools2" onclick="openDialog('ToolsPopup.php?txtID=AddSampleCeramicTools2&txtdesc=AddSampleCeramicTools2Desc', 750,650 );return false">Add2</a><!-- END Link AddTools2 -->
+              <!-- BEGIN Link DelTools2 --><a href="{DelTools2_Src}" id="AddSampleCeramicDelTools2" onclick="document.AddSampleCeramic.Tools2.value='';document.AddSampleCeramic.Tools2Desc.value='';">Del</a><!-- END Link DelTools2 --></td> 
+            <td><input id="AddSampleCeramicTools3" type="hidden" value="{Tools3}" name="{Tools3_Name}"><input id="AddSampleCeramicTools3Desc" size="12" value="{Tools3Desc}" name="{Tools3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddTools3 --><a href="{AddTools3_Src}" id="sampleceramicAddTools3" onclick="openDialog('ToolsPopup.php?txtID=AddSampleCeramicTools3&txtdesc=AddSampleCeramicTools3Desc', 750,650 );return false">Add3</a><!-- END Link AddTools3 -->
+              <!-- BEGIN Link DelTools3 --><a href="{DelTools3_Src}" id="AddSampleCeramicDelTools3" onclick="document.AddSampleCeramic.Tools3.value='';document.AddSampleCeramic.Tools3Desc.value='';">Del</a><!-- END Link DelTools3 --></td> 
+            <td><input id="AddSampleCeramicTools4" type="hidden" value="{Tools4}" name="{Tools4_Name}"><input id="AddSampleCeramicTools4Desc" size="12" value="{Tools4Desc}" name="{Tools4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddTools4 --><a href="{AddTools4_Src}" id="sampleceramicAddTools4" onclick="openDialog('ToolsPopup.php?txtID=AddSampleCeramicTools4&txtdesc=AddSampleCeramicTools4Desc', 750,650 );return false">Add4</a><!-- END Link AddTools4 -->
+              <!-- BEGIN Link DelTools4 --><a href="{DelTools4_Src}" id="AddSampleCeramicDelTools4" onclick="document.AddSampleCeramic.Tools4.value='';document.AddSampleCeramic.Tools4Desc.value='';">Del</a><!-- END Link DelTools4 --></td>
+          </tr>
+ 
+          <tr class="Controls" id="Tools">
+            <th>Tools Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicToolsNote" name="{ToolsNote_Name}" rows="3" cols="80">{ToolsNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Engobe</th>
+ 
+            <td><input id="AddSampleCeramicEngobe1" type="hidden" value="{Engobe1}" name="{Engobe1_Name}"><input id="AddSampleCeramicEngobe1Desc" size="12" value="{Engobe1Desc}" name="{Engobe1Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEngobe1 --><a href="{AddEngobe1_Src}" id="sampleceramicAddEngobe1" onclick="openDialog('EngobePopup.php?txtID=AddSampleCeramicEngobe1&txtdesc=AddSampleCeramicEngobe1Desc', 750,650 );return false">Add1</a><!-- END Link AddEngobe1 -->
+              <!-- BEGIN Link DelEngobe1 --><a href="{DelEngobe1_Src}" id="AddSampleCeramicDelEngobe1" onclick="document.AddSampleCeramic.Engobe1.value='';document.AddSampleCeramic.Engobe1Desc.value='';">Del</a><!-- END Link DelEngobe1 --></td> 
+            <td><input id="AddSampleCeramicEngobe2" type="hidden" value="{Engobe2}" name="{Engobe2_Name}"><input id="AddSampleCeramicEngobe2Desc" size="12" value="{Engobe2Desc}" name="{Engobe2Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEngobe2 --><a href="{AddEngobe2_Src}" id="sampleceramicAddEngobe2" onclick="openDialog('EngobePopup.php?txtID=AddSampleCeramicEngobe2&txtdesc=AddSampleCeramicEngobe2Desc', 750,650 );return false">Add2</a><!-- END Link AddEngobe2 -->
+              <!-- BEGIN Link DelEngobe2 --><a href="{DelEngobe2_Src}" id="AddSampleCeramicDelEngobe2" onclick="document.AddSampleCeramic.Engobe2.value='';document.AddSampleCeramic.Engobe2Desc.value='';">Del</a><!-- END Link DelEngobe2 --></td> 
+            <td><input id="AddSampleCeramicEngobe3" type="hidden" value="{Engobe3}" name="{Engobe3_Name}"><input id="AddSampleCeramicEngobe3Desc" size="12" value="{Engobe3Desc}" name="{Engobe3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEngobe3 --><a href="{AddEngobe3_Src}" id="sampleceramicAddEngobe3" onclick="openDialog('EngobePopup.php?txtID=AddSampleCeramicEngobe3&txtdesc=AddSampleCeramicEngobe3Desc', 750,650 );return false">Add3</a><!-- END Link AddEngobe3 -->
+              <!-- BEGIN Link DelEngobe3 --><a href="{DelEngobe3_Src}" id="AddSampleCeramicDelEngobe3" onclick="document.AddSampleCeramic.Engobe3.value='';document.AddSampleCeramic.Engobe3Desc.value='';">Del</a><!-- END Link DelEngobe3 --></td> 
+            <td><input id="AddSampleCeramicEngobe4" type="hidden" value="{Engobe4}" name="{Engobe4_Name}"><input id="AddSampleCeramicEngobe4Desc" size="12" value="{Engobe4Desc}" name="{Engobe4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddEngobe4 --><a href="{AddEngobe4_Src}" id="sampleceramicAddEngobe4" onclick="openDialog('EngobePopup.php?txtID=AddSampleCeramicEngobe4&txtdesc=AddSampleCeramicEngobe4Desc', 750,650 );return false">Add4</a><!-- END Link AddEngobe4 -->
+              <!-- BEGIN Link DelEngobe4 --><a href="{DelEngobe4_Src}" id="AddSampleCeramicDelEngobe4" onclick="document.AddSampleCeramic.Engobe4.value='';document.AddSampleCeramic.Engobe4Desc.value='';">Del</a><!-- END Link DelEngobe4 --></td>
+          </tr>
+ 
+          <tr class="Controls" id="Engobe">
+            <th>Engobe Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicEngobeNote" name="{EngobeNote_Name}" rows="5" cols="80">{EngobeNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Bisque Temp</th>
+ 
+            <td colspan="4">
+              <!-- BEGIN RadioButton BisqueTemp --><input id="AddSampleCeramicBisqueTemp_{BisqueTemp:optionNumber}" type="radio" value="{Value}" name="{BisqueTemp_Name}" {Check}><label for="AddSampleCeramicBisqueTemp_{BisqueTemp:optionNumber}">{Description}</label><!-- END RadioButton BisqueTemp --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Stain Oxide</th>
+ 
+            <td><input id="AddSampleCeramicStainOxide1" type="hidden" value="{StainOxide1}" name="{StainOxide1_Name}"><input id="AddSampleCeramicStainOxide1Desc" size="12" value="{StainOxide1Desc}" name="{StainOxide1Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddStainOxide1 --><a href="{AddStainOxide1_Src}" id="sampleceramicAddStainOxide1" onclick="openDialog('StainOxidePopup.php?txtID=AddSampleCeramicStainOxide1&txtdesc=AddSampleCeramicStainOxide1Desc', 750,650 );return false">Add1</a><!-- END Link AddStainOxide1 -->
+              <!-- BEGIN Link DelStainOxide1 --><a href="{DelStainOxide1_Src}" id="AddSampleCeramicDelStainOxide1" onclick="document.AddSampleCeramic.StainOxide1.value='';document.AddSampleCeramic.StainOxide1Desc.value='';">Del</a><!-- END Link DelStainOxide1 --></td> 
+            <td><input id="AddSampleCeramicStainOxide2" type="hidden" value="{StainOxide2}" name="{StainOxide2_Name}"><input id="AddSampleCeramicStainOxide2Desc" size="12" value="{StainOxide2Desc}" name="{StainOxide2Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddStainOxide2 --><a href="{AddStainOxide2_Src}" id="sampleceramicAddStainOxide2" onclick="openDialog('StainOxidePopup.php?txtID=AddSampleCeramicStainOxide2&txtdesc=AddSampleCeramicStainOxide2Desc', 750,650 );return false">Add2</a><!-- END Link AddStainOxide2 -->
+              <!-- BEGIN Link DelStainOxide2 --><a href="{DelStainOxide2_Src}" id="AddSampleCeramicDelStainOxide2" onclick="document.AddSampleCeramic.StainOxide2.value='';document.AddSampleCeramic.StainOxide2Desc.value='';">Del</a><!-- END Link DelStainOxide2 --></td> 
+            <td><input id="AddSampleCeramicStainOxide3" type="hidden" value="{StainOxide3}" name="{StainOxide3_Name}"><input id="AddSampleCeramicStainOxide3Desc" size="12" value="{StainOxide3Desc}" name="{StainOxide3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddStainOxide3 --><a href="{AddStainOxide3_Src}" id="sampleceramicAddStainOxide3" onclick="openDialog('StainOxidePopup.php?txtID=AddSampleCeramicStainOxide3&txtdesc=AddSampleCeramicStainOxide3Desc', 750,650 );return false">Add3</a><!-- END Link AddStainOxide3 -->
+              <!-- BEGIN Link DelStainOxide3 --><a href="{DelStainOxide3_Src}" id="AddSampleCeramicDelStainOxide3" onclick="document.AddSampleCeramic.StainOxide3.value='';document.AddSampleCeramic.StainOxide3Desc.value='';">Del</a><!-- END Link DelStainOxide3 --></td> 
+            <td><input id="AddSampleCeramicStainOxide4" type="hidden" value="{StainOxide4}" name="{StainOxide4_Name}"><input id="AddSampleCeramicStainOxide4Desc" size="12" value="{StainOxide4Desc}" name="{StainOxide4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddStainOxide4 --><a href="{AddStainOxide4_Src}" id="sampleceramicAddStainOxide4" onclick="openDialog('StainOxidePopup.php?txtID=AddSampleCeramicStainOxide4&txtdesc=AddSampleCeramicStainOxide4Desc', 750,650 );return false">Add4</a><!-- END Link AddStainOxide4 -->
+              <!-- BEGIN Link DelStainOxide4 --><a href="{DelStainOxide4_Src}" id="AddSampleCeramicDelStainOxide4" onclick="document.AddSampleCeramic.StainOxide4.value='';document.AddSampleCeramic.StainOxide4Desc.value='';">Del</a><!-- END Link DelStainOxide4 --></td>
+          </tr>
+ 
+          <tr class="Controls" id="StainOxide">
+            <th>Stain Oxide Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicStainOxideNote" name="{StainOxideNote_Name}" rows="5" cols="80">{StainOxideNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Glaze</th>
+ 
+            <td><input id="AddSampleCeramicGlaze1" type="hidden" value="{Glaze1}" name="{Glaze1_Name}"><input id="AddSampleCeramicGlaze1Desc" size="12" value="{Glaze1Desc}" name="{Glaze1Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddGlaze1 --><a href="{AddGlaze1_Src}" id="SampleCeramicAddGlaze1" onclick="openDialog('GlazePopup.php?txtID=AddSampleCeramicGlaze1&txtdesc=AddSampleCeramicGlaze1Desc', 750,650 );return false">Add1</a><!-- END Link AddGlaze1 -->
+              <!-- BEGIN Link DelGlaze1 --><a href="{DelGlaze1_Src}" id="AddSampleCeramicDelGlaze1" onclick="document.AddSampleCeramic.Glaze1.value='';document.AddSampleCeramic.Glaze1Desc.value='';">Del</a><!-- END Link DelGlaze1 --></td> 
+            <td><input id="AddSampleCeramicGlaze2" type="hidden" value="{Glaze2}" name="{Glaze2_Name}"><input id="AddSampleCeramicGlaze2Desc" size="12" value="{Glaze2Desc}" name="{Glaze2Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddGlaze2 --><a href="{AddGlaze2_Src}" id="sampleceramicAddGlaze2" onclick="openDialog('GlazePopup.php?txtID=AddSampleCeramicGlaze2&txtdesc=AddSampleCeramicGlaze2Desc', 750,650 );return false">Add2</a><!-- END Link AddGlaze2 -->
+              <!-- BEGIN Link DelGlaze2 --><a href="{DelGlaze2_Src}" id="AddSampleCeramicDelGlaze2" onclick="document.AddSampleCeramic.Glaze2.value='';document.AddSampleCeramic.Glaze2Desc.value='';">Del</a><!-- END Link DelGlaze2 --></td> 
+            <td><input id="AddSampleCeramicGlaze3" type="hidden" value="{Glaze3}" name="{Glaze3_Name}"><input id="AddSampleCeramicGlaze3Desc" size="12" value="{Glaze3Desc}" name="{Glaze3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddGlaze3 --><a href="{AddGlaze3_Src}" id="sampleceramicAddGlaze3" onclick="openDialog('GlazePopup.php?txtID=AddSampleCeramicGlaze3&txtdesc=AddSampleCeramicGlaze3Desc', 750,650 );return false">Add3</a><!-- END Link AddGlaze3 -->
+              <!-- BEGIN Link DelGlaze3 --><a href="{DelGlaze3_Src}" id="AddSampleCeramicDelGlaze3" onclick="document.AddSampleCeramic.Glaze3.value='';document.AddSampleCeramic.Glaze3Desc.value='';">Del</a><!-- END Link DelGlaze3 --></td> 
+            <td><input id="AddSampleCeramicGlaze4" type="hidden" value="{Glaze4}" name="{Glaze4_Name}"><input id="AddSampleCeramicGlaze4Desc" size="12" value="{Glaze4Desc}" name="{Glaze4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddGlaze4 --><a href="{AddGlaze4_Src}" id="sampleceramicAddGlaze4" onclick="openDialog('GlazePopup.php?txtID=AddSampleCeramicGlaze4&txtdesc=AddSampleCeramicGlaze4Desc', 750,650 );return false">Add4</a><!-- END Link AddGlaze4 -->
+              <!-- BEGIN Link DelGlaze4 --><a href="{DelGlaze4_Src}" id="AddSampleCeramicDelGlaze4" onclick="document.AddSampleCeramic.Glaze4.value='';document.AddSampleCeramic.Glaze4Desc.value='';">Del</a><!-- END Link DelGlaze4 --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Glaze Density</th>
+ 
+            <td><input id="AddSampleCeramicGlazeDensity1" maxlength="10" size="10" value="{GlazeDensity1}" name="{GlazeDensity1_Name}"></td> 
+            <td><input id="AddSampleCeramicGlazeDensity2" maxlength="10" size="10" value="{GlazeDensity2}" name="{GlazeDensity2_Name}"></td> 
+            <td><input id="AddSampleCeramicGlazeDensity3" maxlength="10" size="10" value="{GlazeDensity3}" name="{GlazeDensity3_Name}"></td> 
+            <td><input id="AddSampleCeramicGlazeDensity4" maxlength="10" size="10" value="{GlazeDensity4}" name="{GlazeDensity4_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Glaze Technique&nbsp;</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicGlazeTechnique" maxlength="100" size="50" value="{GlazeTechnique}" name="{GlazeTechnique_Name}">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls" id="Glaze">
+            <th>Glaze Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicGlazeNote" name="{GlazeNote_Name}" rows="5" cols="80">{GlazeNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Glaze Temp</th>
+ 
+            <td colspan="4"><input id="AddSampleCeramicGlazeTemp" maxlength="10" size="10" value="{GlazeTemp}" name="{GlazeTemp_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Firing</th>
+ 
+            <td colspan="4">
+              <!-- BEGIN RadioButton Firing --><input id="AddSampleCeramicFiring_{Firing:optionNumber}" type="radio" value="{Value}" name="{Firing_Name}" {Check}>{Description}<!-- END RadioButton Firing --></td>
+          </tr>
+ 
+          <tr class="Controls" id="Firing">
+            <th>Firing Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicFiringNote" name="{FiringNote_Name}" rows="3" cols="80">{FiringNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Width&nbsp;</th>
+ 
+            <td>W=<input id="AddSampleCeramicWidth" maxlength="12" size="12" value="{Width}" name="{Width_Name}"></td> 
+            <td>L=<input id="AddSampleCeramicLength" maxlength="12" size="12" value="{Length}" name="{Length_Name}"></td> 
+            <td>Ø=<input id="AddSampleCeramicDiameter" maxlength="12" size="12" value="{Diameter}" name="{Diameter_Name}"></td> 
+            <td>H=<input id="AddSampleCeramicHeight" maxlength="12" size="12" value="{Height}" name="{Height_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls" id="FinalSize">
+            <th>Final Size Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicFinalSizeNote" name="{FinalSizeNote_Name}" rows="3" cols="80">{FinalSizeNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Design Material</th>
+ 
+            <td><input id="AddSampleCeramicDesignMat1" type="hidden" value="{DesignMat1}" name="{DesignMat1_Name}">
+              <!-- BEGIN TextBox DesignMat1Desc --><input id="AddSampleCeramicDesignMat1Desc" size="12" value="{DesignMat1Desc}" name="{DesignMat1Desc_Name}"><!-- END TextBox DesignMat1Desc -->&nbsp; 
+              <!-- BEGIN Link AddDesignMat1 --><a href="{AddDesignMat1_Src}" id="sampleceramicAddDesignMat1" onclick="openDialog('DesignMatPopupSC.php?txtID=AddSampleCeramicDesignMat1&txtdesc=AddSampleCeramicDesignMat1Desc', 750,650 );return false">Add1</a><!-- END Link AddDesignMat1 -->
+              <!-- BEGIN Link DelDesignMat1 --><a href="{DelDesignMat1_Src}" id="AddSampleCeramicDelDesignMat1" onclick="document.AddSampleCeramic.DesignMat1.value='';document.AddSampleCeramic.Design1Desc.value='';">Del</a><!-- END Link DelDesignMat1 --></td> 
+            <td><input id="AddSampleCeramicDesignMat2" type="hidden" value="{DesignMat2}" name="{DesignMat2_Name}"><input id="AddSampleCeramicDesignMat2Desc" size="12" value="{DesignMat2Desc}" name="{DesignMat2Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddDesignMat2 --><a href="{AddDesignMat2_Src}" id="sampleceramicAddDesignMat2" onclick="openDialog('DesignMatPopupSC.php?txtID=AddSampleCeramicDesignMat2&txtdesc=AddSampleCeramicDesignMat2Desc', 750,650 );return false">Add2</a><!-- END Link AddDesignMat2 -->
+              <!-- BEGIN Link DelDesignMat2 --><a href="{DelDesignMat2_Src}" id="AddSampleCeramicDelDesignMat2" onclick="document.AddSampleCeramic.DesignMat2.value='';document.AddSampleCeramic.Design2Desc.value='';">Del</a><!-- END Link DelDesignMat2 --></td> 
+            <td><input id="AddSampleCeramicDesignMat3" type="hidden" value="{DesignMat3}" name="{DesignMat3_Name}"><input id="AddSampleCeramicDesignMat3Desc" size="12" value="{DesignMat3Desc}" name="{DesignMat3Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddDesignMat3 --><a href="{AddDesignMat3_Src}" id="sampleceramicAddDesignMat3" onclick="openDialog('DesignMatPopupSC.php?txtID=AddSampleCeramicDesignMat3&txtdesc=AddSampleCeramicDesignMat3Desc', 750,650 );return false">Add3</a><!-- END Link AddDesignMat3 -->
+              <!-- BEGIN Link DelDesignMat3 --><a href="{DelDesignMat3_Src}" id="AddSampleCeramicDelDesignMat3" onclick="document.AddSampleCeramic.DesignMat3.value='';document.AddSampleCeramic.Design3Desc.value='';">Del</a><!-- END Link DelDesignMat3 --></td> 
+            <td><input id="AddSampleCeramicDesignMat4" type="hidden" value="{DesignMat4}" name="{DesignMat4_Name}"><input id="AddSampleCeramicDesignMat4Desc" size="12" value="{DesignMat4Desc}" name="{DesignMat4Desc_Name}">&nbsp; 
+              <!-- BEGIN Link AddDesignMat4 --><a href="{AddDesignMat4_Src}" id="sampleceramicAddDesignMat4" onclick="openDialog('DesignMatPopupSC.php?txtID=AddSampleCeramicDesignMat4&txtdesc=AddSampleCeramicDesignMat4Desc', 750,650 );return false">Add4</a><!-- END Link AddDesignMat4 -->
+              <!-- BEGIN Link DelDesignMat4 --><a href="{DelDesignMat4_Src}" id="AddSampleCeramicDelDesignMat4" onclick="document.AddSampleCeramic.DesignMat4.value='';document.AddSampleCeramic.Design4Desc.value='';">Del</a><!-- END Link DelDesignMat4 --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Design Material Qty</th>
+ 
+            <td><input id="AddSampleCeramicDesignMatQty1" maxlength="10" size="12" value="{DesignMatQty1}" name="{DesignMatQty1_Name}"></td> 
+            <td><input id="AddSampleCeramicDesignMatQty2" maxlength="10" size="12" value="{DesignMatQty2}" name="{DesignMatQty2_Name}"></td> 
+            <td>
+              <!-- BEGIN TextBox DesignMatQty3 --><input id="AddSampleCeramicDesignMatQty3" maxlength="10" size="12" value="{DesignMatQty3}" name="{DesignMatQty3_Name}"><!-- END TextBox DesignMatQty3 --></td> 
+            <td><input id="AddSampleCeramicDesignMatQty4" maxlength="10" size="12" value="{DesignMatQty4}" name="{DesignMatQty4_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls" id="DesignMat">
+            <th>Design Material Notes</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicDesignMatNote" name="{DesignMatNote_Name}" rows="3" cols="80">{DesignMatNote}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>History</th>
+ 
+            <td colspan="4"><textarea id="AddSampleCeramicHistory" name="{History_Name}" rows="5" cols="80">{History}</textarea></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="center" colspan="5">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddSampleCeramicButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->&nbsp; 
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddSampleCeramicButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="AddSampleCeramicButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AddSampleCeramic --><br>
+</body>
+</html>

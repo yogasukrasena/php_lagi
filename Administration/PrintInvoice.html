@@ -1,0 +1,275 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>PrintInvoice</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Basic/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+&nbsp; 
+<!-- BEGIN Link Report_Print -->
+<p align="right"><a href="{Report_Print_Src}" id="Report_Print" target="_blank">Printable version</a></p>
+<!-- END Link Report_Print -->
+<!-- BEGIN Report tbladminist_invoice_h_tbl -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Basic/Images/Spacer.gif" border="0"></td> 
+          <th>Invoice</th>
+ 
+          <td class="HeaderRight"><img src="Styles/Basic/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header --><!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td>{Report_CurrentDate}</td> 
+          <td>Page {Report_CurrentPage} of {Report_TotalPages} 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+ 
+        <!-- BEGIN Panel PageBreak -->
+      </table>
+    </td>
+  </tr>
+</table>
+<p style="PAGE-BREAK-AFTER: always">&nbsp;</p>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- END Panel PageBreak --><!-- END Section Page_Footer -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <th>Company </th>
+ 
+          <td>{Company} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>ClientCompany </th>
+ 
+          <td>{ClientCompany} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Invoice_D_ID </th>
+ 
+          <td>{Invoice_D_ID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>tbladminist_invoice_d.Invoice_H_ID </th>
+ 
+          <td>{tbladminist_invoice_d_Invoice_H_ID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>tbladminist_invoice_d.InvoicePar </th>
+ 
+          <td>{tbladminist_invoice_d_InvoicePar} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Qty </th>
+ 
+          <td>{Qty} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Unit </th>
+ 
+          <td>{Unit} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>CollectID </th>
+ 
+          <td>{CollectID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>CollectCode </th>
+ 
+          <td>{CollectCode} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>UnitPrice </th>
+ 
+          <td>{UnitPrice} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Total </th>
+ 
+          <td>{Total} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>tbladminist_invoice_h.Invoice_H_ID </th>
+ 
+          <td>{tbladminist_invoice_h_Invoice_H_ID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Invoice_SH_ID </th>
+ 
+          <td>{Invoice_SH_ID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>tbladminist_invoice_h.InvoicePar </th>
+ 
+          <td>{tbladminist_invoice_h_InvoicePar} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Quotation_H_ID </th>
+ 
+          <td>{Quotation_H_ID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Proforma_H_ID </th>
+ 
+          <td>{Proforma_H_ID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>InvoiceDate </th>
+ 
+          <td>{InvoiceDate} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>ClientOrderRef </th>
+ 
+          <td>{ClientOrderRef} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>GayaOrderRef </th>
+ 
+          <td>{GayaOrderRef} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>DeliveryTermID </th>
+ 
+          <td>{DeliveryTermID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>PaymentTermID </th>
+ 
+          <td>{PaymentTermID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>DueDate </th>
+ 
+          <td>{DueDate} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>ClientID </th>
+ 
+          <td>{ClientID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>AddressID </th>
+ 
+          <td>{AddressID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>InvoiceContactID </th>
+ 
+          <td>{InvoiceContactID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>DeliveryContactID </th>
+ 
+          <td>{DeliveryContactID} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>SubTotal </th>
+ 
+          <td>{SubTotal} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Discount </th>
+ 
+          <td>{Discount} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Packaging </th>
+ 
+          <td>{Packaging} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>ShippingCost </th>
+ 
+          <td>{ShippingCost} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>GrandTotal </th>
+ 
+          <td>{GrandTotal} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>PaymentBankTransferred </th>
+ 
+          <td>{PaymentBankTransferred} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>Balance </th>
+ 
+          <td>{Balance} </td>
+        </tr>
+ 
+        <tr class="Row">
+          <th>InvoiceNo </th>
+ 
+          <td>{InvoiceNo} </td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="2">No records</td>
+        </tr>
+ <!-- END Panel NoRecords --><!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report tbladminist_invoice_h_tbl --><br>
+</body>
+</html>

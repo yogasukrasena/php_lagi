@@ -1,0 +1,729 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Edit R&D Costing</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Apricot2/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="Javascript">
+      <!--
+      function isNumberKey(evt)
+      {
+         var charCode = (evt.which) ? evt.which : event.keyCode
+         if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+
+         return true;
+      }
+      //-->
+          
+      <!--
+
+          function perjam(bil1)
+          {
+                var hasil =  60 / bil1;
+                                return hasil;
+          }
+          -->
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//DEL  //    var Element_Number = this.name.substring(11)-1;
+//DEL  /*var Element_ID   = document.Costing.ClayType.value;
+
+
+
+
+
+
+
+
+
+
+
+
+//DEL   if (parseInt(Element_ID) > 0) {
+//DEL      document.Costing.ClayPrice.value = product_price[parseInt(Element_ID)];
+//DEL   } else {
+//DEL      document.Costing.ClayPrice.value = 0;
+//DEL   }*/
+//DEL   //ClayChange();
+
+//CostingClayPreparationMinute_OnChange @12-2D7D7235
+function CostingClayPreparationMinute_OnChange()
+{
+    var result;
+//End CostingClayPreparationMinute_OnChange
+
+//Custom Code @174-2A29BDB7
+document.Costing.ClayPreparationPPH.value = perjam(document.Costing.ClayPreparationMinute.value);
+//document.Costing.ClayPreparationCost.value = kali(document.Costing.ClayPreparationCPM.value, document.Costing.ClayPreparationMinute.value);
+//TotalAll();
+
+//End Custom Code
+
+//Close CostingClayPreparationMinute_OnChange @12-BC33A33A
+    return result;
+}
+//End Close CostingClayPreparationMinute_OnChange
+
+//CostingWheelMinute_OnChange @14-CA5EB89B
+function CostingWheelMinute_OnChange()
+{
+    var result;
+//End CostingWheelMinute_OnChange
+
+//Custom Code @173-2A29BDB7
+document.Costing.WheelPPH.value = perjam(document.Costing.WheelMinute.value);
+//    document.Costing.WheelCost.value = kali(document.Costing.WheelCPM.value, document.Costing.WheelMinute.value);
+//    wheelchange();
+//End Custom Code
+
+//Close CostingWheelMinute_OnChange @14-BC33A33A
+    return result;
+}
+//End Close CostingWheelMinute_OnChange
+
+//CostingSlabMinute_OnChange @16-AC040548
+function CostingSlabMinute_OnChange()
+{
+    var result;
+//End CostingSlabMinute_OnChange
+
+//Custom Code @175-2A29BDB7
+document.Costing.SlabPPH.value = perjam(document.Costing.SlabMinute.value);
+//    document.Costing.SlabCost.value = kali(document.Costing.SlabCPM.value, document.Costing.SlabMinute.value);
+// TotalAll();
+//End Custom Code
+
+//Close CostingSlabMinute_OnChange @16-BC33A33A
+    return result;
+}
+//End Close CostingSlabMinute_OnChange
+
+//CostingCastingMinute_OnChange @18-27AF6AD2
+function CostingCastingMinute_OnChange()
+{
+    var result;
+//End CostingCastingMinute_OnChange
+
+//Custom Code @176-2A29BDB7
+document.Costing.CastingPPH.value = perjam(document.Costing.CastingMinute.value);
+//    document.Costing.CastingCost.value = kali(document.Costing.CastingCPM.value, document.Costing.CastingMinute.value);
+//TotalAll();
+//End Custom Code
+
+//Close CostingCastingMinute_OnChange @18-BC33A33A
+    return result;
+}
+//End Close CostingCastingMinute_OnChange
+
+//CostingFinishingMinute_OnChange @20-345A1A3D
+function CostingFinishingMinute_OnChange()
+{
+    var result;
+//End CostingFinishingMinute_OnChange
+
+//Custom Code @177-2A29BDB7
+document.Costing.FinishingPPH.value = perjam(document.Costing.FinishingMinute.value);
+//    document.Costing.FinishingCost.value = kali(document.Costing.FinishingCPM.value, document.Costing.FinishingMinute.value);
+//TotalAll();
+//End Custom Code
+
+//Close CostingFinishingMinute_OnChange @20-BC33A33A
+    return result;
+}
+//End Close CostingFinishingMinute_OnChange
+
+//CostingGlazingMinute_OnChange @22-F8A8A250
+function CostingGlazingMinute_OnChange()
+{
+    var result;
+//End CostingGlazingMinute_OnChange
+
+//Custom Code @178-2A29BDB7
+document.Costing.GlazingPPH.value = perjam(document.Costing.GlazingMinute.value);
+//    document.Costing.GlazingCost.value = kali(document.Costing.GlazingCPM.value, document.Costing.GlazingMinute.value);
+//TotalAll();
+//End Custom Code
+
+//Close CostingGlazingMinute_OnChange @22-BC33A33A
+    return result;
+}
+//End Close CostingGlazingMinute_OnChange
+
+//CostingStandardBisqueLoading_OnChange @24-950B3B16
+function CostingStandardBisqueLoading_OnChange()
+{
+    var result;
+//End CostingStandardBisqueLoading_OnChange
+
+//Custom Code @181-2A29BDB7
+//document.Costing.StandardBisqueCost.value = kali(document.Costing.StdBisquePerFiring.value, document.Costing.ClayKG.value);
+//TotalAll();
+//End Custom Code
+
+//Close CostingStandardBisqueLoading_OnChange @24-BC33A33A
+    return result;
+}
+//End Close CostingStandardBisqueLoading_OnChange
+
+//CostingStandardGlazeLoading_OnChange @26-DD28481E
+function CostingStandardGlazeLoading_OnChange()
+{
+    var result;
+//End CostingStandardGlazeLoading_OnChange
+
+//Custom Code @182-2A29BDB7
+//   document.Costing.StandardGlazeCost.value = kali(document.Costing.StdGlazePerFiring.value, document.Costing.ClayKG.value);
+//        TotalAll();
+//End Custom Code
+
+//Close CostingStandardGlazeLoading_OnChange @26-BC33A33A
+    return result;
+}
+//End Close CostingStandardGlazeLoading_OnChange
+
+//CostingRakuBisqueLoading_OnChange @28-39288D11
+function CostingRakuBisqueLoading_OnChange()
+{
+    var result;
+//End CostingRakuBisqueLoading_OnChange
+
+//Custom Code @183-2A29BDB7
+//    document.Costing.RakuBisqueCost.value = kali(document.Costing.RakuBisquePerFiring.value, document.Costing.ClayKG.value);
+//       TotalAll();
+//End Custom Code
+
+//Close CostingRakuBisqueLoading_OnChange @28-BC33A33A
+    return result;
+}
+//End Close CostingRakuBisqueLoading_OnChange
+
+//CostingRakuGlazeLoading_OnChange @30-42670F35
+function CostingRakuGlazeLoading_OnChange()
+{
+    var result;
+//End CostingRakuGlazeLoading_OnChange
+
+//Custom Code @184-2A29BDB7
+//    document.Costing.RakuGlazeCost.value = kali(document.Costing.RakuGlazePerFiring.value, document.Costing.ClayKG.value);
+//        TotalAll();
+//End Custom Code
+
+//Close CostingRakuGlazeLoading_OnChange @30-BC33A33A
+    return result;
+}
+//End Close CostingRakuGlazeLoading_OnChange
+
+//CostingMovementMinute_OnChange @32-212DF140
+function CostingMovementMinute_OnChange()
+{
+    var result;
+//End CostingMovementMinute_OnChange
+
+//Custom Code @179-2A29BDB7
+document.Costing.MovementPPH.value = perjam(document.Costing.MovementMinute.value);
+//    document.Costing.MovementCost.value = kali(document.Costing.MovementCPM.value, document.Costing.MovementMinute.value);
+//TotalAll();
+//End Custom Code
+
+//Close CostingMovementMinute_OnChange @32-BC33A33A
+    return result;
+}
+//End Close CostingMovementMinute_OnChange
+
+//CostingPackagingWorkMinute_OnChange @34-1357252C
+function CostingPackagingWorkMinute_OnChange()
+{
+    var result;
+//End CostingPackagingWorkMinute_OnChange
+
+//Custom Code @180-2A29BDB7
+document.Costing.PackagingWorkPPH.value = perjam(document.Costing.PackagingWorkMinute.value);
+//    document.Costing.PackagingWorkCost.value = kali(document.Costing.PackagingCPM.value, document.Costing.PackagingWorkMinute.value);
+//TotalAll();
+//End Custom Code
+
+//Close CostingPackagingWorkMinute_OnChange @34-BC33A33A
+    return result;
+}
+//End Close CostingPackagingWorkMinute_OnChange
+
+//PTAutoFill1 Loading @120-BEF195A4
+function CostingClayTypePTAutoFill1_start(sender) {
+    new Ajax.Request("services/EditRnd_Costing_ClayType_PTAutoFill1.php?keyword=" + $("CostingClayType").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            getSameLevelCtl("CostingClayPrice", sender).value = valuesRow["PricePerKG"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-2D67A6CB
+function bind_events() {
+    addEventHandler("CostingClayType", "click", CostingClayTypePTAutoFill1_start);
+    addEventHandler("CostingClayPreparationMinute", "change", CostingClayPreparationMinute_OnChange);
+    addEventHandler("CostingWheelMinute", "change", CostingWheelMinute_OnChange);
+    addEventHandler("CostingSlabMinute", "change", CostingSlabMinute_OnChange);
+    addEventHandler("CostingCastingMinute", "change", CostingCastingMinute_OnChange);
+    addEventHandler("CostingFinishingMinute", "change", CostingFinishingMinute_OnChange);
+    addEventHandler("CostingGlazingMinute", "change", CostingGlazingMinute_OnChange);
+    addEventHandler("CostingStandardBisqueLoading", "change", CostingStandardBisqueLoading_OnChange);
+    addEventHandler("CostingStandardGlazeLoading", "change", CostingStandardGlazeLoading_OnChange);
+    addEventHandler("CostingRakuBisqueLoading", "change", CostingRakuBisqueLoading_OnChange);
+    addEventHandler("CostingRakuGlazeLoading", "change", CostingRakuGlazeLoading_OnChange);
+    addEventHandler("CostingMovementMinute", "change", CostingMovementMinute_OnChange);
+    addEventHandler("CostingPackagingWorkMinute", "change", CostingPackagingWorkMinute_OnChange);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record Costing -->
+<form id="Costing" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="3" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Apricot2/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Edit Sample Ceramic Costing</strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Apricot2/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="3">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="8">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th" colspan="3"><label for="CostingSampleCode"><b>Sample Code</b></label><br>
+              {SampleCode}</td> 
+            <td class="th" colspan="5"><b>Sample Description</b><br>
+              {SampleDescription}&nbsp;<input id="CostingsID" type="hidden" value="{sID}" name="{sID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" colspan="3"><label for="CostingClientCode"><b>Barcode</b></label></td> 
+            <td class="th"><b>Client Code</b><br>
+              {ClientCode}</td> 
+            <td class="th" colspan="4"><b>Client Description</b><br>
+              {ClientDescription}</td>
+          </tr>
+ 
+          <tr class="row">
+            <td class="ColorBgButton" colspan="8"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2">CLAY</td> 
+            <th class="judul" colspan="2"><strong>Clay</strong></th>
+ 
+            <th class="judul"><strong>KG</strong></th>
+ 
+            <th class="judul"><strong>Price / KG</strong></th>
+ 
+            <th class="judul"><strong>Total Clay Cost </strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td style="WIDTH: 165px" colspan="2">&nbsp; 
+              <!-- BEGIN ListBox ClayType -->
+              <select id="CostingClayType" name="{ClayType_Name}">
+                <option value="0" selected>Select Value</option>
+                {ClayType_Options}
+              </select>
+ <!-- END ListBox ClayType --></td> 
+            <td><input id="CostingClayKG" readonly maxlength="12" onchange="TotalAll();" size="12" value="{ClayKG}" name="{ClayKG_Name}"></td> 
+            <td><input id="CostingClayPrice" readonly size="10" value="{ClayPrice}" name="{ClayPrice_Name}"></td> 
+            <td style="TEXT-ALIGN: right"><label for="CostingClayCost" style="display: none;">Clay Cost</label>{ClayCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingClayPreparationMinute">CLAY PREPARATION MINUTE </label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour</strong> </th>
+ 
+            <th class="judul"><strong>Total Clay Preparation Cost </strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingClayPreparationCPM" readonly value="{ClayPreparationCPM}" name="{ClayPreparationCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingClayPreparationMinute" maxlength="10" size="10" value="{ClayPreparationMinute}" name="{ClayPreparationMinute_Name}"></td> 
+            <td><input id="CostingClayPreparationPPH" readonly maxlength="10" size="10" value="{ClayPreparationPPH}" name="{ClayPreparationPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right"><label for="CostingClayPreparationCost" style="display: none;">Clay Preparation Cost</label>{ClayPreparationCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingWheelMinute">WHEEL</label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour </strong></th>
+ 
+            <th class="judul"><strong>Total Wheel Cost </strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingWheelCPM" readonly value="{WheelCPM}" name="{WheelCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingWheelMinute" maxlength="10" size="10" value="{WheelMinute}" name="{WheelMinute_Name}"></td> 
+            <td><input id="CostingWheelPPH" readonly maxlength="10" size="10" value="{WheelPPH}" name="{WheelPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right"><label for="CostingWheelCost" style="display: none;">Wheel Cost</label>{WheelCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingSlabMinute">SLAB</label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour</strong> </th>
+ 
+            <th class="judul"><strong>Total Slab Cost </strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingSlabCPM" readonly value="{SlabCPM}" name="{SlabCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingSlabMinute" maxlength="10" size="10" value="{SlabMinute}" name="{SlabMinute_Name}"></td> 
+            <td><input id="CostingSlabPPH" readonly maxlength="10" size="10" value="{SlabPPH}" name="{SlabPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right"><label for="CostingSlabCost" style="display: none;">Slab Cost</label>{SlabCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingCastingMinute">CASTING</label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour</strong> </th>
+ 
+            <th class="judul"><strong>Total Casting&nbsp;Cost</strong> </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingCastingCPM" readonly value="{CastingCPM}" name="{CastingCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingCastingMinute" maxlength="10" size="10" value="{CastingMinute}" name="{CastingMinute_Name}"></td> 
+            <td><input id="CostingCastingPPH" readonly maxlength="10" size="10" value="{CastingPPH}" name="{CastingPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right"><label for="CostingCastingCost" style="display: none;">Casting Cost</label>{CastingCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingFinishingMinute">FINISHING</label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour</strong> </th>
+ 
+            <th class="judul"><strong>Total Finishing&nbsp;Cost</strong> </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingFinishingCPM" readonly value="{FinishingCPM}" name="{FinishingCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingFinishingMinute" maxlength="10" size="10" value="{FinishingMinute}" name="{FinishingMinute_Name}"></td> 
+            <td><input id="CostingFinishingPPH" readonly maxlength="10" size="10" value="{FinishingPPH}" name="{FinishingPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right"><label for="CostingFinishingCost" style="display: none;">Finishing Cost</label>{FinishingCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingGlazingMinute">GLAZING</label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour</strong> </th>
+ 
+            <th class="judul"><strong>Total Glazing&nbsp;Cost </strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingGlazingCPM" readonly value="{GlazingCPM}" name="{GlazingCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingGlazingMinute" maxlength="10" size="10" value="{GlazingMinute}" name="{GlazingMinute_Name}"></td> 
+            <td><input id="CostingGlazingPPH" readonly maxlength="10" size="10" value="{GlazingPPH}" name="{GlazingPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right"><label for="CostingGlazingCost" style="display: none;">Glazing Cost</label>{GlazingCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="3"><label for="CostingStandardBisqueLoading">FIRING STANDARD</label></td> 
+            <th class="judul"><strong>Firing Category</strong></th>
+ 
+            <th class="judul"><strong>Loading</strong></th>
+ 
+            <th class="judul"><strong>Control</strong></th>
+ 
+            <th class="judul"><strong>Price / Firing</strong></th>
+ 
+            <th class="judul"><strong>Total Firing Standard Cost</strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>BISQUE</td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingStandardBisqueLoading" maxlength="10" size="10" value="{StandardBisqueLoading}" name="{StandardBisqueLoading_Name}"></td> 
+            <td>&nbsp;<font color="{StdBisqueColor}">{lblStdBisque}</font></td> 
+            <td><input id="CostingStdBisquePerFiring" readonly size="10" value="{StdBisquePerFiring}" name="{StdBisquePerFiring_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{StandardBisqueCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>GLAZE</td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingStandardGlazeLoading" maxlength="10" size="10" value="{StandardGlazeLoading}" name="{StandardGlazeLoading_Name}"></td> 
+            <td>&nbsp;<font color="{StdGlazeColor}">{lblStdGlaze}</font></td> 
+            <td><input id="CostingStdGlazePerFiring" readonly size="10" value="{StdGlazePerFiring}" name="{StdGlazePerFiring_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{StandardGlazeCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="3"><label for="CostingRakuBisqueLoading">FIRING RAKU</label></td> 
+            <th class="judul"><strong>Firing Category</strong></th>
+ 
+            <th class="judul"><strong>Loading</strong></th>
+ 
+            <th class="judul"><strong>Control</strong></th>
+ 
+            <th class="judul"><strong>Price / Firing</strong></th>
+ 
+            <th class="judul"><strong>Total Firing Raku Cost</strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>BISQUE</td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingRakuBisqueLoading" maxlength="10" size="10" value="{RakuBisqueLoading}" name="{RakuBisqueLoading_Name}"></td> 
+            <td>&nbsp;<font color="{RakuBisqueColor}">{lblRakuBisque}</font></td> 
+            <td><input id="CostingRakuBisquePerFiring" readonly size="10" value="{RakuBisquePerFiring}" name="{RakuBisquePerFiring_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{RakuBisqueCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>GLAZE</td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingRakuGlazeLoading" maxlength="10" size="10" value="{RakuGlazeLoading}" name="{RakuGlazeLoading_Name}"></td> 
+            <td>&nbsp;<font color="{RakuGlazeColor}">{lblRakuGlaze}</font></td> 
+            <td><input id="CostingRakuGlazePerFiring" readonly size="10" value="{RakuGlazePerFiring}" name="{RakuGlazePerFiring_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{RakuGlazeCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="5">DESIGN MATERIAL</td> 
+            <th class="judul"><strong>Design Material</strong></th>
+ 
+            <th class="judul"><strong>Quantity</strong></th>
+ 
+            <th class="judul"><strong>Unit</strong></th>
+ 
+            <th class="judul"><strong>Price / Unit</strong></th>
+ 
+            <th class="judul"><strong>Total Design Material Cost</strong></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>&nbsp;<input id="CostingDesignMat1" style="WIDTH: 51px; HEIGHT: 22px" type="hidden" size="6" value="{DesignMat1}" name="{DesignMat1_Name}">{lblDesignMat1}</td> 
+            <td><input id="CostingDesignMatQty1" readonly size="10" value="{DesignMatQty1}" name="{DesignMatQty1_Name}"></td> 
+            <td>&nbsp;{lblUnit1}</td> 
+            <td><input id="CostingDesignMatUnitPrice1" readonly size="10" value="{DesignMatUnitPrice1}" name="{DesignMatUnitPrice1_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{TotDesignMat1}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>&nbsp;<input id="CostingDesignMat2" style="WIDTH: 51px; HEIGHT: 22px" type="hidden" size="6" value="{DesignMat2}" name="{DesignMat2_Name}">{lblDesignMat2}</td> 
+            <td><input id="CostingDesignMatQty2" readonly size="10" value="{DesignMatQty2}" name="{DesignMatQty2_Name}"></td> 
+            <td>&nbsp;{lblUnit2}</td> 
+            <td><input id="CostingDesignMatUnitPrice2" readonly size="10" value="{DesignMatUnitPrice2}" name="{DesignMatUnitPrice2_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{TotDesignMat2}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>&nbsp;<input id="CostingDesignMat3" style="WIDTH: 51px; HEIGHT: 22px" type="hidden" size="6" value="{DesignMat3}" name="{DesignMat3_Name}">{lblDesignMat3}</td> 
+            <td><input id="CostingDesignMatQty3" readonly size="10" value="{DesignMatQty3}" name="{DesignMatQty3_Name}"></td> 
+            <td>&nbsp;{lblUnit3}</td> 
+            <td><input id="CostingDesignMatUnitPrice3" readonly size="10" value="{DesignMatUnitPrice3}" name="{DesignMatUnitPrice3_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{TotDesignMat3}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td>&nbsp;<input id="CostingDesignMat4" style="WIDTH: 51px; HEIGHT: 22px" type="hidden" size="6" value="{DesignMat4}" name="{DesignMat4_Name}">{lblDesignMat4}</td> 
+            <td><input id="CostingDesignMatQty4" readonly size="10" value="{DesignMatQty4}" name="{DesignMatQty4_Name}"></td> 
+            <td>&nbsp;{lblUnit4}</td> 
+            <td><input id="CostingDesignMatUnitPrice4" readonly size="10" value="{DesignMatUnitPrice4}" name="{DesignMatUnitPrice4_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{TotDesignMat4}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingMovementMinute">MOVEMENT</label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour</strong> </th>
+ 
+            <th class="judul"><strong>Total Movement Cost</strong> </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingMovementCPM" readonly value="{MovementCPM}" name="{MovementCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingMovementMinute" maxlength="10" size="10" value="{MovementMinute}" name="{MovementMinute_Name}"></td> 
+            <td><input id="CostingMovementPPH" readonly maxlength="10" size="10" value="{MovementPPH}" name="{MovementPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{MovementCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="left-judul" colspan="3" rowspan="2"><label for="CostingPackagingWorkMinute">PACKAGING WORK</label></td> 
+            <th class="judul" colspan="2"><strong>Cost / Minute</strong></th>
+ 
+            <th class="judul"><strong>Minute</strong></th>
+ 
+            <th class="judul"><strong>Pieces / Hour</strong> </th>
+ 
+            <th class="judul"><strong>Total Packaging Work Cost</strong> </th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td colspan="2">&nbsp;<input id="CostingPackagingCPM" readonly value="{PackagingCPM}" name="{PackagingCPM_Name}"></td> 
+            <td><input onkeypress="return isNumberKey(event);" id="CostingPackagingWorkMinute" maxlength="10" size="10" value="{PackagingWorkMinute}" name="{PackagingWorkMinute_Name}"></td> 
+            <td><input id="CostingPackagingWorkPPH" readonly maxlength="10" size="10" value="{PackagingWorkPPH}" name="{PackagingWorkPPH_Name}"></td> 
+            <td style="TEXT-ALIGN: right">{PackagingWorkCost}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="judul" style="TEXT-ALIGN: right" colspan="7"><label for="CostingTotalAllCost"><strong>TOTAL</strong></label> &nbsp;</th>
+ 
+            <th class="judul" style="TEXT-ALIGN: right"><b>{TotalAllCost}</b></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" style="TEXT-ALIGN: right" colspan="7"><label for="CostingRiskPrice"><b>RISK </b></label> (TOTAL + 10%)&nbsp;</td> 
+            <td style="TEXT-ALIGN: right"><b>{RiskPrice}</b></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th" style="TEXT-ALIGN: right" colspan="7"><label for="CostingHypoSellingPrice"><b>HYPOTHETICAL SELLING PRICE</b> (RISK X 3)</label></td> 
+            <td style="TEXT-ALIGN: right"><b>{HypoSellingPrice}</b></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="judul" style="TEXT-ALIGN: right" colspan="7"><label for="CostingRealSellingPrice"><strong>REAL SELLING PRICE</strong></label></th>
+ 
+            <th class="judul" style="TEXT-ALIGN: right"><span class="judul" style="TEXT-ALIGN: right"><input id="CostingLastUpdate" type="hidden" value="{LastUpdate}" name="{LastUpdate_Name}">&nbsp;<input id="CostingRealSellingPrice" maxlength="20" value="{RealSellingPrice}" name="{RealSellingPrice_Name}" size="20"></span></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th style="TEXT-ALIGN: right" colspan="7"><label for="CostingRealSellingPrice"><strong>DOLLAR SELLING PRICE</strong></label></th>
+ 
+            <th style="TEXT-ALIGN: right"><input id="CostingDollarPrice" value="{DollarPrice}" name="{DollarPrice_Name}"></th>
+          </tr>
+ 
+          <tr class="Controls">
+            <th class="judul" style="TEXT-ALIGN: right" colspan="7"><label for="CostingRealSellingPrice"><strong>EURO SELLING PRICE</strong></label></th>
+ 
+            <th class="judul" style="TEXT-ALIGN: right"><input id="CostingEuroPrice" value="{EuroPrice}" name="{EuroPrice_Name}"></th>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="8">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="CostingButton_Update" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->&nbsp; 
+              <!-- BEGIN Button Btn_Cancel --><input class="Button" id="CostingBtn_Cancel" type="submit" alt="Button1" value="Cancel" name="{Button_Name}"><!-- END Button Btn_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <p></p>
+  <table cellspacing="0" cellpadding="3" width="50%" border="0">
+    <tr class="Controls">
+      <th class="judul" width="97"></td> 
+    <th class="judul" width="100"><b>Multiplier</b></th>
+ 
+    <th class="judul" width="101"><b>Unit</b></th>
+ 
+    <th class="judul" width="80"><b>Wheel pcs</b></th>
+ 
+    <th class="judul" width="83"><b>Total/Pieces</b></th>
+  </tr>
+ 
+  <tr class="Controls">
+    <td class="left-judul"><strong>DAY</strong></td> 
+    <td style="TEXT-ALIGN: right">&nbsp;{Day}</td> 
+    <td align="left">Productive Hours</td> 
+    <td style="TEXT-ALIGN: right">{WheelPPH1}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{TotPiecesDay}</td>
+  </tr>
+ 
+  <tr class="Controls">
+    <td><b>MONTH</b></td> 
+    <td style="TEXT-ALIGN: right">{Month}</td> 
+    <td align="left">Days</td> 
+    <td align="left">&nbsp;</td> 
+    <td style="TEXT-ALIGN: right" align="right">{TotPiecesMonth}</td>
+  </tr>
+ 
+  <tr class="Controls">
+    <td><b>YEAR</b></td> 
+    <td style="TEXT-ALIGN: right">{Year}</td> 
+    <td align="left">Months</td> 
+    <td align="left">&nbsp;</td> 
+    <td style="TEXT-ALIGN: right" align="right">{TotPiecesYear}</td>
+  </tr>
+ 
+  <tr class="Controls">
+    <td><b>WORKER</b></td> 
+    <td style="TEXT-ALIGN: right">{Worker}</td> 
+    <td align="left">Trow Worker</td> 
+    <td align="left">&nbsp;</td> 
+    <td style="TEXT-ALIGN: right" align="right">{TotPiecesWorker}</td>
+  </tr>
+ 
+  <tr class="Controls">
+    <th class="judul" style="TEXT-ALIGN: right" colspan="3"><b>TOTAL</b>(on total cost + risk)</th>
+ 
+    <th class="judul" style="TEXT-ALIGN: left">Rp</th>
+ 
+    <th class="judul" style="TEXT-ALIGN: right"><b>{TotAllPieces}</b></th>
+  </tr>
+ 
+  <tr class="Controls">
+    <th class="judul" style="TEXT-ALIGN: right" colspan="3"><b>COST BUDGET PREVIEW {lblYear}&nbsp;</b></th>
+ 
+    <th class="judul" style="TEXT-ALIGN: left">Rp</th>
+ 
+    <th class="judul" style="TEXT-ALIGN: right"><b>{CostBudget}</b></th>
+  </tr>
+ 
+  <tr class="Controls">
+    <th class="judul" style="TEXT-ALIGN: right" colspan="3"><b>COST PRICE REACHING BUDGET PREVIEW {lblYear1}&nbsp;</b></th>
+ 
+    <th class="judul" style="TEXT-ALIGN: left">Rp</th>
+ 
+    <th class="judul" style="TEXT-ALIGN: right"><b>{BEP}</b></th>
+  </tr>
+</table>
+</form>
+<!-- END Record Costing --><br>
+</body>
+</html>

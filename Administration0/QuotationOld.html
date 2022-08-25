@@ -1,0 +1,408 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Quotation</title>
+<meta content="CodeCharge Studio 4.00.00.015" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+function disable_record()
+{
+  document.AddQuotation.ClientCode.disabled = true;
+  document.AddQuotation.QuotationDate.disabled = true;
+  document.AddQuotation.Button_Update.disabled = true;
+  document.AddQuotation.Button_Delete.disabled = true;
+
+} 
+
+function disable_editablegrid()
+{
+  if (document.forms["AddItem"]) {
+    for(var i = 0; i < AddItemElements.length; i++){
+          AddItemElements[i][AddItemRnDCodeID].disabled = true;
+          AddItemElements[i][AddItemDescriptionID].disabled = true;
+          AddItemElements[i][AddItemRemarkID].disabled = true;
+    }
+    document.AddItem.Button_Submit.disabled = true;
+  }
+} 
+
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-F10A3DCA
+
+var AddQuotation_DatePicker_QuotationDate = new Object(); 
+AddQuotation_DatePicker_QuotationDate.format           = "ShortDate";
+AddQuotation_DatePicker_QuotationDate.style            = "Styles/Fresh/Style.css";
+AddQuotation_DatePicker_QuotationDate.relativePathPart = "";
+AddQuotation_DatePicker_QuotationDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//AddQuotationButton_Delete_OnClick @29-431D9819
+function AddQuotationButton_Delete_OnClick()
+{
+    var result;
+//End AddQuotationButton_Delete_OnClick
+
+//Confirmation Message @30-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close AddQuotationButton_Delete_OnClick @29-BC33A33A
+    return result;
+}
+//End Close AddQuotationButton_Delete_OnClick
+
+//AddItemRndCode_OnChange @38-1065BCB4
+function AddItemRndCode_OnChange()
+{
+    var result;
+//End AddItemRndCode_OnChange
+
+//Custom Code @52-2A29BDB7
+var Element_Number = this.name.substring(11)-1;
+var Element_ID   = AddItemElements[Element_Number][AddItemRndCodesID].value;
+ if (parseInt(Element_ID) > 0) {
+    AddItemElements[Element_Number][AddItemDescsID].value = RnD_Desc[parseInt(Element_ID)];
+ } else {
+    AddItemElements[Element_Number][AddItemDescsID].value = 0;
+ }
+
+ disable_record();
+//End Custom Code
+
+//Close AddItemRndCode_OnChange @38-BC33A33A
+    return result;
+}
+//End Close AddItemRndCode_OnChange
+
+//AddItemAddItemBtn_OnClick @46-98050303
+function AddItemAddItemBtn_OnClick()
+{
+    var result;
+//End AddItemAddItemBtn_OnClick
+
+//Custom Code @50-2A29BDB7
+var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+var IE  = (document.all) ? 1 : 0;
+var O = typeof(opera) != "undefined";
+var FormState = document.AddItem.FormState.value.split(";");
+var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+
+  if (parseInt(FormState[0]) == 0 ) {
+      FormState[0] = 1;
+  }
+
+  var i;
+  
+  for (i=FormState[0]; i<AllLength; i++) {
+     var objRow = document.getElementById("row"+i);
+     if (NS6 || O) {
+       if (objRow.style.display == "none") {
+           objRow.style.display = '';
+           break;
+       }
+     } else {
+       if (objRow.style.display == "none") {
+           objRow.style.display = "block"; 
+           break;
+       }
+         }
+  }
+
+  if (i >= AllLength) 
+      document.forms["AddItem"].AddItemBtn.disabled = true;
+//End Custom Code
+
+//Close AddItemAddItemBtn_OnClick @46-BC33A33A
+    return result;
+}
+//End Close AddItemAddItemBtn_OnClick
+
+//bind_events @1-A9380CC9
+function bind_events() {
+    addEventHandler("AddQuotationButton_Delete", "click", AddQuotationButton_Delete_OnClick);
+    addEventHandler("AddItemRndCode", "change", AddItemRndCode_OnChange);
+    addEventHandler("AddItemAddItemBtn", "click", AddItemAddItemBtn_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table border="0">
+  <tr>
+    <td valign="top">
+      <!-- BEGIN Record SearchQuotation -->
+      <form id="SearchQuotation" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>Search Quotation</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="4">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <th>Quotation No</th>
+ 
+                  <td><input id="SearchQuotations_QuotationNo" maxlength="11" size="11" value="{s_QuotationNo}" name="{s_QuotationNo_Name}"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>Client Company</th>
+ 
+                  <td><input id="SearchQuotations_ClientCompany" maxlength="100" value="{s_ClientCompany}" name="{s_ClientCompany_Name}" size="20"></td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="4">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="SearchQuotationButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record SearchQuotation --><br>
+      <!-- BEGIN Grid GridQuotation -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                <th>List of Quotation </th>
+ 
+                <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+              </tr>
+ 
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="4">Total Records:&nbsp;{tbladminist_client_tbladm1_TotalRecords}</td> 
+              </tr>
+ 
+              <tr class="Caption">
+                <th>
+                <!-- BEGIN Sorter Sorter_Quotation_H_ID --><a href="{Sort_URL}" id="GridQuotationSorter_Quotation_H_ID">ID</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Quotation_H_ID --></th>
+ 
+                <th width="25">
+                <!-- BEGIN Sorter Sorter_QuotationNo --><a href="{Sort_URL}" id="GridQuotationSorter_QuotationNo">Quotation No</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_QuotationNo --></th>
+ 
+                <th width="30">
+                <!-- BEGIN Sorter Sorter_ClientCompany --><a href="{Sort_URL}" id="GridQuotationSorter_ClientCompany">Client</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ClientCompany --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_QuotationDate --><a href="{Sort_URL}" id="GridQuotationSorter_QuotationDate">Date</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_QuotationDate --></th>
+ 
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td style="TEXT-ALIGN: left"><a href="{Quotation_H_ID_Src}" id="GridQuotationQuotation_H_ID_{GridQuotation:rowNumber}">{Quotation_H_ID}</a>&nbsp;</td> 
+                <td width="25">{QuotationNo}&nbsp;</td> 
+                <td width="30">{ClientCompany}&nbsp;</td> 
+                <td>{QuotationDate}&nbsp;</td> 
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="4">No records</td> 
+              </tr>
+ <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="4"><a href="{Link1_Src}" id="GridQuotationLink1_{GridQuotation:rowNumber}">Add</a>&nbsp; 
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+                  <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                    <option value="" selected>-</option>
+ {PageSize_Options} 
+                  </select>
+ 
+                  <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                  <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                  <!-- BEGIN Pages -->
+                  <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                  <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+              </tr>
+ 
+            </table>
+ </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid GridQuotation --><br>
+    </td> 
+    <td valign="top">a&nbsp; <br>
+      <!-- BEGIN Record AddQuotation -->
+      <form id="AddQuotation" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>Add/Edit Quotation </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}{QuotationNo}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <th>Client</th>
+ 
+                  <td>
+                    <select id="AddQuotationClientCode" name="{ClientCode_Name}">
+                      <option value="" selected>Select Value</option>
+ {ClientCode_Options} 
+                    </select>
+ </td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>Quotation Date</th>
+ 
+                  <td><input id="AddQuotationQuotationDate" maxlength="100" size="8" value="{QuotationDate}" name="{QuotationDate_Name}">
+                    <!-- BEGIN DatePicker DatePicker_QuotationDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddQuotationDatePicker_QuotationDate"><img id="AddQuotationDatePicker_QuotationDate_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_QuotationDate --></td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="AddQuotationButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="AddQuotationButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Delete --><input class="Button" id="AddQuotationButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record AddQuotation --><br>
+      <!-- BEGIN EditableGrid AddItem -->
+      <form id="AddItem" name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} {DescArray} {PriceArray} 
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>List of Tbladminist Quotation D </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="4">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Caption">
+                  <th>Rnd Code</th>
+ 
+                  <th>Description</th>
+ 
+                  <th>Remark</th>
+ 
+                  <th>Delete</th>
+ 
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr class="Error">
+                  <td colspan="4">{Error}</td> 
+                </tr>
+ <!-- END RowError -->
+                <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+                  <td><input id="AddItemQuotation_H_ID_{AddItem:rowNumber}" type="hidden" value="{Quotation_H_ID}" name="{Quotation_H_ID_Name}">
+                    <!--{RowNameAttribute}-->
+                    <select id="AddItemRndCode_{AddItem:rowNumber}" name="{RndCode_Name}">
+                      <option value="" selected>Select Value</option>
+ {RndCode_Options} 
+                    </select>
+ </td> 
+                  <td><input id="AddItemDescription_{AddItem:rowNumber}" maxlength="100" size="30" value="{Description}" name="{Description_Name}"></td> 
+                  <td><textarea id="AddItemRemark_{AddItem:rowNumber}" name="{Remark_Name}" cols="30">{Remark}</textarea></td> 
+                  <td>
+                    <!-- BEGIN Panel Delete1 -->
+                    <!-- BEGIN CheckBox CheckBox_Delete --><input id="AddItemDelete1CheckBox_Delete_{AddItem:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete --><!-- END Panel Delete1 -->&nbsp;</td> 
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="4">No records</td> 
+                </tr>
+ <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="4">
+                    <!-- BEGIN Button AddItemBtn --><input class="Button" id="AddItemAddItemBtn" type="button" value="Add Item" name="{Button_Name}"><!-- END Button AddItemBtn -->
+                    <!-- BEGIN Button Button_Submit --><input class="Button" id="AddItemButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid AddItem --><br>
+    </td> 
+  </tr>
+</table>
+<p></p>
+</body>
+</html>

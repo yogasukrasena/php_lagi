@@ -1,0 +1,146 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Productive Hour</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Apricot2/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Grid tblcosting_productivehour -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/Apricot2/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>Productive Hours </strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/Apricot2/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_ID --><a href="{Sort_URL}" id="tblcosting_productivehourSorter_ID">ID</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Apricot2/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Apricot2/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ID --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Day --><a href="{Sort_URL}" id="tblcosting_productivehourSorter_Day">Day</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Apricot2/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Apricot2/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Day --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Month --><a href="{Sort_URL}" id="tblcosting_productivehourSorter_Month">Month</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Apricot2/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Apricot2/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Month --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_Year --><a href="{Sort_URL}" id="tblcosting_productivehourSorter_Year">Year</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/Apricot2/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/Apricot2/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Year --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right"><a href="{ID_Src}" id="tblcosting_productivehourID_{tblcosting_productivehour:rowNumber}">{ID}</a>&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Day}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Month}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">{Year}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="4">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="4">&nbsp;
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option value="" selected>-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid tblcosting_productivehour --><br>
+<!-- BEGIN Record tblcosting_productivehour1 -->
+<form id="tblcosting_productivehour1" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img alt="" src="Styles/Apricot2/Images/Spacer.gif" border="0"></td> 
+            <td class="th"><strong>Edit Productive Hours </strong></td> 
+            <td class="HeaderRight"><img alt="" src="Styles/Apricot2/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <td class="th"><label for="tblcosting_productivehour1Day">Day</label></td> 
+            <td><input id="tblcosting_productivehour1Day" maxlength="12" size="12" value="{Day}" name="{Day_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcosting_productivehour1Month">Month</label></td> 
+            <td><input id="tblcosting_productivehour1Month" maxlength="10" size="10" value="{Month}" name="{Month_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <td class="th"><label for="tblcosting_productivehour1Year">Year</label></td> 
+            <td><input id="tblcosting_productivehour1Year" maxlength="10" size="10" value="{Year}" name="{Year_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tblcosting_productivehour1Button_Update" type="submit" alt="Submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblcosting_productivehour1 --><br>
+</body>
+</html>

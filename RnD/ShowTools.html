@@ -1,0 +1,85 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Show Tools</title>
+
+<link href="../includes/graphite.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record tbltools -->
+<form id="tbltools" name="{HTMLFormName}" action="{Action}" method="post">
+  <font class="GraphiteFormHeaderFont">Work Plan Gaya&nbsp;Design </font> 
+  <table class="GraphiteFormTABLE" cellspacing="1" cellpadding="3">
+    <tr>
+      <td class="GraphiteColumnTD" colspan="2" align="center">
+	  	<table width="100%" border="0" cellspacing="0" cellpadding="3">
+        	<tr>
+       		  <td height="50" align="center" valign="bottom"><h1>TOOLS</h1></td>
+			  <td height="50"><img src="../images/GayaKecil.jpg" width="300" height="50"></td> 
+        	</tr>
+      	</table>
+	  </td> 
+    </tr>
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="2" class="GraphiteErrorDataTD">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Tools Code</th>
+      <th class="GraphiteFieldCaptionTD">Tools Description</th> 
+
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD">{ToolsCode}</td> 
+      <td class="GraphiteDataTD">{ToolsDescription}</td>
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" nowrap colspan="2" align="right">&nbsp;</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteFieldCaptionTD" colspan="2" nowrap>Notes</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" colspan="2" nowrap>&nbsp;</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">
+	  	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+			<tr>
+				<td height="500" valign="top">{ToolsNotes}</td>
+			</tr>
+		</table>	
+	  </td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" colspan="2" nowrap>&nbsp;</td> 
+    </tr>
+ 	<tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Photo</td> 
+    </tr> 
+	<tr>
+	  <td colspan="2">
+	  	<table width="100%" cellpadding="3" cellspacing="0" border="0">
+			<tr>
+	  			<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tbltoolsToolsPhoto1" src="../upload/{ToolsPhoto1}"></td> 
+      			<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tbltoolsToolsPhoto2" src="../upload/{ToolsPhoto2}"></td> 
+      			<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tbltoolsToolsPhoto3" src="../upload/{ToolsPhoto3}"></td>
+				<td class="GraphiteDataTD" align="center"><img class="GraphiteInput" width="150" id="tbltoolsToolsPhoto4" src="../upload/{ToolsPhoto4}"></td> 
+			</tr>
+		</table>
+	  </td>
+    </tr>
+	<tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Technical
+        Drawing</td> 
+    </tr>
+	<tr>
+      <td class="GraphiteDataTD" nowrap colspan="2" align="center" valign="middle"><img class="GraphiteInput" height="750" width="600" id="tbltoolsToolsTechDraw" src="../upload/{ToolsTechDraw}"></td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record tbltools --><br>
+</body>
+</html>

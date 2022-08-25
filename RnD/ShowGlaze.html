@@ -1,0 +1,95 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Show Glaze</title>
+
+<link href="../includes/graphite.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record tblglaze -->
+<form id="tblglaze" name="{HTMLFormName}" action="{Action}" method="post">
+  <font class="GraphiteFormHeaderFont">Work Plan Gaya&nbsp;Design </font>
+  <table class="GraphiteFormTABLE" cellspacing="1" cellpadding="3">
+    <tr>
+      <td class="GraphiteColumnTD" align="center" colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td valign="bottom" align="center" height="50">
+              <h1>GLAZE</h1>
+            </td> 
+            <td height="50"><img height="50" src="../images/GayaKecil.jpg" width="300"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- BEGIN Error -->
+    <tr>
+      <td class="GraphiteErrorDataTD" colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <th class="GraphiteFieldCaptionTD">Glaze Code</th>
+ 
+      <th class="GraphiteFieldCaptionTD">Glaze Description</th>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD">{GlazeCode}</td> 
+      <td class="GraphiteDataTD">{GlazeDescription}</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap align="right" colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" nowrap colspan="2">Notes</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="1">
+          <tr>
+            <td valign="top" height="500">{GlazeNotes}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" nowrap colspan="2">&nbsp;</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Photo</td>
+    </tr>
+ 
+    <tr>
+      <td colspan="2">
+        <table cellspacing="0" cellpadding="3" width="100%" border="0">
+          <tr>
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblglazeGlazePhoto1" src="../upload/{GlazePhoto1}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblglazeGlazePhoto2" src="../upload/{GlazePhoto2}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblglazeGlazePhoto3" src="../upload/{GlazePhoto3}" width="150"></td> 
+            <td class="GraphiteDataTD" align="center"><img class="GraphiteInput" id="tblglazeGlazePhoto4" src="../upload/{GlazePhoto4}" width="150"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteFieldCaptionTD" valign="middle" nowrap align="center" colspan="2">&nbsp;Technical Drawing</td>
+    </tr>
+ 
+    <tr>
+      <td class="GraphiteDataTD" valign="middle" nowrap align="center" colspan="2"><img class="GraphiteInput" id="tblglazeGlazeTechDraw" height="750" src="../upload/{GlazeTechDraw}" width="600"></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblglaze --><br>
+</body>
+</html>

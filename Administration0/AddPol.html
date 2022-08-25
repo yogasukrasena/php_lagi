@@ -1,0 +1,278 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Create New POL</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+
+function openDialog(url, width, height, returnFunc, args) {
+        if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+                dialogWin.returnFunc = returnFunc
+                dialogWin.args = args
+                dialogWin.url = url
+                dialogWin.width = width
+                dialogWin.height = height
+                                dialogWin.scrollbars = scrollbars
+                dialogWin.name = (new Date()).getSeconds().toString()
+
+                if (Nav4) {
+                        dialogWin.left = window.screenX + 
+                           ((window.outerWidth - dialogWin.width) / 2)
+                        dialogWin.top = window.screenY + 
+                           ((window.outerHeight - dialogWin.height) / 2)
+                        var attr = "screenX=" + dialogWin.left + 
+                           ",screenY=" + dialogWin.top + ",resizable=yes,width=" + 
+                           dialogWin.width + ",height=" + dialogWin.height + ",scrollbars=yes"
+                } else {
+                        dialogWin.left = (screen.width - dialogWin.width) / 2
+                        dialogWin.top = (screen.height - dialogWin.height) / 2
+                        var attr = "left=" + dialogWin.left + ",top=" + 
+                           dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+                           ",height=" + dialogWin.height + ",scrollbars=yes"
+                }
+                
+                dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+                dialogWin.win.focus()
+        } else {
+                dialogWin.win.focus()
+        }
+}
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-CCE1D0D9
+
+var AddNewHeader_DatePicker_POLDate = new Object(); 
+AddNewHeader_DatePicker_POLDate.format           = "dd/mm/yyyy";
+AddNewHeader_DatePicker_POLDate.style            = "Styles/Fresh/Style.css";
+AddNewHeader_DatePicker_POLDate.relativePathPart = "";
+AddNewHeader_DatePicker_POLDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//AddNewDetailAddItemBtn_OnClick @23-10805450
+function AddNewDetailAddItemBtn_OnClick()
+{
+    var result;
+//End AddNewDetailAddItemBtn_OnClick
+
+//Custom Code @24-2A29BDB7
+  var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+  var IE  = (document.all) ? 1 : 0;
+  var O = typeof(opera) != "undefined";
+  var FormState = document.AddNewDetail.FormState.value.split(";");
+  var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+  
+    if (parseInt(FormState[0]) == 0 ) {
+        FormState[0] = 1;
+    }
+  
+    var i;
+    
+    for (i=FormState[0]; i<AllLength; i++) {
+       var objRow = document.getElementById("row"+i);
+       if (NS6 || O) {
+         if (objRow.style.display == "none") {
+             objRow.style.display = '';
+             break;
+         }
+       } else {
+         if (objRow.style.display == "none") {
+             objRow.style.display = "block"; 
+             break;
+         }
+           }
+    }
+  
+    if (i >= AllLength) 
+        document.forms["AddNewDetail"].AddItemBtn.disabled = true;
+//End Custom Code
+
+//Close AddNewDetailAddItemBtn_OnClick @23-BC33A33A
+    return result;
+}
+//End Close AddNewDetailAddItemBtn_OnClick
+
+//bind_events @1-99E84FC5
+function bind_events() {
+    addEventHandler("AddNewDetailAddItemBtn", "click", AddNewDetailAddItemBtn_OnClick);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record AddNewHeader -->
+<form id="AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit&nbsp;P.O.L </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>POL No.</th>
+ 
+            <td><input id="AddNewHeaderPolNo" readonly size="15" value="{PolNo}" name="{PolNo_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>POL Date</th>
+ 
+            <td><input id="AddNewHeaderPOLDate" maxlength="100" size="10" value="{POLDate}" name="{POLDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_POLDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddNewHeaderDatePicker_POLDate"><img id="AddNewHeaderDatePicker_POLDate_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_POLDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client</th>
+ 
+            <td>
+              <select id="AddNewHeaderClientID" name="{ClientID_Name}">
+                <option value="" selected>Select Value</option>
+                {ClientID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Client Order Ref</th>
+ 
+            <td><input id="AddNewHeaderClientOrderRef" maxlength="30" size="30" value="{ClientOrderRef}" name="{ClientOrderRef_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Delivery Time ID</th>
+ 
+            <td>
+              <select id="AddNewHeaderDeliveryTimeID" name="{DeliveryTimeID_Name}">
+                <option value="" selected>Select Value</option>
+                {DeliveryTimeID_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->&nbsp; 
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="AddNewHeaderButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AddNewHeader --><br>
+<!-- BEGIN EditableGrid AddNewDetail -->
+<form id="AddNewDetail" name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>List of P.O.L Item List</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="11">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>COLLECTION CODE </th>
+ 
+            <th>DESIGN&nbsp;</th>
+ 
+            <th>NAME&nbsp;</th>
+ 
+            <th>CATEGORY&nbsp;</th>
+ 
+            <th>INFO/SIZE&nbsp;</th>
+ 
+            <th>TEXTURE&nbsp;</th>
+ 
+            <th>COLOR&nbsp;</th>
+ 
+            <th>MATERIAL&nbsp;</th>
+ 
+            <th>QTY</th>
+ 
+            <th colspan="2">DELETE</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="11">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+            <td><input type="hidden" name="{POL_H_ID_Name}" value="{POL_H_ID}" id="AddNewDetailPOL_H_ID_{AddNewDetail:rowNumber}">
+              <!--{RowNameAttribute}-->
+              <input id="AddNewDetailCollectID_{AddNewDetail:rowNumber}" type="hidden" value="{CollectID}" name="{CollectID_Name}"><input id="AddNewDetailCollectCode_{AddNewDetail:rowNumber}" readonly value="{CollectCode}" name="{CollectCode_Name}">&nbsp; <a href="{CollectPopup}" onclick="openDialog('Collect4Pol.php?rowNumber={AddNewDetail:rowNumber}', 750,650);return false;"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Fresh/Images/DatePicker.gif"></a> </td> 
+            <td>
+              <!-- BEGIN TextBox Design --><input id="AddNewDetailDesign_{AddNewDetail:rowNumber}" readonly value="{Design}" name="{Design_Name}"><!-- END TextBox Design --></td> 
+            <td>
+              <!-- BEGIN TextBox NameDesc --><input id="AddNewDetailNameDesc_{AddNewDetail:rowNumber}" readonly value="{NameDesc}" name="{NameDesc_Name}"><!-- END TextBox NameDesc --></td> 
+            <td>
+              <!-- BEGIN TextBox Category --><input id="AddNewDetailCategory_{AddNewDetail:rowNumber}" readonly value="{Category}" name="{Category_Name}"><!-- END TextBox Category --></td> 
+            <td>
+              <!-- BEGIN TextBox Size --><input id="AddNewDetailSize_{AddNewDetail:rowNumber}" readonly value="{Size}" name="{Size_Name}"><!-- END TextBox Size --></td> 
+            <td>
+              <!-- BEGIN TextBox Texture --><input id="AddNewDetailTexture_{AddNewDetail:rowNumber}" readonly value="{Texture}" name="{Texture_Name}"><!-- END TextBox Texture --></td> 
+            <td>
+              <!-- BEGIN TextBox Color --><input id="AddNewDetailColor_{AddNewDetail:rowNumber}" readonly value="{Color}" name="{Color_Name}"><!-- END TextBox Color --></td> 
+            <td>
+              <!-- BEGIN TextBox Material --><input id="AddNewDetailMaterial_{AddNewDetail:rowNumber}" readonly value="{Material}" name="{Material_Name}"><!-- END TextBox Material --></td> 
+            <td><input id="AddNewDetailQty_{AddNewDetail:rowNumber}" maxlength="10" size="1" value="{Qty}" name="{Qty_Name}"></td> 
+            <td colspan="2">
+              <!-- BEGIN CheckBox CheckBox_Delete --><input id="AddNewDetailCheckBox_Delete_{AddNewDetail:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="11">No records</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="11">
+              <!-- BEGIN Button AddItemBtn --><input class="Button" id="AddNewDetailAddItemBtn" type="button" value="Add Item" name="{Button_Name}"><!-- END Button AddItemBtn -->
+              <!-- BEGIN Button Button_Submit --><input class="Button" id="AddNewDetailButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid AddNewDetail -->
+</body>
+</html>

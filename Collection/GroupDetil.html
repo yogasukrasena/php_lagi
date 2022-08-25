@@ -1,0 +1,230 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>GroupDetil</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/PinkPatterned/Style_doctype.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-D3B5F5BF
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Grid Grid -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td> 
+          <td class="th"><strong>List of Collection in Group</strong></td> 
+          <td class="HeaderRight"><img alt="" src="Styles/PinkPatterned/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="6"></td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_GroupCode --><a href="{Sort_URL}" id="GridSorter_GroupCode">CODE</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_GroupCode --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_DesignName --><a href="{Sort_URL}" id="GridSorter_DesignName">DESIGN</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DesignName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_GroupDescription --><a href="{Sort_URL}" id="GridSorter_GroupDescription">DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_GroupDescription --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_ClientCode --><a href="{Sort_URL}" id="GridSorter_ClientCode">CLIENT CODE</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ClientCode --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_ClientDesc --><a href="{Sort_URL}" id="GridSorter_ClientDesc">CLIENT DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ClientDesc --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_GroupPhoto --><a href="{Sort_URL}" id="GridSorter_GroupPhoto">PHOTO</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_GroupPhoto --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{GroupCode}&nbsp;</td> 
+          <td>{DesignName}&nbsp;</td> 
+          <td>{GroupDescription}&nbsp;</td> 
+          <td>{ClientCode}&nbsp;</td> 
+          <td>{ClientDesc}&nbsp;</td> 
+          <td><img id="GridGroupPhoto_{Grid:rowNumber}" height="50" alt=" " src="../upload/{GroupPhoto}" width="50" align="center">&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option value="" selected>-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Grid -->
+<p><br>
+<!-- BEGIN Grid GridCollection -->
+<table cellspacing="0" cellpadding="3" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="3" border="0">
+        <tr>
+          <td class="HeaderLeft"></td> 
+          <td class="th"><strong>List of&nbsp;Item in Group&nbsp;</strong></td> 
+          <td class="HeaderRight"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="3">
+        <tr class="Row">
+          <td colspan="11">Total Records:&nbsp;{tblcollect_category_tblco1_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_CollectCode --><a href="{Sort_URL}" id="GridCollectionSorter_CollectCode">CODE</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CollectCode --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_DesignName --><a href="{Sort_URL}" id="GridCollectionSorter_DesignName">DESIGN</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_DesignName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_NameDesc --><a href="{Sort_URL}" id="GridCollectionSorter_NameDesc">NAME</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_NameDesc --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_CategoryName --><a href="{Sort_URL}" id="GridCollectionSorter_CategoryName">CATEGORY</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_CategoryName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_SizeName --><a href="{Sort_URL}" id="GridCollectionSorter_SizeName">INFO/SIZE</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_SizeName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_TextureName --><a href="{Sort_URL}" id="GridCollectionSorter_TextureName">TEXTURE</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_TextureName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_ColorName --><a href="{Sort_URL}" id="GridCollectionSorter_ColorName">COLOR</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ColorName --></th>
+ 
+          <th scope="col">
+          <!-- BEGIN Sorter Sorter_MaterialName --><a href="{Sort_URL}" id="GridCollectionSorter_MaterialName">MATERIAL</a> 
+          <!-- BEGIN Asc_On --><img alt="Ascending" src="Styles/PinkPatterned/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img alt="Descending" src="Styles/PinkPatterned/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_MaterialName --></th>
+ 
+          <th scope="col"><u>PHOTO</u></th>
+ 
+          <th scope="col"><u>WORKPLAN</u></th>
+ 
+          <th scope="col">QTY&nbsp;</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{CollectCode}&nbsp;</td> 
+          <td>{DesignName}&nbsp;</td> 
+          <td>{NameDesc}&nbsp;</td> 
+          <td>{CategoryName}&nbsp;</td> 
+          <td>{SizeName}&nbsp;</td> 
+          <td>{TextureName}&nbsp;</td> 
+          <td>{ColorName}&nbsp;</td> 
+          <td>{MaterialName}&nbsp;</td> 
+          <td><img id="GridCollectionPhoto1_{GridCollection:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50">&nbsp;</td> 
+          <td><a href="{LinkShow_Src}" id="GridCollectionLinkShow_{GridCollection:rowNumber}" target="_blank">Show</a>&nbsp;</td> 
+          <td>{lblQty} </td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="11">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="11">&nbsp;
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+            <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+              <option value="" selected>-</option>
+ {PageSize_Options}
+            </select>
+ 
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid GridCollection --></p>
+</body>
+</html>

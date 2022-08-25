@@ -1,0 +1,131 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ClayPopup</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Blueprint/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+function SetOpenerValue(IDnya, currentObj)
+{
+        var IE  = (document.all) ? 1 : 0;
+        if(IE) {
+                var desc = currentObj.innerText; 
+        } else {
+                var desc = currentObj.text;     
+        }
+
+       window.opener.document.AddSampleCeramic.Clay.value = IDnya;
+       window.opener.document.AddSampleCeramic.ClayDesc.value = desc;
+
+        window.opener.focus();
+        window.close();
+}
+</script>
+</head>
+<body>
+<!-- BEGIN Record tblclaySearch -->
+<form id="tblclaySearch" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+            <th>Search Clay </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="4">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Clay Code</th>
+ 
+            <td><input id="tblclaySearchs_ClayCode" maxlength="10" size="10" value="{s_ClayCode}" name="{s_ClayCode_Name}"></td> 
+            <th>Clay Description</th>
+ 
+            <td><input id="tblclaySearchs_ClayDescription" maxlength="100" size="50" value="{s_ClayDescription}" name="{s_ClayDescription_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="4">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="tblclaySearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblclaySearch -->
+<p>&nbsp; 
+<!-- BEGIN Grid tblclay -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td> 
+          <th>List of Clay </th>
+ 
+          <td class="HeaderRight"><img src="Styles/Blueprint-Versi3/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="3"><b>Total Records:&nbsp;{tblclay_TotalRecords}</b></td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_ClayCode --><a href="{Sort_URL}" id="tblclaySorter_ClayCode">CLAY CODE</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ClayCode --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_ClayDescription --><a href="{Sort_URL}" id="tblclaySorter_ClayDescription">CLAY DESCRIPTION</a> 
+          <!-- BEGIN Asc_On --><img src="Styles/Blueprint-Versi3/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="Styles/Blueprint-Versi3/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_ClayDescription --></th>
+ 
+          <th><u>PHOTO</u></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{ClayCode}&nbsp;</td> 
+          <td><a href="{ClayDescription_Src}" id="tblclayClayDescription_{tblclay:rowNumber}" onclick="SetOpenerValue('{ClayID}', this);return false;">{ClayDescription}</a>&nbsp;<input id="tblclayClayID" type="hidden" value="{ClayID}" name="{ClayID_Name}"></td> 
+          <td><img id="tblclayClayPhoto1_{tblclay:rowNumber}" height="50" alt=" " src="../upload/{ClayPhoto1}" width="50" align="center" name="ClayPhoto1">&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="3">&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First </a><!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev </a><!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next </a><!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last </a><!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid tblclay --></p>
+</body>
+</html>

@@ -1,0 +1,707 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Proforma</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<script src="../Includes/jquery.js" type="text/javascript"></script>
+<script src="../Includes/clickmenu.js" type="text/javascript"></script>
+<script src="../Includes/columnmanager.js" type="text/javascript"></script>
+<link href="../Includes/clickmenu.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+var Nav4 = ((navigator.appName == "Netscape") && (parseInt(navigator.appVersion) == 4))
+var dialogWin = new Object()
+
+function openDialog(url, width, height, returnFunc, args) {
+  if (!dialogWin.win || (dialogWin.win && dialogWin.win.closed)) {
+    dialogWin.returnFunc = returnFunc
+    dialogWin.args = args
+    dialogWin.url = url
+    dialogWin.width = width
+    dialogWin.height = height
+    dialogWin.name = (new Date()).getSeconds().toString()
+
+    if (Nav4) {
+      dialogWin.left = window.screenX + 
+      ((window.outerWidth - dialogWin.width) / 2)
+      dialogWin.top = window.screenY + 
+      ((window.outerHeight - dialogWin.height) / 2)
+      var attr = "screenX=" + dialogWin.left + 
+      ",screenY=" + dialogWin.top + ",resizable=yes,width=" + 
+      dialogWin.width + ",height=" + dialogWin.height + ",scrollbars=yes"
+    } else {
+      dialogWin.left = (screen.width - dialogWin.width) / 2
+      dialogWin.top = (screen.height - dialogWin.height) / 2
+      var attr = "left=" + dialogWin.left + ",top=" + 
+      dialogWin.top + ",resizable=yes,width=" + dialogWin.width + 
+      ",height=" + dialogWin.height + ",scrollbars=yes"
+    }
+                
+    dialogWin.win=window.open(dialogWin.url, dialogWin.name, attr)
+    dialogWin.win.focus()
+  } else {
+    dialogWin.win.focus()
+  }
+}
+
+//function showHide(){
+//get the row identifier which is the number after the '_'  
+//    var row_id = document.form["AddNewDetailchkGroup"].id.split("_")[1];  
+//if(document.getElementById("AddNewDetailchkGroup_"+row_id).checked)
+//{
+//document.getElementById("AddNewDetailPanelCollectCollectID_"+row_id).style.visibility = 'hidden';
+//document.getElementById("AddNewDetailPanelGroupCollectGroupID_"+row_id).style.visibility = 'visible';
+//}
+//else
+//{
+//document.getElementById("AddNewDetailPanelCollectCollectID_"+row_id).style.visibility = 'visible';
+//document.getElementById("AddNewDetailPanelGroupCollectGroupID_"+row_id).style.visibility = 'hidden';
+//}
+//}
+
+function StrToFloat(str)
+{
+    if (str.indexOf(",") != -1) {
+        str = str.replace(",","");
+    }
+    var result = parseFloat(str);
+    if (isNaN(result)) {
+                result = 0.0;
+    }
+    return result;
+}
+
+function Show_Total()
+{
+ var TotalSum=0;
+ var Summ;
+ initAddNewDetailElements();
+
+    for(var i = 0; i < AddNewDetailElements.length; i++){
+          Summ = StrToFloat(AddNewDetailElements[i][AddNewDetailUnitPriceID].value) *
+            StrToFloat(AddNewDetailElements[i][AddNewDetailQtyID].value);
+      TotalSum = TotalSum + Summ;
+      if (Summ == 0) {
+        AddNewDetailElements[i][AddNewDetailSumPriceID].value = "";
+          } else {
+        AddNewDetailElements[i][AddNewDetailSumPriceID].value = Math.round(Summ*100)/100;
+          }
+    }
+    document.AddNewDetail.Total_price.value = Math.round(TotalSum*100)/100;
+    <!--    var packcost = (parseInt(document.AddNewHeader.PackagingCost.value)/100) * (document.AddNewDetail.Total_price.value - document.AddNewDetail.Discount.value);
+    //    document.AddNewDetail.PackCost.value = packcost;
+    //    document.AddNewDetail.GrandTotal.value = parseFloat(document.AddNewDetail.Total_price.value) - parseFloat(document.AddNewDetail.Discount.value) + parseFloat(document.AddNewDetail.PackCost.value) + parseFloat(document.AddNewDetail.ShippingCost.value);-->
+}
+
+function disable_record()
+{
+  document.AddNewHeader.ClientID.disabled = true;
+  document.AddNewHeader.ProformaDate.disabled = true;
+  document.AddNewHeader.Button_Update.disabled = true;
+  document.AddNewHeader.Button_Delete.disabled = true;
+  document.AddNewHeader.ProformaNo.disabled = true;
+  document.AddNewHeader.Validity.disabled = true;
+  document.AddNewHeader.ClientOrderRef.disabled = true;
+  //document.AddNewHeader.Attn.disabled = true;
+  document.AddNewHeader.Email.disabled = true;
+  document.AddNewHeader.Address.disabled = true;
+  document.AddNewHeader.Phone.disabled = true;
+  document.AddNewHeader.Fax.disabled = true;
+  document.AddNewHeader.PackagingCost.disabled = true;
+  document.AddNewHeader.DeliveryTermID.disabled = true;
+  document.AddNewHeader.DeliveryTimeID.disabled = true;
+  document.AddNewHeader.PaymentTermID.disabled = true;
+  document.AddNewHeader.SpecialInstruction.disabled = true;
+} 
+
+function disable_editablegrid()
+{
+  if (document.forms["AddNewDetail"]) {
+    for(var i = 0; i < AddNewDetailElements.length; i++){
+          AddNewDetailElements[i][AddNewDetailCollectCodeID].disabled = true;
+          AddNewDetailElements[i][AddNewDetailQtyID].disabled = true;
+          AddNewDetailElements[i][AddNewDetailUnitPriceID].disabled = true;
+    }
+    document.AddNewDetail.Button_Submit.disabled = true;
+  }
+} 
+
+
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-B93D65AC
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Date Picker Object Definitions @1-1E7DA0D9
+
+var AddNewHeader_DatePicker_ProformaDate = new Object(); 
+AddNewHeader_DatePicker_ProformaDate.format           = "dd/mm/yyyy";
+AddNewHeader_DatePicker_ProformaDate.style            = "Styles/Fresh/Style.css";
+AddNewHeader_DatePicker_ProformaDate.relativePathPart = "";
+AddNewHeader_DatePicker_ProformaDate.themeVersion = "3.0";
+
+var AddNewHeader_DatePicker_PreviewDPDate = new Object(); 
+AddNewHeader_DatePicker_PreviewDPDate.format           = "dd/mm/yyyy";
+AddNewHeader_DatePicker_PreviewDPDate.style            = "Styles/Fresh/Style.css";
+AddNewHeader_DatePicker_PreviewDPDate.relativePathPart = "";
+AddNewHeader_DatePicker_PreviewDPDate.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//AddNewHeaderButton_Delete_OnClick @5-86D80BDB
+function AddNewHeaderButton_Delete_OnClick()
+{
+    var result;
+//End AddNewHeaderButton_Delete_OnClick
+
+//Confirmation Message @6-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close AddNewHeaderButton_Delete_OnClick @5-BC33A33A
+    return result;
+}
+//End Close AddNewHeaderButton_Delete_OnClick
+
+//AddNewDetailQty_OnChange @202-C5448CDB
+function AddNewDetailQty_OnChange()
+{
+    var result;
+//End AddNewDetailQty_OnChange
+
+//Custom Code @242-2A29BDB7
+  Show_Total();
+//End Custom Code
+
+//Close AddNewDetailQty_OnChange @202-BC33A33A
+    return result;
+}
+//End Close AddNewDetailQty_OnChange
+
+//AddNewDetailUnitPrice_OnChange @204-94996C2E
+function AddNewDetailUnitPrice_OnChange()
+{
+    var result;
+//End AddNewDetailUnitPrice_OnChange
+
+//Custom Code @253-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close AddNewDetailUnitPrice_OnChange @204-BC33A33A
+    return result;
+}
+//End Close AddNewDetailUnitPrice_OnChange
+
+//AddNewDetailAddItemBtn_OnClick @208-10805450
+function AddNewDetailAddItemBtn_OnClick()
+{
+    var result;
+//End AddNewDetailAddItemBtn_OnClick
+
+//Custom Code @219-2A29BDB7
+  var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+  var IE  = (document.all) ? 1 : 0;
+  var O = typeof(opera) != "undefined";
+  var FormState = document.AddNewDetail.FormState.value.split(";");
+  var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+  
+    if (parseInt(FormState[0]) == 0 ) {
+        FormState[0] = 1;
+    }
+  
+    var i;
+    
+    for (i=FormState[0]; i<AllLength; i++) {
+       var objRow = document.getElementById("row"+i);
+       if (NS6 || O) {
+         if (objRow.style.display == "none") {
+             objRow.style.display = '';
+             break;
+         }
+       } else {
+         if (objRow.style.display == "none") {
+             objRow.style.display = "block"; 
+             break;
+         }
+           }
+    }
+  
+    if (i >= AllLength) 
+        document.forms["AddNewDetail"].AddItemBtn.disabled = true;
+//End Custom Code
+
+//Close AddNewDetailAddItemBtn_OnClick @208-BC33A33A
+    return result;
+}
+//End Close AddNewDetailAddItemBtn_OnClick
+
+//AddNewDetailCollectCode_OnChange @210-36966CD5
+function AddNewDetailCollectCode_OnChange()
+{
+    var result;
+//End AddNewDetailCollectCode_OnChange
+
+//Custom Code @254-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close AddNewDetailCollectCode_OnChange @210-BC33A33A
+    return result;
+}
+//End Close AddNewDetailCollectCode_OnChange
+
+//AddNewDetailTotal_OnClick @325-0384B267
+function AddNewDetailTotal_OnClick()
+{
+    var result;
+//End AddNewDetailTotal_OnClick
+
+//Custom Code @326-2A29BDB7
+var Proforma_H_ID = AddNewHeader.Proforma_H_ID.value;
+var TotalPrice = AddNewDetail.Total_price.value;
+//var PackCost = (parseInt(document.AddNewHeader.PackagingCost.value)/100) * (document.AddNewDetail.Total_price.value - document.AddNewDetail.Discount.value);
+openDialog('ProformaTotal.php?Proforma_H_ID='+Proforma_H_ID+'&TP='+TotalPrice, 300,250);return false;
+//End Custom Code
+
+//Close AddNewDetailTotal_OnClick @325-BC33A33A
+    return result;
+}
+//End Close AddNewDetailTotal_OnClick
+
+//AddNewDetail_OnLoad @197-B3D25386
+function AddNewDetail_OnLoad()
+{
+    var result;
+//End AddNewDetail_OnLoad
+
+//Custom Code @245-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close AddNewDetail_OnLoad @197-BC33A33A
+    return result;
+}
+//End Close AddNewDetail_OnLoad
+
+//PTAutoFill3 Loading @152-4C79051B
+function AddNewHeaderAttnPTAutoFill3_start(sender) {
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTAutoFill1.php?keyword=" + $("AddNewHeaderAttn").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            getSameLevelCtl("AddNewHeaderEmail", sender).value = valuesRow["Email"];
+            getSameLevelCtl("AddNewHeaderAddress", sender).value = valuesRow["Address"];
+            getSameLevelCtl("AddNewHeaderPhone", sender).value = valuesRow["Phone"];
+            getSameLevelCtl("AddNewHeaderFax", sender).value = valuesRow["Fax"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill3 Loading
+
+//AddNewHeaderAttnPTDependentListBox3 Start @157-9FBA8A34
+function AddNewHeaderAttnPTDependentListBox3_start(sender) {
+    var dependentElement = $("AddNewHeaderAttn" + sender.id.substring(21));
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onLoading: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+        },
+        onSuccess: function(transport) {
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End AddNewHeaderAttnPTDependentListBox3 Start
+
+//AddNewHeaderDeliveryContactIDPTDependentListBox1 Start @284-252E5545
+function AddNewHeaderDeliveryContactIDPTDependentListBox1_start(sender) {
+    var dependentElement = $("AddNewHeaderDeliveryContactID" + sender.id.substring(29));
+    new Ajax.Request("services/AddQuotation_AddNewHeader_Attn_PTDependentListBox1.php?keyword=" + sender.value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onLoading: function(transport) {
+            for (var i = dependentElement.options.length - 1; i > 0; i--) {
+                var currentOption = dependentElement.options.item(i);
+                if (currentOption.value != "") {
+                    dependentElement.remove(i);
+                }
+            }
+        },
+        onSuccess: function(transport) {
+            var valueRows = eval(transport.responseText);
+            for (var i = 0; i < valueRows.length; i++) {
+                var newOption = new Option(valueRows[i]["1"], valueRows[i]["0"]);
+                dependentElement.options[dependentElement.options.length] = newOption;
+            } 
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End AddNewHeaderDeliveryContactIDPTDependentListBox1 Start
+
+//PTAutoFill1 Loading @357-BEEAEA4E
+function AddNewHeaderDeliveryContactIDPTAutoFill1_start(sender) {
+    new Ajax.Request("services/ListQuotation_AddNewHeader_DeliveryContactID_PTAutoFill1.php?keyword=" + $("AddNewHeaderDeliveryContactID").value, {
+        method: "get",
+        requestHeaders: ['If-Modified-Since', new Date(0)],
+        onSuccess: function(transport) {
+            var valuesRow = eval(transport.responseText)[0];
+            getSameLevelCtl("AddNewHeaderDeliveryAddress", sender).value = valuesRow["Address"];
+            getSameLevelCtl("AddNewHeaderDeliveryPhone", sender).value = valuesRow["Phone"];
+            getSameLevelCtl("AddNewHeaderDeliveryFax", sender).value = valuesRow["Fax"];
+            getSameLevelCtl("AddNewHeaderDeliveryEmail", sender).value = valuesRow["Email"];
+        }, 
+        onFailure: function(transport) {
+            alert(transport.responseText);
+        }
+    });
+}
+//End PTAutoFill1 Loading
+
+//bind_events @1-A84F0BE4
+function bind_events() {
+    addEventHandler("AddNewHeaderAddressID", "change", AddNewHeaderAttnPTDependentListBox3_start);
+    addEventHandler("AddNewHeaderDeliveryAddressID", "change", AddNewHeaderDeliveryContactIDPTDependentListBox1_start);
+    addEventHandler("AddNewHeaderAttn", "change", AddNewHeaderAttnPTAutoFill3_start);
+    addEventHandler("AddNewHeaderDeliveryContactID", "change", AddNewHeaderDeliveryContactIDPTAutoFill1_start);
+    addEventHandler("AddNewHeaderButton_Delete", "click", AddNewHeaderButton_Delete_OnClick);
+    addEventHandler("AddNewDetailQty", "change", AddNewDetailQty_OnChange);
+    addEventHandler("AddNewDetailUnitPrice", "change", AddNewDetailUnitPrice_OnChange);
+    addEventHandler("AddNewDetailAddItemBtn", "click", AddNewDetailAddItemBtn_OnClick);
+    addEventHandler("AddNewDetailCollectCode", "change", AddNewDetailCollectCode_OnChange);
+    addEventHandler("AddNewDetailTotal", "click", AddNewDetailTotal_OnClick);
+    addEventHandler("AddNewDetail", "load", AddNewDetail_OnLoad);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<p>
+<!-- BEGIN Record AddNewHeader -->
+<form id="AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Add/Edit Proforma</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="6">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Proforma&nbsp;No</th>
+ 
+            <td><input id="AddNewHeaderProformaNo" readonly maxlength="11" size="11" value="{ProformaNo}" name="{ProformaNo_Name}">&nbsp; 
+              <!-- BEGIN TextBox Revis --><input id="AddNewHeaderRevis" readonly size="5" value="{Revis}" name="{Revis_Name}"><!-- END TextBox Revis -->&nbsp; 
+              <!-- BEGIN Link LinkRev --><a href="{LinkRev_Src}" id="AddNewHeaderLinkRev">Rev</a><!-- END Link LinkRev --></td> 
+            <th>Client Order Ref</th>
+ 
+            <td><input id="AddNewHeaderClientOrderRef" maxlength="50" size="15" value="{ClientOrderRef}" name="{ClientOrderRef_Name}">&nbsp;<input id="AddNewHeaderQuotation_H_ID" type="hidden" value="{Quotation_H_ID}" name="{Quotation_H_ID_Name}"></td> 
+            <th>Delivery Term</th>
+ 
+            <td>
+              <select id="AddNewHeaderDeliveryTerm" name="{DeliveryTerm_Name}">
+                <option value="" selected>Select Value</option>
+                {DeliveryTerm_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Validity</th>
+ 
+            <td><input id="AddNewHeaderValidity" maxlength="15" size="15" value="{Validity}" name="{Validity_Name}"><input id="AddNewHeaderProforma_H_ID" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}"></td> 
+            <th>Client</th>
+ 
+            <td>
+              <select id="AddNewHeaderClientID" name="{ClientID_Name}">
+                <option value="" selected>Select Value</option>
+                {ClientID_Options}
+              </select>
+ </td> 
+            <th>Delivery Time</th>
+ 
+            <td>
+              <select id="AddNewHeaderDeliveryTime" name="{DeliveryTime_Name}">
+                <option value="" selected>Select Value</option>
+                {DeliveryTime_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Proforma&nbsp;Date</th>
+ 
+            <td><input id="AddNewHeaderProformaDate" maxlength="100" size="8" value="{ProformaDate}" name="{ProformaDate_Name}">
+              <!-- BEGIN DatePicker DatePicker_ProformaDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddNewHeaderDatePicker_ProformaDate"><img id="AddNewHeaderDatePicker_ProformaDate_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_ProformaDate --></td> 
+            <th>Packaging Cost</th>
+ 
+            <td><input id="AddNewHeaderPackagingCost" maxlength="12" size="1" value="{PackagingCost}" name="{PackagingCost_Name}">&nbsp;%</td> 
+            <th>Payment Term</th>
+ 
+            <td>
+              <select id="AddNewHeaderPaymentTerm" name="{PaymentTerm_Name}">
+                <option value="" selected>Select Value</option>
+                {PaymentTerm_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th><strong><u>Proforma&nbsp;Address</u></strong></th>
+ 
+            <td>
+              <!-- BEGIN ListBox AddressID -->
+              <select id="AddNewHeaderAddressID" name="{AddressID_Name}">
+                <option value="0" selected>Select Value</option>
+                {AddressID_Options}
+              </select>
+ <!-- END ListBox AddressID -->
+              <!-- BEGIN TextBox lblAddress --><input id="AddNewHeaderlblAddress" readonly value="{lblAddress}" name="{lblAddress_Name}"><!-- END TextBox lblAddress --></td> 
+            <td><strong><u>Delivery Address</u></strong></td> 
+            <td>
+              <!-- BEGIN ListBox DeliveryAddressID -->
+              <select id="AddNewHeaderDeliveryAddressID" name="{DeliveryAddressID_Name}">
+                <option value="0" selected>Select Value</option>
+                {DeliveryAddressID_Options}
+              </select>
+ <!-- END ListBox DeliveryAddressID -->
+              <!-- BEGIN TextBox lblDeliveryAddress --><input id="AddNewHeaderlblDeliveryAddress" readonly value="{lblDeliveryAddress}" name="{lblDeliveryAddress_Name}"><!-- END TextBox lblDeliveryAddress --></td> 
+            <td>Currency&nbsp;</td> 
+            <td>
+              <select id="AddNewHeaderCurrency" name="{Currency_Name}">
+                <option value="" selected>Select Value</option>
+                {Currency_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Attn</th>
+ 
+            <td>
+              <!-- BEGIN ListBox Attn -->
+              <select id="AddNewHeaderAttn" name="{Attn_Name}">
+                <option value="0" selected>Select Value</option>
+                {Attn_Options}
+              </select>
+ &nbsp;<!-- END ListBox Attn -->
+              <!-- BEGIN TextBox lblAttn --><input id="AddNewHeaderlblAttn" readonly value="{lblAttn}" name="{lblAttn_Name}"><!-- END TextBox lblAttn -->&nbsp; 
+              <!-- BEGIN Link LinkChange --><a href="{LinkChange_Src}" id="AddNewHeaderLinkChange">Change</a><!-- END Link LinkChange --></td> 
+            <th>Attn</th>
+ 
+            <td>
+              <!-- BEGIN ListBox DeliveryContactID -->
+              <select id="AddNewHeaderDeliveryContactID" name="{DeliveryContactID_Name}">
+                <option value="0" selected>Select Value</option>
+                {DeliveryContactID_Options}
+              </select>
+ <!-- END ListBox DeliveryContactID -->
+              <!-- BEGIN TextBox lblDeliveryContactID --><input id="AddNewHeaderlblDeliveryContactID" readonly value="{lblDeliveryContactID}" name="{lblDeliveryContactID_Name}"><!-- END TextBox lblDeliveryContactID -->&nbsp; 
+              <!-- BEGIN Link LinkChangeDeliveryContact --><a href="{LinkChangeDeliveryContact_Src}" id="AddNewHeaderLinkChangeDeliveryContact">Change</a><!-- END Link LinkChangeDeliveryContact --></td> 
+            <th>Preview Deposit Date</th>
+ 
+            <td><input id="AddNewHeaderPreviewDPDate" maxlength="100" size="10" value="{PreviewDPDate}" name="{PreviewDPDate_Name}">&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_PreviewDPDate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="AddNewHeaderDatePicker_PreviewDPDate"><img id="AddNewHeaderDatePicker_PreviewDPDate_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_PreviewDPDate --></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Address</th>
+ 
+            <td><textarea id="AddNewHeaderAddress" name="{Address_Name}" rows="3" readonly cols="30">{Address}</textarea></td> 
+            <th>Address</th>
+ 
+            <td><textarea id="AddNewHeaderDeliveryAddress" name="{DeliveryAddress_Name}" rows="3" readonly cols="30">{DeliveryAddress}</textarea></td> 
+            <th rowspan="4">Special Instruction</th>
+ 
+            <td rowspan="4"><textarea id="AddNewHeaderSpecialInstruction" name="{SpecialInstruction_Name}" rows="10">{SpecialInstruction}</textarea></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Email</th>
+ 
+            <td><input id="AddNewHeaderEmail" readonly maxlength="30" size="30" value="{Email}" name="{Email_Name}"></td> 
+            <th>Email</th>
+ 
+            <td><input id="AddNewHeaderDeliveryEmail" readonly maxlength="30" size="30" value="{DeliveryEmail}" name="{DeliveryEmail_Name}">&nbsp;<input id="AddNewHeaderDocMaker" type="hidden" value="{DocMaker}" name="{DocMaker_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Phone&nbsp;</th>
+ 
+            <td><input id="AddNewHeaderPhone" readonly maxlength="15" size="15" value="{Phone}" name="{Phone_Name}"></td> 
+            <th>Phone&nbsp;</th>
+ 
+            <td><input id="AddNewHeaderDeliveryPhone" readonly maxlength="15" size="15" value="{DeliveryPhone}" name="{DeliveryPhone_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Fax&nbsp;</th>
+ 
+            <td><input id="AddNewHeaderFax" readonly maxlength="15" size="15" value="{Fax}" name="{Fax_Name}"></td> 
+            <th>Fax&nbsp;</th>
+ 
+            <td><input id="AddNewHeaderDeliveryFax" readonly maxlength="15" size="15" value="{DeliveryFax}" name="{DeliveryFax_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="6">
+              <!-- BEGIN Button Button_Insert --><input class="Button" id="AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input class="Button" id="AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input class="Button" id="AddNewHeaderButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record AddNewHeader --></p>
+<p>
+<table cellpadding="3" width="100%" border="0">
+  <tr>
+    <td valign="top"><br>
+      <!-- BEGIN EditableGrid AddNewDetail -->
+      <form id="AddNewDetail" name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>List of Proforma Item List</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="14">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Caption">
+                  <th>COLLECTION CODE </th>
+ 
+                  <th>DESIGN&nbsp;</th>
+ 
+                  <th>NAME&nbsp;</th>
+ 
+                  <th>CATEGORY&nbsp;</th>
+ 
+                  <th>INFO/SIZE&nbsp;</th>
+ 
+                  <th>TEXTURE&nbsp;</th>
+ 
+                  <th>COLOR&nbsp;</th>
+ 
+                  <th>MATERIAL&nbsp;</th>
+ 
+                  <th>UNIT PRICE&nbsp;</th>
+ 
+                  <th>QTY&nbsp;</th>
+ 
+                  <th>UNIT&nbsp;</th>
+ 
+                  <th>PRICE&nbsp;</th>
+ 
+                  <th colspan="2">DELETE</th>
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr class="Error">
+                  <td colspan="14">{Error}</td>
+                </tr>
+                <!-- END RowError -->
+                <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+                  <td><input id="AddNewDetailProforma_H_ID_{AddNewDetail:rowNumber}" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}">
+                    <!--{RowNameAttribute}-->
+                    <input id="AddNewDetailCollectID_{AddNewDetail:rowNumber}" type="hidden" value="{CollectID}" name="{CollectID_Name}"><input id="AddNewDetailCollectCode_{AddNewDetail:rowNumber}" readonly value="{CollectCode}" name="{CollectCode_Name}">&nbsp; <a href="{CollectPopup}" onclick="openDialog('PriceList.php?rowNumber={AddNewDetail:rowNumber}', 750,650);return false;"><img style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px" src="Styles/Fresh/Images/DatePicker.gif"></a> </td> 
+                  <td>
+                    <!-- BEGIN TextBox Design --><input id="AddNewDetailDesign_{AddNewDetail:rowNumber}" readonly value="{Design}" name="{Design_Name}"><!-- END TextBox Design --></td> 
+                  <td>
+                    <!-- BEGIN TextBox NameDesc --><input id="AddNewDetailNameDesc_{AddNewDetail:rowNumber}" readonly value="{NameDesc}" name="{NameDesc_Name}"><!-- END TextBox NameDesc --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Category --><input id="AddNewDetailCategory_{AddNewDetail:rowNumber}" readonly value="{Category}" name="{Category_Name}"><!-- END TextBox Category --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Size --><input id="AddNewDetailSize_{AddNewDetail:rowNumber}" readonly value="{Size}" name="{Size_Name}"><!-- END TextBox Size --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Texture --><input id="AddNewDetailTexture_{AddNewDetail:rowNumber}" readonly value="{Texture}" name="{Texture_Name}"><!-- END TextBox Texture --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Color --><input id="AddNewDetailColor_{AddNewDetail:rowNumber}" readonly value="{Color}" name="{Color_Name}"><!-- END TextBox Color --></td> 
+                  <td>
+                    <!-- BEGIN TextBox Material --><input id="AddNewDetailMaterial_{AddNewDetail:rowNumber}" readonly value="{Material}" name="{Material_Name}"><!-- END TextBox Material --></td> 
+                  <td><input id="AddNewDetailUnitPrice_{AddNewDetail:rowNumber}" readonly maxlength="12" size="12" value="{UnitPrice}" name="{UnitPrice_Name}"></td> 
+                  <td><input id="AddNewDetailQty_{AddNewDetail:rowNumber}" maxlength="10" size="1" value="{Qty}" name="{Qty_Name}"></td> 
+                  <td><input id="AddNewDetailUnit_{AddNewDetail:rowNumber}" maxlength="15" size="3" value="{Unit}" name="{Unit_Name}"></td> 
+                  <td><input id="AddNewDetailSumPrice_{AddNewDetail:rowNumber}" disabled maxlength="12" size="12" value="{SumPrice}" name="{SumPrice_Name}"></td> 
+                  <td colspan="2">
+                    <!-- BEGIN CheckBox CheckBox_Delete --><input id="AddNewDetailCheckBox_Delete_{AddNewDetail:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td>
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="14">No records</td>
+                </tr>
+                <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="14"><input id="AddNewDetailTotal_price_{AddNewDetail:rowNumber}" type="hidden" value="{Total_price}" name="{Total_price_Name}">
+                    <!-- BEGIN Button AddItemBtn --><input class="Button" id="AddNewDetailAddItemBtn" type="button" value="Add Item" name="{Button_Name}"><!-- END Button AddItemBtn -->&nbsp; 
+                    <!-- BEGIN Button Total --><input class="Button" id="AddNewDetailTotal" type="button" value="Total Price" name="{Button_Name}"><!-- END Button Total -->
+                    <!-- BEGIN Button Button_Submit --><input class="Button" id="AddNewDetailButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END EditableGrid AddNewDetail --></td>
+  </tr>
+</table>
+</p>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="../includes/Style.css">
+</head>
+<body bgcolor="#ffffff" link="#000000" alink="#000000" vlink="#000000" text="#000000" class="InLinePageBODY">
+<!-- BEGIN Record c_category -->
+<form name="frmMenu" action="<?php echo $php_self?>" method="post">
+  <p align="center"><font class="InLineFormHeaderFont">&nbsp;</font><img src="../images/header.jpg" width="700" height="150"><br>
+    </p>
+  </p>
+  <table class="InLineFormTABLE" cellspacing="0" cellpadding="3">
+    <!-- BEGIN Error --><!-- END Error -->
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="rnd_sampceramic.php" target="mainFrame">Sample Ceramic</a> </td> 
+    </tr>
+ 	<tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="rnd_sampPackaging.php" target="mainFrame">Sample Packaging</a> </td> 
+    </tr>
+	<tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="rnd_sampOther.php" target="mainFrame">Sample Other</a> </td> 
+    </tr>
+    <tr>
+      <td class="InLineFieldCaptionTD">&nbsp;</td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_client_list.php" target="mainFrame">Clay</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_department_list.php" target="mainFrame">Casting</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_category_list.php" target="mainFrame">Estruder</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_texture_list.php" target="mainFrame">Texture</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_color_list.php" target="mainFrame">Tools</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_material_list.php" target="mainFrame">Engobe</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_size_list.php" target="mainFrame">Stain &amp; Oxide </a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_unit_list.php" target="mainFrame">Glaze</a></td> 
+    </tr>
+	      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_unit_list.php" target="mainFrame">Firing Plan</a></td> 
+    </tr>
+	      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_unit_list.php" target="mainFrame">Design Material</a></td> 
+    </tr>
+	      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_unit_list.php" target="mainFrame">Supplier</a></td> 
+    </tr>
+	      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="../c_unit_list.php" target="mainFrame">Unit</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD">&nbsp;</td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="{Link1_Src}" target="mainFrame">Color
+        Area</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="{Link3_Src}" target="mainFrame">Master
+        Material</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="{Link4_Src}" target="mainFrame">Master
+        Supplier</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="{Link5_Src}" target="mainFrame">Master
+        Unit</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="{Link6_Src}" target="mainFrame">Master
+        Worker</a></td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD">&nbsp;</td> 
+    </tr>
+ 
+    <tr>
+      <td class="InLineFieldCaptionTD"><a class="InLineDataLink" href="{Link2_Src}" target="_top">Logout</a></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record c_category -->
+</body>
+</html>

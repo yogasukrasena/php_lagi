@@ -1,0 +1,118 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>ReportProOpt</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-E0988FC5
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-207BBB7C
+
+var Search_DatePicker_s_due_date = new Object(); 
+Search_DatePicker_s_due_date.format           = "dd/mm/yyyy";
+Search_DatePicker_s_due_date.style            = "Styles/Fresh/Style.css";
+Search_DatePicker_s_due_date.relativePathPart = "";
+Search_DatePicker_s_due_date.themeVersion = "3.0";
+
+var Search_DatePicker_s_due_date1 = new Object(); 
+Search_DatePicker_s_due_date1.format           = "dd/mm/yyyy";
+Search_DatePicker_s_due_date1.style            = "Styles/Fresh/Style.css";
+Search_DatePicker_s_due_date1.relativePathPart = "";
+Search_DatePicker_s_due_date1.themeVersion = "3.0";
+
+var Search_DatePicker_s_due_date2 = new Object(); 
+Search_DatePicker_s_due_date2.format           = "dd/mm/yyyy";
+Search_DatePicker_s_due_date2.style            = "Styles/Fresh/Style.css";
+Search_DatePicker_s_due_date2.relativePathPart = "";
+Search_DatePicker_s_due_date2.themeVersion = "3.0";
+
+var Search_DatePicker_s_due_date3 = new Object(); 
+Search_DatePicker_s_due_date3.format           = "dd/mm/yyyy";
+Search_DatePicker_s_due_date3.style            = "Styles/Fresh/Style.css";
+Search_DatePicker_s_due_date3.relativePathPart = "";
+Search_DatePicker_s_due_date3.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record Search -->
+<form id="Search" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Search Proforma&nbsp;Report </th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>Client</th>
+ 
+            <td colspan="2">
+              <select id="Searchs_ClientID" name="{s_ClientID_Name}">
+                <option value="" selected>Select Value</option>
+ {s_ClientID_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Due Date</th>
+ 
+            <td><input id="Searchs_due_date" maxlength="100" size="10" value="{s_due_date}" name="{s_due_date_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_due_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SearchDatePicker_s_due_date"><img id="SearchDatePicker_s_due_date_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_due_date --></td> 
+            <td><input id="Searchs_due_date1" maxlength="100" size="10" value="{s_due_date1}" name="{s_due_date1_Name}">&nbsp; 
+              <!-- BEGIN DatePicker DatePicker_s_due_date1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SearchDatePicker_s_due_date1"><img id="SearchDatePicker_s_due_date1_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_due_date1 --></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Received Date</th>
+ 
+            <td><input id="Searchs_rec_date" maxlength="100" size="10" value="{s_rec_date}" name="{s_rec_date_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_due_date2 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SearchDatePicker_s_due_date2"><img id="SearchDatePicker_s_due_date2_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_due_date2 --></td> 
+            <td><input id="Searchs_rec_date1" maxlength="100" size="10" value="{s_rec_date1}" name="{s_rec_date1_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_due_date3 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="SearchDatePicker_s_due_date3"><img id="SearchDatePicker_s_due_date3_Image" alt="Show Date Picker" src="Styles/Fresh/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_due_date3 --></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="3">
+              <!-- BEGIN Button Button_DoSearch --><input class="Button" id="SearchButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+          </tr>
+ 
+        </table>
+ </td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record Search -->
+</body>
+</html>

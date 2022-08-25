@@ -1,0 +1,58 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Edit Price</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<!-- BEGIN Record tblcollect_master -->
+<form id="tblcollect_master" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Edit Selling Price</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Rupiah Selling Price</th>
+ 
+            <td><input id="tblcollect_masterRealSellingPrice" maxlength="20" value="{RealSellingPrice}" name="{RealSellingPrice_Name}" size="20"><input id="tblcollect_masterLastUpdate" type="hidden" value="{LastUpdate}" name="{LastUpdate_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Dollar Selling Price</th>
+ 
+            <td><input id="tblcollect_masterDollarPrice" maxlength="20" value="{DollarPrice}" name="{DollarPrice_Name}" size="20">&nbsp;<input id="tblcollect_masterID" type="hidden" value="{ID}" name="{ID_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Euro Selling Price</th>
+ 
+            <td><input id="tblcollect_masterEuroPrice" maxlength="20" value="{EuroPrice}" name="{EuroPrice_Name}" size="20"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input class="Button" id="tblcollect_masterButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record tblcollect_master --><br>
+</body>
+</html>

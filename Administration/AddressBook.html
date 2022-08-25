@@ -1,0 +1,396 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Address Book</title>
+<meta content="CodeCharge Studio 4.00.00.015" name="GENERATOR">
+<script language="JavaScript" type="text/javascript">
+function disable_record()
+{
+  document.AddNewHeader.Company.disabled = true;
+} 
+
+function disable_editablegrid()
+{
+  if (document.forms["ContactGrid"]) {
+    for(var i = 0; i < ContactGridElements.length; i++){
+          ContactGridElements[i][ContactGridAddressIDID].disabled = true;
+          ContactGridElements[i][ContactGridContactNameID].disabled = true;
+          ContactGridElements[i][ContactGridEmailID].disabled = true;
+          ContactGridElements[i][ContactGridAlamatID].disabled = true;
+          ContactGridElements[i][ContactGridPhoneID].disabled = true;
+          ContactGridElements[i][ContactGridFaxID].disabled = true;
+    }
+    document.ContactGrid.Button_Submit.disabled = true;
+  }
+} 
+//Begin CCS script
+//Include Common JSFunctions @1-252A7665
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Include User Scripts @1-CAA84CDD
+</script>
+<script language="JavaScript" src="js/pt/prototype.js" type="text/javascript"></script>
+<script language="JavaScript" src="js/pt/ajaxpanel.js" type="text/javascript"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include User Scripts
+
+//Panel1AddNewHeaderButton_Delete_OnClick @18-85CB3DA7
+function Panel1AddNewHeaderButton_Delete_OnClick()
+{
+    var result;
+//End Panel1AddNewHeaderButton_Delete_OnClick
+
+//Confirmation Message @19-8243B274
+    return confirm('Delete record?');
+//End Confirmation Message
+
+//Close Panel1AddNewHeaderButton_Delete_OnClick @18-BC33A33A
+    return result;
+}
+//End Close Panel1AddNewHeaderButton_Delete_OnClick
+
+//Panel1AddNewHeaderCompany_OnChange @21-2E85975B
+function Panel1AddNewHeaderCompany_OnChange()
+{
+    var result;
+//End Panel1AddNewHeaderCompany_OnChange
+
+//Custom Code @47-2A29BDB7
+    // -------------------------
+    disable_editablegrid();
+    // -------------------------
+//End Custom Code
+
+//Close Panel1AddNewHeaderCompany_OnChange @21-BC33A33A
+    return result;
+}
+//End Close Panel1AddNewHeaderCompany_OnChange
+
+//Panel1ContactGridAddListBtn_OnClick @32-A07DEC04
+function Panel1ContactGridAddListBtn_OnClick()
+{
+    var result;
+//End Panel1ContactGridAddListBtn_OnClick
+
+//Custom Code @36-2A29BDB7
+    var NS6 = (!document.all && document.getElementById) ? 1 : 0;
+var IE  = (document.all) ? 1 : 0;
+var O = typeof(opera) != "undefined";
+var FormState = document.ContactGrid.FormState.value.split(";");
+var AllLength = parseInt(FormState[0])+parseInt(FormState[1]);
+
+  if (parseInt(FormState[0]) == 0 ) {
+      FormState[0] = 1;
+  }
+
+  var i;
+  for (i=FormState[0]; i<AllLength; i++) {
+     var objRow = document.getElementById("row"+i);
+     if (NS6 || O) {
+       if (objRow.style.display == "none") {
+           objRow.style.display = '';
+           break;
+       }
+     } else {
+       if (objRow.style.display == "none") {
+           objRow.style.display = "block"; 
+           break;
+       }
+         }
+  }
+
+  if (i >= AllLength) 
+      document.forms["ContactGrid"].AddListBtn.disabled = true;
+//End Custom Code
+
+//Close Panel1ContactGridAddListBtn_OnClick @32-BC33A33A
+    return result;
+}
+//End Close Panel1ContactGridAddListBtn_OnClick
+
+//Start Panel1 @48-C2C50D0F
+function Panel1_start(sender) {
+    var panel = $("Panel1");
+    panel.onrefresh = function() {
+    };
+    AjaxPanel.init(panel);
+    AjaxPanel._bind(panel);
+    Panel1_bind(sender);
+}
+//End Start Panel1
+
+//Refresh Panel1 @48-0A41C43E
+function Panel1_bind(sender) {
+    addEventHandler("Panel1AddNewHeaderButton_Delete", "click", Panel1AddNewHeaderButton_Delete_OnClick);
+    addEventHandler("Panel1AddNewHeaderCompany", "change", Panel1AddNewHeaderCompany_OnChange);
+    addEventHandler("Panel1ContactGridAddListBtn", "click", Panel1ContactGridAddListBtn_OnClick);
+}
+//End Refresh Panel1
+
+//Refresh Panel1UpdatePanel @95-389A1C55
+function Panel1UpdatePanel_refresh(sender) {
+    AjaxPanel.reload($("Panel1"));
+}
+//End Refresh Panel1UpdatePanel
+
+//bind_events @1-B09987B0
+function bind_events() {
+    Panel1_start(window);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<!-- BEGIN Panel Panel1 -->
+<table width="800" border="0">
+  <tr>
+    <td width="20%" valign="top">
+      <!-- BEGIN Record SearchAddress -->
+      <form id="Panel1SearchAddress" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>Search Address Book </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <th>Company</th>
+ 
+                  <td>
+                    <select id="Panel1SearchAddresss_Company" name="{s_Company_Name}">
+                      <option value="" selected>Select Value</option>
+ {s_Company_Options} 
+                    </select>
+ </td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input class="Button" id="Panel1SearchAddressButton_DoSearch" type="submit" value="Search" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record SearchAddress --><br>
+      <!-- BEGIN Grid AddressGrid -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                <th>List of Address Book </th>
+ 
+                <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+              </tr>
+ 
+            </table>
+ 
+            <table width="100%" class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="2">Total Records:&nbsp;{tbladminist_addressbook_TotalRecords}</td> 
+              </tr>
+ 
+              <tr class="Caption">
+                <th width="27%">
+                <!-- BEGIN Sorter Sorter_AddressID --><a href="{Sort_URL}" id="Panel1AddressGridSorter_AddressID">ID</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_AddressID --></th>
+ 
+                <th width="73%">
+                <!-- BEGIN Sorter Sorter_Company --><a href="{Sort_URL}" id="Panel1AddressGridSorter_Company">COMPANY</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/Fresh/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/Fresh/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_Company --></th>
+ 
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td><a href="{AddressID_Src}">{AddressID}</a>&nbsp;</td> 
+                <td>{Company}&nbsp;</td> 
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="2">No records</td> 
+              </tr>
+ <!-- END NoRecords -->
+              <tr class="Footer">
+                <td colspan="2"><a href="{Link1_Src}">Add New</a> 
+                  <!-- BEGIN Navigator Navigator -->
+                  <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+                  <select onChange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+                    <option value="" selected>-</option>
+ {PageSize_Options} 
+                  </select>
+ 
+                  <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+                  <!-- BEGIN First_Off -->First <!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+                  <!-- BEGIN Pages -->
+                  <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+                  <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+              </tr>
+ 
+            </table>
+ </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Grid AddressGrid --><br>
+    </td> 
+    <td valign="top">
+      <!-- BEGIN Record AddNewHeader -->
+      <form id="Panel1AddNewHeader" name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>Add/Edit Address Book </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <th>Company</th>
+ 
+                  <td><input id="Panel1AddNewHeaderCompany" maxlength="100" size="30" value="{Company}" name="{Company_Name}"></td> 
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_Insert --><input class="Button" id="Panel1AddNewHeaderButton_Insert" type="submit" value="Add" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input class="Button" id="Panel1AddNewHeaderButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Delete --><input class="Button" id="Panel1AddNewHeaderButton_Delete" type="submit" value="Delete" name="{Button_Name}"><!-- END Button Button_Delete --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record AddNewHeader --><br>
+      <!-- BEGIN EditableGrid ContactGrid -->
+      <form id="Panel1ContactGrid" name="{HTMLFormName}" action="{Action}" method="post">
+        <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                  <th>List of Tbladminist Addressbook Contact </th>
+ 
+                  <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Grid" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="6">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Caption">
+                  <th>CONTACT</th>
+ 
+                  <th>EMAIL</th>
+ 
+                  <th>ADDRESS</th>
+ 
+                  <th>PHONE</th>
+ 
+                  <th>FAX</th>
+ 
+                  <th>DEL</th>
+ 
+                </tr>
+ 
+                <!-- BEGIN Row -->
+                <!-- BEGIN RowError -->
+                <tr class="Error">
+                  <td colspan="6">{Error}</td> 
+                </tr>
+ <!-- END RowError -->
+                <tr class="Row" id="row{RowIDAttribute}" {RowStyleAttribute}>
+                  <td><input id="Panel1ContactGridAddressID_{ContactGrid:rowNumber}" type="hidden" value="{AddressID}" name="{AddressID_Name}">
+                    <!--{RowNameAttribute}-->
+                    <input id="Panel1ContactGridContactName_{ContactGrid:rowNumber}" maxlength="100" value="{ContactName}" name="{ContactName_Name}"></td> 
+                  <td><input id="Panel1ContactGridEmail_{ContactGrid:rowNumber}" maxlength="50" size="15" value="{Email}" name="{Email_Name}"></td> 
+                  <td><textarea id="Panel1ContactGridAlamat_{ContactGrid:rowNumber}" name="{Alamat_Name}" cols="25">{Alamat}</textarea></td> 
+                  <td><input id="Panel1ContactGridPhone_{ContactGrid:rowNumber}" maxlength="20" value="{Phone}" name="{Phone_Name}" size="20"></td> 
+                  <td><input id="Panel1ContactGridFax_{ContactGrid:rowNumber}" maxlength="20" value="{Fax}" name="{Fax_Name}" size="20"></td> 
+                  <td>
+                    <!-- BEGIN CheckBox CheckBox_Delete --><input id="Panel1ContactGridCheckBox_Delete_{ContactGrid:rowNumber}" type="checkbox" value="1" name="{CheckBox_Delete_Name}" {CheckBox_Delete}><!-- END CheckBox CheckBox_Delete -->&nbsp;</td> 
+                </tr>
+ <!-- END Row -->
+                <!-- BEGIN NoRecords -->
+                <tr class="NoRecords">
+                  <td colspan="6">No records</td> 
+                </tr>
+ <!-- END NoRecords -->
+                <tr class="Footer">
+                  <td style="TEXT-ALIGN: right" colspan="6">
+                    <!-- BEGIN Button AddListBtn --><input class="Button" id="Panel1ContactGridAddListBtn" type="button" value="Add List" name="{Button_Name}"><!-- END Button AddListBtn -->
+                    <!-- BEGIN Button Button_Submit --><input class="Button" id="Panel1ContactGridButton_Submit" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Submit --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END EditableGrid ContactGrid --><br>
+    </td> 
+  </tr>
+</table>
+<!-- END Panel Panel1 -->
+</body>
+</html>

@@ -1,0 +1,1096 @@
+/* CCSTheme v 3.x */
+/* General */
+
+/* Colors */
+.PageBgColorBlueprint-Versi3 {
+	background-color: #bdcddb;
+	}
+
+.FormTitleBgColorBlueprint-Versi3 {
+	background-color: #3d84cc;
+	}
+
+.FormTitleFontColorBlueprint-Versi3 {
+	color: #ffffff;
+	}
+
+.CaptionBgColorBlueprint-Versi3 {
+	background-color: #dfdfdf;
+	}
+
+.CaptionFontColorBlueprint-Versi3 {
+	color: #000000;
+	}
+
+.DataBgColorBlueprint-Versi3 {
+	background-color: #f7f7f7;
+	}
+
+.AltDataBgColorBlueprint-Versi3 {
+	background-color: #ebf2f8;
+	}
+
+.DataFontColorBlueprint-Versi3 {
+	color: #000000;
+	}
+
+.LinkColorBlueprint-Versi3 {
+	color: #0059b2;
+	}
+
+.VisitedLinkColorBlueprint-Versi3 {
+	color: #830083;
+	}
+
+.HoverLinkColorBlueprint-Versi3 {
+	color: #ff0000;
+	}
+
+.ColorBgButtonBlueprint-Versi3 {
+	background-color: #3d84cc;
+}
+
+.ColorFontButtonBlueprint-Versi3 {
+	color: #ffffff;
+}
+
+.ColorBgButtonPassiveBlueprint-Versi3 {
+	background-color: #93c9ff;
+}
+
+.ColorFontButtonPassiveBlueprint-Versi3 {
+	color: #ffffff;
+}
+
+
+
+.HeaderBlueprint-Versi3 {
+	width: 100%;
+	}
+
+.HeaderBlueprint-Versi3 th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 4px;
+	background-color: #3d84cc; color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+	
+	}
+
+
+
+/*ie6*/
+* html body .HeaderBlueprint-Versi3 th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.HeaderBlueprint-Versi3 a:link { 
+	color: #ffffff;
+	}
+
+.HeaderBlueprint-Versi3 a:visited { 
+	color: #ffffff;
+	}
+
+.HeaderBlueprint-Versi3 a:hover, .CaptionBlueprint-Versi3 a:active { 
+	color: #ffffff; text-decoration: none;
+	}
+
+.HeaderLeftBlueprint-Versi3 { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightBlueprint-Versi3 { 
+	background-image: url('Images/HeaderRight.gif');
+	background-position: right top;
+	}
+
+.HeaderLeftBlueprint-Versi3 img{
+	width: 14px;
+	}
+
+.HeaderRightBlueprint-Versi3 img{
+	width: 1px;
+	}
+
+
+/* Grid Options */
+.GridBlueprint-Versi3 { 
+	border-left: 1px solid #3d84cc; border-bottom: 1px solid #3d84cc;
+	width: 100%;
+	}
+
+.CaptionBlueprint-Versi3 th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+
+
+/*ie6*/
+* html body .CaptionBlueprint-Versi3 th, * html body .CaptionBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.CaptionBlueprint-Versi3 a:link { 
+	color: #000000;
+	}
+
+.CaptionBlueprint-Versi3 a:visited { 
+	color: #000000;
+	}
+
+.CaptionBlueprint-Versi3 a:hover, .CaptionBlueprint-Versi3 a:active { 
+	color: #ff0000;
+	}
+
+.CaptionBlueprint-Versi3 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionBlueprint-Versi3 input {
+	vertical-align: middle;
+	}
+
+.RowBlueprint-Versi3 th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+
+
+/*ie6*/
+* html body .RowBlueprint-Versi3 th, * html body .RowBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+caption.RowBlueprint-Versi3 { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border: 1px solid #3d84cc; border-bottom: 0px;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body caption.RowBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.RowBlueprint-Versi3 a:link { 
+	color: #0059b2;
+	}
+
+.RowBlueprint-Versi3 a:visited { 
+	color: #830083;
+	}
+
+.RowBlueprint-Versi3 a:hover, .RowBlueprint-Versi3 a:active { 
+	color: #ff0000;
+	}
+
+.SeparatorBlueprint-Versi3{
+	color: #3d84cc;
+	}
+
+.SeparatorBlueprint-Versi3 td{
+	height: 1px;
+	}
+
+
+.AltRowBlueprint-Versi3 th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	vertical-align: top;
+	background-color: #ebf2f8; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .AltRowBlueprint-Versi3 th, * html body .AltRowBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.AltRowBlueprint-Versi3 a:link { 
+	color: #0059b2;
+	}
+
+.AltRowBlueprint-Versi3 a:visited { 
+	color: #830083;
+	}
+
+.AltRowBlueprint-Versi3 a:hover, .AltRowBlueprint-Versi3 a:active { 
+	color: #ff0000;
+	}
+
+.NoRecordsBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	background-color: #f7f7f7; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #dfdfdf; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .NoRecordsBlueprint-Versi3 td, * html body .FooterBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.FooterBlueprint-Versi3 a:link { 
+	color: #0059b2;
+	}
+
+.FooterBlueprint-Versi3 a:visited { 
+	color: #830083;
+	}
+
+.FooterBlueprint-Versi3 a:hover, .FooterBlueprint-Versi3 a:active { 
+	color: #ff0000;
+	}
+
+.FooterBlueprint-Versi3 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterBlueprint-Versi3 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordBlueprint-Versi3 { 
+	border-left: 1px solid #3d84cc; border-bottom: 1px solid #3d84cc;
+	width: 100%;
+	}
+
+.ErrorBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+
+
+/*ie6*/
+* html body .ErrorBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.ControlsBlueprint-Versi3 th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+	
+.BottomBlueprint-Versi3 td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #dfdfdf; color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .ControlsBlueprint-Versi3 th, * html body .ControlsBlueprint-Versi3 td, * html body .BottomBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.BottomBlueprint-Versi3 a:link { 
+	color: #0059b2;
+	}
+
+.BottomBlueprint-Versi3 a:visited { 
+	color: #830083;
+	}
+
+.BottomBlueprint-Versi3 a:hover, .CaptionBlueprint-Versi3 a:active { 
+	color: #ff0000;
+	}
+
+.BottomBlueprint-Versi3 img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomBlueprint-Versi3 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionBlueprint-Versi3 th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ebf2f8; 
+	color: #000000;
+	}
+
+.GroupCaptionBlueprint-Versi3 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .GroupCaptionBlueprint-Versi3 th, * html body .GroupCaptionBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupCaptionBlueprint-Versi3 a:link {
+	color: #000000;
+	}
+
+.GroupCaptionBlueprint-Versi3 a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionBlueprint-Versi3 a:hover, .GroupCaptionBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterBlueprint-Versi3 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #dfdfdf; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .GroupFooterBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.GroupFooterBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.GroupFooterBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.GroupFooterBlueprint-Versi3 a:hover, .GroupFooterBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterBlueprint-Versi3 img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterBlueprint-Versi3 input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalBlueprint-Versi3 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ebf2f8; 
+	color: #000000;
+	border-bottom: 2px solid #3d84cc;
+	}
+
+
+
+/*ie6*/
+* html body .SubTotalBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.SubTotalBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.SubTotalBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.SubTotalBlueprint-Versi3 a:hover, .SubTotalBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+.TotalBlueprint-Versi3 td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #ebf2f8; 
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .TotalBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.TotalBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.TotalBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.TotalBlueprint-Versi3 a:hover, .TotalBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Form Options */
+.ButtonBlueprint-Versi3 { 
+	background-color: #ebf2f8; color: #000000; border: solid 1px #3d84cc; padding: 2px; font-weight: bold; font-family: Tahoma; font-size: 11px; font-weight: bold;
+	}
+
+/* Calendar */
+
+.CalendarBlueprint-Versi3 { 
+	border: 1px solid #3d84cc;
+	width: 100%;
+	}
+
+.CalendarWeekdayNameBlueprint-Versi3{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #ebf2f8; 
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekdayNameBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekdayNameBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.CalendarWeekdayNameBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekdayNameBlueprint-Versi3 a:hover, .CalendarWeekdayNameBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+.CalendarWeekendNameBlueprint-Versi3{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #ebf2f8;	
+	color: #000000;
+	font-weight: normal;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendNameBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendNameBlueprint-Versi3 a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNameBlueprint-Versi3 a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNameBlueprint-Versi3 a:link, .CalendarWeekendNameBlueprint-Versi3 a:visited{
+	color: #ff0000;
+	}
+
+/* Calendar Day */
+.CalendarDayBlueprint-Versi3{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarDayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarDayBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.CalendarDayBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.CalendarDayBlueprint-Versi3 a:hover, .CalendarDayBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendBlueprint-Versi3{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: center;
+	background-color: #ebf2f8;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.CalendarWeekendBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekendBlueprint-Versi3 a:hover, .CalendarWeekendBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Today */
+.CalendarTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarTodayBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.CalendarTodayBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.CalendarTodayBlueprint-Versi3 a:hover, .CalendarTodayBlueprint-Versi3 a:active {
+	color: #ff0000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	text-align: center;
+	background-color: #ebf2f8;	
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarWeekendTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarWeekendTodayBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.CalendarWeekendTodayBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.CalendarWeekendTodayBlueprint-Versi3 a:hover, .CalendarWeekendTodayBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDayBlueprint-Versi3{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #3d84cc;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthDayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthDayBlueprint-Versi3 a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthDayBlueprint-Versi3 a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthDayBlueprint-Versi3 a:hover, .CalendarOtherMonthDayBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #3d84cc;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthTodayBlueprint-Versi3 a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthTodayBlueprint-Versi3 a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthTodayBlueprint-Versi3 a:hover, .CalendarOtherMonthTodayBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: center;
+	background-color: #ebf2f8;	
+	color: #3d84cc;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendBlueprint-Versi3 a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendBlueprint-Versi3 a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendBlueprint-Versi3 a:hover, .CalendarOtherMonthWeekendBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 2px;
+	border-top: 3px solid #3d84cc; border-right: 3px solid #3d84cc; border-left: 2px solid #3d84cc; border-bottom: 2px solid #3d84cc;
+	text-align: center;
+	color: #3d84cc;
+	background-color: #ebf2f8;	
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarOtherMonthWeekendTodayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarOtherMonthWeekendTodayBlueprint-Versi3 a:link {
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendTodayBlueprint-Versi3 a:visited{
+	color: #3d84cc;
+	}
+
+.CalendarOtherMonthWeekendTodayBlueprint-Versi3 a:hover, .CalendarOtherMonthWeekendTodayBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDayBlueprint-Versi3{
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #dfdfdf;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+	
+
+
+/*ie6*/
+* html body .CalendarSelectedDayBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarSelectedDayBlueprint-Versi3 a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDayBlueprint-Versi3 a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDayBlueprint-Versi3 a:hover, .CalendarSelectedDayBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	background-color: #dfdfdf; color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarNavigatorBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.CalendarNavigatorBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.CalendarNavigatorBlueprint-Versi3 a:hover, .CalendarNavigatorBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+.CalendarNavigatorBlueprint-Versi3 img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+.CalendarNavigatorBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+.CalendarNavigatorBlueprint-Versi3 th {
+	font-family: Tahoma; font-size: 80%;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarNavigatorBlueprint-Versi3 th, * html body .CalendarNavigatorBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+/* Calendar Extra */
+.CalendarEventBlueprint-Versi3{
+	font-family: Tahoma; font-size: 80%;
+	text-align: left;
+	}
+
+
+
+/*ie6*/
+* html body .CalendarEventBlueprint-Versi3 {
+	font-family: Tahoma; font-size: 100%;
+}
+/*end*/
+
+.CalendarEventBlueprint-Versi3 a:link {
+	color: #0059b2;
+	}
+
+.CalendarEventBlueprint-Versi3 a:visited{
+	color: #830083;
+	}
+
+.CalendarEventBlueprint-Versi3 a:hover, .CalendarEventBlueprint-Versi3 a:active{
+	color: #ff0000;
+	}
+
+/* Changes for Section508 */
+table tr td strong {
+	padding: 0px;
+	margin: 0px;
+}
+
+.thBlueprint-Versi3 { 
+	font-family: Tahoma; font-size: 80%;
+	font-weight: bold;
+}
+
+
+
+/*ie6*/
+* html body .thBlueprint-Versi3 {
+	font-size: 100%;
+}
+/*end*/
+
+.HeaderBlueprint-Versi3 .th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 4px;
+	background-color: #3d84cc; color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .HeaderBlueprint-Versi3 .th {
+	font-family: Tahoma; font-size: 140%; font-weight: bold; text-align: left;
+}
+/*end*/
+
+.CaptionBlueprint-Versi3 .th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+}
+
+
+
+/*ie6*/
+* html body .CaptionBlueprint-Versi3 .th {
+	font-family: Tahoma; font-size: 100%; text-align: left; vertical-align: top;
+}
+/*end*/
+
+.RowBlueprint-Versi3 .th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.AltRowBlueprint-Versi3 .th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.ControlsBlueprint-Versi3 .th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+}
+
+.GroupCaptionBlueprint-Versi3 .th {
+	font-family: Tahoma; font-size: 80%;
+	padding: 4px;
+	border-top: 1px solid #3d84cc; border-right: 1px solid #3d84cc;
+	text-align: left;
+	white-space: nowrap;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ebf2f8; 
+	color: #000000;
+}
+
+
+
+/*ie6*/
+* html body .GroupCaptionBlueprint-Versi3 .th {
+	font-family: Tahoma; font-size: 100%;
+}
+
+* html body .RowBlueprint-Versi3 .th, * html body .AltRowBlueprint-Versi3 .th, * html body .ControlsBlueprint-Versi3 .th {
+	font-family: Tahoma; font-size: 100%; font-weight: normal; text-align: left; vertical-align: top;
+}
+/*end*/
+
+/* Class for Application Builder Menu */
+.simpleMenuBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 80%;
+}
+
+
+
+/*ie6*/
+* html body .simpleMenuBlueprint-Versi3 td {
+	font-family: Tahoma; font-size: 100%;
+} 
+/*end*/

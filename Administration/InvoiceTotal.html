@@ -1,0 +1,195 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Total Invoice</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<script language="Javascript" type="text/javascript">
+function StrToFloat(str)
+{
+    if (str.indexOf(",") != -1) {
+                str = str.replace(",","");
+    }
+    var result = parseFloat(str);
+    if (isNaN(result)) {
+                result = 0.0;
+    }
+    return result;
+}
+
+function Show_Total()
+{
+  <!--document.AddNewDetail.Total_price.value = Math.round(TotalSum*100)/100;-->
+  var SubTotal = parseFloat(document.Totalan.SubTotal.value);
+  var Disc;
+  if (document.Totalan.Discount.value == ""){
+    Disc = 0;
+  } else {
+    Disc = parseFloat(document.Totalan.Discount.value);
+  }
+  var packcost = parseFloat((parseInt(document.Totalan.PackCostInt.value)/100) * (SubTotal - Disc));
+  document.Totalan.Packaging.value = packcost;
+  document.Totalan.GrandTotal.value = SubTotal - Disc + packcost + parseFloat(document.Totalan.Fumigation.value);
+}
+
+function Pack_Cost()
+{
+  var PackCost = 0;
+  var Disc;
+  var Sum;
+
+  if (document.Totalan.Discount.value == ""){
+    Disc = 0;
+  } else {
+    Disc = document.Totalan.Discount.value;
+  }
+  Sum = StrToFloat(document.Totalan.SubTotal.value) - StrToFloat(Disc);
+  document.Totalan.Packaging.value = Math.round(Sum*100)/100;
+}
+
+</script>
+<link href="Styles/Fresh/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-252A7665
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=Functions.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//TotalanButton_Update_OnClick @4-79280215
+function TotalanButton_Update_OnClick()
+{
+    var result;
+//End TotalanButton_Update_OnClick
+
+//Custom Code @25-2A29BDB7
+window.close();
+//End Custom Code
+
+//Close TotalanButton_Update_OnClick @4-BC33A33A
+    return result;
+}
+//End Close TotalanButton_Update_OnClick
+
+//TotalanDiscount_OnChange @7-AAF83A51
+function TotalanDiscount_OnChange()
+{
+    var result;
+//End TotalanDiscount_OnChange
+
+//Custom Code @22-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close TotalanDiscount_OnChange @7-BC33A33A
+    return result;
+}
+//End Close TotalanDiscount_OnChange
+
+//TotalanFumigation_OnChange @9-1C132EFC
+function TotalanFumigation_OnChange()
+{
+    var result;
+//End TotalanFumigation_OnChange
+
+//Custom Code @23-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close TotalanFumigation_OnChange @9-BC33A33A
+    return result;
+}
+//End Close TotalanFumigation_OnChange
+
+//Totalan_OnLoad @2-5403AF09
+function Totalan_OnLoad(form)
+{
+    var result;
+//End Totalan_OnLoad
+
+//Custom Code @26-2A29BDB7
+Show_Total();
+//End Custom Code
+
+//Close Totalan_OnLoad @2-BC33A33A
+    return result;
+}
+//End Close Totalan_OnLoad
+
+//bind_events @1-92A35C29
+function bind_events() {
+    addEventHandler("TotalanButton_Update", "click", TotalanButton_Update_OnClick);
+    addEventHandler("TotalanDiscount", "change", TotalanDiscount_OnChange);
+    addEventHandler("TotalanFumigation", "change", TotalanFumigation_OnChange);
+    addEventHandler("Totalan", "load", Totalan_OnLoad);
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record Totalan -->
+<form id="Totalan" name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td> 
+            <th>Total&nbsp;Price</th>
+ 
+            <td class="HeaderRight"><img src="Styles/Fresh/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>Sub Total</th>
+ 
+            <td><input id="TotalanSubTotal" readonly maxlength="12" size="12" value="{SubTotal}" name="{SubTotal_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Discount</th>
+ 
+            <td><input id="TotalanDiscount" maxlength="12" size="12" value="{Discount}" name="{Discount_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Packaging<input type="hidden" name="{PackCostInt_Name}" value="{PackCostInt}" id="TotalanPackCostInt"></th>
+ 
+            <td><input id="TotalanPackaging" readonly maxlength="12" size="12" value="{Packaging}" name="{Packaging_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Fumigation</th>
+ 
+            <td><input id="TotalanFumigation" maxlength="12" size="12" value="{Fumigation}" name="{Fumigation_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>Grand Total</th>
+ 
+            <td><input id="TotalanGrandTotal" readonly maxlength="12" size="12" value="{GrandTotal}" name="{GrandTotal_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">&nbsp; 
+              <!-- BEGIN Button Button_Update --><input class="Button" id="TotalanButton_Update" type="submit" value="Submit" name="{Button_Name}"><!-- END Button Button_Update --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record Totalan --><br>
+</body>
+</html>

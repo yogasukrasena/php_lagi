@@ -1,0 +1,333 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>Production Order List</title>
+<meta content="CodeCharge Studio 4.01.00.06" name="GENERATOR">
+<link href="Styles/Print-Gaya/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<table cellspacing="0" cellpadding="3" width="100%" border="0">
+  <tr>
+    <th>
+    <h2>PRODUCTION ORDER LIST</h2>
+    </th>
+  </tr>
+</table>
+<br>
+<!-- BEGIN Grid Grid -->
+<table cellspacing="0" cellpadding="3" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>CLIENT</th>
+ 
+          <th>CLIENT ORDER REFERENCE </th>
+ 
+          <th>GAYA PROFORMA NO. </th>
+ 
+          <th>POL&nbsp;DATE</th>
+ 
+          <th>DELIVERY TIME </th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td>{ClientCompany}&nbsp;</td> 
+          <td>{ClientOrderRef}&nbsp;<input id="GridPOL_H_ID" type="hidden" value="{POL_H_ID}" name="{POL_H_ID_Name}"><input id="GridProforma_H_ID" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}"></td> 
+          <td>{ProformaNo}&nbsp;{ProformaRef}</td> 
+          <td>{PolDate}&nbsp;</td> 
+          <td>{DeliveryTime}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="5">No records</td>
+        </tr>
+        <!-- END NoRecords -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid Grid -->
+<p></p>
+<p>
+<!-- BEGIN Link Report_Print -->
+<p align="right"><a href="{Report_Print_Src}" id="Report_Print" target="_blank">Printable version</a></p>
+<!-- END Link Report_Print -->
+<p></p>
+<p>
+<!-- BEGIN Report DetailPOL -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <thead style="DISPLAY: table-header-group">
+          <tr class="Caption">
+            <th rowspan="2">PHOTO</th>
+ 
+            <th rowspan="2">NAME</th>
+ 
+            <th rowspan="2">CATEGORY</th>
+ 
+            <th rowspan="2">INFO/SIZE</th>
+ 
+            <th rowspan="2">TEXTURE</th>
+ 
+            <th rowspan="2">COLOR</th>
+ 
+            <th rowspan="2">MATERIAL</th>
+ 
+            <th rowspan="2">Qty</th>
+ 
+            <th colspan="2">STOCK</th>
+ 
+            <th rowspan="2">TRO<br>
+            QTY</th>
+ 
+            <th rowspan="2">TROW</th>
+ 
+            <th rowspan="2">TRIM</th>
+ 
+            <th rowspan="2">BISQUE</th>
+ 
+            <th rowspan="2">GLAZE</th>
+ 
+            <th colspan="2">PACK</th>
+          </tr>
+ 
+          <tr class="Caption">
+            <th>PIN</th>
+ 
+            <th>RAW</th>
+ 
+            <th>&nbsp;IN</th>
+ 
+            <th>OUT&nbsp;</th>
+          </tr>
+ 
+        </thead>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tfoot style="DISPLAY: table-footer-group">
+          <tr class="Footer">
+            <td colspan="17">
+              <!-- BEGIN Navigator Navigator -->
+              <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+              <!-- BEGIN First_Off -->First <!-- END First_Off -->
+              <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+              <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+              <!-- BEGIN Pages -->
+              <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+              <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+              <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+              <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+              <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+              <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+          </tr>
+        </tfoot>
+ <!-- END Section Page_Footer -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td rowspan="2"><img id="DetailPOLDetailPhoto1_{DetailPOL:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center"></td> 
+          <td rowspan="2">{NameDesc}<input id="DetailPOLDetailPOL_D_ID_{DetailPOL:rowNumber}" type="hidden" value="{POL_D_ID}" name="{POL_D_ID_Name}"></td> 
+          <td rowspan="2">{CategoryName}<input id="DetailPOLDetailPOL_H_ID_{DetailPOL:rowNumber}" type="hidden" value="{POL_H_ID}" name="{POL_H_ID_Name}"></td> 
+          <td rowspan="2">{SizeName} </td> 
+          <td rowspan="2">{TextureName} </td> 
+          <td rowspan="2">{ColorName} </td> 
+          <td rowspan="2">{MaterialName} </td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">{Qty} </td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">&nbsp;{Label1}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">&nbsp;{Label2}&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{Label3}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td style="TEXT-ALIGN: right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <p>&nbsp;</p>
+ 
+            <p>&nbsp;</p>
+          </td> 
+          <td style="TEXT-ALIGN: right">&nbsp;</td>
+        </tr>
+ 
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">&nbsp;</td> 
+          <td style="TEXT-ALIGN: right"><strong>REST</strong></td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="17">No records</td>
+        </tr>
+ <!-- END Panel NoRecords -->
+        <tr class="Total">
+          <td style="TEXT-ALIGN: right">TOTAL&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td style="TEXT-ALIGN: right" valign="baseline">{TotalSum_Qty} </td> 
+          <td colspan="2">&nbsp; </td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td>&nbsp;</td> 
+          <td colspan="2">&nbsp;</td>
+        </tr>
+ <!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report DetailPOL --><br>
+</p>
+<p>
+<!-- BEGIN Report DetailPROF -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- BEGIN Section Report_Header --><!-- END Section Report_Header -->
+        <!-- BEGIN Section Page_Header -->
+        <tr class="Caption">
+          <th rowspan="2">PHOTO</th>
+ 
+          <th rowspan="2">NAME</th>
+ 
+          <th rowspan="2">CATEGORY</th>
+ 
+          <th rowspan="2">INFO/SIZE</th>
+ 
+          <th rowspan="2">TEXTURE</th>
+ 
+          <th rowspan="2">COLOR</th>
+ 
+          <th rowspan="2">MATERIAL</th>
+ 
+          <th rowspan="2">QTY</th>
+ 
+          <th colspan="2">STOCK</th>
+ 
+          <th rowspan="2">TRO<br>
+          QTY</th>
+ 
+          <th rowspan="2">TROW</th>
+ 
+          <th rowspan="2">TRIM</th>
+ 
+          <th rowspan="2">BISQUE</th>
+ 
+          <th rowspan="2">GLAZE</th>
+ 
+          <th colspan="2">PACK</th>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>PIN</th>
+ 
+          <th>RAW</th>
+ 
+          <th>IN</th>
+ 
+          <th>OUT</th>
+        </tr>
+ <!-- END Section Page_Header -->
+        <!-- BEGIN Section Page_Footer -->
+        <tr class="Footer">
+          <td colspan="17">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}">First</a> <!-- END First_On -->
+            <!-- BEGIN First_Off -->First <!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}">Prev</a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off -->Prev <!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->of &nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}">Next</a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off -->Next <!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}">Last</a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off -->Last <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+        </tr>
+ 
+        <!-- BEGIN Panel PageBreak -->
+      </table>
+    </td>
+  </tr>
+</table>
+</p>
+<p style="PAGE-BREAK-AFTER: always">&nbsp;</p>
+<p>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <!-- END Panel PageBreak --><!-- END Section Page_Footer -->
+        <!-- BEGIN Section Detail -->
+        <tr class="Row">
+          <td rowspan="2"><img id="DetailPROFDetailPhoto1_{Report1:rowNumber}" height="50" alt=" " src="../upload/{Photo1}" width="50" align="center">&nbsp;<input id="DetailPROFDetailProforma_D_ID_{Report1:rowNumber}" type="hidden" value="{Proforma_D_ID}" name="{Proforma_D_ID_Name}"></td> 
+          <td rowspan="2">{NameDesc} <input id="DetailPROFDetailProforma_H_ID_{Report1:rowNumber}" type="hidden" value="{Proforma_H_ID}" name="{Proforma_H_ID_Name}"></td> 
+          <td rowspan="2">{CategoryName} </td> 
+          <td rowspan="2">{SizeName} </td> 
+          <td rowspan="2">{TextureName} </td> 
+          <td rowspan="2">{ColorName} </td> 
+          <td rowspan="2">{MaterialName} </td> 
+          <td style="TEXT-ALIGN: right" rowspan="2">{Qty} </td> 
+          <td rowspan="2">{ReportLabelPIN}&nbsp;</td> 
+          <td rowspan="2">{ReportLabelRAW}&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+          <td rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+          <td>&nbsp;&nbsp;&nbsp;&nbsp; </td> 
+          <td>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp; </p>
+ 
+            <p>&nbsp;</p>
+ 
+            <p>&nbsp;</p>
+ 
+            <p>&nbsp;</p>
+          </td>
+        </tr>
+ 
+        <tr class="Row">
+          <td>&nbsp;</td> 
+          <td><strong>REST</strong></td>
+        </tr>
+ <!-- END Section Detail -->
+        <!-- BEGIN Section Report_Footer -->
+        <!-- BEGIN Panel NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="17">No records</td>
+        </tr>
+ <!-- END Panel NoRecords -->
+        <tr class="Total">
+          <td style="TEXT-ALIGN: right">TOTAL&nbsp; </td> 
+          <td style="TEXT-ALIGN: right">&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td>&nbsp; </td> 
+          <td style="TEXT-ALIGN: right" valign="baseline">{TotalSum_Qty} </td> 
+          <td colspan="9">&nbsp; </td>
+        </tr>
+ <!-- END Section Report_Footer -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Report DetailPROF --><br>
+</p>
+<br>
+</body>
+</html>

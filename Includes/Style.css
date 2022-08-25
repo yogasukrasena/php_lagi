@@ -1,0 +1,87 @@
+/* InLine CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.InLinePageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.InLineFormHeaderFont{ color: #000000; font-size: 16px; font-weight: bold; }
+.InLineFormTABLE{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.InLineFormTableNew{ background-color:#FFF; font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.InLineFieldCaptionTD{ border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #ACD5F7; font-size: 1.2em; }
+.InLineFieldCodifTD{ border-bottom: 1px solid #FFFFFF; color: #000000; background-color:#D98C96; font-size: 13px; }
+.InLineFieldCaptionTDNew{ background-color:#ACD5F7; border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #ACD5F7; font-size: 13px; }
+.InlineTitleTD{background-color:#FFFFFF; font-size:14px; font-weight:bold; border:none;}
+.InLineAltDataTD{ color: #000000; background-color: #F2F2F2; font-size: 13px; }
+.InLineColumnTD{ border-left: 1px solid #89999B; border-right: 1px solid #89999B; border-bottom: 1px solid #89999B; border-top: 1px solid #89999B; color: #FFFFFF; background-color: #0170A7; font-size: 13px; font-weight: bold; }
+.InLineDataTD{ border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #ACD5F7; font-size: 13px; }
+.InLineErrorDataTD{ border-bottom: 1px solid #FFFFFF; color: #FF0000; background-color: #0D17EA; font-size: 13px; }
+.InLineSeparatorTD{ height: 1px; background-color: #000000; }
+.InLineFooterTD{ border: 1px solid #89999B; background-color: #0170A7; color: #FFFFFF; font-weight: bold; font-size: 13px; text-align: center; }
+.TopContentTitle{background-color:#0170A7; font-size:24px; color:#FFFFFF;}
+.TopContentTitleRight{background-color:#B9DCF2; font-size:24px; color:#000000;}
+a.InLineSorterLink:link,a.InLineSorterLink:visited{ color: #FFFFFF; font-weight: bold; font-size: 13px; text-decoration: underline; }
+a.InLineSorterLink:hover,a.InLineSorterLink:active{ color: #FFFFFF; font-weight: bold; font-size: 13px; text-decoration: none; }
+a.InLineDataLink:link,a.InLineDataLink:visited{ color: #000000; font-size: 13px; text-decoration: underline; }
+a.InLineDataLink:hover,a.InLineDataLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.InLineNavigatorLink:link,a.InLineNavigatorLink:visited{ color: #FFFFFF; font-weight: bold; font-size: 13px; text-decoration: underline; }
+a.InLineNavigatorLink:hover,a.InLineNavigatorLink:active{ color: #FFFFFF; font-weight: bold; font-size: 13px; text-decoration: none; }
+.InLineButton { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #E7EFEF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.InLineInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.InLineTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.InLineSelect { font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+/* Calendar */
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+a.weekDay:link,a.weekDay:visited{ color: #000000; text-decoration: none; }
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+TD.selectedDay { margin: 1px; border-left: 1px solid #89999B; border-bottom: 1px solid #89999B; border-top: 1px solid #89999B; color: #FFFFFF; background-color: #B5C7CE; font-size: 13px; font-weight: bold; }
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; color: #000000; background-color: #F2F2F2; font-size: 13px; }
+TD.workday { color: #000000; background-color: #F2F2F2; font-size: 13px; }
+TD.weekend { border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #D9E3E3; font-size: 13px; }
+TH.calendar { margin: 1px; border-left: 1px solid #89999B; border-bottom: 1px solid #89999B; border-top: 1px solid #89999B; color: #FFFFFF; background-color: #B5C7CE; font-size: 13px; font-weight: bold; }
+.CalendarButtons { margin: 1px; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #E7EFEF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.Table { }
+/* sidebar */
+.sidenav h1,.sidenav ul {
+	/*padding-left: 12px; */
+}
+.sidenav {
+	/*background: #EEE;
+	border: 1px solid #E5E5E5;
+	float: left;
+	width: 200px;*/
+	font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px;
+	border: lpx solid #E5E5E5;
+	background: #EEE;
+}
+.sidenav h1 {
+	color: #666;
+	font-size: 1.2em;
+	height: 20px;
+	margin-top: 1.2em;
+}
+.sidenav ul {
+	border-top: 1px solid #FAFAFA;
+	background: url(../Admin/img/bgul.gif)repeat-x;
+	margin: 0;
+	padding: 0;
+}
+.sidenav li {
+	/*border: 1px solid #FAFAFA;
+	border-top: none;
+	list-style: none;
+	margin: 0;*/
+	border-bottom: 1px solid #FFFFFF; color: #000000; background-color: #ACD5F7; font-size: 13px;
+	border: lpx solid #FAFAFA;
+}
+.sidenav li a {
+/*	color: #777;
+	display: block;
+	font-size: 0.9em;
+	padding: 3px 6px 3px 14px;
+	text-decoration: none;*/
+	color: #000000; font-size: 13px; text-decoration: underline;
+}
+.sidenav li a:hover {
+	color: #111;
+}
